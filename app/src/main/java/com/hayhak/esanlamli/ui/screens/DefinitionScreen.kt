@@ -31,6 +31,7 @@ import java.util.Locale
 fun DefinitionScreen(viewModel: DefinitionViewModel = hiltViewModel()) {
     val context = LocalContext.current
     val uiState by viewModel.uiState.collectAsState()
+    val isLoading by viewModel.isLoading.collectAsState()
     val trLocale = remember { Locale("tr", "TR") }
 
     var tts by remember { mutableStateOf<TextToSpeech?>(null) }
@@ -54,11 +55,23 @@ fun DefinitionScreen(viewModel: DefinitionViewModel = hiltViewModel()) {
                 fontWeight = FontWeight.ExtraBold,
                 color = MaterialTheme.colorScheme.primary
             )
-            Text(
-                text = stringResource(R.string.definition_word_count, viewModel.wordCount),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.outline
-            )
+            if (isLoading) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    CircularProgressIndicator(modifier = Modifier.size(14.dp), strokeWidth = 2.dp)
+                    Spacer(Modifier.width(8.dp))
+                    Text(
+                        text = stringResource(R.string.preparing_label),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.outline
+                    )
+                }
+            } else {
+                Text(
+                    text = stringResource(R.string.definition_word_count, viewModel.wordCount),
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.outline
+                )
+            }
             Spacer(Modifier.height(20.dp))
         }
 
@@ -101,7 +114,8 @@ fun DefinitionScreen(viewModel: DefinitionViewModel = hiltViewModel()) {
             Button(
                 onClick = { viewModel.updateQuery(viewModel.getRandomWord()) },
                 modifier = Modifier.fillMaxWidth().height(52.dp),
-                shape = RoundedCornerShape(16.dp)
+                shape = RoundedCornerShape(16.dp),
+                enabled = !isLoading
             ) {
                 Icon(Icons.Rounded.Shuffle, contentDescription = null)
                 Spacer(Modifier.width(8.dp))

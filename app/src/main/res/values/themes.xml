@@ -9,8 +9,7 @@
     <!-- Splash Screen Teması -->
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">#4F46E5</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_animated</item>
-        <item name="windowSplashScreenAnimationDuration">500</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
         <item name="postSplashScreenTheme">@style/Theme.EsAnlamli</item>
     </style>
 </resources>

@@ -311,7 +311,7 @@ fun DictionaryScreen(
                             onSpeak = { tts?.speak(results.joinToString(", "), TextToSpeech.QUEUE_FLUSH, null, null) },
                             onShare = {
                                 val modeName = if (currentMode == com.hayhak.esanlamli.data.db.DictionaryMode.SYNONYMS) "eş anlamlısı" else "anlamı"
-                                val shareText = "📖 *${query.uppercase(trLocale)}* kelimesinin $modeName: \n\n✨ ${results.joinToString(", ")}\n\n_Eş Anlamlı & Fiiller Sözlüğü ile öğreniyorum!_"
+                                val shareText = "📖 *${query.uppercase(trLocale)}* kelimesinin $modeName: \n\n✨ ${results.joinToString(", ")}\n\n_Türkçe Sözlük ile öğreniyorum!_"
                                 val shareIntent = Intent(Intent.ACTION_SEND).apply {
                                     type = "text/plain"
                                     putExtra(Intent.EXTRA_TEXT, shareText)

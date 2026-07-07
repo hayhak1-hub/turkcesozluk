@@ -21,7 +21,6 @@ class CoreRepository @Inject constructor(
     val isInitialized = _isInitialized.asStateFlow()
 
     suspend fun initialize() {
-        loadDefinitionsIfNeeded()
         mutex.withLock {
             // SettingsManager değişimlerini takip et
             com.hayhak.esanlamli.data.db.SettingsManager.modeState.collect { mode ->
@@ -32,10 +31,10 @@ class CoreRepository @Inject constructor(
         }
     }
 
-    private suspend fun loadDefinitionsIfNeeded() {
+    suspend fun ensureDefinitionsLoaded() {
         if (DefinitionDataStore.definitionMap.isNotEmpty()) return
         try {
-            DefinitionDataStore.definitionMap.putAll(csvLoader.loadDefinitions())
+            DefinitionDataStore.definitionMap.putAll(csvLoader.loadDefinitionsCached())
             DefinitionDataStore.updateCache()
         } catch (e: Exception) {
             android.util.Log.e("CoreRepository", "Error loading definitions", e)
@@ -47,7 +46,7 @@ class CoreRepository @Inject constructor(
             SynonymDataStore.synonymMap.clear()
 
             // 1. Assets'den yükle
-            val loadResult = csvLoader.loadFromAssets(mode)
+            val loadResult = csvLoader.loadFromAssetsCached(mode)
             SynonymDataStore.synonymMap.putAll(loadResult.data)
             val primaryWords = loadResult.primaryWords.toMutableSet()
 

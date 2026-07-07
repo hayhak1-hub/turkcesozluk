@@ -3,6 +3,7 @@ package com.hayhak.esanlamli.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hayhak.esanlamli.data.model.WordDefinition
+import com.hayhak.esanlamli.data.repository.CoreRepository
 import com.hayhak.esanlamli.data.repository.DefinitionRepository
 import com.hayhak.esanlamli.util.normalizeTR
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -22,15 +23,28 @@ data class DefinitionUiState(
 
 @HiltViewModel
 class DefinitionViewModel @Inject constructor(
+    private val coreRepository: CoreRepository,
     private val definitionRepository: DefinitionRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(DefinitionUiState())
     val uiState = _uiState.asStateFlow()
 
+    private val _isLoading = MutableStateFlow(definitionRepository.wordCount == 0)
+    val isLoading = _isLoading.asStateFlow()
+
     val wordCount: Int get() = definitionRepository.wordCount
 
     private var searchJob: Job? = null
+
+    init {
+        if (_isLoading.value) {
+            viewModelScope.launch {
+                coreRepository.ensureDefinitionsLoaded()
+                _isLoading.value = false
+            }
+        }
+    }
 
     fun updateQuery(newQuery: String) {
         _uiState.update { it.copy(query = newQuery) }

@@ -26,7 +26,6 @@
     <string name="label_word">Kelime</string>
     <string name="btn_add">Ekle</string>
     <string name="btn_cancel">Vazgeç</string>
-    <string name="streak_days">%1$d Gün</string>
     <string name="btn_start_quiz">QUİZE BAŞLA</string>
     <string name="quiz_duration_title">Quiz Süresini Belirle</string>
     <string name="game_over_title">OYUN BİTTİ!</string>
@@ -55,5 +54,4 @@
     <string name="quiz_next_question">SIRADAKİ SORU</string>
     <string name="quiz_score_label">PUAN</string>
     <string name="quiz_answered_questions">Cevaplanan Soru: %1$d</string>
-    <string name="quiz_question_label">kelimesinin %1$s nedir?</string>
 </resources>

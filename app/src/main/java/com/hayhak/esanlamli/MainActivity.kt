@@ -12,6 +12,7 @@ import androidx.compose.animation.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Article
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.PlayArrow
@@ -28,6 +29,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.hayhak.esanlamli.data.repository.CoreRepository
+import com.hayhak.esanlamli.ui.screens.DefinitionScreen
 import com.hayhak.esanlamli.ui.screens.DictionaryScreen
 import com.hayhak.esanlamli.ui.screens.FavoritesScreen
 import com.hayhak.esanlamli.ui.screens.LoadingScreen
@@ -39,6 +41,7 @@ import javax.inject.Inject
 
 sealed class Screen(val route: String, val titleRes: Int, val icon: androidx.compose.ui.graphics.vector.ImageVector) {
     object Dictionary : Screen("dictionary", R.string.tab_dictionary, Icons.Default.Search)
+    object Definition : Screen("definition", R.string.tab_definition, Icons.AutoMirrored.Filled.Article)
     object Quiz : Screen("quiz", R.string.tab_quiz, Icons.Default.PlayArrow)
     object Favorites : Screen("favorites", R.string.tab_favorites, Icons.Default.Favorite)
     object Profile : Screen("profile", R.string.tab_profile, Icons.Default.Person)
@@ -90,6 +93,7 @@ fun MainScreen() {
     val navController = rememberNavController()
     val items = listOf(
         Screen.Dictionary,
+        Screen.Definition,
         Screen.Quiz,
         Screen.Favorites,
         Screen.Profile
@@ -124,9 +128,10 @@ fun MainScreen() {
             startDestination = Screen.Dictionary.route,
             modifier = Modifier.padding(innerPadding)
         ) {
-            composable(Screen.Dictionary.route) { 
-                DictionaryScreen(onNavigateToLearning = { navController.navigate(Screen.Learning.route) }) 
+            composable(Screen.Dictionary.route) {
+                DictionaryScreen(onNavigateToLearning = { navController.navigate(Screen.Learning.route) })
             }
+            composable(Screen.Definition.route) { DefinitionScreen() }
             composable(Screen.Quiz.route) { QuizScreen() }
             composable(Screen.Favorites.route) { FavoritesScreen() }
             composable(Screen.Profile.route) { StatsScreen() }

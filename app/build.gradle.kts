@@ -25,14 +25,10 @@ android {
         create("esanlamli") {
             dimension = "version"
             applicationId = "com.hayhak.esanlamli"
-            resValue("string", "csv_file_name", "es_anlamlilar.csv")
-            resValue("bool", "apply_word_filter", "true")
         }
         create("fiiller") {
             dimension = "version"
             applicationId = "com.hayhak.fiiller"
-            resValue("string", "csv_file_name", "fiiller.csv")
-            resValue("bool", "apply_word_filter", "false")
         }
     }
 
@@ -71,7 +67,6 @@ dependencies {
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.lottie.compose)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.work.runtime.ktx)

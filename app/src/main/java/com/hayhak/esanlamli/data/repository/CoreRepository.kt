@@ -16,11 +16,12 @@ class CoreRepository @Inject constructor(
     private val userSynonymDao: UserSynonymDao
 ) {
     private val mutex = Mutex()
-    
+
     private val _isInitialized = MutableStateFlow(false)
     val isInitialized = _isInitialized.asStateFlow()
 
     suspend fun initialize() {
+        loadDefinitionsIfNeeded()
         mutex.withLock {
             // SettingsManager değişimlerini takip et
             com.hayhak.esanlamli.data.db.SettingsManager.modeState.collect { mode ->
@@ -31,10 +32,20 @@ class CoreRepository @Inject constructor(
         }
     }
 
+    private suspend fun loadDefinitionsIfNeeded() {
+        if (DefinitionDataStore.definitionMap.isNotEmpty()) return
+        try {
+            DefinitionDataStore.definitionMap.putAll(csvLoader.loadDefinitions())
+            DefinitionDataStore.updateCache()
+        } catch (e: Exception) {
+            android.util.Log.e("CoreRepository", "Error loading definitions", e)
+        }
+    }
+
     private suspend fun loadData(mode: com.hayhak.esanlamli.data.db.DictionaryMode) {
         try {
             SynonymDataStore.synonymMap.clear()
-            
+
             // 1. Assets'den yükle
             val loadResult = csvLoader.loadFromAssets(mode)
             SynonymDataStore.synonymMap.putAll(loadResult.data)

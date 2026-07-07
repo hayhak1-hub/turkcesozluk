@@ -1,7 +1,4 @@
 <resources>
     <string name="app_name">Türkçe Sözlük</string>
-    <string name="dictionary_title">Türkçe Sözlük (Fiiller)</string>
-    <string name="synonym_label">ANLAMI:</string>
-    <string name="synonyms_label_multiple">ANLAMLARI (%1$d):</string>
     <string name="label_synonym">Anlamı</string>
 </resources>

@@ -21,8 +21,10 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.hayhak.esanlamli.viewmodel.StatsViewModel
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import com.hayhak.esanlamli.R
+import com.hayhak.esanlamli.util.findActivity
 
 @Composable
 fun StatsScreen(viewModel: StatsViewModel = hiltViewModel()) {
@@ -31,6 +33,9 @@ fun StatsScreen(viewModel: StatsViewModel = hiltViewModel()) {
     val userWords by viewModel.userWords.collectAsState()
     val currentTheme by viewModel.currentTheme.collectAsState()
     val weeklyStats by viewModel.weeklyStats.collectAsState()
+    val isPremium by viewModel.isPremium.collectAsState()
+    val premiumPriceText by viewModel.premiumPriceText.collectAsState()
+    val context = LocalContext.current
     var showPrivacyDialog by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
@@ -54,6 +59,16 @@ fun StatsScreen(viewModel: StatsViewModel = hiltViewModel()) {
                 color = MaterialTheme.colorScheme.primary
             )
             Spacer(Modifier.height(32.dp))
+        }
+
+        item {
+            PremiumCard(
+                isPremium = isPremium,
+                priceText = premiumPriceText,
+                onPurchaseClick = {
+                    context.findActivity()?.let { activity -> viewModel.purchasePremium(activity) }
+                }
+            )
         }
 
         item {
@@ -261,6 +276,48 @@ fun PrivacyPolicyDialog(onDismiss: () -> Unit) {
         },
         shape = RoundedCornerShape(24.dp)
     )
+}
+
+@Composable
+fun PremiumCard(isPremium: Boolean, priceText: String?, onPurchaseClick: () -> Unit) {
+    Card(
+        modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),
+        shape = RoundedCornerShape(28.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = if (isPremium) Color(0xFFFDF0D5) else MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f)
+        )
+    ) {
+        Row(
+            modifier = Modifier.padding(20.dp).fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                Icons.Rounded.Star,
+                contentDescription = null,
+                tint = Color(0xFFF59E0B),
+                modifier = Modifier.size(36.dp)
+            )
+            Spacer(Modifier.width(16.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = stringResource(if (isPremium) R.string.premium_thanks_title else R.string.premium_support_title),
+                    fontWeight = FontWeight.Bold,
+                    style = MaterialTheme.typography.titleMedium
+                )
+                Text(
+                    text = stringResource(if (isPremium) R.string.premium_thanks_desc else R.string.premium_support_desc),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.outline
+                )
+            }
+            if (!isPremium) {
+                Spacer(Modifier.width(12.dp))
+                Button(onClick = onPurchaseClick, shape = RoundedCornerShape(14.dp)) {
+                    Text(priceText ?: stringResource(R.string.premium_support_button))
+                }
+            }
+        }
+    }
 }
 
 @Composable

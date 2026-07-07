@@ -54,4 +54,9 @@
     <string name="quiz_next_question">SIRADAKİ SORU</string>
     <string name="quiz_score_label">PUAN</string>
     <string name="quiz_answered_questions">Cevaplanan Soru: %1$d</string>
+    <string name="premium_support_title">Geliştiriciye Destek Ol</string>
+    <string name="premium_support_desc">İsteğe bağlı bir bağıştır, hiçbir özelliği kilitlemez.</string>
+    <string name="premium_support_button">Destek Ol</string>
+    <string name="premium_thanks_title">Teşekkürler!</string>
+    <string name="premium_thanks_desc">Uygulamayı desteklediğin için teşekkür ederiz.</string>
 </resources>

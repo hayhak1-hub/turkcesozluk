@@ -5,6 +5,7 @@ import androidx.work.Configuration
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
+import com.hayhak.esanlamli.data.billing.PremiumManager
 import com.hayhak.esanlamli.data.repository.CoreRepository
 import com.hayhak.esanlamli.worker.DailyWordWorker
 import dagger.hilt.android.HiltAndroidApp
@@ -24,6 +25,9 @@ class EsAnlamliApp : Application(), Configuration.Provider {
     lateinit var coreRepository: CoreRepository
     
     @Inject
+    lateinit var premiumManager: PremiumManager
+
+    @Inject
     lateinit var workerFactory: HiltWorkerFactory
 
     private val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
@@ -38,6 +42,8 @@ class EsAnlamliApp : Application(), Configuration.Provider {
         
         // WorkManager'ı manuel başlatmayı deneyelim (Hilt ile çakışmayı önlemek için)
         // androidx.work.WorkManager.initialize(this, workManagerConfiguration)
+
+        premiumManager.start()
 
         applicationScope.launch(Dispatchers.IO) {
             com.hayhak.esanlamli.data.db.SettingsManager.init(this@EsAnlamliApp)

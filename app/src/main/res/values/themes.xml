@@ -9,7 +9,8 @@
     <!-- Splash Screen Teması -->
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">#4F46E5</item>
-        <item name="windowSplashScreenAnimatedIcon">@android:drawable/ic_btn_speak_now</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_animated</item>
+        <item name="windowSplashScreenAnimationDuration">500</item>
         <item name="postSplashScreenTheme">@style/Theme.EsAnlamli</item>
     </style>
 </resources>

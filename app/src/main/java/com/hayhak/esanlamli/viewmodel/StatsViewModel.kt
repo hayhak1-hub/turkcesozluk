@@ -1,8 +1,10 @@
 package com.hayhak.esanlamli.viewmodel
 
+import android.app.Activity
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.hayhak.esanlamli.data.billing.PremiumManager
 import com.hayhak.esanlamli.data.db.FavoriteDao
 import com.hayhak.esanlamli.data.db.SearchHistoryDao
 import com.hayhak.esanlamli.data.db.UserSynonymDao
@@ -19,8 +21,16 @@ class StatsViewModel @Inject constructor(
     private val dictionaryRepository: DictionaryRepository,
     private val favoriteDao: FavoriteDao,
     private val historyDao: SearchHistoryDao,
-    private val userSynonymDao: UserSynonymDao
+    private val userSynonymDao: UserSynonymDao,
+    private val premiumManager: PremiumManager
 ) : AndroidViewModel(application) {
+
+    val isPremium = premiumManager.isPremium
+    val premiumPriceText = premiumManager.priceText
+
+    fun purchasePremium(activity: Activity) {
+        premiumManager.launchPurchaseFlow(activity)
+    }
 
     val favorites = favoriteDao.getAllFavorites()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())

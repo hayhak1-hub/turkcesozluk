@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Türkçe Sözlük</string>
+    <string name="dictionary_title">Türkçe Sözlük</string>
+    <string name="synonym_label">EŞ ANLAMLISI:</string>
+    <string name="synonyms_label_multiple">EŞ ANLAMLILARI (%1$d):</string>
+    <string name="label_synonym">Eş Anlamlısı</string>
+</resources>

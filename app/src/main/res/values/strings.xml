@@ -1,19 +1,25 @@
 <resources>
+    <string name="app_name">Türkçe Sözlük</string>
     <string name="tab_dictionary">Sözlük</string>
     <string name="tab_quiz">Quiz</string>
     <string name="tab_favorites">Favoriler</string>
     <string name="tab_profile">Profil</string>
-    <string name="tab_learning">Öğren</string>
     <string name="preparing_label">Hazırlanıyor</string>
     <string name="search_placeholder">Bir kelime arayın...</string>
     <string name="word_count_loaded">%1$d kelime yüklü</string>
-    <string name="dictionary_title_synonyms">Türkçe Sözlük</string>
-    <string name="dictionary_title_verbs">Türkçe Sözlük (Fiiller)</string>
+    <string name="dictionary_title_synonyms">Eş Anlamlılar</string>
+    <string name="dictionary_title_verbs">Fiiller</string>
+    <string name="dictionary_title_all">Karma Sözlük</string>
     <string name="settings_dictionary_mode">Sözlük Modu</string>
     <string name="mode_synonyms">Eş Anlamlılar</string>
     <string name="mode_verbs">Fiiller</string>
+    <string name="mode_definitions">İsimler</string>
+    <string name="mode_idioms">Deyimler</string>
+    <string name="mode_adjectives">Sıfatlar</string>
+    <string name="mode_all">Hepsi</string>
     <string name="label_synonym_text">Eş Anlamlısı</string>
     <string name="label_meaning_text">Anlamı</string>
+    <string name="label_definition_text">Tanımı</string>
     <string name="label_synonyms_multiple_text">Eş Anlmlıları (%1$d)</string>
     <string name="label_meanings_multiple_text">Anlamları (%1$d)</string>
     <string name="quiz_question_synonym">kelimesinin eş anlamlısı nedir?</string>
@@ -24,6 +30,7 @@
     <string name="no_result_found">Kelime bulunamadı. Lütfen kontrol edin.</string>
     <string name="add_new_word">Yeni Kelime Ekle</string>
     <string name="label_word">Kelime</string>
+    <string name="label_synonym">Eş Anlamlısı</string>
     <string name="btn_add">Ekle</string>
     <string name="btn_cancel">Vazgeç</string>
     <string name="btn_start_quiz">QUİZE BAŞLA</string>
@@ -32,10 +39,13 @@
     <string name="btn_try_again">TEKRAR DENE</string>
     <string name="profile_title">PROFİL VE İSTATİSTİK</string>
     <string name="weekly_activity">Haftalık Aktivite</string>
+    <string name="weekly_total">Bu hafta</string>
+    <string name="weekly_average">Günlük ort.</string>
+    <string name="weekly_empty">Bu hafta henüz aktivite yok</string>
     <string name="stat_favorites">Favoriler</string>
     <string name="stat_searches">Aramalar</string>
     <string name="stat_my_words">Eklediklerim</string>
-    <string name="stat_dictionary">Sözlük</string>
+    <string name="stat_dictionary">Kelime</string>
     <string name="achievements_title">BAŞARIMLAR</string>
     <string name="settings_title">AYARLAR</string>
     <string name="appearance_mode">Görünüm Modu</string>
@@ -54,9 +64,16 @@
     <string name="quiz_next_question">SIRADAKİ SORU</string>
     <string name="quiz_score_label">PUAN</string>
     <string name="quiz_answered_questions">Cevaplanan Soru: %1$d</string>
-    <string name="premium_support_title">Geliştiriciye Destek Ol</string>
-    <string name="premium_support_desc">İsteğe bağlı bir bağıştır, hiçbir özelliği kilitlemez.</string>
-    <string name="premium_support_button">Destek Ol</string>
-    <string name="premium_thanks_title">Teşekkürler!</string>
-    <string name="premium_thanks_desc">Uygulamayı desteklediğin için teşekkür ederiz.</string>
+    <string name="tab_definition">İsimler</string>
+    <string name="definition_word_count">%1$d kelime</string>
+    <string name="definition_random_word">RASTGELE KELİME</string>
+
+    <string name="rate_us_button">Bizi Değerlendirin</string>
+    <string name="tdk_source_label">TDK Güncel Türkçe Sözlük</string>
+    <string name="tdk_loading">TDK\'da aranıyor…</string>
+    <string name="tdk_speak">Sesli oku</string>
+    <string name="tdk_proverbs">Atasözü / deyim</string>
+    <string name="tdk_compounds">Birleşik kelimeler</string>
+    <string name="tdk_fallback_hint">Yerel sözlükte yok; TDK sonucu gösteriliyor.</string>
+    <string name="tdk_discovery_hint">Yerelde yoksa TDK Güncel Türkçe Sözlük\'ten de aranır</string>
 </resources>

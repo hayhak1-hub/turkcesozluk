@@ -4,7 +4,9 @@ import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowForward
 import androidx.compose.material.icons.rounded.Refresh
@@ -58,7 +60,10 @@ fun QuizScreen(viewModel: QuizViewModel = hiltViewModel()) {
     }
 
     Column(
-        modifier = Modifier.fillMaxSize().padding(24.dp),
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         if (!isGameStarted) {
@@ -213,6 +218,8 @@ fun QuizScreen(viewModel: QuizViewModel = hiltViewModel()) {
                         Icon(Icons.AutoMirrored.Rounded.ArrowForward, contentDescription = null, modifier = Modifier.padding(start = 8.dp))
                     }
                 }
+
+                Spacer(modifier = Modifier.height(24.dp))
             }
         }
     }
@@ -226,7 +233,9 @@ fun QuizStartScreen(
     onStart: () -> Unit
 ) {
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .heightIn(min = 420.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {

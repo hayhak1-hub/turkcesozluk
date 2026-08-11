@@ -23,8 +23,8 @@ android {
         applicationId = "com.hayhak.turkcesozluk"
         minSdk = 26
         targetSdk = 36
-        versionCode = 4
-        versionName = "1.3"
+        versionCode = 9
+        versionName = "1.6.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -51,6 +51,10 @@ android {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
+            // Native crash/ANR symbols for Play Console (dependencies ship .so files)
+            ndk {
+                debugSymbolLevel = "FULL"
+            }
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -67,6 +71,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     kotlinOptions {
         jvmTarget = "11"
@@ -103,6 +108,8 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
     implementation(libs.hilt.work)
     implementation(libs.play.review.ktx)
+    implementation(libs.play.app.update.ktx)
+    implementation(libs.kotlinx.coroutines.play.services)
     ksp(libs.androidx.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))

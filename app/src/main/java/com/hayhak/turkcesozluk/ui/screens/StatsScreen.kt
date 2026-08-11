@@ -1,5 +1,7 @@
 package com.hayhak.turkcesozluk.ui.screens
 
+import android.os.Build
+import android.widget.Toast
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
@@ -30,12 +32,18 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.MenuBook
+import androidx.compose.material.icons.filled.ChevronRight
+import androidx.compose.material.icons.filled.HelpOutline
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Policy
+import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.SystemUpdate
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.BarChart
 import androidx.compose.material.icons.rounded.CalendarToday
 import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material.icons.rounded.Favorite
-import androidx.compose.material.icons.rounded.Info
 import androidx.compose.material.icons.rounded.Insights
 import androidx.compose.material.icons.rounded.Lock
 import androidx.compose.material.icons.rounded.Search
@@ -43,13 +51,12 @@ import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material.icons.rounded.TrendingDown
 import androidx.compose.material.icons.rounded.TrendingUp
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -59,6 +66,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -75,9 +83,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.hayhak.turkcesozluk.R
-import com.hayhak.turkcesozluk.util.findActivity
-import com.hayhak.turkcesozluk.util.launchInAppReview
+import com.hayhak.turkcesozluk.ui.components.UpdateAvailableDialog
+import com.hayhak.turkcesozluk.util.PlayStoreHelper
+import com.hayhak.turkcesozluk.util.PlayUpdateInfo
+import com.hayhak.turkcesozluk.util.UpdateCheckStatus
+import com.hayhak.turkcesozluk.util.PlayUpdateChecker
 import com.hayhak.turkcesozluk.viewmodel.StatsViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlin.math.roundToInt
 
 @Composable
@@ -89,16 +103,35 @@ fun StatsScreen(viewModel: StatsViewModel = hiltViewModel()) {
     val weeklyStats by viewModel.weeklyStats.collectAsState()
     val previousWeekTotal by viewModel.previousWeekTotal.collectAsState()
     val context = LocalContext.current
-    var showPrivacyDialog by remember { mutableStateOf(false) }
+    val scope = rememberCoroutineScope()
+    var showHelpDialog by remember { mutableStateOf(false) }
+    var checkingUpdate by remember { mutableStateOf(false) }
+    var manualUpdateInfo by remember { mutableStateOf<PlayUpdateInfo?>(null) }
 
     LaunchedEffect(Unit) {
         viewModel.refreshStats()
     }
 
-    if (showPrivacyDialog) {
-        PrivacyPolicyDialog(onDismiss = { showPrivacyDialog = false })
+    if (showHelpDialog) {
+        AlertDialog(
+            onDismissRequest = { showHelpDialog = false },
+            title = { Text(stringResource(R.string.settings_help), fontWeight = FontWeight.Bold) },
+            text = { Text(stringResource(R.string.settings_help_body)) },
+            confirmButton = {
+                TextButton(onClick = { showHelpDialog = false }) {
+                    Text(stringResource(R.string.btn_ok))
+                }
+            },
+            shape = RoundedCornerShape(24.dp)
+        )
     }
 
+    manualUpdateInfo?.let { info ->
+        UpdateAvailableDialog(
+            updateInfo = info,
+            onDismiss = { manualUpdateInfo = null },
+        )
+    }
     LazyColumn(
         modifier = Modifier.fillMaxSize().statusBarsPadding(),
         contentPadding = PaddingValues(24.dp),
@@ -224,27 +257,124 @@ fun StatsScreen(viewModel: StatsViewModel = hiltViewModel()) {
             }
 
             Spacer(modifier = Modifier.height(24.dp))
-            OutlinedButton(
-                onClick = { context.findActivity()?.launchInAppReview() },
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(16.dp),
-                border = ButtonDefaults.outlinedButtonBorder.copy(width = 0.5.dp)
-            ) {
-                Icon(Icons.Rounded.Star, contentDescription = null, modifier = Modifier.size(18.dp))
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(stringResource(R.string.rate_us_button), style = MaterialTheme.typography.labelMedium)
+
+            Text(
+                text = stringResource(R.string.settings_about),
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+
+            val packageInfo = remember {
+                context.packageManager.getPackageInfo(context.packageName, 0)
+            }
+            val versionCode = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                packageInfo.longVersionCode
+            } else {
+                @Suppress("DEPRECATION") packageInfo.versionCode.toLong()
             }
 
-            Spacer(modifier = Modifier.height(12.dp))
-            OutlinedButton(
-                onClick = { showPrivacyDialog = true },
+            Card(
                 modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(16.dp),
-                border = ButtonDefaults.outlinedButtonBorder.copy(width = 0.5.dp)
+                shape = RoundedCornerShape(24.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f)
+                )
             ) {
-                Icon(Icons.Rounded.Info, contentDescription = null, modifier = Modifier.size(18.dp))
-                Spacer(modifier = Modifier.width(8.dp))
-                Text("Gizlilik Politikası", style = MaterialTheme.typography.labelMedium)
+                Column(modifier = Modifier.fillMaxWidth()) {
+                    Row(
+                        modifier = Modifier.padding(16.dp).fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            Icons.Default.Info,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary
+                        )
+                        Spacer(modifier = Modifier.width(16.dp))
+                        Text(
+                            stringResource(
+                                R.string.settings_version_label,
+                                packageInfo.versionName ?: "",
+                                versionCode
+                            ),
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                    }
+                    HorizontalDivider()
+                    AboutLinkRow(
+                        icon = Icons.Default.SystemUpdate,
+                        title = stringResource(R.string.settings_update),
+                        subtitle = if (checkingUpdate) {
+                            stringResource(R.string.update_check_checking)
+                        } else {
+                            stringResource(R.string.settings_update_desc)
+                        },
+                        onClick = {
+                            if (checkingUpdate) return@AboutLinkRow
+                            scope.launch {
+                                checkingUpdate = true
+                                val result = withContext(Dispatchers.IO) {
+                                    PlayUpdateChecker.checkDetailed(context)
+                                }
+                                checkingUpdate = false
+                                when (result.status) {
+                                    UpdateCheckStatus.AVAILABLE -> {
+                                        manualUpdateInfo = result.info
+                                    }
+                                    UpdateCheckStatus.UP_TO_DATE -> {
+                                        Toast.makeText(
+                                            context,
+                                            context.getString(R.string.update_check_up_to_date),
+                                            Toast.LENGTH_SHORT
+                                        ).show()
+                                    }
+                                    UpdateCheckStatus.UNAVAILABLE -> {
+                                        Toast.makeText(
+                                            context,
+                                            context.getString(R.string.update_check_unavailable),
+                                            Toast.LENGTH_SHORT
+                                        ).show()
+                                    }
+                                }
+                            }
+                        }
+                    )
+                    HorizontalDivider()
+                    AboutLinkRow(
+                        icon = Icons.Default.HelpOutline,
+                        title = stringResource(R.string.settings_help),
+                        subtitle = stringResource(R.string.settings_help_desc),
+                        onClick = { showHelpDialog = true }
+                    )
+                    HorizontalDivider()
+                    AboutLinkRow(
+                        icon = Icons.Default.Star,
+                        title = stringResource(R.string.settings_rate_us),
+                        subtitle = stringResource(R.string.settings_rate_us_desc),
+                        onClick = { PlayStoreHelper.openListing(context) }
+                    )
+                    HorizontalDivider()
+                    AboutLinkRow(
+                        icon = Icons.Default.Share,
+                        title = stringResource(R.string.settings_share),
+                        subtitle = stringResource(R.string.settings_share_desc),
+                        onClick = { PlayStoreHelper.shareApp(context) }
+                    )
+                    HorizontalDivider()
+                    AboutLinkRow(
+                        icon = Icons.Default.Policy,
+                        title = stringResource(R.string.settings_privacy_policy),
+                        subtitle = stringResource(R.string.settings_privacy_policy_desc),
+                        onClick = {
+                            PlayStoreHelper.openUrl(
+                                context,
+                                context.getString(R.string.privacy_policy_url)
+                            )
+                        }
+                    )
+                }
             }
 
             Spacer(modifier = Modifier.height(40.dp))
@@ -252,6 +382,33 @@ fun StatsScreen(viewModel: StatsViewModel = hiltViewModel()) {
     }
 }
 
+@Composable
+private fun AboutLinkRow(
+    icon: ImageVector,
+    title: String,
+    subtitle: String,
+    onClick: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+            .padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
+        Spacer(modifier = Modifier.width(16.dp))
+        Column(modifier = Modifier.weight(1f)) {
+            Text(title, style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.SemiBold)
+            Text(
+                subtitle,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+        Icon(Icons.Default.ChevronRight, contentDescription = null)
+    }
+}
 @Composable
 fun PrivacyPolicyDialog(onDismiss: () -> Unit) {
     AlertDialog(
@@ -265,13 +422,12 @@ fun PrivacyPolicyDialog(onDismiss: () -> Unit) {
                         .padding(vertical = 8.dp)
                 ) {
                     Text(
-                        text = "Türkçe Sözlük uygulaması olarak gizliliğinize önem veriyoruz. " +
-                            "Uygulamamız kişisel veri toplamaz veya üçüncü taraflarla paylaşmaz. " +
-                            "\n\n1. Veri Toplama: İsim, e-posta, konum vb. kişisel veri toplamıyoruz. " +
-                            "\n\n2. Yerel Saklama: Favoriler ve istatistikler yalnızca cihazınızda saklanır. " +
-                            "\n\n3. İnternet: Yerel sözlükte bulunamayan kelimeler için TDK (sozluk.gov.tr) sorgulanabilir; yalnızca aranan kelime gönderilir. " +
-                            "\n\n4. Diğer izinler: Bildirim ve sesli arama isteğe bağlıdır. " +
-                            "\n\nBu politika uygulama içindeki tüm özellikler için geçerlidir.",
+                        text = "Türkçe Sözlük (com.hayhak.turkcesozluk) — Geliştirici / veri sorumlusu: ThunderCraft.\n\n" +
+                                "1. Hesap / kimlik: Uygulama hesap istemez; ad, e-posta, konum vb. kişisel kimlik bilgisi toplamayız.\n\n" +
+                                "2. Yerel saklama: Favoriler, arama geçmişi, eklenen kelimeler ve istatistikler yalnızca cihazınızda tutulur.\n\n" +
+                                "3. İnternet: Yerelde bulunamayan kelimeler için aranan kelime metni TDK (sozluk.gov.tr) sitesine gönderilebilir.\n\n" +
+                                "4. Bildirim ve sesli arama isteğe bağlıdır. Reklam veya analitik SDK kullanmayız.\n\n" +
+                                "İletişim: hayhak1@gmail.com",
                         style = MaterialTheme.typography.bodyMedium
                     )
                 }

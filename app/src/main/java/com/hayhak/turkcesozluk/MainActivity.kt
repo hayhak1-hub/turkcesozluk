@@ -35,7 +35,9 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import com.hayhak.turkcesozluk.data.repository.CoreRepository
 import com.hayhak.turkcesozluk.ui.screens.DictionaryScreen
 import com.hayhak.turkcesozluk.ui.screens.FavoritesScreen
+import com.hayhak.turkcesozluk.ui.screens.HelpScreen
 import com.hayhak.turkcesozluk.ui.screens.LoadingScreen
+import com.hayhak.turkcesozluk.ui.screens.PrivacyPolicyScreen
 import com.hayhak.turkcesozluk.ui.screens.QuizScreen
 import com.hayhak.turkcesozluk.ui.screens.StatsScreen
 import com.hayhak.turkcesozluk.ui.theme.TurkceSozlukTheme
@@ -49,6 +51,9 @@ sealed class Screen(val route: String, val titleRes: Int, val icon: androidx.com
     object Favorites : Screen("favorites", R.string.tab_favorites, Icons.Default.Favorite)
     object Profile : Screen("profile", R.string.tab_profile, Icons.Default.Person)
 }
+
+private const val ROUTE_HELP = "help"
+private const val ROUTE_PRIVACY = "privacy_policy"
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -104,6 +109,7 @@ fun MainScreen() {
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
+    val showBottomBar = currentRoute in items.map { it.route }
 
     BackHandler(enabled = navController.previousBackStackEntry == null) {
         showExitDialog = true
@@ -131,21 +137,23 @@ fun MainScreen() {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         bottomBar = {
-            NavigationBar {
-                items.forEach { screen ->
-                    NavigationBarItem(
-                        selected = currentRoute == screen.route,
-                        onClick = {
-                            if (currentRoute != screen.route) {
-                                navController.navigate(screen.route) {
-                                    popUpTo(navController.graph.startDestinationId)
-                                    launchSingleTop = true
+            if (showBottomBar) {
+                NavigationBar {
+                    items.forEach { screen ->
+                        NavigationBarItem(
+                            selected = currentRoute == screen.route,
+                            onClick = {
+                                if (currentRoute != screen.route) {
+                                    navController.navigate(screen.route) {
+                                        popUpTo(navController.graph.startDestinationId)
+                                        launchSingleTop = true
+                                    }
                                 }
-                            }
-                        },
-                        icon = { Icon(screen.icon, contentDescription = null) },
-                        label = { Text(stringResource(screen.titleRes)) }
-                    )
+                            },
+                            icon = { Icon(screen.icon, contentDescription = null) },
+                            label = { Text(stringResource(screen.titleRes)) }
+                        )
+                    }
                 }
             }
         }
@@ -162,7 +170,18 @@ fun MainScreen() {
             composable(Screen.Dictionary.route) { DictionaryScreen() }
             composable(Screen.Quiz.route) { QuizScreen() }
             composable(Screen.Favorites.route) { FavoritesScreen() }
-            composable(Screen.Profile.route) { StatsScreen() }
+            composable(Screen.Profile.route) {
+                StatsScreen(
+                    onNavigateToHelp = { navController.navigate(ROUTE_HELP) },
+                    onNavigateToPrivacy = { navController.navigate(ROUTE_PRIVACY) }
+                )
+            }
+            composable(ROUTE_HELP) {
+                HelpScreen(onBack = { navController.popBackStack() })
+            }
+            composable(ROUTE_PRIVACY) {
+                PrivacyPolicyScreen(onBack = { navController.popBackStack() })
+            }
         }
     }
 }

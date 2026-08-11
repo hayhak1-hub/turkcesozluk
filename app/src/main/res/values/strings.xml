@@ -93,6 +93,9 @@
     <string name="settings_help">Yardım</string>
     <string name="settings_help_desc">Uygulamayı nasıl kullanacağınızı öğrenin</string>
     <string name="settings_help_body">• Sözlük sekmesinde kelime arayın; eş anlamlılar, fiiller, sıfatlar, deyimler ve isimler arasında geçiş yapın.\n\n• Yerelde bulunamayan kelimeler TDK Güncel Türkçe Sözlük üzerinden aranabilir.\n\n• Favorilere ekleyin, Quiz ile çalışın, Öğren kartlarıyla tekrar edin.\n\n• Profilde istatistiklerinizi ve ayarlarınızı yönetin.</string>
+    <string name="rate_dialog_positive">Değerlendir</string>
+    <string name="rate_dialog_later">Sonra</string>
+    <string name="cd_back">Geri</string>
     <string name="privacy_policy_url">https://hayhak1-hub.github.io/turkcesozluk/</string>
     <string name="tdk_source_label">TDK Güncel Türkçe Sözlük</string>
     <string name="tdk_loading">TDK\'da aranıyor…</string>

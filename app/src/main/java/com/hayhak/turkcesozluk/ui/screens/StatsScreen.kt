@@ -83,11 +83,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.hayhak.turkcesozluk.R
+import com.hayhak.turkcesozluk.ui.components.RateUsDialog
 import com.hayhak.turkcesozluk.ui.components.UpdateAvailableDialog
 import com.hayhak.turkcesozluk.util.PlayStoreHelper
+import com.hayhak.turkcesozluk.util.PlayUpdateChecker
 import com.hayhak.turkcesozluk.util.PlayUpdateInfo
 import com.hayhak.turkcesozluk.util.UpdateCheckStatus
-import com.hayhak.turkcesozluk.util.PlayUpdateChecker
 import com.hayhak.turkcesozluk.viewmodel.StatsViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -95,7 +96,11 @@ import kotlinx.coroutines.withContext
 import kotlin.math.roundToInt
 
 @Composable
-fun StatsScreen(viewModel: StatsViewModel = hiltViewModel()) {
+fun StatsScreen(
+    viewModel: StatsViewModel = hiltViewModel(),
+    onNavigateToHelp: () -> Unit = {},
+    onNavigateToPrivacy: () -> Unit = {}
+) {
     val favorites by viewModel.favorites.collectAsState()
     val recentSearches by viewModel.recentSearches.collectAsState()
     val userWords by viewModel.userWords.collectAsState()
@@ -104,7 +109,7 @@ fun StatsScreen(viewModel: StatsViewModel = hiltViewModel()) {
     val previousWeekTotal by viewModel.previousWeekTotal.collectAsState()
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
-    var showHelpDialog by remember { mutableStateOf(false) }
+    var showRateDialog by remember { mutableStateOf(false) }
     var checkingUpdate by remember { mutableStateOf(false) }
     var manualUpdateInfo by remember { mutableStateOf<PlayUpdateInfo?>(null) }
 
@@ -112,18 +117,8 @@ fun StatsScreen(viewModel: StatsViewModel = hiltViewModel()) {
         viewModel.refreshStats()
     }
 
-    if (showHelpDialog) {
-        AlertDialog(
-            onDismissRequest = { showHelpDialog = false },
-            title = { Text(stringResource(R.string.settings_help), fontWeight = FontWeight.Bold) },
-            text = { Text(stringResource(R.string.settings_help_body)) },
-            confirmButton = {
-                TextButton(onClick = { showHelpDialog = false }) {
-                    Text(stringResource(R.string.btn_ok))
-                }
-            },
-            shape = RoundedCornerShape(24.dp)
-        )
+    if (showRateDialog) {
+        RateUsDialog(onDismiss = { showRateDialog = false })
     }
 
     manualUpdateInfo?.let { info ->
@@ -346,14 +341,14 @@ fun StatsScreen(viewModel: StatsViewModel = hiltViewModel()) {
                         icon = Icons.Default.HelpOutline,
                         title = stringResource(R.string.settings_help),
                         subtitle = stringResource(R.string.settings_help_desc),
-                        onClick = { showHelpDialog = true }
+                        onClick = onNavigateToHelp
                     )
                     HorizontalDivider()
                     AboutLinkRow(
                         icon = Icons.Default.Star,
                         title = stringResource(R.string.settings_rate_us),
                         subtitle = stringResource(R.string.settings_rate_us_desc),
-                        onClick = { PlayStoreHelper.openListing(context) }
+                        onClick = { showRateDialog = true }
                     )
                     HorizontalDivider()
                     AboutLinkRow(
@@ -367,12 +362,7 @@ fun StatsScreen(viewModel: StatsViewModel = hiltViewModel()) {
                         icon = Icons.Default.Policy,
                         title = stringResource(R.string.settings_privacy_policy),
                         subtitle = stringResource(R.string.settings_privacy_policy_desc),
-                        onClick = {
-                            PlayStoreHelper.openUrl(
-                                context,
-                                context.getString(R.string.privacy_policy_url)
-                            )
-                        }
+                        onClick = onNavigateToPrivacy
                     )
                 }
             }

@@ -1,6 +1,7 @@
 package com.hayhak.turkcesozluk
 
 import android.Manifest
+import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -41,6 +42,7 @@ import com.hayhak.turkcesozluk.ui.screens.PrivacyPolicyScreen
 import com.hayhak.turkcesozluk.ui.screens.QuizScreen
 import com.hayhak.turkcesozluk.ui.screens.StatsScreen
 import com.hayhak.turkcesozluk.ui.theme.TurkceSozlukTheme
+import com.hayhak.turkcesozluk.util.LocaleHelper
 import com.hayhak.turkcesozluk.util.findActivity
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -60,6 +62,10 @@ class MainActivity : ComponentActivity() {
 
     @Inject
     lateinit var coreRepository: CoreRepository
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LocaleHelper.wrap(newBase, LocaleHelper.savedTag(newBase)))
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
@@ -118,16 +124,16 @@ fun MainScreen() {
     if (showExitDialog) {
         AlertDialog(
             onDismissRequest = { showExitDialog = false },
-            title = { Text("Çıkmak istiyor musunuz?") },
-            text = { Text("Türkçe Sözlük uygulamasından çıkmak üzeresiniz.") },
+            title = { Text(stringResource(R.string.exit_dialog_title)) },
+            text = { Text(stringResource(R.string.exit_dialog_message)) },
             confirmButton = {
                 TextButton(onClick = { context.findActivity()?.finish() }) {
-                    Text("Çık")
+                    Text(stringResource(R.string.exit_dialog_confirm))
                 }
             },
             dismissButton = {
                 TextButton(onClick = { showExitDialog = false }) {
-                    Text("Vazgeç")
+                    Text(stringResource(R.string.exit_dialog_cancel))
                 }
             },
             shape = RoundedCornerShape(24.dp)

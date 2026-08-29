@@ -47,9 +47,14 @@ class DailyWordWorker @AssistedInject constructor(
         }
 
         val intent = Intent(applicationContext, MainActivity::class.java)
+        val pendingIntentFlags = PendingIntent.FLAG_UPDATE_CURRENT or
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                PendingIntent.FLAG_IMMUTABLE
+            } else {
+                0
+            }
         val pendingIntent = PendingIntent.getActivity(
-            applicationContext, 0, intent, 
-            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+            applicationContext, 0, intent, pendingIntentFlags
         )
 
         val notification = NotificationCompat.Builder(applicationContext, channelId)

@@ -40,6 +40,7 @@ class StatsViewModel @Inject constructor(
     val previousWeekTotal = _previousWeekTotal.asStateFlow()
 
     val currentTheme = com.hayhak.turkcesozluk.data.db.SettingsManager.themeState
+    val currentLanguage = com.hayhak.turkcesozluk.data.db.SettingsManager.languageState
 
     init {
         refreshStats()
@@ -54,5 +55,9 @@ class StatsViewModel @Inject constructor(
 
     fun setTheme(theme: com.hayhak.turkcesozluk.data.db.AppTheme) {
         com.hayhak.turkcesozluk.data.db.SettingsManager.setTheme(getApplication(), theme)
+    }
+
+    fun setLanguage(locale: com.hayhak.turkcesozluk.data.db.AppLocale) {
+        com.hayhak.turkcesozluk.data.db.SettingsManager.setLanguage(getApplication(), locale)
     }
 }

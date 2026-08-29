@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "464020416841",
+    "project_id": "turkce-sozluk-62188",
+    "storage_bucket": "turkce-sozluk-62188.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464020416841:android:faa6d5724600e593a6d298",
+        "android_client_info": {
+          "package_name": "com.hayhak.turkcesozluk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk-0LGr04nIqEdstXx7qQGzpYphX8oyuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

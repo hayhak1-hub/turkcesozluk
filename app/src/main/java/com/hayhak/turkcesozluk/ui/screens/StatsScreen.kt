@@ -15,6 +15,8 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -83,18 +85,21 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.hayhak.turkcesozluk.R
+import com.hayhak.turkcesozluk.data.db.AppLocale
 import com.hayhak.turkcesozluk.ui.components.RateUsDialog
 import com.hayhak.turkcesozluk.ui.components.UpdateAvailableDialog
 import com.hayhak.turkcesozluk.util.PlayStoreHelper
 import com.hayhak.turkcesozluk.util.PlayUpdateChecker
 import com.hayhak.turkcesozluk.util.PlayUpdateInfo
 import com.hayhak.turkcesozluk.util.UpdateCheckStatus
+import com.hayhak.turkcesozluk.util.findActivity
 import com.hayhak.turkcesozluk.viewmodel.StatsViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.math.roundToInt
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun StatsScreen(
     viewModel: StatsViewModel = hiltViewModel(),
@@ -105,6 +110,7 @@ fun StatsScreen(
     val recentSearches by viewModel.recentSearches.collectAsState()
     val userWords by viewModel.userWords.collectAsState()
     val currentTheme by viewModel.currentTheme.collectAsState()
+    val currentLanguage by viewModel.currentLanguage.collectAsState()
     val weeklyStats by viewModel.weeklyStats.collectAsState()
     val previousWeekTotal by viewModel.previousWeekTotal.collectAsState()
     val context = LocalContext.current
@@ -241,6 +247,50 @@ fun StatsScreen(
                                             com.hayhak.turkcesozluk.data.db.AppTheme.LIGHT -> stringResource(R.string.theme_light)
                                             com.hayhak.turkcesozluk.data.db.AppTheme.DARK -> stringResource(R.string.theme_dark)
                                             com.hayhak.turkcesozluk.data.db.AppTheme.SYSTEM -> stringResource(R.string.theme_system)
+                                        }
+                                    )
+                                },
+                                shape = RoundedCornerShape(12.dp)
+                            )
+                        }
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(24.dp),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f))
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text(
+                        stringResource(R.string.settings_language),
+                        style = MaterialTheme.typography.labelLarge,
+                        color = MaterialTheme.colorScheme.primary
+                    )
+                    Spacer(modifier = Modifier.height(12.dp))
+                    FlowRow(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        AppLocale.entries.forEach { locale ->
+                            FilterChip(
+                                selected = currentLanguage == locale,
+                                onClick = {
+                                    if (currentLanguage != locale) {
+                                        viewModel.setLanguage(locale)
+                                        context.findActivity()?.recreate()
+                                    }
+                                },
+                                label = {
+                                    Text(
+                                        if (locale == AppLocale.SYSTEM) {
+                                            stringResource(R.string.language_system)
+                                        } else {
+                                            locale.nativeName
                                         }
                                     )
                                 },

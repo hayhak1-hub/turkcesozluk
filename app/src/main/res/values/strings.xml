@@ -104,4 +104,10 @@
     <string name="tdk_compounds">Birleşik kelimeler</string>
     <string name="tdk_fallback_hint">Yerel sözlükte yok; TDK sonucu gösteriliyor.</string>
     <string name="tdk_discovery_hint">Yerelde yoksa TDK Güncel Türkçe Sözlük\'ten de aranır</string>
+    <string name="settings_language">Dil</string>
+    <string name="language_system">Sistem</string>
+    <string name="exit_dialog_title">Çıkmak istiyor musunuz?</string>
+    <string name="exit_dialog_message">Türkçe Sözlük uygulamasından çıkmak üzeresiniz.</string>
+    <string name="exit_dialog_confirm">Çık</string>
+    <string name="exit_dialog_cancel">Vazgeç</string>
 </resources>

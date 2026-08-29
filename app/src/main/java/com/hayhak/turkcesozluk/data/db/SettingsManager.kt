@@ -16,6 +16,7 @@ object SettingsManager {
     private const val PREFS_NAME = "app_settings"
     private const val KEY_THEME = "ui_theme"
     private const val KEY_MODE = "dictionary_mode"
+    private const val KEY_LANGUAGE = "app_language"
     private const val KEY_SHOW_DAILY_WORD = "show_daily_word"
     private const val KEY_HAS_SEEN_MODE_HINT = "has_seen_mode_hint"
 
@@ -24,6 +25,9 @@ object SettingsManager {
 
     private val _modeState = MutableStateFlow(DictionaryMode.SYNONYMS)
     val modeState = _modeState.asStateFlow()
+
+    private val _languageState = MutableStateFlow(AppLocale.SYSTEM)
+    val languageState = _languageState.asStateFlow()
 
     private val _showDailyWordState = MutableStateFlow(true)
     val showDailyWordState = _showDailyWordState.asStateFlow()
@@ -40,6 +44,9 @@ object SettingsManager {
         val modeName = prefs.getString(KEY_MODE, DictionaryMode.SYNONYMS.name)
         _modeState.value = runCatching { DictionaryMode.valueOf(modeName ?: "") }.getOrDefault(DictionaryMode.SYNONYMS)
 
+        val languageTag = prefs.getString(KEY_LANGUAGE, AppLocale.SYSTEM.tag)
+        _languageState.value = AppLocale.fromTag(languageTag)
+
         _showDailyWordState.value = prefs.getBoolean(KEY_SHOW_DAILY_WORD, true)
         _hasSeenModeHintState.value = prefs.getBoolean(KEY_HAS_SEEN_MODE_HINT, false)
     }
@@ -54,6 +61,17 @@ object SettingsManager {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         prefs.edit().putString(KEY_MODE, mode.name).apply()
         _modeState.value = mode
+    }
+
+    fun setLanguage(context: Context, locale: AppLocale) {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit().putString(KEY_LANGUAGE, locale.tag).apply()
+        _languageState.value = locale
+    }
+
+    fun savedLanguageTag(): String? {
+        val tag = _languageState.value.tag
+        return tag.takeIf { it.isNotEmpty() }
     }
 
     fun setShowDailyWord(context: Context, show: Boolean) {

@@ -1,0 +1,207 @@
+<tr-TR>
+• 25 dil desteği — Azerbaycan, Kazak, Kırgız, Özbek ve Türkmence dahil
+• Yeni yan menü: Sözlük, Quiz, Favoriler ve Profil
+• Sağ üstteki simgeyle açık/koyu tema
+• Gizlilik politikası uygulama içinde, 25 dilde (çevrimdışı)
+• Dil değişince arayüz artık doğru dilde kalıyor
+• Dil listesi alfabetik sıralandı
+• Çeviri, takvim ve arayüz iyileştirmeleri
+</tr-TR>
+<ar>
+• 25 لغة — بما في ذلك الأذرية والكازاخية والقيرغيزية والأوزبكية والتركمانية
+• قائمة جانبية جديدة: القاموس والاختبار والمفضلة والملف الشخصي
+• تبديل السمة الفاتحة/الداكنة من أيقونة أعلى اليمين
+• سياسة الخصوصية داخل التطبيق بـ 25 لغة (بدون إنترنت)
+• تبقى الواجهة باللغة المختارة بعد تغيير اللغة
+• قائمة اللغات مرتبة أبجدياً
+• تحسينات الترجمة والتقويم والواجهة
+</ar>
+<az-AZ>
+• 25 dil dəstəyi — Azərbaycan, Qazax, Qırğız, Özbək və Türkmən dilləri daxil
+• Yeni yan menyu: Lüğət, Viktorina, Seçilmişlər və Profil
+• Sağ yuxarı simvol ilə açıq/qaranlıq tema
+• Məxfilik siyasəti tətbiqdaxili, 25 dil (oflayn)
+• Dil dəyişəndə interfeys seçilmiş dildə qalır
+• Dil siyahısı əlifba sırası ilə
+• Tərcümə, təqvim və interfeys təkmilləşdirmələri
+</az-AZ>
+<bn-BD>
+• ২৫টি ভাষা — আজারবাইজানি, কাজাখ, কিরগিজ, উজবেক ও তুর্কমেন সহ
+• নতুন সাইড মেনু: অভিধান, কুইজ, পছন্দ ও প্রোফাইল
+• উপরের ডান আইকনে লাইট/ডার্ক থিম
+• অ্যাপে গোপনীয়তা নীতি ২৫টি ভাষায় (অফলাইন)
+• ভাষা বদলালে ইন্টারফেস নির্বাচিত ভাষায় থাকে
+• ভাষার তালিকা বর্ণানুক্রমে
+• অনুবাদ, ক্যালেন্ডার ও UI উন্নতি
+</bn-BD>
+<de-DE>
+• 25 Sprachen — einschließlich Aserbaidschanisch, Kasachisch, Kirgisisch, Usbekisch und Turkmenisch
+• Neues Seitenmenü: Wörterbuch, Quiz, Favoriten und Profil
+• Hell/Dunkel-Design per Symbol oben rechts
+• Datenschutzrichtlinie in der App in 25 Sprachen (offline)
+• Oberfläche bleibt nach Sprachwechsel in der gewählten Sprache
+• Sprachliste alphabetisch sortiert
+• Verbesserungen bei Übersetzungen, Kalender und Oberfläche
+</de-DE>
+<en-US>
+• 25 languages — including Azerbaijani, Kazakh, Kyrgyz, Uzbek and Turkmen
+• New side menu: Dictionary, Quiz, Favorites and Profile
+• Light/dark theme toggle in the top-right corner
+• In-app privacy policy in 25 languages (offline)
+• UI now stays in the selected language after switching
+• Language list sorted alphabetically
+• Translation, calendar and UI improvements
+</en-US>
+<es-ES>
+• 25 idiomas — incluye azerí, kazajo, kirguís, uzbeko y turcomano
+• Nuevo menú lateral: diccionario, quiz, favoritos y perfil
+• Tema claro/oscuro con el icono de la esquina superior derecha
+• Política de privacidad en la app en 25 idiomas (sin conexión)
+• La interfaz permanece en el idioma seleccionado al cambiarlo
+• Lista de idiomas ordenada alfabéticamente
+• Mejoras de traducción, calendario e interfaz
+</es-ES>
+<fr-FR>
+• 25 langues — azéri, kazakh, kirghiz, ouzbek et turkmène inclus
+• Nouveau menu latéral : dictionnaire, quiz, favoris et profil
+• Thème clair/sombre via l'icône en haut à droite
+• Politique de confidentialité intégrée en 25 langues (hors ligne)
+• L'interface reste dans la langue choisie après le changement
+• Liste des langues triée par ordre alphabétique
+• Améliorations des traductions, du calendrier et de l'interface
+</fr-FR>
+<hi-IN>
+• 25 भाषाएँ — अज़रबैजानी, कज़ाख, किर्गिज़, उज़बेक और तुर्कमेन सहित
+• नया साइड मेनू: शब्दकोश, क्विज़, पसंदीदा और प्रोफ़ाइल
+• ऊपर दाएँ आइकन से लाइट/डार्क थीम
+• 25 भाषाओं में इन-ऐप गोपनीयता नीति (ऑफ़लाइन)
+• भाषा बदलने के बाद इंटरफ़ेस चुनी हुई भाषा में रहता है
+• भाषा सूची वर्णानुक्रम में
+• अनुवाद, कैलेंडर और UI सुधार
+</hi-IN>
+<id>
+• 25 bahasa — termasuk Azerbaijan, Kazakh, Kyrgyz, Uzbek dan Turkmen
+• Menu samping baru: kamus, kuis, favorit dan profil
+• Tema terang/gelap lewat ikon kanan atas
+• Kebijakan privasi dalam aplikasi 25 bahasa (offline)
+• Antarmuka tetap dalam bahasa yang dipilih setelah diganti
+• Daftar bahasa diurutkan alfabetis
+• Peningkatan terjemahan, kalender dan antarmuka
+</id>
+<ja-JP>
+• 25言語対応 — アゼルバイジャン語、カザフ語、キルギス語、ウズベク語、トルクメン語を含む
+• 新しいサイドメニュー：辞書、クイズ、お気に入り、プロフィール
+• 右上アイコンでライト/ダークテーマ切替
+• アプリ内プライバシーポリシー（25言語、オフライン）
+• 言語切替後も選択した言語のまま表示
+• 言語リストをアルファベット順に
+• 翻訳、カレンダー、UIの改善
+</ja-JP>
+<kk>
+• 25 тіл — әзербайжан, қазақ, қырғыз, өзбек және түрікмен тілдері қоса
+• Жаңа бүйір мәзір: Сөздік, Викторина, Таңдаулылар және Профиль
+• Оң жоғарғы белгіше арқылы ашық/қараңғы тема
+• Құпиялылық саясаты қолданбада, 25 тілде (офлайн)
+• Тілді ауыстырғаннан кейін интерфейс таңдалған тілде қалады
+• Тіл тізімі әліпби ретімен
+• Аударма, күнтізбе және интерфейс жақсартулары
+</kk>
+<ko-KR>
+• 25개 언어 — 아제르바이잔어, 카자흐어, 키르기스어, 우즈베크어, 투르크멘어 포함
+• 새 사이드 메뉴: 사전, 퀴즈, 즐겨찾기, 프로필
+• 오른쪽 상단 아이콘으로 라이트/다크 테마
+• 앱 내 개인정보 처리방침 25개 언어(오프라인)
+• 언어 변경 후에도 선택한 언어로 유지
+• 언어 목록 가나다순 정렬
+• 번역, 달력 및 UI 개선
+</ko-KR>
+<ky-KG>
+• 25 тил — азербайжан, казак, кыргыз, өзбек жана түркмөн тилдери камтылган
+• Жаңы каптал меню: Сөздүк, Викторина, Тандалгандар жана Профиль
+• Оң жогорку белги менен ачык/караңгы тема
+• Купуялык саясаты тиркемеде, 25 тилде (офлайн)
+• Тил алмаштырганда интерфейс тандалган тилде калат
+• Тил тизмеси алфавит боюнча иреттелди
+• Котормо, календарь жана интерфейс жакшыртуулары
+</ky-KG>
+<mr-IN>
+• 25 भाषा — अझरबैजानी, कझाख, किर्गिझ, उझबेक आणि तुर्कमेन सह
+• नवीन साइड मेनू: शब्दकोश, प्रश्नमंजुषा, आवडते, प्रोफाइल
+• वर उजवीकडे चिन्हाने लाइट/डार्क थीम
+• 25 भाषांमध्ये अ‍ॅपमधील गोपनीयता धोरण (ऑफलाइन)
+• भाषा बदलल्यानंतर इंटरफेस निवडलेल्या भाषेत राहतो
+• भाषा यादी वर्णक्रमाने
+• भाषांतर, दिनदर्शिका आणि UI सुधारणा
+</mr-IN>
+<pt-BR>
+• 25 idiomas — incluindo azeri, cazaque, quirguiz, uzbeque e turcomeno
+• Novo menu lateral: dicionário, quiz, favoritos e perfil
+• Tema claro/escuro pelo ícone no canto superior direito
+• Política de privacidade no app em 25 idiomas (offline)
+• A interface permanece no idioma escolhido após a troca
+• Lista de idiomas em ordem alfabética
+• Melhorias de tradução, calendário e interface
+</pt-BR>
+<ru-RU>
+• 25 языков — включая азербайджанский, казахский, киргизский, узбекский и туркменский
+• Новое боковое меню: словарь, викторина, избранное и профиль
+• Переключение светлой/тёмной темы значком в правом верхнем углу
+• Политика конфиденциальности в приложении на 25 языках (офлайн)
+• После смены языка интерфейс остаётся на выбранном языке
+• Список языков отсортирован по алфавиту
+• Улучшения переводов, календаря и интерфейса
+</ru-RU>
+<sw>
+• Lugha 25 — pamoja na Kiazerbaijani, Kikazakhi, Kikyrgyz, Kiuzbeki na Kiturkmeni
+• Menyu ya pembeni mpya: kamusi, jaribio, vipendwa na wasifu
+• Mandhari nyepesi/giza kupitia ikoni kulia juu
+• Sera ya faragha ndani ya programu, lugha 25 (nje ya mtandao)
+• Kiolesura kinabaki katika lugha uliyochagua baada ya kubadilisha
+• Orodha ya lugha imepangwa kwa herufi
+• Uboreshaji wa tafsiri, kalenda na kiolesura
+</sw>
+<ta-IN>
+• 25 மொழிகள் — அசர்பைஜானி, கசாக், கிர்கிஸ், உஸ்பெக், துர்க்மென் உட்பட
+• புதிய பக்க மெனு: அகராதி, வினாடி வினா, பிடித்தவை, சுயவிவரம்
+• வலது மேல் ஐகானில் ஒளி/இருள் தீம்
+• 25 மொழிகளில் செயலியில் தனியுரிமைக் கொள்கை (ஆஃப்லைன்)
+• மொழி மாற்றிய பிறகும் தேர்ந்த மொழியில் இடைமுகம் இருக்கும்
+• மொழி பட்டியல் அகர வரிசை
+• மொழிபெயர்ப்பு, நாள்காட்டி, UI மேம்பாடுகள்
+</ta-IN>
+<te-IN>
+• 25 భాషలు — అజర్‌బైజానీ, కజఖ్, కిర్గిజ్, ఉజ్బెక్, తుర్క్‌మెన్ సహా
+• కొత్త సైడ్ మెనూ: నిఘంటువు, క్విజ్, ఇష్టాలు, ప్రొఫైల్
+• కుడి పైన ఐకాన్‌తో లైట్/డార్క్ థీమ్
+• 25 భాషల్లో యాప్‌లో గోప్యతా విధానం (ఆఫ్‌లైన్)
+• భాష మార్చిన తర్వాత ఇంటర్‌ఫేస్ ఎంచుకున్న భాషలోనే ఉంటుంది
+• భాషల జాబితా అక్షర క్రమం
+• అనువాద, క్యాలెండర్, UI మెరుగుదలలు
+</te-IN>
+<ur>
+• 25 زبانیں — آذربائیجانی، قازق، کرغیز، ازبک اور ترکمانی سمیت
+• نیا سائیڈ مینو: لغت، کوئز، پسندیدہ اور پروفائل
+• دائیں اوپر آئیکن سے لائٹ/ڈارک تھیم
+• ایپ میں رازداری کی پالیسی 25 زبانوں میں (آف لائن)
+• زبان بدلنے کے بعد انٹرفیس منتخب زبان میں رہتا ہے
+• زبانوں کی فہرست حروف تہجی کے مطابق
+• ترجمہ، کیلنڈر اور UI میں بہتری
+</ur>
+<vi>
+• 25 ngôn ngữ — gồm Azerbaijan, Kazakh, Kyrgyz, Uzbek và Turkmen
+• Menu bên mới: từ điển, câu đố, yêu thích và hồ sơ
+• Chủ đề sáng/tối bằng biểu tượng góc phải trên
+• Chính sách quyền riêng tư trong app, 25 ngôn ngữ (ngoại tuyến)
+• Giao diện giữ ngôn ngữ đã chọn sau khi đổi
+• Danh sách ngôn ngữ sắp xếp theo alphabet
+• Cải thiện bản dịch, lịch và giao diện
+</vi>
+<zh-CN>
+• 支持 25 种语言，包括阿塞拜疆语、哈萨克语、吉尔吉斯语、乌兹别克语和土库曼语
+• 新侧边菜单：词典、测验、收藏和个人资料
+• 右上角图标切换浅色/深色主题
+• 应用内隐私政策，25 种语言（离线可用）
+• 切换语言后界面保持所选语言
+• 语言列表按字母排序
+• 翻译、日历和界面改进
+</zh-CN>

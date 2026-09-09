@@ -1,0 +1,111 @@
+{
+  "title": "Datenschutzerklärung",
+  "pageTitle": "Datenschutzerklärung — Türkisches Wörterbuch",
+  "metaApp": "App",
+  "metaPackage": "Paketname",
+  "metaDeveloper": "Entwickler",
+  "metaUpdated": "Zuletzt aktualisiert",
+  "updatedDate": "7. August 2026",
+  "langLabel": "Sprache",
+  "intro": "Diese Datenschutzerklärung erläutert, wie die App <strong>Türkisches Wörterbuch</strong> über Google Play Nutzerdaten verarbeitet. Durch das Herunterladen oder Verwenden der App stimmen Sie dieser Richtlinie zu.",
+  "sections": [
+    {
+      "title": "1. Verantwortlicher und Kontakt",
+      "paragraphs": [
+        "Verantwortlicher / Entwickler: ThunderCraft<br>E-Mail: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>",
+        "Bei Fragen zum Datenschutz erreichen Sie uns unter der obigen E-Mail-Adresse."
+      ]
+    },
+    {
+      "title": "2. Erhobene Daten",
+      "paragraphs": [
+        "Die App erfordert keine Kontoerstellung, Anmeldung oder Registrierung. Wir erheben wissentlich keine personenbezogenen Identifikationsdaten wie Name, E-Mail, Telefonnummer, genauen Standort oder Ausweisdokumente und senden diese nicht an unsere eigenen Server. Die App verfügt über kein eigenes Benutzerkonto oder Backend."
+      ]
+    },
+    {
+      "title": "3. Lokal auf dem Gerät gespeicherte Daten",
+      "paragraphs": [
+        "Die folgenden Daten werden nur auf Ihrem Gerät (lokaler Speicher / Datenbank) gespeichert und nicht vom Gerät exportiert:",
+        "Wenn Sie die App deinstallieren, werden diese lokalen Daten von Ihrem Gerät entfernt."
+      ],
+      "items": [
+        "Favorisierte Wörter",
+        "Suchverlauf",
+        "Vom Benutzer hinzugefügte Wörter / Synonyme",
+        "In-App-Statistiken (z. B. wöchentliche Aktivität, Serie)",
+        "Einstellungen wie Theme und Wörterbuchmodus"
+      ]
+    },
+    {
+      "title": "4. Über das Internet verarbeitete Daten",
+      "paragraphs": [
+        "Die App kann eine Internetverbindung nutzen. Wird ein Wort im lokalen Wörterbuch nicht gefunden, kann der gesuchte <strong>Worttext</strong> an <a href=\"https://sozluk.gov.tr\" rel=\"noopener noreferrer\">sozluk.gov.tr</a> (Güncel Türkçe Sözlük der Türkischen Sprachgesellschaft) gesendet werden, um Definitionen abzurufen.",
+        "Ohne Internetverbindung oder wenn TDK nicht antwortet, wird kein Online-Ergebnis angezeigt; lokale Wörterbuchfunktionen funktionieren weiter."
+      ],
+      "items": [
+        "Gesendete Daten: nur das in das Suchfeld eingegebene Wort",
+        "Zweck: Anzeige von Wörterbuchbedeutung / Definition",
+        "Es werden keine persönlichen Identifikationsdaten gesendet",
+        "Die Anfrage geht an die öffentliche TDK-Website; die App steht nicht in offizieller Partnerschaft mit TDK"
+      ]
+    },
+    {
+      "title": "5. Berechtigungen",
+      "paragraphs": [],
+      "items": [
+        "<strong>Internet (INTERNET):</strong> Für TDK-Wörterbuchabfragen zu lokal nicht gefundenen Wörtern.",
+        "<strong>Benachrichtigungen (POST_NOTIFICATIONS):</strong> Optional. Für die Benachrichtigung „Wort des Tages“. In den Geräteeinstellungen deaktivierbar.",
+        "<strong>Sprachsuche / Mikrofon:</strong> Beim Tippen auf das Mikrofonsymbol kann der Spracherkennungsdienst des Geräts (z. B. Google) geöffnet werden. Wir speichern keine Audioaufnahmen; nur der erkannte Text wird ins Suchfeld eingetragen."
+      ]
+    },
+    {
+      "title": "6. Drittanbieter",
+      "paragraphs": [
+        "Die App kann mit folgenden Drittanbieterdiensten interagieren:",
+        "Wir verwenden keine Werbe-SDKs, Analyse-SDKs oder Tracking-Tools."
+      ],
+      "items": [
+        "<strong>Google Play / Play Store:</strong> App-Verteilung und Öffnen der Play-Store-Seite über „Bewerten“.",
+        "<strong>sozluk.gov.tr (TDK):</strong> Definitionsabfrage für lokal nicht gefundene Wörter. Es wird nur das gesuchte Wort übermittelt.",
+        "<strong>Spracherkennungsdienst des Geräts:</strong> Wenn der Benutzer die Sprachsuche startet."
+      ]
+    },
+    {
+      "title": "7. Weitergabe und Verkauf von Daten",
+      "paragraphs": [
+        "Wir verkaufen keine Nutzerdaten. Wir erstellen keine Nutzerprofile auf eigenen Servern. Wie in Abschnitt 4 beschrieben, kann nur das gesuchte Wort für die Wörterbuchsuche an die TDK-Website gesendet werden."
+      ]
+    },
+    {
+      "title": "8. Datensicherheit",
+      "paragraphs": [
+        "Lokale Daten verbleiben auf Ihrem Gerät. Online-Wörterbuchabfragen erfolgen über HTTPS. Keine Sicherheitsmaßnahme ist absolut; wir empfehlen, Ihr Gerät aktuell zu halten."
+      ]
+    },
+    {
+      "title": "9. Datenschutz von Kindern",
+      "paragraphs": [
+        "Die App ist eine allgemeine Sprachlern- / Wörterbuch-App. Wir erheben wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Eltern sollten die Nutzung durch ihre Kinder beaufsichtigen."
+      ]
+    },
+    {
+      "title": "10. Ihre Rechte",
+      "paragraphs": [
+        "Lokale Daten können in der App gelöscht werden (z. B. durch Entfernen von Favoriten) oder durch Deinstallation der App. Fragen zu Online-Abfragen: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>."
+      ]
+    },
+    {
+      "title": "11. Änderungen dieser Richtlinie",
+      "paragraphs": [
+        "Diese Richtlinie kann von Zeit zu Zeit aktualisiert werden. Die aktuelle Version wird auf dieser Seite veröffentlicht. Bei wesentlichen Änderungen wird das Datum „Zuletzt aktualisiert“ angepasst."
+      ]
+    },
+    {
+      "title": "12. Kontakt",
+      "paragraphs": [
+        "Datenschutz und Datenverarbeitung: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>"
+      ]
+    }
+  ],
+  "footer": "© 2026 Türkisches Wörterbuch · com.hayhak.turkcesozluk"
+}

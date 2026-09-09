@@ -13,10 +13,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.hayhak.turkcesozluk.R
 import com.hayhak.turkcesozluk.viewmodel.LearningViewModel
 
 @Composable
@@ -31,10 +33,10 @@ fun LearningScreen(viewModel: LearningViewModel, onDismiss: () -> Unit) {
     if (!viewModel.isLearningActive && !viewModel.isLoading) {
         AlertDialog(
             onDismissRequest = onDismiss,
-            title = { Text("Henüz Favori Yok") },
-            text = { Text("Kelime kartlarını kullanabilmek için önce sözlükten bazı kelimeleri favorilerinize eklemelisiniz.") },
+            title = { Text(stringResource(R.string.learning_no_favorites_title)) },
+            text = { Text(stringResource(R.string.learning_no_favorites_message)) },
             confirmButton = {
-                Button(onClick = onDismiss) { Text("Tamam") }
+                Button(onClick = onDismiss) { Text(stringResource(R.string.btn_ok)) }
             }
         )
     }
@@ -58,9 +60,9 @@ fun LearningScreen(viewModel: LearningViewModel, onDismiss: () -> Unit) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             IconButton(onClick = onDismiss) {
-                Icon(Icons.Rounded.Close, contentDescription = "Kapat")
+                Icon(Icons.Rounded.Close, contentDescription = stringResource(R.string.cd_close))
             }
-            Text("Kelime Kartları", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+            Text(stringResource(R.string.learning_cards_title), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
             Box(Modifier.size(48.dp)) // Denge için boşluk
         }
 
@@ -94,7 +96,7 @@ fun LearningScreen(viewModel: LearningViewModel, onDismiss: () -> Unit) {
                     if (rotation <= 90f) {
                         // Ön yüz (Kelime)
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text("KELİME", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+                            Text(stringResource(R.string.learning_word_label), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
                             Spacer(Modifier.height(16.dp))
                             Text(currentCard.word, style = MaterialTheme.typography.displayMedium, fontWeight = FontWeight.Black, textAlign = TextAlign.Center)
                         }
@@ -104,7 +106,7 @@ fun LearningScreen(viewModel: LearningViewModel, onDismiss: () -> Unit) {
                             horizontalAlignment = Alignment.CenterHorizontally,
                             modifier = Modifier.graphicsLayer { rotationY = 180f } // Metni düzelt
                         ) {
-                            Text("EŞ ANLAMLISI", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.onPrimaryContainer)
+                            Text(stringResource(R.string.learning_synonym_label), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.onPrimaryContainer)
                             Spacer(Modifier.height(16.dp))
                             Text(currentCard.synonym, style = MaterialTheme.typography.displaySmall, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
                         }
@@ -121,12 +123,16 @@ fun LearningScreen(viewModel: LearningViewModel, onDismiss: () -> Unit) {
             shape = RoundedCornerShape(20.dp),
             enabled = viewModel.isFlipped
         ) {
-            Text(if (viewModel.getProgress() >= 1f) "BİTİR" else "SIRADAKİ KELİME", fontWeight = FontWeight.Bold, fontSize = 18.sp)
+            Text(
+                stringResource(if (viewModel.getProgress() >= 1f) R.string.learning_finish else R.string.learning_next_word),
+                fontWeight = FontWeight.Bold,
+                fontSize = 18.sp
+            )
             Icon(Icons.AutoMirrored.Rounded.ArrowForward, contentDescription = null, Modifier.padding(start = 8.dp))
         }
         
         Text(
-            "Kartı çevirmek için üzerine dokunun.",
+            stringResource(R.string.learning_flip_hint),
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.outline,
             modifier = Modifier.padding(top = 16.dp)

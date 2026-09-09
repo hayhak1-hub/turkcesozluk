@@ -1,0 +1,111 @@
+{
+  "title": "Sera ya faragha",
+  "pageTitle": "Sera ya faragha — Kamusi ya Kituruki",
+  "metaApp": "Programu",
+  "metaPackage": "jina la kifurushi",
+  "metaDeveloper": "Msanidi",
+  "metaUpdated": "Imesasishwa mwisho",
+  "updatedDate": "Agosti 7, 2026",
+  "langLabel": "Lugha",
+  "intro": "Sera hii ya faragha inaeleza jinsi programu ya <strong>Kamusi ya Kituruki</strong> inavyopatikana kwenye Google Play inavyoshughulikia data ya mtumiaji. Kwa kupakua au kutumia programu, unakubali sera hii.",
+  "sections": [
+    {
+      "title": "1. Mdhibiti wa data na mawasiliano",
+      "paragraphs": [
+        "Mdhibiti wa data / Msanidi: ThunderCraft<br>Barua pepe: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>",
+        "Kwa maswali yanayohusiana na faragha, wasiliana nasi kupitia anwani ya barua pepe hapo juu."
+      ]
+    },
+    {
+      "title": "2. Data inayokusanywa",
+      "paragraphs": [
+        "Programu haihitaji kuunda akaunti, kuingia au kusajili. Hatukusanyi kwa makusudi vitambulisho vya kibinafsi kama jina, barua pepe, nambari ya simu, eneo halisi au hati za utambulisho, wala hatuzitumi kwenye seva zetu. Programu haina akaunti ya mtumiaji au seva ya backend yake mwenyewe."
+      ]
+    },
+    {
+      "title": "3. Data iliyohifadhiwa ndani ya kifaa chako",
+      "paragraphs": [
+        "Data ifuatayo huhifadhiwa tu kwenye kifaa chako (hifadhi ya ndani / hifadhidata) na haihamishwi kutoka kifaa chako:",
+        "Unapoondoa programu, data hii ya ndani pia huondolewa kwenye kifaa chako."
+      ],
+      "items": [
+        "Maneno ya vipendwa",
+        "Historia ya utafutaji",
+        "Maneno / visawe vilivyoongezwa na mtumiaji",
+        "Takwimu ndani ya programu (k.m. shughuli ya kila wiki, mfululizo)",
+        "Mipangilio kama mandhari na hali ya kamusi"
+      ]
+    },
+    {
+      "title": "4. Data inayochakatwa kupitia Intaneti",
+      "paragraphs": [
+        "Programu inaweza kutumia muunganisho wa Intaneti. Neno halipopatikana kwenye kamusi ya ndani, <strong>maandishi ya neno</strong> lililotafutwa linaweza kutumwa kwa <a href=\"https://sozluk.gov.tr\" rel=\"noopener noreferrer\">sozluk.gov.tr</a> (Chama cha Lugha ya Kituruki Güncel Türkçe Sözlük)",
+        "Ikiwa kifaa chako hakina muunganisho wa Intaneti au TDK haijibu, matokeo ya mtandaoni hayoonyeshwi; vipengele vya kamusi ya ndani vinaendelea kufanya kazi."
+      ],
+      "items": [
+        "Data inayotumwa: neno lililoandikwa kwenye kisanduku cha utafutaji tu",
+        "Lengo: kuonyesha maana / ufafanuzi wa kamusi",
+        "Hakuna taarifa za utambulisho wa kibinafsi zinazotumwa",
+        "Ombi hili linafanywa kwenye tovuti ya umma ya TDK; programu haiko katika ushirikiano rasmi na TDK"
+      ]
+    },
+    {
+      "title": "5. Ruhusa",
+      "paragraphs": [],
+      "items": [
+        "<strong>Intaneti (INTERNET):</strong> Inatumika kuuliza kamusi ya TDK kwa maneno yasiyopatikana ndani.",
+        "<strong>Arifa (POST_NOTIFICATIONS):</strong> Hiari. Inaombwa kuonyesha arifa ya “Neno la siku”. Inaweza kuzimwa kwenye mipangilio ya kifaa.",
+        "<strong>Utafutaji wa sauti / kipaza sauti:</strong> Unapogusa ikoni ya kipaza sauti, huduma ya utambuzi wa sauti ya kifaa (k.m. Google) inaweza kufunguka. Hatuhifadhi rekodi za sauti; maandishi yaliyotambuliwa tu huwekwa kwenye kisanduku cha utafutaji."
+      ]
+    },
+    {
+      "title": "6. Wahusika wengine",
+      "paragraphs": [
+        "Programu inaweza kuingiliana na huduma za wahusika wengine zifuatazo:",
+        "Hatutumii SDK za matangazo, SDK za uchanganuzi au zana za ufuatiliaji wa watumiaji."
+      ],
+      "items": [
+        "<strong>Google Play / Play Store:</strong> Usambazaji wa programu na kufungua ukurasa wa Play Store kupitia “Tukadirie”. Mchakato huu unasimamiwa na Google.",
+        "<strong>sozluk.gov.tr (TDK):</strong> Utafutaji wa ufafanuzi kwa maneno yasiyopatikana ndani. Neno lililotafutwa tu ndilo hutumwa.",
+        "<strong>Huduma ya utambuzi wa sauti ya kifaa:</strong> Mtumiaji anapoanzisha utafutaji wa sauti."
+      ]
+    },
+    {
+      "title": "7. Kushiriki na kuuza data",
+      "paragraphs": [
+        "Hatuuzi data ya watumiaji. Hatushi data ya wasifu wa mtumiaji kwenye seva zetu. Kama ilivyoelezwa katika Sehemu ya 4, neno lililotafutwa tu linaweza kutumwa kwenye tovuti ya TDK kwa utafutaji wa kamusi."
+      ]
+    },
+    {
+      "title": "8. Usalama wa data",
+      "paragraphs": [
+        "Data ya ndani hubaki kwenye kifaa chako. Maswali ya kamusi ya mtandaoni hufanywa kupitia HTTPS. Hakuna hatua ya usalama iliyo kamili; tunapendekeza uweke kifaa chako kisasishwe."
+      ]
+    },
+    {
+      "title": "9. Faragha ya watoto",
+      "paragraphs": [
+        "Programu ni programu ya jumla ya kujifunza lugha / kamusi. Hatukusanyi kwa makusudi data ya kibinafsi kutoka kwa watoto chini ya miaka 13. Wazazi wanapaswa kusimamia matumizi ya programu na watoto wao."
+      ]
+    },
+    {
+      "title": "10. Haki zako",
+      "paragraphs": [
+        "Unaweza kufuta data ya ndani kwenye programu (k.m. kwa kuondoa vipendwa) au kwa kuondoa programu. Kwa maswali kuhusu maswali ya mtandaoni, andika kwa <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>."
+      ]
+    },
+    {
+      "title": "11. Mabadiliko ya sera hii",
+      "paragraphs": [
+        "Sera hii inaweza kusasishwa mara kwa mara. Toleo la sasa linachapishwa kwenye ukurasa huu. Tarehe ya “Imesasishwa mwisho” inarekebishwa kwa mabadiliko muhimu."
+      ]
+    },
+    {
+      "title": "12. Mawasiliano",
+      "paragraphs": [
+        "Kwa sera ya faragha na uchakataji wa data: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>"
+      ]
+    }
+  ],
+  "footer": "© 2026 Kamusi ya Kituruki · com.hayhak.turkcesozluk"
+}

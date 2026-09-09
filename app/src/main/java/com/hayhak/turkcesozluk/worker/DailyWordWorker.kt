@@ -10,8 +10,10 @@ import androidx.core.app.NotificationCompat
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.hayhak.turkcesozluk.MainActivity
+import com.hayhak.turkcesozluk.R
 import com.hayhak.turkcesozluk.data.repository.CoreRepository
 import com.hayhak.turkcesozluk.data.repository.DictionaryRepository
+import com.hayhak.turkcesozluk.util.LocaleHelper
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
 import androidx.hilt.work.HiltWorker
@@ -37,12 +39,17 @@ class DailyWordWorker @AssistedInject constructor(
     }
 
     private fun showNotification(word: String, synonym: String) {
+        val localizedContext = LocaleHelper.wrap(applicationContext, LocaleHelper.savedTag(applicationContext))
         val channelId = "daily_word_channel"
         val notificationId = 1
         val notificationManager = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val channel = NotificationChannel(channelId, "Günün Kelimesi", NotificationManager.IMPORTANCE_DEFAULT)
+            val channel = NotificationChannel(
+                channelId,
+                localizedContext.getString(R.string.notification_channel_name),
+                NotificationManager.IMPORTANCE_DEFAULT
+            )
             notificationManager.createNotificationChannel(channel)
         }
 
@@ -59,8 +66,8 @@ class DailyWordWorker @AssistedInject constructor(
 
         val notification = NotificationCompat.Builder(applicationContext, channelId)
             .setSmallIcon(android.R.drawable.ic_btn_speak_now)
-            .setContentTitle("Günün Kelimesi: $word")
-            .setContentText("Eş anlamlısı: $synonym. Hemen öğren!")
+            .setContentTitle(localizedContext.getString(R.string.notification_title, word))
+            .setContentText(localizedContext.getString(R.string.notification_body, synonym))
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)

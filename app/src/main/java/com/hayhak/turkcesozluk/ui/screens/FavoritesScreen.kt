@@ -16,12 +16,12 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.hayhak.turkcesozluk.R
 import com.hayhak.turkcesozluk.viewmodel.FavoritesViewModel
 import com.hayhak.turkcesozluk.viewmodel.LearningViewModel
 
@@ -38,16 +38,15 @@ fun FavoritesScreen(
             onDismiss = { learningViewModel.isLearningActive = false }
         )
     } else {
-        Column(modifier = Modifier.fillMaxSize().statusBarsPadding()) {
+        Column(modifier = Modifier.fillMaxSize()) {
             Text(
-                text = "FAVORİLERİM",
+                text = stringResource(R.string.favorites_title),
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.ExtraBold,
                 color = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.padding(horizontal = 24.dp, vertical = 16.dp)
             )
 
-            // Favorilerde Arama ve Çalışma Butonu
             Row(
                 modifier = Modifier.fillMaxWidth().padding(16.dp),
                 verticalAlignment = Alignment.CenterVertically
@@ -55,19 +54,21 @@ fun FavoritesScreen(
                 OutlinedTextField(
                     value = viewModel.searchQuery,
                     onValueChange = { viewModel.updateSearchQuery(it) },
-                    placeholder = { Text("Ara...") },
+                    placeholder = { Text(stringResource(R.string.search_short_placeholder)) },
                     modifier = Modifier.weight(1f),
                     shape = RoundedCornerShape(16.dp),
                     leadingIcon = { Icon(Icons.Rounded.Search, contentDescription = null) },
                     trailingIcon = {
                         if (viewModel.searchQuery.isNotEmpty()) {
-                            IconButton(onClick = { viewModel.updateSearchQuery("") }) { Icon(Icons.Default.Clear, contentDescription = "Temizle") }
+                            IconButton(onClick = { viewModel.updateSearchQuery("") }) {
+                                Icon(Icons.Default.Clear, contentDescription = stringResource(R.string.cd_clear))
+                            }
                         }
                     }
                 )
-                
+
                 Spacer(Modifier.width(12.dp))
-                
+
                 Button(
                     onClick = { learningViewModel.startLearning() },
                     modifier = Modifier.height(56.dp),
@@ -77,7 +78,7 @@ fun FavoritesScreen(
                 ) {
                     Icon(Icons.Rounded.PlayArrow, contentDescription = null)
                     Spacer(Modifier.width(4.dp))
-                    Text("ÇALIŞ", fontWeight = FontWeight.Bold)
+                    Text(stringResource(R.string.btn_study), fontWeight = FontWeight.Bold)
                 }
             }
 
@@ -101,16 +102,26 @@ fun FavoritesScreen(
                         }
                         Spacer(Modifier.height(24.dp))
                         Text(
-                            text = if (viewModel.searchQuery.isEmpty()) "Henüz Favoriniz Yok" else "Sonuç Bulunamadı",
+                            text = stringResource(
+                                if (viewModel.searchQuery.isEmpty()) {
+                                    R.string.favorites_empty_title
+                                } else {
+                                    R.string.favorites_empty_search_title
+                                }
+                            ),
                             style = MaterialTheme.typography.headlineSmall,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface
                         )
                         Spacer(Modifier.height(8.dp))
                         Text(
-                            text = if (viewModel.searchQuery.isEmpty()) 
-                                "Beğendiğiniz kelimeleri buraya ekleyerek daha sonra çalışabilirsiniz." 
-                                else "Aramanızla eşleşen bir favori kelime bulamadık.",
+                            text = stringResource(
+                                if (viewModel.searchQuery.isEmpty()) {
+                                    R.string.favorites_empty_desc
+                                } else {
+                                    R.string.favorites_empty_search_desc
+                                }
+                            ),
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.outline,
                             textAlign = TextAlign.Center
@@ -120,14 +131,42 @@ fun FavoritesScreen(
             } else {
                 LazyColumn(contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     items(favorites) { favorite ->
-                        Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
-                            Row(modifier = Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
+                        Card(
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(20.dp),
+                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                        ) {
+                            Row(
+                                modifier = Modifier.padding(20.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.SpaceBetween
+                            ) {
                                 Column(modifier = Modifier.weight(1f)) {
-                                    Text(favorite.word, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
-                                    Text("= ${favorite.synonym}", style = MaterialTheme.typography.bodyLarge, color = MaterialTheme.colorScheme.secondary)
+                                    Text(
+                                        favorite.word,
+                                        style = MaterialTheme.typography.titleLarge,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MaterialTheme.colorScheme.primary
+                                    )
+                                    Text(
+                                        "= ${favorite.synonym}",
+                                        style = MaterialTheme.typography.bodyLarge,
+                                        color = MaterialTheme.colorScheme.secondary
+                                    )
                                 }
-                                IconButton(onClick = { viewModel.deleteFavorite(favorite) }, modifier = Modifier.background(MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.2f), CircleShape)) {
-                                    Icon(Icons.Rounded.Delete, contentDescription = "Sil", tint = MaterialTheme.colorScheme.error)
+                                IconButton(
+                                    onClick = { viewModel.deleteFavorite(favorite) },
+                                    modifier = Modifier.background(
+                                        MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.2f),
+                                        CircleShape
+                                    )
+                                ) {
+                                    Icon(
+                                        Icons.Rounded.Delete,
+                                        contentDescription = stringResource(R.string.cd_delete),
+                                        tint = MaterialTheme.colorScheme.error
+                                    )
                                 }
                             }
                         }

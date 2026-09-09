@@ -1,0 +1,111 @@
+{
+  "title": "Maxfiylik siyosati",
+  "pageTitle": "Maxfiylik siyosati — Turk lug'ati",
+  "metaApp": "Ilova",
+  "metaPackage": "paket nomi",
+  "metaDeveloper": "Ishlab chiquvchi",
+  "metaUpdated": "Oxirgi yangilanish",
+  "updatedDate": "2026-yil 7-avgust",
+  "langLabel": "Til",
+  "intro": "Bu maxfiylik siyosati Google Play orqali taqdim etilgan <strong>Turk lug'ati</strong> ilovasi foydalanuvchi ma'lumotlarini qanday qayta ishlashini tushuntiradi. Ilovani yuklab olish yoki foydalanish orqali siz ushbu siyosatga rozilik bildirasiz.",
+  "sections": [
+    {
+      "title": "1. Ma'lumotlar nazoratchisi va aloqa",
+      "paragraphs": [
+        "Ma'lumotlar nazoratchisi / Ishlab chiquvchi: ThunderCraft<br>Elektron pochta: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>",
+        "Maxfiylik bo'yicha savollar uchun yuqoridagi elektron pochta orqali biz bilan bog'laning."
+      ]
+    },
+    {
+      "title": "2. Yig'iladigan ma'lumotlar",
+      "paragraphs": [
+        "Ilova hisob yaratish, kirish yoki ro'yxatdan o'tishni talab qilmaydi. Biz ism, elektron pochta, telefon raqami, aniq joylashuv yoki shaxsni tasdiqlovchi hujjatlar kabi shaxsiy identifikatsiya ma'lumotlarini ataylab yig'maymiz va ularni o'z serverlarimizga yubormaymiz. Ilovaning o'z foydalanuvchi hisobi yoki backend serveri yo'q."
+      ]
+    },
+    {
+      "title": "3. Qurilmada mahalliy saqlanadigan ma'lumotlar",
+      "paragraphs": [
+        "Quyidagi ma'lumotlar faqat qurilmangizda (mahalliy xotira / ma'lumotlar bazasi) saqlanadi va qurilmadan tashqariga uzatilmaydi:",
+        "Ilovani o'chirib tashlaganingizda bu mahalliy ma'lumotlar ham qurilmadan o'chiriladi."
+      ],
+      "items": [
+        "Sevimli so'zlar",
+        "Qidiruv tarixi",
+        "Foydalanuvchi qo'shgan so'zlar / sinonimlar",
+        "Ilova ichidagi statistika (mas. haftalik faollik, seriya)",
+        "Mavzu va lug'at rejimi kabi sozlamalar"
+      ]
+    },
+    {
+      "title": "4. Internet orqali qayta ishlanadigan ma'lumotlar",
+      "paragraphs": [
+        "Ilova internet aloqasidan foydalanishi mumkin. Mahalliy lug'atda so'z topilmasa, ma'no olish uchun qidirilgan <strong>so'z matni</strong> <a href=\"https://sozluk.gov.tr\" rel=\"noopener noreferrer\">sozluk.gov.tr</a> (Turkish Language Association Current Turkish Dictionary) manziliga yuborilishi mumkin.",
+        "Qurilmada internet aloqasi bo'lmasa yoki TDK javob bermasa, onlayn natija ko'rsatilmaydi; mahalliy lug'at funksiyalari ishlashda davom etadi."
+      ],
+      "items": [
+        "Yuboriladigan ma'lumot: faqat qidiruv maydoniga yozilgan so'z",
+        "Maqsad: lug'at ma'nosi / ta'rif ma'lumotini ko'rsatish",
+        "Shaxsiy identifikatsiya ma'lumotlari yuborilmaydi",
+        "Bu so'rov TDKning ochiq veb-saytiga yuboriladi; ilova TDK bilan rasmiy hamkorlikda emas"
+      ]
+    },
+    {
+      "title": "5. Ruxsatlar",
+      "paragraphs": [],
+      "items": [
+        "<strong>Internet (INTERNET):</strong> Mahalliy topilmagan so'zlar uchun TDK lug'at so'rovini amalga oshirish uchun ishlatiladi.",
+        "<strong>Bildirishnomalar (POST_NOTIFICATIONS):</strong> Ixtiyoriy. “Kun so'zi” bildirishnomasini ko'rsatish uchun so'raladi. Qurilma sozlamalaridan o'chirilishi mumkin.",
+        "<strong>Ovozli qidiruv / mikrofon:</strong> Mikrofon belgisini bosganingizda qurilmangizning ovozni tanish xizmati (mas. Google) ochilishi mumkin. Biz audio yozuvlarni saqlamaymiz; faqat tanilgan matn qidiruv maydoniga yoziladi."
+      ]
+    },
+    {
+      "title": "6. Uchinchi tomonlar",
+      "paragraphs": [
+        "Ilova quyidagi uchinchi tomon xizmatlari bilan o'zaro aloqada bo'lishi mumkin:",
+        "Biz reklama SDK, analitika SDK yoki foydalanuvchini kuzatish vositalaridan foydalanmaymiz."
+      ],
+      "items": [
+        "<strong>Google Play / Play Store:</strong> Ilovani tarqatish va “Bizni baholang” orqali Play Store sahifasini ochish uchun. Bu jarayon Google tomonidan boshqariladi.",
+        "<strong>sozluk.gov.tr (TDK):</strong> Mahalliy topilmagan so'zlar uchun ma'no so'rovi. Faqat qidirilgan so'z uzatiladi.",
+        "<strong>Qurilma ovozni tanish xizmati:</strong> Foydalanuvchi ovozli qidiruvni boshlaganda."
+      ]
+    },
+    {
+      "title": "7. Ma'lumotlarni ulashish va sotish",
+      "paragraphs": [
+        "Biz foydalanuvchi ma'lumotlarini sotmaymiz. O'z serverlarimizda foydalanuvchi profili yaratmaymiz. 4-bo'limda tushuntirilganidek, faqat lug'at so'rovi uchun qidirilgan so'z TDK saytiga uzatilishi mumkin."
+      ]
+    },
+    {
+      "title": "8. Ma'lumotlar xavfsizligi",
+      "paragraphs": [
+        "Mahalliy ma'lumotlar qurilmangizda saqlanadi. Onlayn lug'at so'rovlari HTTPS orqali amalga oshiriladi. Hech qanday xavfsizlik chorasi mutlaq emas; qurilmangizni yangilab turishingizni tavsiya qilamiz."
+      ]
+    },
+    {
+      "title": "9. Bolalar maxfiyligi",
+      "paragraphs": [
+        "Ilova umumiy til o'rganish / lug'at ilovasidir. 13 yoshdan kichik bolalardan ataylab shaxsiy ma'lumot yig'maymiz. Ota-onalar bolalarining ilovadan foydalanishini nazorat qilishi kerak."
+      ]
+    },
+    {
+      "title": "10. Sizning huquqlaringiz",
+      "paragraphs": [
+        "Mahalliy ma'lumotlarni ilova ichida (mas. sevimlilarni o'chirish) yoki ilovani o'chirib tashlash orqali o'chirishingiz mumkin. Onlayn so'rovlar bo'yicha savollar uchun <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a> manziliga yozing."
+      ]
+    },
+    {
+      "title": "11. Siyosatdagi o'zgarishlar",
+      "paragraphs": [
+        "Bu siyosat vaqti-vaqti bilan yangilanishi mumkin. Joriy versiya ushbu sahifada e'lon qilinadi. Muhim o'zgarishlarda “Oxirgi yangilanish” sanasi yangilanadi."
+      ]
+    },
+    {
+      "title": "12. Aloqa",
+      "paragraphs": [
+        "Maxfiylik siyosati va ma'lumotlarni qayta ishlash bo'yicha: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>"
+      ]
+    }
+  ],
+  "footer": "© 2026 Turk lug'ati · com.hayhak.turkcesozluk"
+}

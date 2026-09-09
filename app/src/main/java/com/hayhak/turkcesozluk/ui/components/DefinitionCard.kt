@@ -9,9 +9,11 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.hayhak.turkcesozluk.R
 import com.hayhak.turkcesozluk.data.model.WordDefinition
 import com.hayhak.turkcesozluk.util.capitalizeTR
 
@@ -48,7 +50,7 @@ fun DefinitionCard(definition: WordDefinition, onSpeak: () -> Unit) {
                 IconButton(onClick = onSpeak) {
                     Icon(
                         Icons.Rounded.VolumeUp,
-                        contentDescription = "Sesli oku",
+                        contentDescription = stringResource(R.string.cd_speak),
                         tint = MaterialTheme.colorScheme.primary
                     )
                 }

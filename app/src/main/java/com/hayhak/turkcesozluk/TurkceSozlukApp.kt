@@ -1,11 +1,13 @@
 package com.hayhak.turkcesozluk
 
 import android.app.Application
+import android.content.Context
 import androidx.work.Configuration
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import com.hayhak.turkcesozluk.data.repository.CoreRepository
+import com.hayhak.turkcesozluk.util.LocaleHelper
 import com.hayhak.turkcesozluk.worker.DailyWordWorker
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
@@ -33,8 +35,13 @@ class TurkceSozlukApp : Application(), Configuration.Provider {
             .setWorkerFactory(workerFactory)
             .build()
 
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(LocaleHelper.wrap(base, LocaleHelper.savedTag(base)))
+    }
+
     override fun onCreate() {
         super.onCreate()
+        LocaleHelper.applyAppLocale(LocaleHelper.savedTag(this))
         android.util.Log.d("TurkceSozlukApp", "onCreate started")
 
         // WorkManager kurulumu ve CoreRepository'nin CSV/cache okuması potansiyel olarak ağır iş;

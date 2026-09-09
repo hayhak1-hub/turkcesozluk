@@ -1,0 +1,111 @@
+{
+  "title": "Məxfilik siyasəti",
+  "pageTitle": "Məxfilik siyasəti — Türk Lüğəti",
+  "metaApp": "Tətbiq",
+  "metaPackage": "paket adı",
+  "metaDeveloper": "İnkişafçı",
+  "metaUpdated": "Son yenilənmə",
+  "updatedDate": "7 avqust 2026",
+  "langLabel": "Dil",
+  "intro": "Bu məxfilik siyasəti Google Play-də təqdim olunan <strong>Türk Lüğəti</strong> tətbiqinin istifadəçi məlumatlarını necə emal etdiyini izah edir. Tətbiqi yükləyərək və ya istifadə edərək bu siyasəti qəbul etmiş sayılırsınız.",
+  "sections": [
+    {
+      "title": "1. Məlumat Məsul Şəxsi və Əlaqə",
+      "paragraphs": [
+        "Məlumat məsul şəxsi / İnkişafçı: ThunderCraft<br>E-poçt: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>",
+        "Məxfiliklə bağlı suallarınız üçün yuxarıdakı e-poçt ünvanından bizimlə əlaqə saxlaya bilərsiniz."
+      ]
+    },
+    {
+      "title": "2. Toplanan Məlumatlar",
+      "paragraphs": [
+        "Tətbiq hesab yaratma, giriş və ya qeydiyyat tələb etmir. Ad, soyad, e-poçt, telefon nömrəsi, dəqiq yer və ya şəxsiyyət sənədi kimi şəxsi identifikasiya məlumatlarını qəsdən toplamırıq və öz serverlərimizə göndərmirik. Tətbiqin öz istifadəçi hesabı və ya backend serveri yoxdur."
+      ]
+    },
+    {
+      "title": "3. Cihazda Yerli Olaraq Saxlanılan Məlumatlar",
+      "paragraphs": [
+        "Aşağıdakı məlumatlar yalnız cihazınızda (yerli yaddaş / verilənlər bazası) saxlanılır və cihazınızdan kənara ötürülmür:",
+        "Tətbiqi siləndə bu yerli məlumatlar da cihazınızdan silinir."
+      ],
+      "items": [
+        "Sevimli sözlər",
+        "Axtarış tarixçəsi",
+        "İstifadəçinin əlavə etdiyi sözlər / sinonimlər",
+        "Tətbiq daxili statistika (məs. həftəlik fəaliyyət, seriya)",
+        "Tema və lüğət rejimi kimi parametrlər"
+      ]
+    },
+    {
+      "title": "4. İnternet Üzərindən Emal Olunan Məlumatlar",
+      "paragraphs": [
+        "Tətbiq internet bağlantısından istifadə edə bilər. Yerli lüğətdə tapılmayan söz axtarıldıqda, mənanı almaq üçün axtarılan <strong>söz mətni</strong> <a href=\"https://sozluk.gov.tr\" rel=\"noopener noreferrer\">sozluk.gov.tr</a> (Türk Dil Qurumu Güncel Türkçe Sözlük) ünvanına göndərilə bilər.",
+        "Cihazınızın internet bağlantısı yoxdursa və ya TDK cavab vermirsə, onlayn nəticə göstərilmir; yerli lüğət funksiyaları işləməyə davam edir."
+      ],
+      "items": [
+        "Göndərilən məlumat: yalnız axtarış qutusuna yazılan söz",
+        "Məqsəd: lüğət mənası / tərif məlumatını göstərmək",
+        "Şəxsi identifikasiya məlumatı göndərilmir",
+        "Bu sorğu TDK-nın ictimai saytına edilir; tətbiq TDK ilə rəsmi tərəfdaşlıqda deyil"
+      ]
+    },
+    {
+      "title": "5. İcazələr",
+      "paragraphs": [],
+      "items": [
+        "<strong>İnternet (INTERNET):</strong> Yerli olaraq tapılmayan sözlər üçün TDK lüğət sorğusu aparmaq məqsədilə istifadə olunur.",
+        "<strong>Bildirişlər (POST_NOTIFICATIONS):</strong> İstəyə bağlıdır. “Günün sözü” bildirişini göstərmək üçün tələb olunur. Cihaz parametrlərindən söndürülə bilər.",
+        "<strong>Səsli axtarış / mikrofon:</strong> Mikrofon simgesinə toxunduqda cihazınızın öz səs tanıma xidməti (məs. Google) açıla bilər. Səs qeydləri tətbiqimiz tərəfindən saxlanılmır; yalnız tanınan mətn axtarış qutusuna yazılır."
+      ]
+    },
+    {
+      "title": "6. Üçüncü Tərəflər",
+      "paragraphs": [
+        "Tətbiq aşağıdakı üçüncü tərəf xidmətləri ilə qarşılıqlı əlaqədə ola bilər:",
+        "Reklam SDK-sı, analitika SDK-sı və ya istifadəçi izləmə alətləri istifadə etmirik."
+      ],
+      "items": [
+        "<strong>Google Play / Play Store:</strong> Tətbiqin paylanması və “Bizi qiymətləndirin” vasitəsilə Play Store səhifəsinin açılması üçün. Bu proses Google tərəfindən idarə olunur.",
+        "<strong>sozluk.gov.tr (TDK):</strong> Yerli olaraq tapılmayan sözlər üçün mənə sorğusu. Yalnız axtarılan söz ötürülür.",
+        "<strong>Cihaz səs tanıma xidməti:</strong> İstifadəçi səsli axtarışı başlatdıqda."
+      ]
+    },
+    {
+      "title": "7. Məlumatların Paylaşılması və Satışı",
+      "paragraphs": [
+        "İstifadəçi məlumatlarını satmırıq. Öz serverlərimizdə istifadəçi profili yaratmırıq. 4-cü bölmədə izah olunduğu kimi, yalnız lüğət sorğusu üçün axtarılan söz TDK saytına ötürülə bilər."
+      ]
+    },
+    {
+      "title": "8. Məlumat Təhlükəsizliyi",
+      "paragraphs": [
+        "Yerli məlumatlar cihazınızda saxlanılır. Onlayn lüğət sorğuları HTTPS vasitəsilə aparılır. Heç bir təhlükəsizlik tədbiri mütləq deyil; cihazınızı yenilək saxlamağı tövsiyə edirik."
+      ]
+    },
+    {
+      "title": "9. Uşaqların Məxfiliyi",
+      "paragraphs": [
+        "Tətbiq ümumi dil öyrənmə / lüğət tətbiqidir. 13 yaşdan kiçik uşaqlardan qəsdən şəxsi məlumat toplamırıq. Valideynlər uşaqlarının tətbiqdən istifadəsini nəzarət etməlidir."
+      ]
+    },
+    {
+      "title": "10. Hüquqlarınız",
+      "paragraphs": [
+        "Yerli məlumatları tətbiqdən (məs. sevimliləri silməklə) və ya tətbiqi silməklə silə bilərsiniz. Onlayn sorğularla bağlı suallarınız üçün <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a> ünvanına yaza bilərsiniz."
+      ]
+    },
+    {
+      "title": "11. Siyasətdə Dəyişikliklər",
+      "paragraphs": [
+        "Bu siyasət zaman zaman yenilənə bilər. Cari versiya bu səhifədə dərc olunur. Əhəmiyyətli dəyişikliklərdə “Son yenilənmə” tarixi yenilənir."
+      ]
+    },
+    {
+      "title": "12. Əlaqə",
+      "paragraphs": [
+        "Məxfilik siyasəti və məlumat emalı barədə: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>"
+      ]
+    }
+  ],
+  "footer": "© 2026 Türk Lüğəti · com.hayhak.turkcesozluk"
+}

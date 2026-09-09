@@ -59,7 +59,7 @@ fun DailyWordCard(
                     Text(stringResource(R.string.daily_word_title), style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
                 }
                 IconButton(onClick = onClose, modifier = Modifier.size(24.dp)) {
-                    Icon(Icons.Default.Close, contentDescription = "Kapat", tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.5f))
+                    Icon(Icons.Default.Close, contentDescription = stringResource(R.string.cd_close), tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.5f))
                 }
             }
             Spacer(Modifier.height(12.dp))
@@ -81,14 +81,14 @@ fun DailyWordCard(
                         onClick = onToggleFavorite,
                         modifier = Modifier.background(MaterialTheme.colorScheme.surface, CircleShape)
                     ) {
-                        Icon(imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder, contentDescription = "Favori", tint = if (isFavorite) Color.Red else MaterialTheme.colorScheme.primary)
+                        Icon(imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder, contentDescription = stringResource(R.string.cd_favorite), tint = if (isFavorite) Color.Red else MaterialTheme.colorScheme.primary)
                     }
                     Spacer(Modifier.width(8.dp))
                     IconButton(
                         onClick = onSpeak,
                         modifier = Modifier.background(MaterialTheme.colorScheme.primary, CircleShape)
                     ) {
-                        Icon(Icons.Rounded.PlayArrow, contentDescription = "Dinle", tint = Color.White)
+                        Icon(Icons.Rounded.PlayArrow, contentDescription = stringResource(R.string.cd_listen), tint = Color.White)
                     }
                 }
             }

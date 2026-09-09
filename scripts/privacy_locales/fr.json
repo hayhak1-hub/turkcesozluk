@@ -1,0 +1,111 @@
+{
+  "title": "Politique de confidentialité",
+  "pageTitle": "Politique de confidentialité — Dictionnaire turc",
+  "metaApp": "Application",
+  "metaPackage": "nom du package",
+  "metaDeveloper": "Développeur",
+  "metaUpdated": "Dernière mise à jour",
+  "updatedDate": "7 août 2026",
+  "langLabel": "Langue",
+  "intro": "Cette politique de confidentialité explique comment l'application <strong>Dictionnaire turc</strong> disponible sur Google Play traite les données des utilisateurs. En téléchargeant ou en utilisant l'application, vous acceptez cette politique.",
+  "sections": [
+    {
+      "title": "1. Responsable du traitement et contact",
+      "paragraphs": [
+        "Responsable du traitement / Développeur : ThunderCraft<br>E-mail : <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>",
+        "Pour toute question relative à la confidentialité, contactez-nous à l'adresse e-mail ci-dessus."
+      ]
+    },
+    {
+      "title": "2. Données collectées",
+      "paragraphs": [
+        "L'application ne nécessite pas la création de compte, la connexion ou l'inscription. Nous ne collectons pas sciemment d'identifiants personnels tels que nom, e-mail, numéro de téléphone, localisation précise ou documents d'identité, et nous ne les envoyons pas à nos propres serveurs. L'application ne dispose pas de compte utilisateur ni de serveur backend propre."
+      ]
+    },
+    {
+      "title": "3. Données stockées localement sur votre appareil",
+      "paragraphs": [
+        "Les données suivantes sont stockées uniquement sur votre appareil (stockage local / base de données) et ne sont pas exportées de votre appareil :",
+        "Lorsque vous désinstallez l'application, ces données locales sont supprimées de votre appareil."
+      ],
+      "items": [
+        "Mots favoris",
+        "Historique de recherche",
+        "Mots / synonymes ajoutés par l'utilisateur",
+        "Statistiques dans l'application (p. ex. activité hebdomadaire, série)",
+        "Paramètres tels que le thème et le mode dictionnaire"
+      ]
+    },
+    {
+      "title": "4. Données traitées via Internet",
+      "paragraphs": [
+        "L'application peut utiliser une connexion Internet. Lorsqu'un mot n'est pas trouvé dans le dictionnaire local, le <strong>texte du mot</strong> recherché peut être envoyé à <a href=\"https://sozluk.gov.tr\" rel=\"noopener noreferrer\">sozluk.gov.tr</a> (Association de langue turque Güncel Türkçe Sözlük)",
+        "Si votre appareil n'a pas de connexion Internet ou si TDK ne répond pas, le résultat en ligne n'est pas affiché ; les fonctionnalités du dictionnaire local continuent de fonctionner."
+      ],
+      "items": [
+        "Données envoyées : uniquement le mot saisi dans la zone de recherche",
+        "Objectif : afficher le sens / la définition du dictionnaire",
+        "Aucune information d'identité personnelle n'est envoyée",
+        "Cette requête est adressée au site public de TDK ; l'application n'est pas en partenariat officiel avec TDK"
+      ]
+    },
+    {
+      "title": "5. Autorisations",
+      "paragraphs": [],
+      "items": [
+        "<strong>Internet (INTERNET) :</strong> Utilisé pour interroger le dictionnaire TDK pour les mots non trouvés localement.",
+        "<strong>Notifications (POST_NOTIFICATIONS) :</strong> Facultatif. Demandé pour afficher la notification « Mot du jour ». Peut être désactivé dans les paramètres de l'appareil.",
+        "<strong>Recherche vocale / microphone :</strong> Lorsque vous appuyez sur l'icône du microphone, le service de reconnaissance vocale de votre appareil (p. ex. Google) peut s'ouvrir. Nous ne stockons pas d'enregistrements audio ; seul le texte reconnu est placé dans la zone de recherche."
+      ]
+    },
+    {
+      "title": "6. Tiers",
+      "paragraphs": [
+        "L'application peut interagir avec les services tiers suivants :",
+        "Nous n'utilisons pas de SDK publicitaires, de SDK analytiques ni d'outils de suivi des utilisateurs."
+      ],
+      "items": [
+        "<strong>Google Play / Play Store :</strong> Distribution de l'application et ouverture de la page Play Store via « Évaluez-nous ». Ce processus est géré par Google.",
+        "<strong>sozluk.gov.tr (TDK) :</strong> Recherche de définitions pour les mots non trouvés localement. Seul le mot recherché est transmis.",
+        "<strong>Service de reconnaissance vocale de l'appareil :</strong> Lorsque l'utilisateur lance la recherche vocale."
+      ]
+    },
+    {
+      "title": "7. Partage et vente des données",
+      "paragraphs": [
+        "Nous ne vendons pas les données des utilisateurs. Nous ne créons pas de profils utilisateur sur nos propres serveurs. Comme décrit à la Section 4, seul le mot recherché peut être envoyé au site TDK pour une consultation du dictionnaire."
+      ]
+    },
+    {
+      "title": "8. Sécurité des données",
+      "paragraphs": [
+        "Les données locales restent sur votre appareil. Les requêtes de dictionnaire en ligne sont effectuées via HTTPS. Aucune mesure de sécurité n'est absolue ; nous recommandons de maintenir votre appareil à jour."
+      ]
+    },
+    {
+      "title": "9. Confidentialité des enfants",
+      "paragraphs": [
+        "L'application est une application générale d'apprentissage des langues / dictionnaire. Nous ne collectons pas sciemment de données personnelles d'enfants de moins de 13 ans. Les parents doivent superviser l'utilisation de l'application par leurs enfants."
+      ]
+    },
+    {
+      "title": "10. Vos droits",
+      "paragraphs": [
+        "Vous pouvez supprimer les données locales dans l'application (p. ex. en supprimant les favoris) ou en désinstallant l'application. Pour toute question concernant les requêtes en ligne, écrivez à <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>."
+      ]
+    },
+    {
+      "title": "11. Modifications de cette politique",
+      "paragraphs": [
+        "Cette politique peut être mise à jour de temps à autre. La version actuelle est publiée sur cette page. La date de « Dernière mise à jour » est révisée en cas de modifications importantes."
+      ]
+    },
+    {
+      "title": "12. Contact",
+      "paragraphs": [
+        "Pour la politique de confidentialité et le traitement des données : <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>"
+      ]
+    }
+  ],
+  "footer": "© 2026 Dictionnaire turc · com.hayhak.turkcesozluk"
+}

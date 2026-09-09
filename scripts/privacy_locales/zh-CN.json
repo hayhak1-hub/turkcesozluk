@@ -1,0 +1,111 @@
+{
+  "title": "隐私政策",
+  "pageTitle": "隐私政策 — 土耳其语词典",
+  "metaApp": "应用",
+  "metaPackage": "包名",
+  "metaDeveloper": "开发者",
+  "metaUpdated": "最后更新",
+  "updatedDate": "2026年8月7日",
+  "langLabel": "语言",
+  "intro": "本隐私政策说明了 Google Play 上提供的<strong>土耳其语词典</strong>应用如何处理用户数据。下载或使用本应用即表示您同意本政策。",
+  "sections": [
+    {
+      "title": "1. 数据控制者与联系方式",
+      "paragraphs": [
+        "数据控制者 / 开发者：ThunderCraft<br>电子邮件：<a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>",
+        "如有隐私相关问题，请通过上述电子邮件地址联系我们。"
+      ]
+    },
+    {
+      "title": "2. 收集的数据",
+      "paragraphs": [
+        "本应用不需要创建账户、登录或注册。我们不会故意收集姓名、电子邮件、电话号码、精确位置或身份证件等个人身份信息，也不会将其发送至我们的服务器。本应用没有自己的用户账户或后端服务器。"
+      ]
+    },
+    {
+      "title": "3. 设备本地存储的数据",
+      "paragraphs": [
+        "以下数据仅存储在您的设备上（本地存储 / 数据库），不会从设备导出：",
+        "卸载应用后，这些本地数据也会从您的设备中删除。"
+      ],
+      "items": [
+        "收藏的单词",
+        "搜索历史",
+        "用户添加的单词 / 同义词",
+        "应用内统计（如每周活动、连续天数）",
+        "主题和词典模式等设置"
+      ]
+    },
+    {
+      "title": "4. 通过互联网处理的数据",
+      "paragraphs": [
+        "本应用可能使用互联网连接。当本地词典中找不到某个单词时，为获取释义，搜索的<strong>单词文本</strong>可能会发送至 <a href=\"https://sozluk.gov.tr\" rel=\"noopener noreferrer\">sozluk.gov.tr</a>（土耳其语言协会 Güncel Türkçe Sözlük）",
+        "如果设备没有互联网连接或 TDK 无响应，则不会显示在线结果；本地词典功能仍可正常使用。"
+      ],
+      "items": [
+        "发送的数据：仅搜索框中输入的单词",
+        "目的：显示词典释义 / 定义信息",
+        "不发送个人身份信息",
+        "该请求发送至 TDK 的公开网站；本应用与 TDK 没有正式合作关系"
+      ]
+    },
+    {
+      "title": "5. 权限",
+      "paragraphs": [],
+      "items": [
+        "<strong>互联网 (INTERNET)：</strong>用于查询本地未找到的单词的 TDK 词典。",
+        "<strong>通知 (POST_NOTIFICATIONS)：</strong>可选。用于显示“每日一词”通知。可在设备设置中关闭。",
+        "<strong>语音搜索 / 麦克风：</strong>点击麦克风图标时，可能会打开设备的语音识别服务（如 Google）。我们不存储音频录音；仅将识别的文本放入搜索框。"
+      ]
+    },
+    {
+      "title": "6. 第三方",
+      "paragraphs": [
+        "本应用可能与以下第三方服务交互：",
+        "我们不使用广告 SDK、分析 SDK 或用户跟踪工具。"
+      ],
+      "items": [
+        "<strong>Google Play / Play Store：</strong>应用分发及通过“评价我们”打开 Play Store 页面。此过程由 Google 管理。",
+        "<strong>sozluk.gov.tr (TDK)：</strong>查询本地未找到单词的释义。仅传输搜索的单词。",
+        "<strong>设备语音识别服务：</strong>用户启动语音搜索时。"
+      ]
+    },
+    {
+      "title": "7. 数据共享与出售",
+      "paragraphs": [
+        "我们不出售用户数据。我们不在自己的服务器上创建用户档案。如第 4 节所述，仅为词典查询目的，搜索的单词可能会发送至 TDK 网站。"
+      ]
+    },
+    {
+      "title": "8. 数据安全",
+      "paragraphs": [
+        "本地数据保留在您的设备上。在线词典查询通过 HTTPS 进行。没有任何安全措施是绝对安全的；建议您保持设备更新。"
+      ]
+    },
+    {
+      "title": "9. 儿童隐私",
+      "paragraphs": [
+        "本应用是通用的语言学习 / 词典应用。我们不会故意收集 13 岁以下儿童的个人信息。家长应监督儿童使用本应用。"
+      ]
+    },
+    {
+      "title": "10. 您的权利",
+      "paragraphs": [
+        "您可以在应用内删除本地数据（如移除收藏）或通过卸载应用来删除。有关在线查询的问题，请写信至 <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>。"
+      ]
+    },
+    {
+      "title": "11. 政策变更",
+      "paragraphs": [
+        "本政策可能会不时更新。当前版本发布在本页面。重大变更时会更改“最后更新”日期。"
+      ]
+    },
+    {
+      "title": "12. 联系方式",
+      "paragraphs": [
+        "有关隐私政策和数据处理：<a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>"
+      ]
+    }
+  ],
+  "footer": "© 2026 土耳其语词典 · com.hayhak.turkcesozluk"
+}

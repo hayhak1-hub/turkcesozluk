@@ -1,0 +1,111 @@
+{
+  "title": "Gizlinlik syýasaty",
+  "pageTitle": "Gizlinlik syýasaty — Türkçe sözlük",
+  "metaApp": "Programma",
+  "metaPackage": "paket ady",
+  "metaDeveloper": "Öndüriji",
+  "metaUpdated": "Soňky täzelenme",
+  "updatedDate": "2026-nji ýylyň 7-nji awgusty",
+  "langLabel": "Dil",
+  "intro": "Bu gizlinlik syýasaty Google Play arkaly hödürlenýän <strong>Türkçe sözlük</strong> programmasynyň ulanyjy maglumatlaryny nädip işleýändigini düşündirýär. Programmany göçürip almak ýa-da ulanmak bilen siz bu syýasata razylaşýarsyňyz.",
+  "sections": [
+    {
+      "title": "1. Maglumat dolandyryjy we aragatnaşyk",
+      "paragraphs": [
+        "Maglumat dolandyryjy / Öndüriji: ThunderCraft<br>Elektron poçta: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>",
+        "Gizlinlik bilen baglanyşykly soraglar üçin ýokardaky elektron poçta arkaly biz bilen habarlaşyň."
+      ]
+    },
+    {
+      "title": "2. Ýygnan maglumatlar",
+      "paragraphs": [
+        "Programma hasap döretmek, girmek ýa-da hasaba almak talap etmeýär. Biz at, elektron poçta, telefon belgisi, takyk ýerleşiş ýa-da şahsyýetnama ýaly şahsy identifikasiýa maglumatlaryny bilkastlaýyn ýygnamaýarys we olary öz serwerlerimize ibermeýäris. Programmanyň öz ulanyjy hasaby ýa-da backend serweri ýok."
+      ]
+    },
+    {
+      "title": "3. Enjamda ýerli saklanýan maglumatlar",
+      "paragraphs": [
+        "Aşakdaky maglumatlar diňe enjamyňyzda (ýerli saklamak / maglumatlar bazasy) saklanýar we enjamdan daşary geçirilmeýär:",
+        "Programmany aýyranyňyzda bu ýerli maglumatlar hem enjamdan aýrylýar."
+      ],
+      "items": [
+        "Halanan sözler",
+        "Gözleg taryhy",
+        "Ulanyjy goşan sözler / sinonimler",
+        "Programma içindäki statistika (mes. hepdelik işjeňlik, yzygider)",
+        "Tema we sözlük režimi ýaly sazlamalar"
+      ]
+    },
+    {
+      "title": "4. Internet arkaly işlenýän maglumatlar",
+      "paragraphs": [
+        "Programma internet baglanyşygyny ulanyp bilýär. Ýerli sözlükde söz tapylmasa, many almak üçin gözlenen <strong>söz teksti</strong> <a href=\"https://sozluk.gov.tr\" rel=\"noopener noreferrer\">sozluk.gov.tr</a> (Turkish Language Association Current Turkish Dictionary) salgysyna iberilip bilner.",
+        "Enjamda internet baglanyşygy bolmasa ýa-da TDK jogap bermese, onlaýn netije görkezilmeýär; ýerli sözlük funksiýalary işlemegini dowam etdirýär."
+      ],
+      "items": [
+        "Iberilýän maglumat: diňe gözleg meýdançasynda ýazylan söz",
+        "Maksat: sözlük manyny / kesgitlemesini görkezmek",
+        "Şahsy identifikasiýa maglumatlary iberilmeýär",
+        "Bu sorag TDK-nyň açyk sahypasyna iberilýär; programma TDK bilen resmi hyzmatdaşlykda däl"
+      ]
+    },
+    {
+      "title": "5. Rugsatlar",
+      "paragraphs": [],
+      "items": [
+        "<strong>Internet (INTERNET):</strong> Ýerli tapylmadyk sözler üçin TDK sözlük soragyny ýerine ýetirmek üçin ulanylýar.",
+        "<strong>Bildirişler (POST_NOTIFICATIONS):</strong> Islege bagly. “Günüň sözi” bildirişini görkezmek üçin sorag edilýär. Enjam sazlamalaryndan öçürilip bilner.",
+        "<strong>Sesli gözleg / mikrofon:</strong> Mikrofon nyşanyna basylanda enjamyňyzyň ses tanamak hyzmaty (mes. Google) açylyp bilner. Biz audio ýazgylary saklamaýarys; diňe tanalan tekst gözleg meýdançasyna ýazylýar."
+      ]
+    },
+    {
+      "title": "6. Üçünji taraplar",
+      "paragraphs": [
+        "Programma aşakdaky üçünji tarap hyzmatlary bilen özara täsir edip bilýär:",
+        "Biz reklama SDK, analitika SDK ýa-da ulanyjy yzarlamak gurallaryny ulanmaýarys."
+      ],
+      "items": [
+        "<strong>Google Play / Play Store:</strong> Programmanyň paýlanmagy we “Bize baha beriň” arkaly Play Store sahypasyny açmak üçin. Bu proses Google tarapyndan dolandyrylýar.",
+        "<strong>sozluk.gov.tr (TDK):</strong> Ýerli tapylmadyk sözler üçin many soragy. Diňe gözlenen söz iberilýär.",
+        "<strong>Enjam ses tanamak hyzmaty:</strong> Ulanyjy sesli gözlegi başlanda."
+      ]
+    },
+    {
+      "title": "7. Maglumatlary paýlaşmak we satmak",
+      "paragraphs": [
+        "Biz ulanyjy maglumatlaryny satmaýarys. Öz serwerlerimizde ulanyjy profilini döretmeýäris. 4-nji bölümde düşündirilýän ýaly, diňe sözlük soragy üçin gözlenen söz TDK sahypasyna iberilip bilner."
+      ]
+    },
+    {
+      "title": "8. Maglumat howpsuzlygy",
+      "paragraphs": [
+        "Ýerli maglumatlar enjamyňyzda saklanýar. Onlaýn sözlük soraglary HTTPS arkaly ýerine ýetirilýär. Hiç hili howpsuzlyk çäresi doly däl; enjamyňyzy täzelemegi maslahat berýäris."
+      ]
+    },
+    {
+      "title": "9. Çagalaryň gizlinligi",
+      "paragraphs": [
+        "Programma umumy dil öwrenmek / sözlük programmasydyr. 13 ýaşdan kiçi çagalardan bilkastlaýyn şahsy maglumat ýygnamaýarys. Ene-atalar çagalarynyň programmany ulanmagyny gözetmeli."
+      ]
+    },
+    {
+      "title": "10. Siziň hukuklaryňyz",
+      "paragraphs": [
+        "Ýerli maglumatlary programma içinde (mes. halananlary aýyrmak) ýa-da programmany aýyrmak bilen pozup bilersiňiz. Onlaýn soraglar barada <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a> salgysyna ýazyň."
+      ]
+    },
+    {
+      "title": "11. Syýasatdagy üýtgeşmeler",
+      "paragraphs": [
+        "Bu syýasat wagty-wagty täzelenip bilner. Häzirki wersiýa bu sahypada çap edilýär. Möhüm üýtgeşmelerde “Soňky täzelenme” senesi täzelenýär."
+      ]
+    },
+    {
+      "title": "12. Aragatnaşyk",
+      "paragraphs": [
+        "Gizlinlik syýasaty we maglumatlary işlemek barada: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>"
+      ]
+    }
+  ],
+  "footer": "© 2026 Türkçe sözlük · com.hayhak.turkcesozluk"
+}

@@ -1,0 +1,111 @@
+{
+  "title": "Kebijakan privasi",
+  "pageTitle": "Kebijakan privasi — Kamus Turki",
+  "metaApp": "Aplikasi",
+  "metaPackage": "nama paket",
+  "metaDeveloper": "Pengembang",
+  "metaUpdated": "Terakhir diperbarui",
+  "updatedDate": "7 Agustus 2026",
+  "langLabel": "Bahasa",
+  "intro": "Kebijakan privasi ini menjelaskan bagaimana aplikasi <strong>Kamus Turki</strong> yang tersedia di Google Play menangani data pengguna. Dengan mengunduh atau menggunakan aplikasi, Anda setuju dengan kebijakan ini.",
+  "sections": [
+    {
+      "title": "1. Pengendali data dan kontak",
+      "paragraphs": [
+        "Pengendali data / Pengembang: ThunderCraft<br>Email: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>",
+        "Untuk pertanyaan terkait privasi, hubungi kami di alamat email di atas."
+      ]
+    },
+    {
+      "title": "2. Data yang dikumpulkan",
+      "paragraphs": [
+        "Aplikasi tidak memerlukan pembuatan akun, masuk, atau pendaftaran. Kami tidak dengan sengaja mengumpulkan pengenal pribadi seperti nama, email, nomor telepon, lokasi presisi, atau dokumen identitas, dan tidak mengirimkannya ke server kami. Aplikasi tidak memiliki akun pengguna atau server backend sendiri."
+      ]
+    },
+    {
+      "title": "3. Data yang disimpan secara lokal di perangkat Anda",
+      "paragraphs": [
+        "Data berikut disimpan hanya di perangkat Anda (penyimpanan lokal / basis data) dan tidak diekspor dari perangkat:",
+        "Saat Anda menghapus aplikasi, data lokal ini dihapus dari perangkat Anda."
+      ],
+      "items": [
+        "Kata favorit",
+        "Riwayat pencarian",
+        "Kata / sinonim yang ditambahkan pengguna",
+        "Statistik dalam aplikasi (mis. aktivitas mingguan, streak)",
+        "Pengaturan seperti tema dan mode kamus"
+      ]
+    },
+    {
+      "title": "4. Data yang diproses melalui Internet",
+      "paragraphs": [
+        "Aplikasi dapat menggunakan koneksi internet. Ketika kata tidak ditemukan dalam kamus lokal, <strong>teks kata</strong> yang dicari dapat dikirim ke <a href=\"https://sozluk.gov.tr\" rel=\"noopener noreferrer\">sozluk.gov.tr</a> (Asosiasi Bahasa Turki Güncel Türkçe Sözlük)",
+        "Jika perangkat Anda tidak memiliki koneksi internet atau TDK tidak merespons, hasil online tidak ditampilkan; fitur kamus lokal tetap berfungsi."
+      ],
+      "items": [
+        "Data yang dikirim: hanya kata yang diketik di kotak pencarian",
+        "Tujuan: menampilkan arti / definisi kamus",
+        "Tidak ada informasi identitas pribadi yang dikirim",
+        "Permintaan ini dibuat ke situs web publik TDK; aplikasi tidak bekerja sama resmi dengan TDK"
+      ]
+    },
+    {
+      "title": "5. Izin",
+      "paragraphs": [],
+      "items": [
+        "<strong>Internet (INTERNET):</strong> Digunakan untuk menanyakan kamus TDK untuk kata yang tidak ditemukan secara lokal.",
+        "<strong>Notifikasi (POST_NOTIFICATIONS):</strong> Opsional. Diminta untuk menampilkan notifikasi “Kata hari ini”. Dapat dinonaktifkan di pengaturan perangkat.",
+        "<strong>Pencarian suara / mikrofon:</strong> Saat Anda mengetuk ikon mikrofon, layanan pengenalan suara perangkat (mis. Google) dapat terbuka. Kami tidak menyimpan rekaman audio; hanya teks yang dikenali yang dimasukkan ke kotak pencarian."
+      ]
+    },
+    {
+      "title": "6. Pihak ketiga",
+      "paragraphs": [
+        "Aplikasi dapat berinteraksi dengan layanan pihak ketiga berikut:",
+        "Kami tidak menggunakan SDK iklan, SDK analitik, atau alat pelacakan pengguna."
+      ],
+      "items": [
+        "<strong>Google Play / Play Store:</strong> Distribusi aplikasi dan membuka halaman Play Store melalui “Beri kami rating”. Proses ini dikelola oleh Google.",
+        "<strong>sozluk.gov.tr (TDK):</strong> Pencarian definisi untuk kata yang tidak ditemukan secara lokal. Hanya kata yang dicari yang dikirim.",
+        "<strong>Layanan pengenalan suara perangkat:</strong> Saat pengguna memulai pencarian suara."
+      ]
+    },
+    {
+      "title": "7. Berbagi dan penjualan data",
+      "paragraphs": [
+        "Kami tidak menjual data pengguna. Kami tidak membuat profil pengguna di server kami. Seperti dijelaskan di Bagian 4, hanya kata yang dicari yang dapat dikirim ke situs TDK untuk pencarian kamus."
+      ]
+    },
+    {
+      "title": "8. Keamanan data",
+      "paragraphs": [
+        "Data lokal tetap di perangkat Anda. Kueri kamus online dilakukan melalui HTTPS. Tidak ada langkah keamanan yang mutlak; kami menyarankan menjaga perangkat Anda tetap diperbarui."
+      ]
+    },
+    {
+      "title": "9. Privasi anak",
+      "paragraphs": [
+        "Aplikasi ini adalah aplikasi pembelajaran bahasa / kamus umum. Kami tidak dengan sengaja mengumpulkan data pribadi dari anak di bawah 13 tahun. Orang tua harus mengawasi penggunaan aplikasi oleh anak-anak mereka."
+      ]
+    },
+    {
+      "title": "10. Hak Anda",
+      "paragraphs": [
+        "Anda dapat menghapus data lokal di aplikasi (mis. dengan menghapus favorit) atau dengan menghapus aplikasi. Untuk pertanyaan tentang kueri online, tulis ke <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>."
+      ]
+    },
+    {
+      "title": "11. Perubahan kebijakan ini",
+      "paragraphs": [
+        "Kebijakan ini dapat diperbarui dari waktu ke waktu. Versi saat ini dipublikasikan di halaman ini. Tanggal “Terakhir diperbarui” direvisi untuk perubahan signifikan."
+      ]
+    },
+    {
+      "title": "12. Kontak",
+      "paragraphs": [
+        "Untuk kebijakan privasi dan pemrosesan data: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>"
+      ]
+    }
+  ],
+  "footer": "© 2026 Kamus Turki · com.hayhak.turkcesozluk"
+}

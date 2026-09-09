@@ -14,6 +14,7 @@ import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.hayhak.turkcesozluk.R
@@ -24,6 +25,7 @@ fun SearchBar(
     onQueryChange: (String) -> Unit,
     voiceLauncher: ManagedActivityResultLauncher<Intent, ActivityResult>? = null
 ) {
+    val context = LocalContext.current
     OutlinedTextField(
         value = query,
         onValueChange = onQueryChange,
@@ -35,7 +37,7 @@ fun SearchBar(
             Row {
                 if (query.isNotEmpty()) {
                     IconButton(onClick = { onQueryChange("") }) {
-                        Icon(Icons.Default.Clear, contentDescription = "Temizle")
+                        Icon(Icons.Default.Clear, contentDescription = stringResource(R.string.cd_clear))
                     }
                 }
                 if (voiceLauncher != null) {
@@ -43,11 +45,11 @@ fun SearchBar(
                         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
                             putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
                             putExtra(RecognizerIntent.EXTRA_LANGUAGE, "tr-TR")
-                            putExtra(RecognizerIntent.EXTRA_PROMPT, "Bir kelime söyleyin...")
+                            putExtra(RecognizerIntent.EXTRA_PROMPT, context.getString(R.string.voice_search_prompt))
                         }
                         voiceLauncher.launch(intent)
                     }) {
-                        Icon(Icons.Rounded.Mic, contentDescription = "Sesli Ara", tint = MaterialTheme.colorScheme.primary)
+                        Icon(Icons.Rounded.Mic, contentDescription = stringResource(R.string.cd_voice_search), tint = MaterialTheme.colorScheme.primary)
                     }
                 }
             }

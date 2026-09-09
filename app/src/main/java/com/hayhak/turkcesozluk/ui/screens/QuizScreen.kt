@@ -20,6 +20,7 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.res.stringResource
@@ -125,7 +126,7 @@ fun QuizScreen(viewModel: QuizViewModel = hiltViewModel()) {
                     viewModel.quitGame()
                     selectedAnswer = null
                 }) {
-                    Icon(Icons.Rounded.Refresh, contentDescription = "Sıfırla", tint = MaterialTheme.colorScheme.primary)
+                    Icon(Icons.Rounded.Refresh, contentDescription = stringResource(R.string.cd_reset), tint = MaterialTheme.colorScheme.primary)
                 }
             }
             Spacer(modifier = Modifier.height(24.dp))
@@ -280,7 +281,11 @@ fun QuizStartScreen(
         Text(
             stringResource(R.string.quiz_duration_title),
             style = MaterialTheme.typography.headlineSmall,
-            fontWeight = FontWeight.Bold
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.padding(horizontal = 16.dp)
         )
         Spacer(modifier = Modifier.height(32.dp))
 
@@ -311,7 +316,13 @@ fun QuizStartScreen(
         ) {
             Icon(Icons.Rounded.PlayArrow, contentDescription = null)
             Spacer(Modifier.width(12.dp))
-            Text(stringResource(R.string.btn_start_quiz), fontWeight = FontWeight.Bold, fontSize = 18.sp)
+            Text(
+                stringResource(R.string.btn_start_quiz),
+                fontWeight = FontWeight.Bold,
+                fontSize = 18.sp,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
         }
     }
 }

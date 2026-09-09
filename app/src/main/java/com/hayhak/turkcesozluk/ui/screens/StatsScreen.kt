@@ -2,6 +2,7 @@ package com.hayhak.turkcesozluk.ui.screens
 
 import android.os.Build
 import android.widget.Toast
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
@@ -34,6 +35,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.MenuBook
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.HelpOutline
 import androidx.compose.material.icons.filled.Info
@@ -81,6 +84,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -109,7 +113,6 @@ fun StatsScreen(
     val favorites by viewModel.favorites.collectAsState()
     val recentSearches by viewModel.recentSearches.collectAsState()
     val userWords by viewModel.userWords.collectAsState()
-    val currentTheme by viewModel.currentTheme.collectAsState()
     val currentLanguage by viewModel.currentLanguage.collectAsState()
     val weeklyStats by viewModel.weeklyStats.collectAsState()
     val previousWeekTotal by viewModel.previousWeekTotal.collectAsState()
@@ -118,6 +121,17 @@ fun StatsScreen(
     var showRateDialog by remember { mutableStateOf(false) }
     var checkingUpdate by remember { mutableStateOf(false) }
     var manualUpdateInfo by remember { mutableStateOf<PlayUpdateInfo?>(null) }
+    var languageExpanded by remember { mutableStateOf(false) }
+
+    val collapsedLocales = remember(currentLanguage) {
+        buildList {
+            add(currentLanguage)
+            for (fallback in listOf(AppLocale.SYSTEM, AppLocale.TURKISH, AppLocale.ENGLISH)) {
+                if (size >= 2) break
+                if (fallback !in this) add(fallback)
+            }
+        }
+    }
 
     LaunchedEffect(Unit) {
         viewModel.refreshStats()
@@ -134,7 +148,7 @@ fun StatsScreen(
         )
     }
     LazyColumn(
-        modifier = Modifier.fillMaxSize().statusBarsPadding(),
+        modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -231,52 +245,46 @@ fun StatsScreen(
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f))
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
-                    Text(stringResource(R.string.appearance_mode), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
-                    Spacer(modifier = Modifier.height(12.dp))
                     Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable { languageExpanded = !languageExpanded },
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
-                        com.hayhak.turkcesozluk.data.db.AppTheme.entries.forEach { theme ->
-                            FilterChip(
-                                selected = currentTheme == theme,
-                                onClick = { viewModel.setTheme(theme) },
-                                label = {
-                                    Text(
-                                        when (theme) {
-                                            com.hayhak.turkcesozluk.data.db.AppTheme.LIGHT -> stringResource(R.string.theme_light)
-                                            com.hayhak.turkcesozluk.data.db.AppTheme.DARK -> stringResource(R.string.theme_dark)
-                                            com.hayhak.turkcesozluk.data.db.AppTheme.SYSTEM -> stringResource(R.string.theme_system)
-                                        }
-                                    )
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                stringResource(R.string.settings_language),
+                                style = MaterialTheme.typography.labelLarge,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                            Text(
+                                text = if (currentLanguage == AppLocale.SYSTEM) {
+                                    stringResource(R.string.language_system)
+                                } else {
+                                    currentLanguage.nativeName
                                 },
-                                shape = RoundedCornerShape(12.dp)
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
+                        Icon(
+                            imageVector = if (languageExpanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
+                            contentDescription = if (languageExpanded) {
+                                stringResource(R.string.language_show_less)
+                            } else {
+                                stringResource(R.string.language_show_all)
+                            },
+                            tint = MaterialTheme.colorScheme.primary
+                        )
                     }
-                }
-            }
-
-            Spacer(modifier = Modifier.height(16.dp))
-
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(24.dp),
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f))
-            ) {
-                Column(modifier = Modifier.padding(16.dp)) {
-                    Text(
-                        stringResource(R.string.settings_language),
-                        style = MaterialTheme.typography.labelLarge,
-                        color = MaterialTheme.colorScheme.primary
-                    )
                     Spacer(modifier = Modifier.height(12.dp))
                     FlowRow(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        AppLocale.entries.forEach { locale ->
+                        val localesToShow = if (languageExpanded) AppLocale.sortedForPicker else collapsedLocales
+                        localesToShow.forEach { locale ->
                             FilterChip(
                                 selected = currentLanguage == locale,
                                 onClick = {
@@ -291,12 +299,24 @@ fun StatsScreen(
                                             stringResource(R.string.language_system)
                                         } else {
                                             locale.nativeName
-                                        }
+                                        },
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis
                                     )
                                 },
                                 shape = RoundedCornerShape(12.dp)
                             )
                         }
+                    }
+                    AnimatedVisibility(visible = !languageExpanded && AppLocale.sortedForPicker.size > collapsedLocales.size) {
+                        Text(
+                            text = stringResource(R.string.language_show_all),
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier
+                                .padding(top = 8.dp)
+                                .clickable { languageExpanded = true }
+                        )
                     }
                 }
             }
@@ -439,11 +459,13 @@ private fun AboutLinkRow(
         Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
-            Text(title, style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.SemiBold)
+            Text(title, style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.SemiBold, maxLines = 2, overflow = TextOverflow.Ellipsis)
             Text(
                 subtitle,
                 style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis
             )
         }
         Icon(Icons.Default.ChevronRight, contentDescription = null)
@@ -453,7 +475,7 @@ private fun AboutLinkRow(
 fun PrivacyPolicyDialog(onDismiss: () -> Unit) {
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("Gizlilik Politikası", fontWeight = FontWeight.Bold) },
+        title = { Text(stringResource(R.string.settings_privacy_policy), fontWeight = FontWeight.Bold) },
         text = {
             androidx.compose.foundation.rememberScrollState().let { scrollState ->
                 Column(
@@ -475,7 +497,7 @@ fun PrivacyPolicyDialog(onDismiss: () -> Unit) {
         },
         confirmButton = {
             TextButton(onClick = onDismiss) {
-                Text("Kapat")
+                Text(stringResource(R.string.cd_close))
             }
         },
         shape = RoundedCornerShape(24.dp)
@@ -484,8 +506,24 @@ fun PrivacyPolicyDialog(onDismiss: () -> Unit) {
 
 @Composable
 fun WeeklyActivityCard(weeklyStats: List<Int>, previousWeekTotal: Int) {
-    val days = listOf("Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz")
-    val fullDays = listOf("Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar")
+    val days = listOf(
+        stringResource(R.string.day_mon),
+        stringResource(R.string.day_tue),
+        stringResource(R.string.day_wed),
+        stringResource(R.string.day_thu),
+        stringResource(R.string.day_fri),
+        stringResource(R.string.day_sat),
+        stringResource(R.string.day_sun),
+    )
+    val fullDays = listOf(
+        stringResource(R.string.day_mon_full),
+        stringResource(R.string.day_tue_full),
+        stringResource(R.string.day_wed_full),
+        stringResource(R.string.day_thu_full),
+        stringResource(R.string.day_fri_full),
+        stringResource(R.string.day_sat_full),
+        stringResource(R.string.day_sun_full),
+    )
 
     val currentDayIndex = remember {
         java.util.Calendar.getInstance().let {
@@ -569,7 +607,7 @@ fun WeeklyActivityCard(weeklyStats: List<Int>, previousWeekTotal: Int) {
                             style = MaterialTheme.typography.titleMedium
                         )
                         Text(
-                            "Son 7 gün",
+                            stringResource(R.string.weekly_last_7_days),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.outline
                         )
@@ -835,7 +873,7 @@ fun WeeklyActivityCard(weeklyStats: List<Int>, previousWeekTotal: Int) {
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
-                        text = "${fullDays[selectedIndex]} · $selectedValue aktivite",
+                        text = stringResource(R.string.weekly_day_detail, fullDays[selectedIndex], selectedValue),
                         style = MaterialTheme.typography.labelMedium,
                         fontWeight = FontWeight.SemiBold,
                         color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f)
@@ -883,7 +921,7 @@ fun StatCard(title: String, value: String, icon: ImageVector, color: Color, modi
             Icon(icon, contentDescription = null, tint = color)
             Spacer(modifier = Modifier.height(12.dp))
             Text(value, fontSize = 28.sp, fontWeight = FontWeight.Black, color = color)
-            Text(title, style = MaterialTheme.typography.labelMedium, color = color.copy(alpha = 0.7f))
+            Text(title, style = MaterialTheme.typography.labelMedium, color = color.copy(alpha = 0.7f), maxLines = 2, overflow = TextOverflow.Ellipsis)
         }
     }
 }
@@ -909,9 +947,17 @@ fun AchievementItem(title: String, desc: String, isUnlocked: Boolean) {
                 Text(
                     title,
                     fontWeight = FontWeight.Bold,
-                    color = if (isUnlocked) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.outline
+                    color = if (isUnlocked) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.outline,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis
                 )
-                Text(desc, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.outline)
+                Text(
+                    desc,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.outline,
+                    maxLines = 3,
+                    overflow = TextOverflow.Ellipsis
+                )
             }
         }
     }

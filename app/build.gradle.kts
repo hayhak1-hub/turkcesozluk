@@ -25,8 +25,8 @@ android {
         applicationId = "com.hayhak.turkcesozluk"
         minSdk = 23
         targetSdk = 36
-        versionCode = 16
-        versionName = "1.8.0"
+        versionCode = 18
+        versionName = "1.9.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

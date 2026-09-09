@@ -1,0 +1,111 @@
+{
+  "title": "Privacy Policy",
+  "pageTitle": "Privacy Policy — Turkish Dictionary",
+  "metaApp": "App",
+  "metaPackage": "package name",
+  "metaDeveloper": "Developer",
+  "metaUpdated": "Last updated",
+  "updatedDate": "August 7, 2026",
+  "langLabel": "Language",
+  "intro": "This privacy policy explains how the <strong>Turkish Dictionary</strong> app available on Google Play handles user data. By downloading or using the app, you agree to this policy.",
+  "sections": [
+    {
+      "title": "1. Data Controller and Contact",
+      "paragraphs": [
+        "Data controller / Developer: ThunderCraft<br>Email: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>",
+        "For privacy-related questions, contact us at the email address above."
+      ]
+    },
+    {
+      "title": "2. Data Collected",
+      "paragraphs": [
+        "The app does not require account creation, sign-in, or registration. We do not knowingly collect personal identifiers such as name, email, phone number, precise location, or ID documents, and we do not send them to our own servers. The app has no user account or backend server of its own."
+      ]
+    },
+    {
+      "title": "3. Data Stored Locally on Your Device",
+      "paragraphs": [
+        "The following data is stored only on your device (local storage / database) and is not exported from your device:",
+        "When you uninstall the app, this local data is removed from your device."
+      ],
+      "items": [
+        "Favorite words",
+        "Search history",
+        "User-added words / synonyms",
+        "In-app statistics (e.g. weekly activity, streak)",
+        "Settings such as theme and dictionary mode"
+      ]
+    },
+    {
+      "title": "4. Data Processed Over the Internet",
+      "paragraphs": [
+        "The app may use an internet connection. When a word is not found in the local dictionary, the searched <strong>word text</strong> may be sent to <a href=\"https://sozluk.gov.tr\" rel=\"noopener noreferrer\">sozluk.gov.tr</a> (Turkish Language Association Current Turkish Dictionary) to retrieve definition information.",
+        "If your device has no internet connection or TDK does not respond, the online result is not shown; local dictionary features continue to work."
+      ],
+      "items": [
+        "Data sent: only the word typed in the search box",
+        "Purpose: to display dictionary meaning / definition",
+        "No personal identity information is sent",
+        "This request is made to TDK's public website; the app is not in an official partnership with TDK"
+      ]
+    },
+    {
+      "title": "5. Permissions",
+      "paragraphs": [],
+      "items": [
+        "<strong>Internet (INTERNET):</strong> Used to query the TDK dictionary for words not found locally.",
+        "<strong>Notifications (POST_NOTIFICATIONS):</strong> Optional. Requested to show the “Word of the day” notification. Can be disabled in device settings.",
+        "<strong>Voice search / microphone:</strong> When you tap the microphone icon, your device's speech recognition service (e.g. Google) may open. We do not store audio recordings; only the recognized text is placed in the search box."
+      ]
+    },
+    {
+      "title": "6. Third Parties",
+      "paragraphs": [
+        "The app may interact with the following third-party services:",
+        "We do not use ad SDKs, analytics SDKs, or user tracking tools."
+      ],
+      "items": [
+        "<strong>Google Play / Play Store:</strong> App distribution and opening the Play Store page via “Rate us”. This process is managed by Google.",
+        "<strong>sozluk.gov.tr (TDK):</strong> Definition lookup for words not found locally. Only the searched word is transmitted.",
+        "<strong>Device speech recognition service:</strong> When the user starts voice search."
+      ]
+    },
+    {
+      "title": "7. Data Sharing and Sale",
+      "paragraphs": [
+        "We do not sell user data. We do not create user profiles on our own servers. As described in Section 4, only the searched word may be sent to the TDK website for dictionary lookup."
+      ]
+    },
+    {
+      "title": "8. Data Security",
+      "paragraphs": [
+        "Local data stays on your device. Online dictionary queries are made over HTTPS. No security measure is absolute; we recommend keeping your device up to date."
+      ]
+    },
+    {
+      "title": "9. Children's Privacy",
+      "paragraphs": [
+        "The app is a general language learning / dictionary app. We do not knowingly collect personal data from children under 13. Parents should supervise their children's use of the app."
+      ]
+    },
+    {
+      "title": "10. Your Rights",
+      "paragraphs": [
+        "You can delete local data in the app (e.g. by removing favorites) or by uninstalling the app. For questions about online queries, write to <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>."
+      ]
+    },
+    {
+      "title": "11. Changes to This Policy",
+      "paragraphs": [
+        "This policy may be updated from time to time. The current version is published on this page. The “Last updated” date is revised for significant changes."
+      ]
+    },
+    {
+      "title": "12. Contact",
+      "paragraphs": [
+        "For privacy policy and data processing: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>"
+      ]
+    }
+  ],
+  "footer": "© 2026 Turkish Dictionary · com.hayhak.turkcesozluk"
+}

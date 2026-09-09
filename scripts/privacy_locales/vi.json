@@ -1,0 +1,111 @@
+{
+  "title": "Chính sách quyền riêng tư",
+  "pageTitle": "Chính sách quyền riêng tư — Từ điển tiếng Thổ Nhĩ Kỳ",
+  "metaApp": "Ứng dụng",
+  "metaPackage": "tên gói",
+  "metaDeveloper": "Nhà phát triển",
+  "metaUpdated": "Cập nhật lần cuối",
+  "updatedDate": "7 tháng 8 năm 2026",
+  "langLabel": "Ngôn ngữ",
+  "intro": "Chính sách quyền riêng tư này giải thích cách ứng dụng <strong>Từ điển tiếng Thổ Nhĩ Kỳ</strong> trên Google Play xử lý dữ liệu người dùng. Bằng việc tải xuống hoặc sử dụng ứng dụng, bạn đồng ý với chính sách này.",
+  "sections": [
+    {
+      "title": "1. Người kiểm soát dữ liệu và liên hệ",
+      "paragraphs": [
+        "Người kiểm soát dữ liệu / Nhà phát triển: ThunderCraft<br>Email: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>",
+        "Đối với các câu hỏi liên quan đến quyền riêng tư, vui lòng liên hệ với chúng tôi qua địa chỉ email ở trên."
+      ]
+    },
+    {
+      "title": "2. Dữ liệu thu thập",
+      "paragraphs": [
+        "Ứng dụng không yêu cầu tạo tài khoản, đăng nhập hoặc đăng ký. Chúng tôi không cố ý thu thập thông tin nhận dạng cá nhân như tên, email, số điện thoại, vị trí chính xác hoặc giấy tờ tùy thân, và không gửi chúng đến máy chủ của chúng tôi. Ứng dụng không có tài khoản người dùng hoặc máy chủ backend riêng."
+      ]
+    },
+    {
+      "title": "3. Dữ liệu lưu trữ cục bộ trên thiết bị của bạn",
+      "paragraphs": [
+        "Dữ liệu sau đây chỉ được lưu trên thiết bị của bạn (bộ nhớ cục bộ / cơ sở dữ liệu) và không được xuất khỏi thiết bị:",
+        "Khi bạn gỡ cài đặt ứng dụng, dữ liệu cục bộ này cũng bị xóa khỏi thiết bị của bạn."
+      ],
+      "items": [
+        "Từ yêu thích",
+        "Lịch sử tìm kiếm",
+        "Từ / từ đồng nghĩa do người dùng thêm",
+        "Thống kê trong ứng dụng (ví dụ: hoạt động hàng tuần, chuỗi)",
+        "Cài đặt như chủ đề và chế độ từ điển"
+      ]
+    },
+    {
+      "title": "4. Dữ liệu xử lý qua Internet",
+      "paragraphs": [
+        "Ứng dụng có thể sử dụng kết nối Internet. Khi không tìm thấy từ trong từ điển cục bộ, <strong>văn bản từ</strong> được tìm kiếm có thể được gửi đến <a href=\"https://sozluk.gov.tr\" rel=\"noopener noreferrer\">sozluk.gov.tr</a> (Hiệp hội Ngôn ngữ Thổ Nhĩ Kỳ Güncel Türkçe Sözlük)",
+        "Nếu thiết bị của bạn không có kết nối Internet hoặc TDK không phản hồi, kết quả trực tuyến sẽ không hiển thị; các tính năng từ điển cục bộ vẫn hoạt động."
+      ],
+      "items": [
+        "Dữ liệu gửi: chỉ từ được nhập trong ô tìm kiếm",
+        "Mục đích: hiển thị nghĩa / định nghĩa từ điển",
+        "Không gửi thông tin nhận dạng cá nhân",
+        "Yêu cầu này được gửi đến trang web công khai của TDK; ứng dụng không có quan hệ đối tác chính thức với TDK"
+      ]
+    },
+    {
+      "title": "5. Quyền",
+      "paragraphs": [],
+      "items": [
+        "<strong>Internet (INTERNET):</strong> Dùng để truy vấn từ điển TDK cho các từ không tìm thấy cục bộ.",
+        "<strong>Thông báo (POST_NOTIFICATIONS):</strong> Tùy chọn. Được yêu cầu để hiển thị thông báo “Từ trong ngày”. Có thể tắt trong cài đặt thiết bị.",
+        "<strong>Tìm kiếm bằng giọng nói / micrô:</strong> Khi bạn chạm biểu tượng micrô, dịch vụ nhận dạng giọng nói của thiết bị (ví dụ: Google) có thể mở. Chúng tôi không lưu bản ghi âm; chỉ văn bản được nhận dạng được đặt vào ô tìm kiếm."
+      ]
+    },
+    {
+      "title": "6. Bên thứ ba",
+      "paragraphs": [
+        "Ứng dụng có thể tương tác với các dịch vụ bên thứ ba sau:",
+        "Chúng tôi không sử dụng SDK quảng cáo, SDK phân tích hoặc công cụ theo dõi người dùng."
+      ],
+      "items": [
+        "<strong>Google Play / Play Store:</strong> Phân phối ứng dụng và mở trang Play Store qua “Đánh giá chúng tôi”. Quy trình này do Google quản lý.",
+        "<strong>sozluk.gov.tr (TDK):</strong> Tra cứu định nghĩa cho từ không tìm thấy cục bộ. Chỉ từ được tìm kiếm được truyền.",
+        "<strong>Dịch vụ nhận dạng giọng nói của thiết bị:</strong> Khi người dùng bắt đầu tìm kiếm bằng giọng nói."
+      ]
+    },
+    {
+      "title": "7. Chia sẻ và bán dữ liệu",
+      "paragraphs": [
+        "Chúng tôi không bán dữ liệu người dùng. Chúng tôi không tạo hồ sơ người dùng trên máy chủ của mình. Như mô tả ở Mục 4, chỉ từ được tìm kiếm có thể được gửi đến trang web TDK để tra cứu từ điển."
+      ]
+    },
+    {
+      "title": "8. Bảo mật dữ liệu",
+      "paragraphs": [
+        "Dữ liệu cục bộ ở lại trên thiết bị của bạn. Truy vấn từ điển trực tuyến được thực hiện qua HTTPS. Không có biện pháp bảo mật nào là tuyệt đối; chúng tôi khuyên bạn nên cập nhật thiết bị."
+      ]
+    },
+    {
+      "title": "9. Quyền riêng tư của trẻ em",
+      "paragraphs": [
+        "Ứng dụng là ứng dụng học ngôn ngữ / từ điển chung. Chúng tôi không cố ý thu thập dữ liệu cá nhân từ trẻ em dưới 13 tuổi. Phụ huynh nên giám sát việc sử dụng ứng dụng của con cái."
+      ]
+    },
+    {
+      "title": "10. Quyền của bạn",
+      "paragraphs": [
+        "Bạn có thể xóa dữ liệu cục bộ trong ứng dụng (ví dụ: bằng cách xóa mục yêu thích) hoặc bằng cách gỡ cài đặt ứng dụng. Đối với câu hỏi về truy vấn trực tuyến, hãy viết đến <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>."
+      ]
+    },
+    {
+      "title": "11. Thay đổi chính sách này",
+      "paragraphs": [
+        "Chính sách này có thể được cập nhật theo thời gian. Phiên bản hiện tại được công bố trên trang này. Ngày “Cập nhật lần cuối” được sửa đổi cho các thay đổi quan trọng."
+      ]
+    },
+    {
+      "title": "12. Liên hệ",
+      "paragraphs": [
+        "Về chính sách quyền riêng tư và xử lý dữ liệu: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>"
+      ]
+    }
+  ],
+  "footer": "© 2026 Từ điển tiếng Thổ Nhĩ Kỳ · com.hayhak.turkcesozluk"
+}

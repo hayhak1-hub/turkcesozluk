@@ -26,10 +26,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -44,8 +46,19 @@ import com.hayhak.turkcesozluk.ui.components.TdkResultCard
 import com.hayhak.turkcesozluk.util.capitalizeTR
 import com.hayhak.turkcesozluk.util.normalizeTR
 import com.hayhak.turkcesozluk.util.pressScale
+import com.hayhak.turkcesozluk.data.db.DictionaryMode
 import com.hayhak.turkcesozluk.viewmodel.DictionaryViewModel
 import java.util.Locale
+
+@Composable
+private fun dictionaryModeTitle(mode: DictionaryMode): String = when (mode) {
+    DictionaryMode.SYNONYMS -> stringResource(R.string.dictionary_title_synonyms)
+    DictionaryMode.VERBS -> stringResource(R.string.dictionary_title_verbs)
+    DictionaryMode.DEFINITIONS -> stringResource(R.string.mode_definitions)
+    DictionaryMode.IDIOMS -> stringResource(R.string.mode_idioms)
+    DictionaryMode.ADJECTIVES -> stringResource(R.string.mode_adjectives)
+    DictionaryMode.ALL -> stringResource(R.string.dictionary_title_all)
+}
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -66,8 +79,12 @@ fun DictionaryScreen(
     val streakCount by viewModel.streakCount.collectAsState()
     val showDailyWord by viewModel.showDailyWord.collectAsState()
     val currentMode by viewModel.currentMode.collectAsState()
-    val dictionaryTitle by viewModel.dictionaryTitle.collectAsState()
     val hasSeenModeHint by viewModel.hasSeenModeHint.collectAsState()
+    val configuration = LocalConfiguration.current
+    val displayLocale = remember(configuration) {
+        configuration.locales[0] ?: Locale.getDefault()
+    }
+    val dictionaryTitle = dictionaryModeTitle(currentMode)
     val trLocale = remember { Locale("tr", "TR") }
     
     var showAddDialog by remember { mutableStateOf(false) }
@@ -103,6 +120,7 @@ fun DictionaryScreen(
     val fabInteractionSource = remember { MutableInteractionSource() }
 
     Scaffold(
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         floatingActionButton = {
             FloatingActionButton(
                 onClick = { showAddDialog = true },
@@ -111,7 +129,7 @@ fun DictionaryScreen(
                 containerColor = MaterialTheme.colorScheme.primary,
                 contentColor = Color.White
             ) {
-                Icon(Icons.Default.Add, contentDescription = "Kelime Ekle")
+                Icon(Icons.Default.Add, contentDescription = stringResource(R.string.cd_add_word))
             }
         }
     ) { padding ->
@@ -128,8 +146,7 @@ fun DictionaryScreen(
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(padding)
-                .statusBarsPadding(), // Status bar ile çakışmayı önler
+                .padding(padding),
             contentPadding = PaddingValues(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -140,10 +157,12 @@ fun DictionaryScreen(
                     verticalAlignment = Alignment.Top // Butonların yukarıda hizalanmasını sağlar
                 ) {
                     Text(
-                        text = dictionaryTitle.uppercase(trLocale), 
-                        style = MaterialTheme.typography.headlineMedium, 
-                        fontWeight = FontWeight.ExtraBold, 
+                        text = dictionaryTitle.uppercase(displayLocale),
+                        style = MaterialTheme.typography.headlineMedium,
+                        fontWeight = FontWeight.ExtraBold,
                         color = MaterialTheme.colorScheme.primary,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
                         modifier = Modifier.weight(1f)
                     )
                     
@@ -177,7 +196,7 @@ fun DictionaryScreen(
                                 }) {
                                     Icon(
                                         Icons.Default.Settings,
-                                        contentDescription = "Ayarlar",
+                                        contentDescription = stringResource(R.string.cd_settings),
                                         tint = MaterialTheme.colorScheme.primary
                                     )
                                 }
@@ -203,14 +222,14 @@ fun DictionaryScreen(
                                         ) {
                                             Column(modifier = Modifier.padding(14.dp)) {
                                                 Text(
-                                                    "Sözlüğü değiştirebilirsin",
+                                                    stringResource(R.string.mode_hint_title),
                                                     color = Color.White,
                                                     fontWeight = FontWeight.Bold,
                                                     style = MaterialTheme.typography.labelLarge
                                                 )
                                                 Spacer(Modifier.height(4.dp))
                                                 Text(
-                                                    "Buradan Fiiller, Eş Anlamlılar, Deyimler gibi sözlük modları arasında geçiş yapabilirsin. Yerelde bulunamayan kelimeleri de otomatik olarak TDK'dan aratırız.",
+                                                    stringResource(R.string.mode_hint_body),
                                                     color = Color.White.copy(alpha = 0.9f),
                                                     style = MaterialTheme.typography.bodySmall
                                                 )
@@ -220,7 +239,7 @@ fun DictionaryScreen(
                                                     modifier = Modifier.align(Alignment.End),
                                                     colors = ButtonDefaults.textButtonColors(contentColor = Color.White)
                                                 ) {
-                                                    Text("Anladım", fontWeight = FontWeight.Bold)
+                                                    Text(stringResource(R.string.mode_hint_ok), fontWeight = FontWeight.Bold)
                                                 }
                                             }
                                         }
@@ -298,7 +317,7 @@ fun DictionaryScreen(
                                     )
                                     Divider(modifier = Modifier.padding(vertical = 4.dp))
                                     DropdownMenuItem(
-                                        text = { Text("Günün Kelimesini Göster") },
+                                        text = { Text(stringResource(R.string.menu_show_daily_word)) },
                                         onClick = {
                                             com.hayhak.turkcesozluk.data.db.SettingsManager.setShowDailyWord(context, !showDailyWord)
                                             showSettingsMenu = false
@@ -416,7 +435,13 @@ fun DictionaryScreen(
                 ) {
                     Icon(Icons.Rounded.Refresh, contentDescription = null)
                     Spacer(Modifier.width(8.dp))
-                    Text(stringResource(R.string.btn_try_luck), fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                    Text(
+                        stringResource(R.string.btn_try_luck),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 14.sp,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
                 }
 
                 if (recentSearches.isNotEmpty() && query.isEmpty()) {
@@ -466,20 +491,20 @@ fun DictionaryScreen(
                             onToggleFavorite = { viewModel.toggleFavorite(query, results.joinToString(", "), isResultFavorite) },
                             onSpeak = { tts?.speak(results.joinToString(", "), TextToSpeech.QUEUE_FLUSH, null, null) },
                             onShare = {
-                                val modeName = when(currentMode) {
-                                    com.hayhak.turkcesozluk.data.db.DictionaryMode.SYNONYMS -> "eş anlamlısı"
-                                    com.hayhak.turkcesozluk.data.db.DictionaryMode.VERBS -> "anlamı"
-                                    com.hayhak.turkcesozluk.data.db.DictionaryMode.DEFINITIONS -> "tanımı"
-                                    com.hayhak.turkcesozluk.data.db.DictionaryMode.IDIOMS -> "anlamı"
-                                    com.hayhak.turkcesozluk.data.db.DictionaryMode.ADJECTIVES -> "anlamı"
-                                    com.hayhak.turkcesozluk.data.db.DictionaryMode.ALL -> "anlamı/eş anlamlısı"
+                                val modeName = when (currentMode) {
+                                    com.hayhak.turkcesozluk.data.db.DictionaryMode.SYNONYMS -> context.getString(R.string.label_synonym_text).lowercase(trLocale)
+                                    com.hayhak.turkcesozluk.data.db.DictionaryMode.VERBS -> context.getString(R.string.share_mode_verbs)
+                                    com.hayhak.turkcesozluk.data.db.DictionaryMode.DEFINITIONS -> context.getString(R.string.share_mode_definitions)
+                                    com.hayhak.turkcesozluk.data.db.DictionaryMode.IDIOMS -> context.getString(R.string.share_mode_idioms)
+                                    com.hayhak.turkcesozluk.data.db.DictionaryMode.ADJECTIVES -> context.getString(R.string.share_mode_adjectives)
+                                    com.hayhak.turkcesozluk.data.db.DictionaryMode.ALL -> context.getString(R.string.share_mode_all)
                                 }
                                 val shareText = "📖 *${query.uppercase(trLocale)}* kelimesinin $modeName: \n\n✨ ${results.joinToString(", ")}\n\n_Türkçe Sözlük ile öğreniyorum!_"
                                 val shareIntent = Intent(Intent.ACTION_SEND).apply {
                                     type = "text/plain"
                                     putExtra(Intent.EXTRA_TEXT, shareText)
                                 }
-                                context.startActivity(Intent.createChooser(shareIntent, "Kelimeyi Paylaş"))
+                                context.startActivity(Intent.createChooser(shareIntent, context.getString(R.string.share_word_title)))
                             },
                             onWordClick = { viewModel.updateQuery(it) },
                             mode = currentMode

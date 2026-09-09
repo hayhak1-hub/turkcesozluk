@@ -2,6 +2,7 @@ package com.hayhak.turkcesozluk.ui.screens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -27,8 +28,10 @@ import com.hayhak.turkcesozluk.R
 @Composable
 fun HelpScreen(onBack: () -> Unit) {
     Scaffold(
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             TopAppBar(
+                windowInsets = WindowInsets(0, 0, 0, 0),
                 title = { Text(stringResource(R.string.settings_help)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {

@@ -93,23 +93,23 @@ fun ResultCard(
                 ) {
                     Icon(
                         imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder, 
-                        contentDescription = "Favori", 
+                        contentDescription = stringResource(R.string.cd_favorite), 
                         tint = if (isFavorite) Color.Red else MaterialTheme.colorScheme.onSecondaryContainer
                     )
                 }
                 Spacer(Modifier.width(12.dp))
                 FilledIconButton(onClick = onSpeak, modifier = Modifier.size(56.dp)) {
-                    Icon(Icons.Rounded.PlayArrow, contentDescription = "Dinle", modifier = Modifier.size(32.dp))
+                    Icon(Icons.Rounded.PlayArrow, contentDescription = stringResource(R.string.cd_listen), modifier = Modifier.size(32.dp))
                 }
                 Spacer(Modifier.width(12.dp))
                 FilledTonalIconButton(onClick = onShare, modifier = Modifier.size(56.dp)) {
-                    Icon(Icons.Rounded.Share, contentDescription = "Paylaş")
+                    Icon(Icons.Rounded.Share, contentDescription = stringResource(R.string.cd_share))
                 }
             }
 
             if (wordTree.isNotEmpty()) {
                 Spacer(Modifier.height(32.dp))
-                Text("KELİME AĞACI", style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+                Text(stringResource(R.string.word_tree_title), style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
                 Spacer(Modifier.height(16.dp))
                 
                 @OptIn(ExperimentalLayoutApi::class)

@@ -55,23 +55,6 @@ class DictionaryViewModel @Inject constructor(
     val currentMode = com.hayhak.turkcesozluk.data.db.SettingsManager.modeState
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), com.hayhak.turkcesozluk.data.db.DictionaryMode.SYNONYMS)
 
-    val dictionaryTitle = currentMode.map { mode ->
-        when (mode) {
-            com.hayhak.turkcesozluk.data.db.DictionaryMode.SYNONYMS ->
-                application.getString(com.hayhak.turkcesozluk.R.string.dictionary_title_synonyms)
-            com.hayhak.turkcesozluk.data.db.DictionaryMode.VERBS ->
-                application.getString(com.hayhak.turkcesozluk.R.string.dictionary_title_verbs)
-            com.hayhak.turkcesozluk.data.db.DictionaryMode.DEFINITIONS ->
-                application.getString(com.hayhak.turkcesozluk.R.string.mode_definitions)
-            com.hayhak.turkcesozluk.data.db.DictionaryMode.IDIOMS ->
-                application.getString(com.hayhak.turkcesozluk.R.string.mode_idioms)
-            com.hayhak.turkcesozluk.data.db.DictionaryMode.ADJECTIVES ->
-                application.getString(com.hayhak.turkcesozluk.R.string.mode_adjectives)
-            com.hayhak.turkcesozluk.data.db.DictionaryMode.ALL ->
-                application.getString(com.hayhak.turkcesozluk.R.string.dictionary_title_all)
-        }
-    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), "")
-
     val recentSearches = historyDao.getRecentSearches()
         .stateIn(
             scope = viewModelScope,

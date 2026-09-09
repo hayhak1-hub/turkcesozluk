@@ -1,0 +1,111 @@
+{
+  "title": "Política de privacidade",
+  "pageTitle": "Política de privacidade — Dicionário turco",
+  "metaApp": "Aplicativo",
+  "metaPackage": "nome do pacote",
+  "metaDeveloper": "Desenvolvedor",
+  "metaUpdated": "Última atualização",
+  "updatedDate": "7 de agosto de 2026",
+  "langLabel": "Idioma",
+  "intro": "Esta política de privacidade explica como o aplicativo <strong>Dicionário turco</strong> disponível no Google Play trata os dados do usuário. Ao baixar ou usar o aplicativo, você concorda com esta política.",
+  "sections": [
+    {
+      "title": "1. Controlador de dados e contacto",
+      "paragraphs": [
+        "Controlador de dados / Desenvolvedor: ThunderCraft<br>E-mail: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>",
+        "Para questões relacionadas com a privacidade, contacte-nos no endereço de e-mail acima."
+      ]
+    },
+    {
+      "title": "2. Dados recolhidos",
+      "paragraphs": [
+        "A aplicação não requer criação de conta, início de sessão ou registo. Não recolhemos deliberadamente identificadores pessoais como nome, e-mail, número de telefone, localização precisa ou documentos de identidade, nem os enviamos para os nossos servidores. A aplicação não tem conta de utilizador nem servidor backend próprio."
+      ]
+    },
+    {
+      "title": "3. Dados armazenados localmente no seu dispositivo",
+      "paragraphs": [
+        "Os seguintes dados são armazenados apenas no seu dispositivo (armazenamento local / base de dados) e não são exportados do dispositivo:",
+        "Ao desinstalar a aplicação, estes dados locais são removidos do seu dispositivo."
+      ],
+      "items": [
+        "Palavras favoritas",
+        "Histórico de pesquisa",
+        "Palavras / sinónimos adicionados pelo utilizador",
+        "Estatísticas na aplicação (p. ex., atividade semanal, sequência)",
+        "Definições como tema e modo de dicionário"
+      ]
+    },
+    {
+      "title": "4. Dados processados pela Internet",
+      "paragraphs": [
+        "A aplicação pode utilizar uma ligação à Internet. Quando uma palavra não é encontrada no dicionário local, o <strong>texto da palavra</strong> pesquisada pode ser enviado para <a href=\"https://sozluk.gov.tr\" rel=\"noopener noreferrer\">sozluk.gov.tr</a> (Associação da Língua Turca Güncel Türkçe Sözlük)",
+        "Se o seu dispositivo não tiver ligação à Internet ou o TDK não responder, o resultado online não é apresentado; as funcionalidades do dicionário local continuam a funcionar."
+      ],
+      "items": [
+        "Dados enviados: apenas a palavra digitada na caixa de pesquisa",
+        "Finalidade: apresentar significado / definição do dicionário",
+        "Nenhuma informação de identidade pessoal é enviada",
+        "Este pedido é feito ao site público do TDK; a aplicação não tem parceria oficial com o TDK"
+      ]
+    },
+    {
+      "title": "5. Permissões",
+      "paragraphs": [],
+      "items": [
+        "<strong>Internet (INTERNET):</strong> Utilizado para consultar o dicionário TDK de palavras não encontradas localmente.",
+        "<strong>Notificações (POST_NOTIFICATIONS):</strong> Opcional. Solicitado para mostrar a notificação «Palavra do dia». Pode ser desativado nas definições do dispositivo.",
+        "<strong>Pesquisa por voz / microfone:</strong> Ao tocar no ícone do microfone, o serviço de reconhecimento de voz do dispositivo (p. ex., Google) pode abrir. Não armazenamos gravações de áudio; apenas o texto reconhecido é colocado na caixa de pesquisa."
+      ]
+    },
+    {
+      "title": "6. Terceiros",
+      "paragraphs": [
+        "A aplicação pode interagir com os seguintes serviços de terceiros:",
+        "Não utilizamos SDK de publicidade, SDK de análise nem ferramentas de rastreamento de utilizadores."
+      ],
+      "items": [
+        "<strong>Google Play / Play Store:</strong> Distribuição da aplicação e abertura da página da Play Store através de «Avalie-nos». Este processo é gerido pelo Google.",
+        "<strong>sozluk.gov.tr (TDK):</strong> Consulta de definições de palavras não encontradas localmente. Apenas a palavra pesquisada é transmitida.",
+        "<strong>Serviço de reconhecimento de voz do dispositivo:</strong> Quando o utilizador inicia a pesquisa por voz."
+      ]
+    },
+    {
+      "title": "7. Partilha e venda de dados",
+      "paragraphs": [
+        "Não vendemos dados de utilizadores. Não criamos perfis de utilizador nos nossos servidores. Conforme descrito na Secção 4, apenas a palavra pesquisada pode ser enviada ao site TDK para consulta do dicionário."
+      ]
+    },
+    {
+      "title": "8. Segurança dos dados",
+      "paragraphs": [
+        "Os dados locais permanecem no seu dispositivo. As consultas ao dicionário online são feitas via HTTPS. Nenhuma medida de segurança é absoluta; recomendamos manter o dispositivo atualizado."
+      ]
+    },
+    {
+      "title": "9. Privacidade das crianças",
+      "paragraphs": [
+        "A aplicação é uma aplicação geral de aprendizagem de idiomas / dicionário. Não recolhemos deliberadamente dados pessoais de crianças com menos de 13 anos. Os pais devem supervisionar a utilização da aplicação pelos filhos."
+      ]
+    },
+    {
+      "title": "10. Os seus direitos",
+      "paragraphs": [
+        "Pode eliminar dados locais na aplicação (p. ex., removendo favoritos) ou desinstalando a aplicação. Para questões sobre consultas online, escreva para <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>."
+      ]
+    },
+    {
+      "title": "11. Alterações a esta política",
+      "paragraphs": [
+        "Esta política pode ser atualizada periodicamente. A versão atual é publicada nesta página. A data de «Última atualização» é revista para alterações significativas."
+      ]
+    },
+    {
+      "title": "12. Contacto",
+      "paragraphs": [
+        "Para política de privacidade e tratamento de dados: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>"
+      ]
+    }
+  ],
+  "footer": "© 2026 Dicionário turco · com.hayhak.turkcesozluk"
+}

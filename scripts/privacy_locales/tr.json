@@ -1,0 +1,111 @@
+{
+  "title": "Gizlilik Politikası",
+  "pageTitle": "Gizlilik Politikası — Türkçe Sözlük",
+  "metaApp": "Uygulama",
+  "metaPackage": "paket adı",
+  "metaDeveloper": "Geliştirici",
+  "metaUpdated": "Son güncelleme",
+  "updatedDate": "7 Ağustos 2026",
+  "langLabel": "Dil",
+  "intro": "Bu gizlilik politikası, Google Play üzerinden sunulan <strong>Türkçe Sözlük</strong> uygulamasının kullanıcı verilerini nasıl işlediğini açıklar. Uygulamayı indirerek veya kullanarak bu politikayı kabul etmiş sayılırsınız.",
+  "sections": [
+    {
+      "title": "1. Veri Sorumlusu ve İletişim",
+      "paragraphs": [
+        "Veri sorumlusu / Geliştirici: ThunderCraft<br>E-posta: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>",
+        "Gizlilik ile ilgili sorularınız için yukarıdaki e-posta adresinden bize ulaşabilirsiniz."
+      ]
+    },
+    {
+      "title": "2. Toplanan Veriler",
+      "paragraphs": [
+        "Uygulama hesap oluşturma, giriş veya kayıt istemez. Ad, soyad, e-posta, telefon numarası, kesin konum veya kimlik belgesi gibi kişisel kimlik bilgilerini bilerek toplamayız ve kendi sunucularımıza göndermeyiz. Uygulamanın kendisine ait bir kullanıcı hesabı / backend sunucusu yoktur."
+      ]
+    },
+    {
+      "title": "3. Cihazda Yerel Olarak Saklanan Veriler",
+      "paragraphs": [
+        "Aşağıdaki veriler yalnızca cihazınızda (yerel depolama / veritabanı) tutulur ve cihazınızdan dışarı aktarılmaz:",
+        "Uygulamayı kaldırdığınızda bu yerel veriler de cihazınızdan silinir."
+      ],
+      "items": [
+        "Favori kelimeler",
+        "Arama geçmişi",
+        "Kullanıcının eklediği kelimeler / eş anlamlılar",
+        "Uygulama içi istatistikler (ör. haftalık aktivite, seri)",
+        "Tema ve sözlük modu gibi ayarlar"
+      ]
+    },
+    {
+      "title": "4. İnternet Üzerinden İşlenen Veriler",
+      "paragraphs": [
+        "Uygulama internet bağlantısı kullanabilir. Yerel sözlükte bulunamayan bir kelime arandığında, anlam bilgisi almak için aranan <strong>kelime metni</strong> <a href=\"https://sozluk.gov.tr\" rel=\"noopener noreferrer\">sozluk.gov.tr</a> (Türk Dil Kurumu Güncel Türkçe Sözlük) adresine gönderilebilir.",
+        "Cihazınızın internet bağlantısı yoksa veya TDK yanıt vermezse ilgili online sonuç gösterilmez; yerel sözlük özellikleri çalışmaya devam eder."
+      ],
+      "items": [
+        "Gönderilen veri: yalnızca arama kutusuna yazılan kelime",
+        "Amaç: sözlük anlamı / tanım bilgisini göstermek",
+        "Kişisel kimlik bilgisi gönderilmez",
+        "Bu istek TDK’nın kamuya açık sitesine yapılır; uygulama TDK ile resmî bir ortaklık içinde değildir"
+      ]
+    },
+    {
+      "title": "5. İzinler",
+      "paragraphs": [],
+      "items": [
+        "<strong>İnternet (INTERNET):</strong> Yerelde bulunamayan kelimeler için TDK sözlük sorgusu yapmak amacıyla kullanılır.",
+        "<strong>Bildirimler (POST_NOTIFICATIONS):</strong> İsteğe bağlıdır. “Günün kelimesi” bildirimi gösterebilmek için istenir. Cihaz ayarlarından kapatılabilir.",
+        "<strong>Sesli arama / mikrofon:</strong> Mikrofon simgesine dokunduğunuzda cihazınızın kendi ses tanıma servisi (ör. Google) açılabilir. Ses kaydı uygulamamız tarafından saklanmaz; yalnızca tanınan metin arama kutusuna yazılır."
+      ]
+    },
+    {
+      "title": "6. Üçüncü Taraflar",
+      "paragraphs": [
+        "Uygulama aşağıdaki üçüncü taraf hizmetlerle etkileşebilir:",
+        "Reklam SDK’sı, analitik SDK’sı veya kullanıcı takip araçları kullanmıyoruz."
+      ],
+      "items": [
+        "<strong>Google Play / Play Store:</strong> Uygulama dağıtımı ve “Bizi Değerlendirin” ile Play Store sayfasının açılması için. Bu süreç Google tarafından yönetilir.",
+        "<strong>sozluk.gov.tr (TDK):</strong> Yerelde bulunamayan kelimeler için anlam sorgusu. Yalnızca aranan kelime iletilir.",
+        "<strong>Cihaz ses tanıma servisi:</strong> Kullanıcı sesli aramayı başlattığında."
+      ]
+    },
+    {
+      "title": "7. Verilerin Paylaşımı ve Satışı",
+      "paragraphs": [
+        "Kullanıcı verilerini satmayız. Kendi sunucularımızda kullanıcı profili oluşturmayız. Bölüm 4’te açıklandığı gibi, yalnızca sözlük sorgusu için aranan kelime TDK sitesine iletilebilir."
+      ]
+    },
+    {
+      "title": "8. Veri Güvenliği",
+      "paragraphs": [
+        "Yerel veriler cihazınızda tutulur. Online sözlük sorguları HTTPS üzerinden yapılır. Hiçbir güvenlik önlemi mutlak değildir; cihazınızı güncel tutmanızı öneririz."
+      ]
+    },
+    {
+      "title": "9. Çocukların Gizliliği",
+      "paragraphs": [
+        "Uygulama genel bir dil öğrenme / sözlük uygulamasıdır. 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamayız. Ebeveynler çocuklarının uygulamayı kullanımını denetlemelidir."
+      ]
+    },
+    {
+      "title": "10. Haklarınız",
+      "paragraphs": [
+        "Yerel verileri uygulama içinden (ör. favorileri kaldırarak) veya uygulamayı kaldırarak silebilirsiniz. Online sorgulara ilişkin sorularınız için <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a> adresine yazabilirsiniz."
+      ]
+    },
+    {
+      "title": "11. Politikadaki Değişiklikler",
+      "paragraphs": [
+        "Bu politika zaman zaman güncellenebilir. Güncel sürüm bu sayfada yayınlanır. Önemli değişikliklerde “Son güncelleme” tarihi yenilenir."
+      ]
+    },
+    {
+      "title": "12. İletişim",
+      "paragraphs": [
+        "Gizlilik politikası ve veri işleme hakkında: <a href=\"mailto:hayhak1@gmail.com\">hayhak1@gmail.com</a>"
+      ]
+    }
+  ],
+  "footer": "© 2026 Türkçe Sözlük · com.hayhak.turkcesozluk"
+}

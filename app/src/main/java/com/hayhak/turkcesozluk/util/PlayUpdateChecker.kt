@@ -32,6 +32,8 @@ data class PlayUpdateCheckResult(
  */
 object PlayUpdateChecker {
     private const val TAG = "PlayUpdateChecker"
+    private const val PREFS = "app_settings"
+    private const val KEY_DISMISSED_UPDATE_CODE = "dismissed_update_version_code"
 
     suspend fun checkDetailed(context: Context): PlayUpdateCheckResult {
         return try {
@@ -59,5 +61,32 @@ object PlayUpdateChecker {
             Log.d(TAG, "Update check failed (expected for sideload/debug): ${e.message}")
             PlayUpdateCheckResult(status = UpdateCheckStatus.UNAVAILABLE)
         }
+    }
+
+    /**
+     * Silent startup check: only when online; skips versions the user already dismissed.
+     */
+    suspend fun checkForStartupPrompt(context: Context): PlayUpdateInfo? {
+        if (!NetworkUtils.isOnline(context)) {
+            Log.d(TAG, "Startup update check skipped: offline")
+            return null
+        }
+        val result = checkDetailed(context)
+        val info = result.info ?: return null
+        if (result.status != UpdateCheckStatus.AVAILABLE || !info.isOutdated) return null
+        val dismissed = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+            .getInt(KEY_DISMISSED_UPDATE_CODE, 0)
+        if (info.availableVersionCode <= dismissed) {
+            Log.d(TAG, "Startup update prompt skipped: dismissed for ${info.availableVersionCode}")
+            return null
+        }
+        return info
+    }
+
+    fun markUpdateDismissed(context: Context, availableVersionCode: Int) {
+        context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+            .edit()
+            .putInt(KEY_DISMISSED_UPDATE_CODE, availableVersionCode)
+            .apply()
     }
 }

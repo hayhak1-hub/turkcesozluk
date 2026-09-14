@@ -12,16 +12,20 @@ import androidx.compose.ui.res.stringResource
 import com.hayhak.turkcesozluk.BuildConfig
 import com.hayhak.turkcesozluk.R
 import com.hayhak.turkcesozluk.util.PlayStoreHelper
+import com.hayhak.turkcesozluk.util.PlayUpdateChecker
 import com.hayhak.turkcesozluk.util.PlayUpdateInfo
 
 @Composable
 fun UpdateAvailableDialog(
-    @Suppress("UNUSED_PARAMETER") updateInfo: PlayUpdateInfo,
+    updateInfo: PlayUpdateInfo,
     onDismiss: () -> Unit,
 ) {
     val context = LocalContext.current
     AlertDialog(
-        onDismissRequest = onDismiss,
+        onDismissRequest = {
+            PlayUpdateChecker.markUpdateDismissed(context, updateInfo.availableVersionCode)
+            onDismiss()
+        },
         icon = {
             Icon(Icons.Default.SystemUpdate, contentDescription = null)
         },
@@ -45,7 +49,12 @@ fun UpdateAvailableDialog(
             }
         },
         dismissButton = {
-            TextButton(onClick = onDismiss) {
+            TextButton(
+                onClick = {
+                    PlayUpdateChecker.markUpdateDismissed(context, updateInfo.availableVersionCode)
+                    onDismiss()
+                },
+            ) {
                 Text(stringResource(R.string.update_dialog_later))
             }
         },

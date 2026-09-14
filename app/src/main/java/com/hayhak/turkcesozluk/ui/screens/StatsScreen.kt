@@ -290,6 +290,8 @@ fun StatsScreen(
                                 onClick = {
                                     if (currentLanguage != locale) {
                                         viewModel.setLanguage(locale)
+                                        // Locale is committed synchronously; recreate so
+                                        // attachBaseContext + resources pick up the new tag.
                                         context.findActivity()?.recreate()
                                     }
                                 },

@@ -65,7 +65,7 @@ class DailyWordWorker @AssistedInject constructor(
         )
 
         val notification = NotificationCompat.Builder(applicationContext, channelId)
-            .setSmallIcon(android.R.drawable.ic_btn_speak_now)
+            .setSmallIcon(R.drawable.ic_stat_dictionary)
             .setContentTitle(localizedContext.getString(R.string.notification_title, word))
             .setContentText(localizedContext.getString(R.string.notification_body, synonym))
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)

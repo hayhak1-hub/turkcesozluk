@@ -65,7 +65,9 @@ object SettingsManager {
 
     fun setLanguage(context: Context, locale: AppLocale) {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        prefs.edit().putString(KEY_LANGUAGE, locale.tag).apply()
+        // commit() so recreate()/attachBaseContext never races an in-flight apply()
+        // and restores the previous language.
+        prefs.edit().putString(KEY_LANGUAGE, locale.tag).commit()
         _languageState.value = locale
         com.hayhak.turkcesozluk.util.LocaleHelper.applyAppLocale(locale.tag.takeIf { it.isNotEmpty() })
     }

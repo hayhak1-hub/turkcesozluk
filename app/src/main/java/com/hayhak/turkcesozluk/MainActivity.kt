@@ -10,8 +10,6 @@ import android.os.Build
 
 import android.os.Bundle
 
-import androidx.activity.ComponentActivity
-
 import androidx.activity.compose.BackHandler
 
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -21,6 +19,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 
 import androidx.activity.result.contract.ActivityResultContracts
+
+import androidx.appcompat.app.AppCompatActivity
 
 import androidx.compose.animation.*
 
@@ -81,6 +81,8 @@ import com.hayhak.turkcesozluk.data.db.AppTheme
 import com.hayhak.turkcesozluk.data.db.SettingsManager
 import com.hayhak.turkcesozluk.data.repository.CoreRepository
 
+import com.hayhak.turkcesozluk.ui.components.UpdateAvailableDialog
+
 import com.hayhak.turkcesozluk.ui.screens.DictionaryScreen
 
 import com.hayhak.turkcesozluk.ui.screens.FavoritesScreen
@@ -99,11 +101,19 @@ import com.hayhak.turkcesozluk.ui.theme.TurkceSozlukTheme
 
 import com.hayhak.turkcesozluk.util.LocaleHelper
 
+import com.hayhak.turkcesozluk.util.PlayUpdateChecker
+
+import com.hayhak.turkcesozluk.util.PlayUpdateInfo
+
 import com.hayhak.turkcesozluk.util.findActivity
 
 import dagger.hilt.android.AndroidEntryPoint
 
+import kotlinx.coroutines.Dispatchers
+
 import kotlinx.coroutines.launch
+
+import kotlinx.coroutines.withContext
 
 import javax.inject.Inject
 
@@ -131,7 +141,7 @@ private const val ROUTE_PRIVACY = "privacy_policy"
 
 @AndroidEntryPoint
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
 
 
 
@@ -235,7 +245,23 @@ fun MainScreen() {
 
     var showExitDialog by remember { mutableStateOf(false) }
 
+    var startupUpdateInfo by remember { mutableStateOf<PlayUpdateInfo?>(null) }
 
+    LaunchedEffect(Unit) {
+        val info = withContext(Dispatchers.IO) {
+            PlayUpdateChecker.checkForStartupPrompt(context)
+        }
+        if (info != null) {
+            startupUpdateInfo = info
+        }
+    }
+
+    startupUpdateInfo?.let { info ->
+        UpdateAvailableDialog(
+            updateInfo = info,
+            onDismiss = { startupUpdateInfo = null },
+        )
+    }
 
     val items = listOf(
 

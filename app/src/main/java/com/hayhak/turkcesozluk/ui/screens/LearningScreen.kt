@@ -3,6 +3,8 @@ package com.hayhak.turkcesozluk.ui.screens
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowForward
@@ -51,7 +53,7 @@ fun LearningScreen(viewModel: LearningViewModel, onDismiss: () -> Unit) {
     )
 
     Column(
-        modifier = Modifier.fillMaxSize().padding(24.dp),
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Row(
@@ -72,7 +74,7 @@ fun LearningScreen(viewModel: LearningViewModel, onDismiss: () -> Unit) {
             strokeCap = androidx.compose.ui.graphics.StrokeCap.Round
         )
 
-        Spacer(Modifier.weight(1f))
+        Spacer(Modifier.height(16.dp))
 
         if (currentCard != null) {
             // Flashcard
@@ -95,7 +97,7 @@ fun LearningScreen(viewModel: LearningViewModel, onDismiss: () -> Unit) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     if (rotation <= 90f) {
                         // Ön yüz (Kelime)
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Column(modifier = Modifier.verticalScroll(rememberScrollState()).padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                             Text(stringResource(R.string.learning_word_label), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
                             Spacer(Modifier.height(16.dp))
                             Text(currentCard.word, style = MaterialTheme.typography.displayMedium, fontWeight = FontWeight.Black, textAlign = TextAlign.Center)
@@ -104,7 +106,7 @@ fun LearningScreen(viewModel: LearningViewModel, onDismiss: () -> Unit) {
                         // Arka yüz (Eş Anlamlı)
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,
-                            modifier = Modifier.graphicsLayer { rotationY = 180f } // Metni düzelt
+                            modifier = Modifier.graphicsLayer { rotationY = 180f }.verticalScroll(rememberScrollState()).padding(16.dp)
                         ) {
                             Text(stringResource(R.string.learning_synonym_label), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.onPrimaryContainer)
                             Spacer(Modifier.height(16.dp))
@@ -115,16 +117,22 @@ fun LearningScreen(viewModel: LearningViewModel, onDismiss: () -> Unit) {
             }
         }
 
-        Spacer(Modifier.weight(1f))
+        Spacer(Modifier.height(16.dp))
+
+        OutlinedButton(
+            onClick = { viewModel.rateCard(false) },
+            enabled = viewModel.isFlipped && !viewModel.saving,
+            modifier = Modifier.fillMaxWidth()
+        ) { Text(stringResource(R.string.study_again)) }
 
         Button(
-            onClick = { viewModel.nextCard() },
-            modifier = Modifier.fillMaxWidth().height(64.dp),
+            onClick = { viewModel.rateCard(true) },
+            modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp),
             shape = RoundedCornerShape(20.dp),
-            enabled = viewModel.isFlipped
+            enabled = viewModel.isFlipped && !viewModel.saving
         ) {
             Text(
-                stringResource(if (viewModel.getProgress() >= 1f) R.string.learning_finish else R.string.learning_next_word),
+                stringResource(R.string.study_known),
                 fontWeight = FontWeight.Bold,
                 fontSize = 18.sp
             )

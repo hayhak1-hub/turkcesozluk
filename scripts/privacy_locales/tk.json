@@ -5,7 +5,7 @@
   "metaPackage": "paket ady",
   "metaDeveloper": "Öndüriji",
   "metaUpdated": "Soňky täzelenme",
-  "updatedDate": "2026-nji ýylyň 7-nji awgusty",
+  "updatedDate": "2026-09-19",
   "langLabel": "Dil",
   "intro": "Bu gizlinlik syýasaty Google Play arkaly hödürlenýän <strong>Türkçe sözlük</strong> programmasynyň ulanyjy maglumatlaryny nädip işleýändigini düşündirýär. Programmany göçürip almak ýa-da ulanmak bilen siz bu syýasata razylaşýarsyňyz.",
   "sections": [
@@ -25,7 +25,7 @@
     {
       "title": "3. Enjamda ýerli saklanýan maglumatlar",
       "paragraphs": [
-        "Aşakdaky maglumatlar diňe enjamyňyzda (ýerli saklamak / maglumatlar bazasy) saklanýar we enjamdan daşary geçirilmeýär:",
+        "Halanýanlar, ulanyjy goşan sözler, gözleg taryhy, statistika, test ýalňyşlary we aralyk gaýtalama ösüşi adatça diňe enjamyňyzda galýar. Bu maglumatlar diňe “Ätiýaçlygy sakla” saýlananda siziň saýlan faýlyňyza ýa-da saklaýyş hyzmatyňyza geçirilýär.",
         "Programmany aýyranyňyzda bu ýerli maglumatlar hem enjamdan aýrylýar."
       ],
       "items": [
@@ -62,7 +62,7 @@
       "title": "6. Üçünji taraplar",
       "paragraphs": [
         "Programma aşakdaky üçünji tarap hyzmatlary bilen özara täsir edip bilýär:",
-        "Biz reklama SDK, analitika SDK ýa-da ulanyjy yzarlamak gurallaryny ulanmaýarys."
+        "Mahabat SDK-syny ulanmaýarys. Ulanylyşy we durnuklylygy düşünmek üçin Google Firebase Analytics we Firebase Crashlytics ulanýarys. Analytics programma hereketlerini, sessiýa maglumatyny, programma nusgasy/enjam kesgitleýjilerini, enjam we programma maglumatyny hem-de takmynan sebiti işläp biler. Crashlytics çökme we ANR ýazgylaryny, stek yzlaryny, programma/enjam/OS maglumatyny we gurnama kesgitleýjilerini işläp biler. Google bu maglumatlary Firebase şertlerine we Google gizlinlik syýasatyna laýyklykda işleýär. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
         "<strong>Google Play / Play Store:</strong> Programmanyň paýlanmagy we “Bize baha beriň” arkaly Play Store sahypasyny açmak üçin. Bu proses Google tarapyndan dolandyrylýar.",
@@ -73,13 +73,13 @@
     {
       "title": "7. Maglumatlary paýlaşmak we satmak",
       "paragraphs": [
-        "Biz ulanyjy maglumatlaryny satmaýarys. Öz serwerlerimizde ulanyjy profilini döretmeýäris. 4-nji bölümde düşündirilýän ýaly, diňe sözlük soragy üçin gözlenen söz TDK sahypasyna iberilip bilner."
+        "Ulanyjy maglumatlaryny satmaýarys. Maglumat diňe şu ýerde beýan edilen maksatlar üçin Google/Firebase-e, onlaýn sözlük soragy üçin TDK-a we ätiýaçlyk üçin saýlan saklaýyş hyzmatyňyza geçirilip bilner."
       ]
     },
     {
       "title": "8. Maglumat howpsuzlygy",
       "paragraphs": [
-        "Ýerli maglumatlar enjamyňyzda saklanýar. Onlaýn sözlük soraglary HTTPS arkaly ýerine ýetirilýär. Hiç hili howpsuzlyk çäresi doly däl; enjamyňyzy täzelemegi maslahat berýäris."
+        "Onlaýn geçirimler HTTPS ulanýar. Eksport edilen JSON ätiýaçlygy programma tarapyndan şifrlenmeýär; ony howpsuz saklamak we gerek bolmadyk wagty öçürmek siziň jogapkärçiligiňizdir. Saýlan saklaýyş hyzmatyňyzyň gizlinlik şertleri ulanylýar."
       ]
     },
     {

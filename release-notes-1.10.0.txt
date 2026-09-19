@@ -1,0 +1,138 @@
+<tr-TR>
+• Yanlış cevaplarından quiz çöz.
+• Aralıklı tekrarla öğrendiklerini pekiştir.
+• Verilerini dosyaya yedekle ve geri yükle.
+• 25 arayüz dili artık uygulamayla birlikte gelir; dil değiştirmek için internet gerekmez.
+</tr-TR>
+<ar>
+• تدرب على الأسئلة التي أجبت عنها بشكل خاطئ.
+• عزز تعلمك بالتكرار المتباعد.
+• احفظ بياناتك في ملف واستعدها.
+• تأتي لغات الواجهة الـ25 مع التطبيق؛ لا يلزم الإنترنت لتغيير اللغة.
+</ar>
+<az-AZ>
+• Səhv cavablandırdığın sualları yenidən həll et.
+• Aralıqlı təkrarla öyrəndiklərini möhkəmləndir.
+• Məlumatlarını fayla yedəklə və bərpa et.
+• 25 interfeys dili tətbiqlə birlikdə gəlir; dili dəyişmək üçün internet lazım deyil.
+</az-AZ>
+<bn-BD>
+• ভুল উত্তর দেওয়া প্রশ্নগুলো আবার অনুশীলন করুন।
+• বিরতি দিয়ে পুনরাবৃত্তির মাধ্যমে শেখা বিষয় মনে রাখুন।
+• ফাইলে তথ্যের ব্যাকআপ নিন এবং পুনরুদ্ধার করুন।
+• অ্যাপের সঙ্গেই ২৫টি ইন্টারফেস ভাষা পাবেন; ভাষা বদলাতে ইন্টারনেট লাগবে না।
+</bn-BD>
+<de-DE>
+• Übe falsch beantwortete Quizfragen erneut.
+• Festige dein Wissen mit zeitlich gestaffelten Wiederholungen.
+• Sichere deine Daten in einer Datei und stelle sie wieder her.
+• Alle 25 Oberflächensprachen sind enthalten; der Sprachwechsel funktioniert offline.
+</de-DE>
+<en-US>
+• Practice quiz questions you previously answered incorrectly.
+• Reinforce learning with spaced repetition.
+• Back up your data to a file and restore it.
+• All 25 interface languages are included with the app; switch languages offline.
+</en-US>
+<es-ES>
+• Repasa las preguntas que respondiste mal.
+• Refuerza lo aprendido con repetición espaciada.
+• Guarda tus datos en un archivo y restáuralos.
+• Los 25 idiomas de la interfaz vienen incluidos; cambia de idioma sin conexión.
+</es-ES>
+<fr-FR>
+• Révisez les questions auxquelles vous avez mal répondu.
+• Consolidez vos acquis avec la répétition espacée.
+• Sauvegardez vos données dans un fichier et restaurez-les.
+• Les 25 langues de l’interface sont incluses ; changez de langue hors connexion.
+</fr-FR>
+<hi-IN>
+• जिन प्रश्नों के गलत उत्तर दिए थे, उनका फिर अभ्यास करें।
+• अंतराल पर दोहराकर सीखी हुई बातें याद रखें।
+• अपने डेटा का फ़ाइल में बैकअप लें और उसे बहाल करें।
+• सभी 25 इंटरफ़ेस भाषाएँ ऐप में शामिल हैं; भाषा बदलने के लिए इंटरनेट की ज़रूरत नहीं।
+</hi-IN>
+<id>
+• Latih kembali soal yang sebelumnya dijawab salah.
+• Perkuat pembelajaran dengan pengulangan berjeda.
+• Cadangkan data ke berkas dan pulihkan kembali.
+• Semua 25 bahasa antarmuka disertakan dalam aplikasi; ganti bahasa tanpa internet.
+</id>
+<ja-JP>
+• 間違えた問題をもう一度クイズで練習できます。
+• 間隔を空けた復習で学習内容を定着させます。
+• データをファイルにバックアップし、復元できます。
+• 25の表示言語をアプリに同梱。オフラインで言語を切り替えられます。
+</ja-JP>
+<kk>
+• Қате жауап берген сұрақтарды қайта орындаңыз.
+• Аралықпен қайталау арқылы біліміңізді бекітіңіз.
+• Деректерді файлға сақтық көшірмелеп, қалпына келтіріңіз.
+• Интерфейстің 25 тілі қолданбамен бірге орнатылады; тілді ауыстыру үшін интернет қажет емес.
+</kk>
+<ko-KR>
+• 틀린 문제를 퀴즈로 다시 연습하세요.
+• 간격 반복 학습으로 배운 내용을 익히세요.
+• 데이터를 파일로 백업하고 복원하세요.
+• 25개 인터페이스 언어가 앱에 포함되어 인터넷 없이 언어를 변경할 수 있습니다.
+</ko-KR>
+<ky-KG>
+• Туура эмес жооп берген суроолорду кайра чечиңиз.
+• Аралык менен кайталап, үйрөнгөндөрүңүздү бекемдеңиз.
+• Маалыматтарды файлга камдык көчүрмөлөп, калыбына келтириңиз.
+• Интерфейстин 25 тили колдонмо менен кошо орнотулат; тилди өзгөртүү үчүн интернет кереги жок.
+</ky-KG>
+<mr-IN>
+• चुकीची उत्तरे दिलेल्या प्रश्नांचा पुन्हा सराव करा.
+• ठरावीक अंतराने उजळणी करून शिकलेले पक्के करा.
+• तुमच्या डेटाचा फाइलमध्ये बॅकअप घ्या आणि तो पुनर्संचयित करा.
+• सर्व २५ इंटरफेस भाषा ॲपमध्ये समाविष्ट आहेत; भाषा बदलण्यासाठी इंटरनेट लागत नाही.
+</mr-IN>
+<pt-BR>
+• Pratique novamente as perguntas que você errou.
+• Reforce o aprendizado com repetição espaçada.
+• Faça backup dos seus dados em um arquivo e restaure-os.
+• Os 25 idiomas da interface estão incluídos no app; altere o idioma sem internet.
+</pt-BR>
+<ru-RU>
+• Повторяйте вопросы, на которые ответили неправильно.
+• Закрепляйте знания с помощью интервальных повторений.
+• Сохраняйте данные в файл и восстанавливайте их.
+• Все 25 языков интерфейса включены в приложение; переключайте язык без интернета.
+</ru-RU>
+<sw>
+• Fanya tena maswali uliyojibu vibaya.
+• Imarisha ulichojifunza kwa marudio yaliyopangwa kwa vipindi.
+• Hifadhi nakala ya data kwenye faili na uirejeshe.
+• Lugha zote 25 za kiolesura zimejumuishwa kwenye programu; badili lugha bila intaneti.
+</sw>
+<ta-IN>
+• தவறாகப் பதிலளித்த கேள்விகளை மீண்டும் பயிற்சி செய்யுங்கள்.
+• இடைவெளி விட்டு மீள்பார்த்து கற்றதை உறுதிப்படுத்துங்கள்.
+• தரவைக் கோப்பில் காப்புப் பிரதி எடுத்து மீட்டமைக்கலாம்.
+• 25 இடைமுக மொழிகளும் செயலியில் உள்ளன; இணையமின்றி மொழியை மாற்றலாம்.
+</ta-IN>
+<te-IN>
+• తప్పుగా సమాధానమిచ్చిన ప్రశ్నలను మళ్లీ సాధన చేయండి.
+• విరామాలతో పునశ్చరణ చేసి నేర్చుకున్న విషయాలను గుర్తుంచుకోండి.
+• మీ డేటాను ఫైల్‌లో బ్యాకప్ చేసి పునరుద్ధరించండి.
+• మొత్తం 25 ఇంటర్‌ఫేస్ భాషలు యాప్‌లోనే ఉన్నాయి; భాష మార్చడానికి ఇంటర్నెట్ అవసరం లేదు.
+</te-IN>
+<ur>
+• جن سوالوں کے غلط جواب دیے تھے، ان کی دوبارہ مشق کریں۔
+• وقفوں سے دہرائی کے ذریعے سیکھی ہوئی باتیں پختہ کریں۔
+• اپنے ڈیٹا کا فائل میں بیک اپ بنائیں اور اسے بحال کریں۔
+• انٹرفیس کی تمام 25 زبانیں ایپ میں شامل ہیں؛ زبان بدلنے کے لیے انٹرنیٹ ضروری نہیں۔
+</ur>
+<vi>
+• Luyện lại những câu hỏi bạn đã trả lời sai.
+• Củng cố kiến thức bằng phương pháp lặp lại ngắt quãng.
+• Sao lưu dữ liệu vào tệp và khôi phục lại.
+• Cả 25 ngôn ngữ giao diện đều có sẵn trong ứng dụng; đổi ngôn ngữ không cần Internet.
+</vi>
+<zh-CN>
+• 重新练习曾经答错的测验题目。
+• 通过间隔复习巩固所学内容。
+• 将数据备份到文件并恢复。
+• 应用已内置全部25种界面语言，无需联网即可切换语言。
+</zh-CN>

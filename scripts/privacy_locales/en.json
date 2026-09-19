@@ -5,7 +5,7 @@
   "metaPackage": "package name",
   "metaDeveloper": "Developer",
   "metaUpdated": "Last updated",
-  "updatedDate": "August 7, 2026",
+  "updatedDate": "2026-09-19",
   "langLabel": "Language",
   "intro": "This privacy policy explains how the <strong>Turkish Dictionary</strong> app available on Google Play handles user data. By downloading or using the app, you agree to this policy.",
   "sections": [
@@ -25,7 +25,7 @@
     {
       "title": "3. Data Stored Locally on Your Device",
       "paragraphs": [
-        "The following data is stored only on your device (local storage / database) and is not exported from your device:",
+        "Favorites, user-added words, search history, statistics, quiz mistakes, and spaced-repetition progress normally remain only on your device. They are transferred to a file or storage provider chosen by you only when you use ‘Save backup’.",
         "When you uninstall the app, this local data is removed from your device."
       ],
       "items": [
@@ -62,7 +62,7 @@
       "title": "6. Third Parties",
       "paragraphs": [
         "The app may interact with the following third-party services:",
-        "We do not use ad SDKs, analytics SDKs, or user tracking tools."
+        "We do not use an advertising SDK. We use Google Firebase Analytics and Firebase Crashlytics to understand usage and stability. Analytics may process app interactions, session information, app-instance/device identifiers, device and app information, and approximate region. Crashlytics may process crash and ANR logs, stack traces, app/device/OS information, and installation identifiers. Google processes this data under the Firebase terms and Google privacy policy. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
         "<strong>Google Play / Play Store:</strong> App distribution and opening the Play Store page via “Rate us”. This process is managed by Google.",
@@ -73,13 +73,13 @@
     {
       "title": "7. Data Sharing and Sale",
       "paragraphs": [
-        "We do not sell user data. We do not create user profiles on our own servers. As described in Section 4, only the searched word may be sent to the TDK website for dictionary lookup."
+        "We do not sell user data. Data may be sent only for the purposes described here: to Google/Firebase, to TDK for online dictionary queries, and to the storage provider you choose for backup."
       ]
     },
     {
       "title": "8. Data Security",
       "paragraphs": [
-        "Local data stays on your device. Online dictionary queries are made over HTTPS. No security measure is absolute; we recommend keeping your device up to date."
+        "Online transfers use HTTPS. The exported JSON backup is not encrypted by the app; you are responsible for storing it securely and deleting it when no longer needed. The privacy terms of your chosen storage provider apply."
       ]
     },
     {

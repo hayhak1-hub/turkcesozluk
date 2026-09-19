@@ -169,5 +169,8 @@
   "share_mode_adjectives": "अर्थ",
   "share_mode_all": "अर्थ/समानार्थी",
   "weekly_day_detail": "%1$s · %2$d क्रियाकलाप",
-  "cd_open_menu": "मेनू उघडा"
+  "cd_open_menu": "मेनू उघडा",
+  "tdk_error_server": "TDK ने प्रतिसाद दिला नाही",
+  "tdk_error_network": "इंटरनेट कनेक्शन नाही किंवा TDK उपलब्ध नाही",
+  "share_result_template": "📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_तुर्की शब्दकोश वापरून शिकत आहे!_"
 }

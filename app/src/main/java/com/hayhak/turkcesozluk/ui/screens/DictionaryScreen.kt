@@ -1,6 +1,8 @@
 package com.hayhak.turkcesozluk.ui.screens
 
+import android.Manifest
 import android.content.Intent
+import android.os.Build
 import android.speech.RecognizerIntent
 import android.speech.tts.TextToSpeech
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -37,6 +39,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.window.Popup
+import androidx.core.os.ConfigurationCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.hayhak.turkcesozluk.R
 import com.hayhak.turkcesozluk.ui.components.DailyWordCard
@@ -82,13 +85,19 @@ fun DictionaryScreen(
     val hasSeenModeHint by viewModel.hasSeenModeHint.collectAsState()
     val configuration = LocalConfiguration.current
     val displayLocale = remember(configuration) {
-        configuration.locales[0] ?: Locale.getDefault()
+        ConfigurationCompat.getLocales(configuration)[0] ?: Locale.getDefault()
     }
     val dictionaryTitle = dictionaryModeTitle(currentMode)
     val trLocale = remember { Locale("tr", "TR") }
     
     var showAddDialog by remember { mutableStateOf(false) }
     var showSettingsMenu by remember { mutableStateOf(false) }
+
+    // Bildirim izni yalnizca kullanici gunun kelimesi ozelligini actiginda,
+    // yani izin gercekten bir ise yarayacakken istenir.
+    val notificationPermissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { }
 
     val voiceLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.StartActivityForResult()
@@ -315,11 +324,15 @@ fun DictionaryScreen(
                                             RadioButton(selected = currentMode == com.hayhak.turkcesozluk.data.db.DictionaryMode.ALL, onClick = null)
                                         }
                                     )
-                                    Divider(modifier = Modifier.padding(vertical = 4.dp))
+                                    HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
                                     DropdownMenuItem(
                                         text = { Text(stringResource(R.string.menu_show_daily_word)) },
                                         onClick = {
-                                            com.hayhak.turkcesozluk.data.db.SettingsManager.setShowDailyWord(context, !showDailyWord)
+                                            val enabling = !showDailyWord
+                                            com.hayhak.turkcesozluk.data.db.SettingsManager.setShowDailyWord(context, enabling)
+                                            if (enabling && Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                                                notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                                            }
                                             showSettingsMenu = false
                                         },
                                         leadingIcon = {
@@ -426,7 +439,7 @@ fun DictionaryScreen(
                 val luckyInteractionSource = remember { MutableInteractionSource() }
 
                 Button(
-                    onClick = { viewModel.updateQuery(viewModel.getRandomWord().first) },
+                    onClick = { viewModel.getRandomWord()?.let { viewModel.updateQuery(it.first) } },
                     modifier = Modifier.padding(top = 16.dp).fillMaxWidth().height(56.dp)
                         .pressScale(luckyInteractionSource)
                         .scale(if (query.isEmpty()) scale else 1f),
@@ -499,7 +512,12 @@ fun DictionaryScreen(
                                     com.hayhak.turkcesozluk.data.db.DictionaryMode.ADJECTIVES -> context.getString(R.string.share_mode_adjectives)
                                     com.hayhak.turkcesozluk.data.db.DictionaryMode.ALL -> context.getString(R.string.share_mode_all)
                                 }
-                                val shareText = "📖 *${query.uppercase(trLocale)}* kelimesinin $modeName: \n\n✨ ${results.joinToString(", ")}\n\n_Türkçe Sözlük ile öğreniyorum!_"
+                                val shareText = context.getString(
+                                    R.string.share_result_template,
+                                    query.uppercase(trLocale),
+                                    modeName,
+                                    results.joinToString(", ")
+                                )
                                 val shareIntent = Intent(Intent.ACTION_SEND).apply {
                                     type = "text/plain"
                                     putExtra(Intent.EXTRA_TEXT, shareText)
@@ -556,7 +574,12 @@ fun DictionaryScreen(
                             )
                         }
                     } else if (key == "error" && tdkError != null) {
-                        val message = tdkError
+                        val message = when (tdkError) {
+                            com.hayhak.turkcesozluk.data.model.TdkErrorReason.SERVER ->
+                                stringResource(R.string.tdk_error_server)
+                            com.hayhak.turkcesozluk.data.model.TdkErrorReason.NETWORK ->
+                                stringResource(R.string.tdk_error_network)
+                        }
                         Card(
                             colors = CardDefaults.cardColors(
                                 containerColor = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.15f)

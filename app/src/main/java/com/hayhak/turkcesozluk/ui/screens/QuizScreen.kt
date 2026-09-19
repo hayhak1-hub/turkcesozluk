@@ -3,12 +3,15 @@ package com.hayhak.turkcesozluk.ui.screens
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowForward
+import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Refresh
 import androidx.compose.material.icons.rounded.Timer
 import androidx.compose.material.icons.rounded.PlayArrow
@@ -35,6 +38,7 @@ fun QuizScreen(viewModel: QuizViewModel = hiltViewModel()) {
     val isGameOver = viewModel.isGameOver
     val isGameStarted = viewModel.isGameStarted
     val currentMode by viewModel.currentMode.collectAsState()
+    val savedMistakes by viewModel.savedMistakes.collectAsState()
 
     val shakeOffset = remember { Animatable(0f) }
     val scoreFlashColor = remember { Animatable(Color.Transparent, Color.VectorConverter(Color.Transparent.colorSpace)) }
@@ -59,16 +63,62 @@ fun QuizScreen(viewModel: QuizViewModel = hiltViewModel()) {
     }
 
     if (!isGameStarted) {
-        Box(
+        val mistakeCount = savedMistakes.count {
+            it.kind == "mistake" && it.mode == currentMode.name
+        }
+        Column(
             modifier = Modifier
                 .fillMaxSize()
+                .verticalScroll(rememberScrollState())
                 .padding(24.dp),
-            contentAlignment = Alignment.Center
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            Button(
+                onClick = {
+                    selectedAnswer = null
+                    viewModel.startNewGame(practiceMistakes = true)
+                },
+                enabled = !viewModel.starting && mistakeCount > 0,
+                modifier = Modifier.fillMaxWidth().height(56.dp),
+                shape = RoundedCornerShape(16.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.secondaryContainer,
+                    contentColor = MaterialTheme.colorScheme.onSecondaryContainer
+                )
+            ) {
+                Text(
+                    text = stringResource(R.string.study_mistakes) + " ($mistakeCount)",
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+            if (viewModel.startError) {
+                Spacer(modifier = Modifier.height(8.dp))
+                Text(
+                    stringResource(R.string.study_no_mistakes),
+                    color = MaterialTheme.colorScheme.error,
+                    textAlign = TextAlign.Center,
+                    style = MaterialTheme.typography.bodyMedium
+                )
+            } else if (mistakeCount == 0) {
+                Spacer(modifier = Modifier.height(8.dp))
+                Text(
+                    stringResource(R.string.study_no_mistakes),
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.Center,
+                    style = MaterialTheme.typography.bodySmall
+                )
+            }
+            Spacer(modifier = Modifier.height(16.dp))
             QuizStartScreen(
                 selectedDuration = viewModel.selectedDuration,
                 onDurationChange = { viewModel.selectedDuration = it },
-                onStart = { viewModel.startNewGame() }
+                onStart = {
+                    selectedAnswer = null
+                    // Normal quiz asla "hatalar" modunda kalmasın
+                    viewModel.startNewGame(practiceMistakes = false)
+                }
             )
         }
         return
@@ -126,7 +176,11 @@ fun QuizScreen(viewModel: QuizViewModel = hiltViewModel()) {
                     viewModel.quitGame()
                     selectedAnswer = null
                 }) {
-                    Icon(Icons.Rounded.Refresh, contentDescription = stringResource(R.string.cd_reset), tint = MaterialTheme.colorScheme.primary)
+                    Icon(
+                        Icons.Rounded.Close,
+                        contentDescription = stringResource(R.string.cd_close),
+                        tint = MaterialTheme.colorScheme.onSurface
+                    )
                 }
             }
             Spacer(modifier = Modifier.height(24.dp))
@@ -140,7 +194,11 @@ fun QuizScreen(viewModel: QuizViewModel = hiltViewModel()) {
                     wrong = viewModel.wrongAnswers,
                     total = viewModel.totalQuestionsAsked,
                     onRestart = {
-                        viewModel.startNewGame()
+                        viewModel.startNewGame(practiceMistakes = viewModel.mistakesOnly)
+                        selectedAnswer = null
+                    },
+                    onClose = {
+                        viewModel.quitGame()
                         selectedAnswer = null
                     }
                 )
@@ -328,17 +386,35 @@ fun QuizStartScreen(
 }
 
 @Composable
-fun GameOverScreen(score: Int, correct: Int, wrong: Int, total: Int, onRestart: () -> Unit) {
+fun GameOverScreen(
+    score: Int,
+    correct: Int,
+    wrong: Int,
+    total: Int,
+    onRestart: () -> Unit,
+    onClose: () -> Unit
+) {
     Card(
         modifier = Modifier.fillMaxWidth().padding(8.dp),
         shape = RoundedCornerShape(32.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 12.dp)
     ) {
-        Column(
-            modifier = Modifier.padding(32.dp).fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
+        Box(modifier = Modifier.fillMaxWidth()) {
+            IconButton(
+                onClick = onClose,
+                modifier = Modifier.align(Alignment.TopEnd)
+            ) {
+                Icon(
+                    Icons.Rounded.Close,
+                    contentDescription = stringResource(R.string.cd_close),
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+            Column(
+                modifier = Modifier.padding(32.dp).fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
             Text(
                 "🎉",
                 fontSize = 64.sp,
@@ -426,6 +502,7 @@ fun GameOverScreen(score: Int, correct: Int, wrong: Int, total: Int, onRestart: 
                 Icon(Icons.Rounded.Refresh, contentDescription = null)
                 Spacer(Modifier.width(12.dp))
                 Text(stringResource(R.string.btn_try_again), fontWeight = FontWeight.Bold, fontSize = 18.sp)
+            }
             }
         }
     }

@@ -170,4 +170,7 @@
     <string name="share_mode_idioms">అర్థం</string>
     <string name="share_mode_adjectives">అర్థం</string>
     <string name="share_mode_all">అర్థం/పర్యాయపదం</string>
+    <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_టర్కిష్ నిఘంటువుతో నేర్చుకుంటున్నాను!_</string>
+    <string name="tdk_error_server">TDK స్పందించలేదు</string>
+    <string name="tdk_error_network">ఇంటర్నెట్ కనెక్షన్ లేదు లేదా TDKని చేరుకోలేకపోయాం</string>
 </resources>

@@ -170,4 +170,7 @@
     <string name="share_mode_idioms">अर्थ</string>
     <string name="share_mode_adjectives">अर्थ</string>
     <string name="share_mode_all">अर्थ/पर्यायवाची</string>
+    <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_तुर्की शब्दकोश से सीख रहा हूँ!_</string>
+    <string name="tdk_error_server">TDK ने जवाब नहीं दिया</string>
+    <string name="tdk_error_network">इंटरनेट कनेक्शन नहीं है या TDK तक नहीं पहुँचा जा सका</string>
 </resources>

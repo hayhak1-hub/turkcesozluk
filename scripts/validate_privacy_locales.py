@@ -31,4 +31,16 @@ for code in expected:
         errors.append(f"{code}: no tdk")
     if "ThunderCraft" not in text:
         errors.append(f"{code}: no developer")
+    if data.get("updatedDate") != "2026-09-19":
+        errors.append(f"{code}: stale update date")
+    for required_text in (
+        "Firebase Analytics",
+        "Firebase Crashlytics",
+        "https://firebase.google.com/support/privacy",
+        "https://policies.google.com/privacy",
+    ):
+        if required_text not in text:
+            errors.append(f"{code}: no {required_text}")
+    if "We do not use ad SDKs, analytics SDKs" in text or "analitik SDK’sı veya kullanıcı takip" in text:
+        errors.append(f"{code}: obsolete analytics denial")
 print("Errors:", errors or "none")

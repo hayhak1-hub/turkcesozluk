@@ -5,7 +5,7 @@
   "metaPackage": "tên gói",
   "metaDeveloper": "Nhà phát triển",
   "metaUpdated": "Cập nhật lần cuối",
-  "updatedDate": "7 tháng 8 năm 2026",
+  "updatedDate": "2026-09-19",
   "langLabel": "Ngôn ngữ",
   "intro": "Chính sách quyền riêng tư này giải thích cách ứng dụng <strong>Từ điển tiếng Thổ Nhĩ Kỳ</strong> trên Google Play xử lý dữ liệu người dùng. Bằng việc tải xuống hoặc sử dụng ứng dụng, bạn đồng ý với chính sách này.",
   "sections": [
@@ -25,7 +25,7 @@
     {
       "title": "3. Dữ liệu lưu trữ cục bộ trên thiết bị của bạn",
       "paragraphs": [
-        "Dữ liệu sau đây chỉ được lưu trên thiết bị của bạn (bộ nhớ cục bộ / cơ sở dữ liệu) và không được xuất khỏi thiết bị:",
+        "Mục yêu thích, từ do người dùng thêm, lịch sử tìm kiếm, thống kê, câu trả lời sai và tiến độ ôn tập ngắt quãng thường chỉ nằm trên thiết bị. Dữ liệu chỉ được chuyển tới tệp hoặc nhà cung cấp lưu trữ bạn chọn khi dùng “Lưu bản sao lưu”.",
         "Khi bạn gỡ cài đặt ứng dụng, dữ liệu cục bộ này cũng bị xóa khỏi thiết bị của bạn."
       ],
       "items": [
@@ -62,7 +62,7 @@
       "title": "6. Bên thứ ba",
       "paragraphs": [
         "Ứng dụng có thể tương tác với các dịch vụ bên thứ ba sau:",
-        "Chúng tôi không sử dụng SDK quảng cáo, SDK phân tích hoặc công cụ theo dõi người dùng."
+        "Chúng tôi không dùng SDK quảng cáo. Chúng tôi dùng Google Firebase Analytics và Firebase Crashlytics để hiểu việc sử dụng và độ ổn định. Analytics có thể xử lý tương tác trong ứng dụng, thông tin phiên, mã nhận dạng phiên bản ứng dụng/thiết bị, thông tin thiết bị và ứng dụng và khu vực gần đúng. Crashlytics có thể xử lý nhật ký sự cố và ANR, dấu vết ngăn xếp, thông tin ứng dụng/thiết bị/HĐH và mã nhận dạng cài đặt. Google xử lý dữ liệu theo điều khoản Firebase và chính sách quyền riêng tư của Google. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
         "<strong>Google Play / Play Store:</strong> Phân phối ứng dụng và mở trang Play Store qua “Đánh giá chúng tôi”. Quy trình này do Google quản lý.",
@@ -73,13 +73,13 @@
     {
       "title": "7. Chia sẻ và bán dữ liệu",
       "paragraphs": [
-        "Chúng tôi không bán dữ liệu người dùng. Chúng tôi không tạo hồ sơ người dùng trên máy chủ của mình. Như mô tả ở Mục 4, chỉ từ được tìm kiếm có thể được gửi đến trang web TDK để tra cứu từ điển."
+        "Chúng tôi không bán dữ liệu người dùng. Dữ liệu chỉ có thể được gửi cho mục đích đã nêu: tới Google/Firebase, TDK để tra từ điển trực tuyến và nhà cung cấp lưu trữ bạn chọn để sao lưu."
       ]
     },
     {
       "title": "8. Bảo mật dữ liệu",
       "paragraphs": [
-        "Dữ liệu cục bộ ở lại trên thiết bị của bạn. Truy vấn từ điển trực tuyến được thực hiện qua HTTPS. Không có biện pháp bảo mật nào là tuyệt đối; chúng tôi khuyên bạn nên cập nhật thiết bị."
+        "Truyền dữ liệu trực tuyến dùng HTTPS. Bản sao lưu JSON xuất ra không được ứng dụng mã hóa; bạn chịu trách nhiệm lưu giữ an toàn và xóa khi không cần. Điều khoản của nhà cung cấp lưu trữ đã chọn được áp dụng."
       ]
     },
     {

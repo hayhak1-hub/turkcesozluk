@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">ভুলগুলো অনুশীলন</string>
+    <string name="study_no_mistakes">এই অভিধান মোডে কোনো ভুল সংরক্ষিত নেই।</string>
+    <string name="study_due">আজকের পুনরালোচনা</string>
+    <string name="study_nothing_due">কোনো কার্ডের সময় হয়নি। পছন্দে শব্দ যোগ করুন।</string>
+    <string name="study_again">আবার দেখান (১০ মিনিট)</string>
+    <string name="study_known">আমি জানি</string>
+    <string name="backup_title">ব্যাকআপ</string>
+    <string name="backup_description">পছন্দ, শব্দ, ইতিহাস, পরিসংখ্যান ও শেখার অগ্রগতি। ফাইলে ব্যক্তিগত তথ্য আছে; নিরাপদে রাখুন।</string>
+    <string name="backup_export">ব্যাকআপ সংরক্ষণ</string>
+    <string name="backup_restore">ব্যাকআপ পুনরুদ্ধার</string>
+    <string name="backup_success">সম্পন্ন।</string>
+    <string name="backup_error">সম্পন্ন হয়নি। ফাইল ও অনুমতি পরীক্ষা করুন।</string>
+    <string name="backup_confirm">বর্তমান তথ্যের সঙ্গে মেলাবেন? নতুন শেখার অগ্রগতি রাখা হবে।</string>
+</resources>

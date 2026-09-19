@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Fehler üben</string>
+    <string name="study_no_mistakes">Keine gespeicherten Fehler in diesem Wörterbuchmodus.</string>
+    <string name="study_due">Fällige Wiederholungen</string>
+    <string name="study_nothing_due">Keine Karten fällig. Füge zuerst Wörter zu Favoriten hinzu.</string>
+    <string name="study_again">Erneut lernen (10 Min.)</string>
+    <string name="study_known">Das weiß ich</string>
+    <string name="backup_title">Datensicherung</string>
+    <string name="backup_description">Favoriten, Wörter, Verlauf, Statistiken und Lernfortschritt. Die Datei enthält persönliche Daten; bewahre sie sicher auf.</string>
+    <string name="backup_export">Sicherung speichern</string>
+    <string name="backup_restore">Sicherung wiederherstellen</string>
+    <string name="backup_success">Abgeschlossen.</string>
+    <string name="backup_error">Vorgang fehlgeschlagen. Datei und Zugriffsrechte prüfen.</string>
+    <string name="backup_confirm">Sicherung mit vorhandenen Einträgen zusammenführen? Neuerer Lernfortschritt bleibt erhalten.</string>
+</resources>

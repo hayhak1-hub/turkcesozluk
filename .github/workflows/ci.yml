@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Unit tests
+        run: ./gradlew :app:testEsanlamliDebugUnitTest --stacktrace
+
+      - name: Lint
+        run: ./gradlew :app:lintEsanlamliDebug --stacktrace
+
+      # Release imzalama anahtari repoda yok; keystore.properties eksikken
+      # build.gradle.kts imzasiz derlemeye duser, bu yuzden debug APK uretiyoruz.
+      - name: Assemble debug APK
+        run: ./gradlew :app:assembleEsanlamliDebug --stacktrace
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reports
+          path: |
+            app/build/reports/
+            app/build/test-results/
+          if-no-files-found: ignore
+
+  locales:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # scripts/locales/*.json kaynaktir; values-*/strings.xml ondan uretilir.
+      # Elle duzenlenip pipeline ile senkron kalmadiysa burada yakalanir.
+      - name: Verify generated strings.xml is in sync
+        run: |
+          python scripts/generate_locales.py
+          git diff --exit-code -- app/src/main/res

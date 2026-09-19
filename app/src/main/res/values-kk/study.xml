@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Қателерді қайталау</string>
+    <string name="study_no_mistakes">Бұл сөздік режимінде сақталған қате жоқ.</string>
+    <string name="study_due">Қайталау уақыты</string>
+    <string name="study_nothing_due">Қайталау қажет карточка жоқ. Сөздерді таңдаулыларға қосыңыз.</string>
+    <string name="study_again">Қайта көрсету (10 мин)</string>
+    <string name="study_known">Білемін</string>
+    <string name="backup_title">Сақтық көшірме</string>
+    <string name="backup_description">Таңдаулылар, сөздер, тарих, статистика және оқу барысы. Файлда жеке деректер бар; қауіпсіз сақтаңыз.</string>
+    <string name="backup_export">Көшірмені сақтау</string>
+    <string name="backup_restore">Көшірмені қалпына келтіру</string>
+    <string name="backup_success">Аяқталды.</string>
+    <string name="backup_error">Аяқтау мүмкін болмады. Файл мен рұқсаттарды тексеріңіз.</string>
+    <string name="backup_confirm">Қазіргі жазбалармен біріктірілсін бе? Жаңарақ оқу барысы сақталады.</string>
+</resources>

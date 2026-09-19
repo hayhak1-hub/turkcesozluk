@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Səhvlərimi təkrar et</string>
+    <string name="study_no_mistakes">Bu lüğət rejimində qeydə alınmış səhv yoxdur.</string>
+    <string name="study_due">Bugünkü təkrarlar</string>
+    <string name="study_nothing_due">Təkrar vaxtı çatan kart yoxdur. Seçilmişlərə söz əlavə edin.</string>
+    <string name="study_again">Yenidən göstər (10 dəq.)</string>
+    <string name="study_known">Bilirəm</string>
+    <string name="backup_title">Ehtiyat nüsxə</string>
+    <string name="backup_description">Seçilmişlər, sözlər, tarixçə, statistika və öyrənmə irəliləyişi. Şəxsi məlumatları olan faylı təhlükəsiz saxlayın.</string>
+    <string name="backup_export">Nüsxəni saxla</string>
+    <string name="backup_restore">Nüsxəni bərpa et</string>
+    <string name="backup_success">Tamamlandı.</string>
+    <string name="backup_error">Əməliyyat alınmadı. Faylı və giriş icazəsini yoxlayın.</string>
+    <string name="backup_confirm">Mövcud qeydlərlə birləşdirilsin? Daha yeni öyrənmə irəliləyişi saxlanacaq.</string>
+</resources>

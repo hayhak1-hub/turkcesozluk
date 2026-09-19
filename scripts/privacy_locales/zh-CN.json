@@ -5,7 +5,7 @@
   "metaPackage": "包名",
   "metaDeveloper": "开发者",
   "metaUpdated": "最后更新",
-  "updatedDate": "2026年8月7日",
+  "updatedDate": "2026-09-19",
   "langLabel": "语言",
   "intro": "本隐私政策说明了 Google Play 上提供的<strong>土耳其语词典</strong>应用如何处理用户数据。下载或使用本应用即表示您同意本政策。",
   "sections": [
@@ -25,7 +25,7 @@
     {
       "title": "3. 设备本地存储的数据",
       "paragraphs": [
-        "以下数据仅存储在您的设备上（本地存储 / 数据库），不会从设备导出：",
+        "收藏词、用户添加的词语、搜索记录、统计数据、测验错题和间隔复习进度通常只保存在设备上。只有当您选择“保存备份”时，这些数据才会传输到您选择的文件或存储服务商。",
         "卸载应用后，这些本地数据也会从您的设备中删除。"
       ],
       "items": [
@@ -62,7 +62,7 @@
       "title": "6. 第三方",
       "paragraphs": [
         "本应用可能与以下第三方服务交互：",
-        "我们不使用广告 SDK、分析 SDK 或用户跟踪工具。"
+        "我们不使用广告 SDK。我们使用 Google Firebase Analytics 和 Firebase Crashlytics 来了解使用情况和稳定性。Analytics 可能处理应用互动、会话信息、应用实例/设备标识符、设备与应用信息及大致区域；Crashlytics 可能处理崩溃和 ANR 日志、堆栈跟踪、应用/设备/操作系统信息及安装标识符。Google 会依据 Firebase 条款和 Google 隐私政策处理这些数据。 <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
         "<strong>Google Play / Play Store：</strong>应用分发及通过“评价我们”打开 Play Store 页面。此过程由 Google 管理。",
@@ -73,13 +73,13 @@
     {
       "title": "7. 数据共享与出售",
       "paragraphs": [
-        "我们不出售用户数据。我们不在自己的服务器上创建用户档案。如第 4 节所述，仅为词典查询目的，搜索的单词可能会发送至 TDK 网站。"
+        "我们不出售用户数据。数据仅可能按本文所述目的发送给 Google/Firebase、用于在线词典查询的 TDK，以及您为备份选择的存储服务商。"
       ]
     },
     {
       "title": "8. 数据安全",
       "paragraphs": [
-        "本地数据保留在您的设备上。在线词典查询通过 HTTPS 进行。没有任何安全措施是绝对安全的；建议您保持设备更新。"
+        "在线传输使用 HTTPS。导出的 JSON 备份文件不会由应用加密；您有责任安全保管并在不再需要时删除。您选择的存储服务商的隐私条款同样适用。"
       ]
     },
     {

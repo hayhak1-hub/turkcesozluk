@@ -5,7 +5,7 @@
   "metaPackage": "paket adı",
   "metaDeveloper": "Geliştirici",
   "metaUpdated": "Son güncelleme",
-  "updatedDate": "7 Ağustos 2026",
+  "updatedDate": "2026-09-19",
   "langLabel": "Dil",
   "intro": "Bu gizlilik politikası, Google Play üzerinden sunulan <strong>Türkçe Sözlük</strong> uygulamasının kullanıcı verilerini nasıl işlediğini açıklar. Uygulamayı indirerek veya kullanarak bu politikayı kabul etmiş sayılırsınız.",
   "sections": [
@@ -25,7 +25,7 @@
     {
       "title": "3. Cihazda Yerel Olarak Saklanan Veriler",
       "paragraphs": [
-        "Aşağıdaki veriler yalnızca cihazınızda (yerel depolama / veritabanı) tutulur ve cihazınızdan dışarı aktarılmaz:",
+        "Favoriler, kullanıcı kelimeleri, arama geçmişi, istatistikler, quiz yanlışları ve aralıklı tekrar ilerlemesi normalde yalnızca cihazınızda tutulur. Yalnızca siz ‘Yedeği kaydet’ seçeneğini kullandığınızda bu veriler seçtiğiniz dosya veya depolama sağlayıcısına aktarılır.",
         "Uygulamayı kaldırdığınızda bu yerel veriler de cihazınızdan silinir."
       ],
       "items": [
@@ -62,7 +62,7 @@
       "title": "6. Üçüncü Taraflar",
       "paragraphs": [
         "Uygulama aşağıdaki üçüncü taraf hizmetlerle etkileşebilir:",
-        "Reklam SDK’sı, analitik SDK’sı veya kullanıcı takip araçları kullanmıyoruz."
+        "Reklam SDK’sı kullanmıyoruz. Kullanım ve kararlılığı anlamak için Google Firebase Analytics ve Firebase Crashlytics kullanıyoruz. Analytics; uygulama etkileşimleri, oturum bilgileri, uygulama örneği/cihaz tanımlayıcıları, cihaz ve uygulama bilgileri ile yaklaşık bölge gibi teknik verileri işleyebilir. Crashlytics; çökme ve ANR günlüklerini, yığın izlerini, uygulama/cihaz/işletim sistemi bilgilerini ve kurulum tanımlayıcılarını işleyebilir. Bu veriler Google tarafından Firebase koşulları ve gizlilik politikası uyarınca işlenir. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
         "<strong>Google Play / Play Store:</strong> Uygulama dağıtımı ve “Bizi Değerlendirin” ile Play Store sayfasının açılması için. Bu süreç Google tarafından yönetilir.",
@@ -73,13 +73,13 @@
     {
       "title": "7. Verilerin Paylaşımı ve Satışı",
       "paragraphs": [
-        "Kullanıcı verilerini satmayız. Kendi sunucularımızda kullanıcı profili oluşturmayız. Bölüm 4’te açıklandığı gibi, yalnızca sözlük sorgusu için aranan kelime TDK sitesine iletilebilir."
+        "Kullanıcı verilerini satmayız. Veriler yalnızca burada açıklanan amaçlarla Google/Firebase’e, çevrimiçi sözlük sorgusu için TDK’ya ve yedekleme sırasında sizin seçtiğiniz depolama sağlayıcısına iletilebilir."
       ]
     },
     {
       "title": "8. Veri Güvenliği",
       "paragraphs": [
-        "Yerel veriler cihazınızda tutulur. Online sözlük sorguları HTTPS üzerinden yapılır. Hiçbir güvenlik önlemi mutlak değildir; cihazınızı güncel tutmanızı öneririz."
+        "Çevrimiçi aktarımlar HTTPS kullanır. Dışa aktarılan JSON yedek dosyası uygulama tarafından şifrelenmez; dosyayı güvenli saklamak ve gerektiğinde silmek sizin sorumluluğunuzdadır. Seçtiğiniz depolama sağlayıcısının gizlilik koşulları geçerlidir."
       ]
     },
     {

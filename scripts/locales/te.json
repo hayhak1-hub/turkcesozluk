@@ -169,5 +169,8 @@
   "share_mode_adjectives": "అర్థం",
   "share_mode_all": "అర్థం/పర్యాయపదం",
   "weekly_day_detail": "%1$s · %2$d కార్యకలాపాలు",
-  "cd_open_menu": "మెనూ తెరవండి"
+  "cd_open_menu": "మెనూ తెరవండి",
+  "tdk_error_server": "TDK స్పందించలేదు",
+  "tdk_error_network": "ఇంటర్నెట్ కనెక్షన్ లేదు లేదా TDKని చేరుకోలేకపోయాం",
+  "share_result_template": "📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_టర్కిష్ నిఘంటువుతో నేర్చుకుంటున్నాను!_"
 }

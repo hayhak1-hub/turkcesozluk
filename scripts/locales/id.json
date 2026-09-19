@@ -169,5 +169,8 @@
   "share_mode_adjectives": "arti",
   "share_mode_all": "arti/sinonim",
   "weekly_day_detail": "%1$s · %2$d aktivitas",
-  "cd_open_menu": "Buka menu"
+  "cd_open_menu": "Buka menu",
+  "tdk_error_server": "TDK tidak merespons",
+  "tdk_error_network": "Tidak ada koneksi internet atau TDK tidak dapat dijangkau",
+  "share_result_template": "📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Belajar dengan Kamus Turki!_"
 }

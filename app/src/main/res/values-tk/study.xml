@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Ýalňyşlary gaýtala</string>
+    <string name="study_no_mistakes">Bu sözlük tertibinde ýazylan ýalňyş ýok.</string>
+    <string name="study_due">Şu günki gaýtalamalar</string>
+    <string name="study_nothing_due">Gaýtalamaly kart ýok. Sözleri saýlananlara goşuň.</string>
+    <string name="study_again">Gaýtadan görkez (10 min)</string>
+    <string name="study_known">Bilýärin</string>
+    <string name="backup_title">Ätiýaçlyk nusga</string>
+    <string name="backup_description">Saýlananlar, sözler, taryh, statistika we okuw ösüşi. Şahsy maglumatly faýly howpsuz saklaň.</string>
+    <string name="backup_export">Nusgany ýatda sakla</string>
+    <string name="backup_restore">Nusgany dikelt</string>
+    <string name="backup_success">Tamamlandy.</string>
+    <string name="backup_error">Tamamlap bolmady. Faýly we rugsatlary barlaň.</string>
+    <string name="backup_confirm">Bar bolan ýazgylar bilen birleşdirilsinmi? Has täze okuw ösüşi saklanar.</string>
+</resources>

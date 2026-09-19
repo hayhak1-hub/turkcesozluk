@@ -170,4 +170,7 @@
     <string name="share_mode_idioms">maana</string>
     <string name="share_mode_adjectives">maana</string>
     <string name="share_mode_all">maana/kisawe</string>
+    <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Ninajifunza na Kamusi ya Kituruki!_</string>
+    <string name="tdk_error_server">TDK haikujibu</string>
+    <string name="tdk_error_network">Hakuna muunganisho wa intaneti au TDK haipatikani</string>
 </resources>

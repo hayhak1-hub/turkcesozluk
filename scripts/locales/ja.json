@@ -169,5 +169,8 @@
   "share_mode_adjectives": "意味",
   "share_mode_all": "意味/同義語",
   "weekly_day_detail": "%1$s · %2$d 件のアクティビティ",
-  "cd_open_menu": "メニューを開く"
+  "cd_open_menu": "メニューを開く",
+  "tdk_error_server": "TDK が応答しませんでした",
+  "tdk_error_network": "インターネット接続がないか、TDK に接続できません",
+  "share_result_template": "📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_トルコ語辞書で学習中！_"
 }

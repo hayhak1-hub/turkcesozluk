@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">తప్పులను సాధన చేయండి</string>
+    <string name="study_no_mistakes">ఈ నిఘంటువు మోడ్‌లో సేవ్ చేసిన తప్పులు లేవు.</string>
+    <string name="study_due">నేటి పునశ్చరణ</string>
+    <string name="study_nothing_due">పునశ్చరణకు కార్డులు లేవు. ఇష్టమైనవాటిలో పదాలను జోడించండి.</string>
+    <string name="study_again">మళ్లీ చూపించు (10 నిమిషాలు)</string>
+    <string name="study_known">నాకు తెలుసు</string>
+    <string name="backup_title">బ్యాకప్</string>
+    <string name="backup_description">ఇష్టమైనవి, పదాలు, చరిత్ర, గణాంకాలు మరియు అభ్యాస పురోగతి. ఫైల్‌లో వ్యక్తిగత సమాచారం ఉంది; భద్రంగా ఉంచండి.</string>
+    <string name="backup_export">బ్యాకప్ సేవ్ చేయండి</string>
+    <string name="backup_restore">బ్యాకప్ పునరుద్ధరించండి</string>
+    <string name="backup_success">పూర్తయింది.</string>
+    <string name="backup_error">పూర్తి కాలేదు. ఫైల్ మరియు అనుమతులను తనిఖీ చేయండి.</string>
+    <string name="backup_confirm">ప్రస్తుత రికార్డులతో కలపాలా? కొత్త అభ్యాస పురోగతి ఉంచబడుతుంది.</string>
+</resources>

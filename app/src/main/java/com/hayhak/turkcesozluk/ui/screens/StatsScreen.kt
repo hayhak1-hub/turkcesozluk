@@ -325,6 +325,8 @@ fun StatsScreen(
 
             Spacer(modifier = Modifier.height(24.dp))
 
+            com.hayhak.turkcesozluk.ui.components.BackupCard(onRestored = { viewModel.refreshStats() })
+            Spacer(modifier = Modifier.height(24.dp))
             Text(
                 text = stringResource(R.string.settings_about),
                 style = MaterialTheme.typography.titleLarge,
@@ -964,4 +966,3 @@ fun AchievementItem(title: String, desc: String, isUnlocked: Boolean) {
         }
     }
 }
-

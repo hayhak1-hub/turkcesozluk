@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">틀린 문제 복습</string>
+    <string name="study_no_mistakes">이 사전 모드에 저장된 오답이 없습니다.</string>
+    <string name="study_due">오늘의 복습</string>
+    <string name="study_nothing_due">복습할 카드가 없습니다. 즐겨찾기에 단어를 추가하세요.</string>
+    <string name="study_again">다시 보기 (10분)</string>
+    <string name="study_known">알아요</string>
+    <string name="backup_title">백업</string>
+    <string name="backup_description">즐겨찾기, 단어, 기록, 통계 및 학습 진도. 개인정보가 포함된 파일을 안전하게 보관하세요.</string>
+    <string name="backup_export">백업 저장</string>
+    <string name="backup_restore">백업 복원</string>
+    <string name="backup_success">완료되었습니다.</string>
+    <string name="backup_error">완료하지 못했습니다. 파일과 접근 권한을 확인하세요.</string>
+    <string name="backup_confirm">기존 기록과 합칠까요? 최신 학습 진도는 유지됩니다.</string>
+</resources>

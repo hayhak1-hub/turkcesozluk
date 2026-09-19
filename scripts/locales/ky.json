@@ -169,5 +169,8 @@
   "share_mode_adjectives": "мааниси",
   "share_mode_all": "мааниси/синоним",
   "weekly_day_detail": "%1$s · %2$d иш-аракет",
-  "cd_open_menu": "Менуну ачуу"
+  "cd_open_menu": "Менуну ачуу",
+  "tdk_error_server": "TDK жооп берген жок",
+  "tdk_error_network": "Интернет байланышы жок же TDK жеткиликсиз",
+  "share_result_template": "📖 *%1$s* сөзүнүн %2$s:\n\n✨ %3$s\n\n_Түркчө сөздүк менен үйрөнүп жатам!_"
 }

@@ -170,4 +170,7 @@
     <string name="share_mode_idioms">意味</string>
     <string name="share_mode_adjectives">意味</string>
     <string name="share_mode_all">意味/同義語</string>
+    <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_トルコ語辞書で学習中！_</string>
+    <string name="tdk_error_server">TDK が応答しませんでした</string>
+    <string name="tdk_error_network">インターネット接続がないか、TDK に接続できません</string>
 </resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Работа над ошибками</string>
+    <string name="study_no_mistakes">В этом режиме словаря нет сохранённых ошибок.</string>
+    <string name="study_due">Пора повторить</string>
+    <string name="study_nothing_due">Нет карточек для повторения. Добавьте слова в избранное.</string>
+    <string name="study_again">Повторить (10 мин.)</string>
+    <string name="study_known">Я знаю</string>
+    <string name="backup_title">Резервная копия</string>
+    <string name="backup_description">Избранное, слова, история, статистика и прогресс. Файл содержит личные данные; храните его в безопасном месте.</string>
+    <string name="backup_export">Сохранить копию</string>
+    <string name="backup_restore">Восстановить копию</string>
+    <string name="backup_success">Готово.</string>
+    <string name="backup_error">Не удалось завершить. Проверьте файл и разрешения.</string>
+    <string name="backup_confirm">Объединить с текущими записями? Более новый прогресс сохранится.</string>
+</resources>

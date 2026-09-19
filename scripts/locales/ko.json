@@ -169,5 +169,8 @@
   "share_mode_adjectives": "의미",
   "share_mode_all": "의미/동의어",
   "weekly_day_detail": "%1$s · %2$d 활동",
-  "cd_open_menu": "메뉴 열기"
+  "cd_open_menu": "메뉴 열기",
+  "tdk_error_server": "TDK가 응답하지 않았습니다",
+  "tdk_error_network": "인터넷 연결이 없거나 TDK에 연결할 수 없습니다",
+  "share_result_template": "📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_터키어 사전으로 배우고 있어요!_"
 }

@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Latih kesalahan</string>
+    <string name="study_no_mistakes">Tidak ada kesalahan tersimpan dalam mode ini.</string>
+    <string name="study_due">Ulasan terjadwal</string>
+    <string name="study_nothing_due">Belum ada kartu yang perlu diulang. Tambahkan kata ke favorit.</string>
+    <string name="study_again">Ulangi (10 menit)</string>
+    <string name="study_known">Saya tahu</string>
+    <string name="backup_title">Cadangan</string>
+    <string name="backup_description">Favorit, kata, riwayat, statistik, dan kemajuan belajar. Berkas berisi data pribadi; simpan dengan aman.</string>
+    <string name="backup_export">Simpan cadangan</string>
+    <string name="backup_restore">Pulihkan cadangan</string>
+    <string name="backup_success">Selesai.</string>
+    <string name="backup_error">Gagal menyelesaikan. Periksa berkas dan izin akses.</string>
+    <string name="backup_confirm">Gabungkan dengan catatan saat ini? Kemajuan terbaru akan dipertahankan.</string>
+</resources>

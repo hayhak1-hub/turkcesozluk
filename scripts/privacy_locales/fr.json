@@ -5,7 +5,7 @@
   "metaPackage": "nom du package",
   "metaDeveloper": "Développeur",
   "metaUpdated": "Dernière mise à jour",
-  "updatedDate": "7 août 2026",
+  "updatedDate": "2026-09-19",
   "langLabel": "Langue",
   "intro": "Cette politique de confidentialité explique comment l'application <strong>Dictionnaire turc</strong> disponible sur Google Play traite les données des utilisateurs. En téléchargeant ou en utilisant l'application, vous acceptez cette politique.",
   "sections": [
@@ -25,7 +25,7 @@
     {
       "title": "3. Données stockées localement sur votre appareil",
       "paragraphs": [
-        "Les données suivantes sont stockées uniquement sur votre appareil (stockage local / base de données) et ne sont pas exportées de votre appareil :",
+        "Les favoris, mots ajoutés, recherches, statistiques, erreurs de quiz et progrès de répétition espacée restent normalement sur votre appareil. Ils ne sont transférés vers le fichier ou fournisseur de stockage choisi que lorsque vous utilisez « Enregistrer la sauvegarde ».",
         "Lorsque vous désinstallez l'application, ces données locales sont supprimées de votre appareil."
       ],
       "items": [
@@ -62,7 +62,7 @@
       "title": "6. Tiers",
       "paragraphs": [
         "L'application peut interagir avec les services tiers suivants :",
-        "Nous n'utilisons pas de SDK publicitaires, de SDK analytiques ni d'outils de suivi des utilisateurs."
+        "Nous n’utilisons aucun SDK publicitaire. Nous utilisons Google Firebase Analytics et Firebase Crashlytics pour comprendre l’usage et la stabilité. Analytics peut traiter les interactions, données de session, identifiants d’instance/appareil, informations sur l’appareil et l’application et région approximative. Crashlytics peut traiter les journaux de plantage et d’ANR, traces de pile, informations application/appareil/OS et identifiants d’installation. Google traite ces données selon les conditions Firebase et sa politique de confidentialité. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
         "<strong>Google Play / Play Store :</strong> Distribution de l'application et ouverture de la page Play Store via « Évaluez-nous ». Ce processus est géré par Google.",
@@ -73,13 +73,13 @@
     {
       "title": "7. Partage et vente des données",
       "paragraphs": [
-        "Nous ne vendons pas les données des utilisateurs. Nous ne créons pas de profils utilisateur sur nos propres serveurs. Comme décrit à la Section 4, seul le mot recherché peut être envoyé au site TDK pour une consultation du dictionnaire."
+        "Nous ne vendons pas les données utilisateur. Elles peuvent uniquement être transmises aux fins décrites : à Google/Firebase, à TDK pour les recherches en ligne et au fournisseur de stockage choisi pour la sauvegarde."
       ]
     },
     {
       "title": "8. Sécurité des données",
       "paragraphs": [
-        "Les données locales restent sur votre appareil. Les requêtes de dictionnaire en ligne sont effectuées via HTTPS. Aucune mesure de sécurité n'est absolue ; nous recommandons de maintenir votre appareil à jour."
+        "Les transferts en ligne utilisent HTTPS. La sauvegarde JSON exportée n’est pas chiffrée par l’application ; vous devez la conserver en sécurité et la supprimer lorsqu’elle n’est plus utile. Les conditions du fournisseur choisi s’appliquent."
       ]
     },
     {

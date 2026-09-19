@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Hatalarımı çalış</string>
+    <string name="study_no_mistakes">Bu sözlük modunda kayıtlı yanlış yok.</string>
+    <string name="study_due">Bugünkü tekrarlar</string>
+    <string name="study_nothing_due">Tekrar zamanı gelen kart yok. Önce favorilere kelime ekleyebilirsiniz.</string>
+    <string name="study_again">Tekrar göster (10 dk)</string>
+    <string name="study_known">Biliyorum</string>
+    <string name="backup_title">Yedekleme</string>
+    <string name="backup_description">Favoriler, kelimeler, geçmiş, istatistikler ve öğrenme ilerlemesi. Dosya kişisel verilerinizi içerir; güvenli saklayın.</string>
+    <string name="backup_export">Yedeği kaydet</string>
+    <string name="backup_restore">Yedeği geri yükle</string>
+    <string name="backup_success">İşlem tamamlandı.</string>
+    <string name="backup_error">İşlem tamamlanamadı. Dosyayı ve erişim iznini kontrol edin.</string>
+    <string name="backup_confirm">Yedek mevcut kayıtlarla birleştirilecek. Daha yeni öğrenme ilerlemesi korunacak. Devam edilsin mi?</string>
+</resources>

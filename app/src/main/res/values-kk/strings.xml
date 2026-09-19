@@ -170,4 +170,7 @@
     <string name="share_mode_idioms">мағынасы</string>
     <string name="share_mode_adjectives">мағынасы</string>
     <string name="share_mode_all">мағынасы/синоним</string>
+    <string name="share_result_template">📖 *%1$s* сөзінің %2$s:\n\n✨ %3$s\n\n_Тürkше сөздік арқылы үйреніп жүрмін!_</string>
+    <string name="tdk_error_server">TDK жауап бермеді</string>
+    <string name="tdk_error_network">Интернет байланысы жоқ немесе TDK-ға қол жеткізу мүмкін емес</string>
 </resources>

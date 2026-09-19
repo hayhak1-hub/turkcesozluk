@@ -169,5 +169,8 @@
   "share_mode_adjectives": "мағынасы",
   "share_mode_all": "мағынасы/синоним",
   "weekly_day_detail": "%1$s · %2$d белсенділік",
-  "cd_open_menu": "Мәзірді ашу"
+  "cd_open_menu": "Мәзірді ашу",
+  "tdk_error_server": "TDK жауап бермеді",
+  "tdk_error_network": "Интернет байланысы жоқ немесе TDK-ға қол жеткізу мүмкін емес",
+  "share_result_template": "📖 *%1$s* сөзінің %2$s:\n\n✨ %3$s\n\n_Тürkше сөздік арқылы үйреніп жүрмін!_"
 }

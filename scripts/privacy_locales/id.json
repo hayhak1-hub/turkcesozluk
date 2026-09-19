@@ -5,7 +5,7 @@
   "metaPackage": "nama paket",
   "metaDeveloper": "Pengembang",
   "metaUpdated": "Terakhir diperbarui",
-  "updatedDate": "7 Agustus 2026",
+  "updatedDate": "2026-09-19",
   "langLabel": "Bahasa",
   "intro": "Kebijakan privasi ini menjelaskan bagaimana aplikasi <strong>Kamus Turki</strong> yang tersedia di Google Play menangani data pengguna. Dengan mengunduh atau menggunakan aplikasi, Anda setuju dengan kebijakan ini.",
   "sections": [
@@ -25,7 +25,7 @@
     {
       "title": "3. Data yang disimpan secara lokal di perangkat Anda",
       "paragraphs": [
-        "Data berikut disimpan hanya di perangkat Anda (penyimpanan lokal / basis data) dan tidak diekspor dari perangkat:",
+        "Favorit, kata yang ditambahkan, riwayat pencarian, statistik, kesalahan kuis, dan kemajuan pengulangan berjeda biasanya hanya tersimpan di perangkat. Data baru dikirim ke berkas atau penyedia penyimpanan pilihan Anda saat Anda memakai “Simpan cadangan”.",
         "Saat Anda menghapus aplikasi, data lokal ini dihapus dari perangkat Anda."
       ],
       "items": [
@@ -62,7 +62,7 @@
       "title": "6. Pihak ketiga",
       "paragraphs": [
         "Aplikasi dapat berinteraksi dengan layanan pihak ketiga berikut:",
-        "Kami tidak menggunakan SDK iklan, SDK analitik, atau alat pelacakan pengguna."
+        "Kami tidak menggunakan SDK iklan. Kami menggunakan Google Firebase Analytics dan Firebase Crashlytics untuk memahami penggunaan dan stabilitas. Analytics dapat memproses interaksi aplikasi, informasi sesi, pengenal instans aplikasi/perangkat, informasi perangkat dan aplikasi, serta perkiraan wilayah. Crashlytics dapat memproses log crash dan ANR, stack trace, informasi aplikasi/perangkat/OS, dan pengenal instalasi. Google memproses data ini berdasarkan persyaratan Firebase dan kebijakan privasi Google. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
         "<strong>Google Play / Play Store:</strong> Distribusi aplikasi dan membuka halaman Play Store melalui “Beri kami rating”. Proses ini dikelola oleh Google.",
@@ -73,13 +73,13 @@
     {
       "title": "7. Berbagi dan penjualan data",
       "paragraphs": [
-        "Kami tidak menjual data pengguna. Kami tidak membuat profil pengguna di server kami. Seperti dijelaskan di Bagian 4, hanya kata yang dicari yang dapat dikirim ke situs TDK untuk pencarian kamus."
+        "Kami tidak menjual data pengguna. Data hanya dapat dikirim untuk tujuan yang dijelaskan: ke Google/Firebase, ke TDK untuk kueri kamus daring, dan ke penyedia penyimpanan yang Anda pilih untuk cadangan."
       ]
     },
     {
       "title": "8. Keamanan data",
       "paragraphs": [
-        "Data lokal tetap di perangkat Anda. Kueri kamus online dilakukan melalui HTTPS. Tidak ada langkah keamanan yang mutlak; kami menyarankan menjaga perangkat Anda tetap diperbarui."
+        "Transfer daring menggunakan HTTPS. Cadangan JSON yang diekspor tidak dienkripsi oleh aplikasi; Anda bertanggung jawab menyimpan dan menghapusnya dengan aman. Persyaratan privasi penyedia pilihan Anda berlaku."
       ]
     },
     {

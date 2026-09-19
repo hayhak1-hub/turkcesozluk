@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Revoir mes erreurs</string>
+    <string name="study_no_mistakes">Aucune erreur enregistrée dans ce mode.</string>
+    <string name="study_due">Révisions du jour</string>
+    <string name="study_nothing_due">Aucune carte à revoir. Ajoutez des mots aux favoris.</string>
+    <string name="study_again">Revoir (10 min)</string>
+    <string name="study_known">Je sais</string>
+    <string name="backup_title">Sauvegarde</string>
+    <string name="backup_description">Favoris, mots, historique, statistiques et progression. Ce fichier contient des données personnelles ; conservez-le en lieu sûr.</string>
+    <string name="backup_export">Enregistrer la sauvegarde</string>
+    <string name="backup_restore">Restaurer la sauvegarde</string>
+    <string name="backup_success">Terminé.</string>
+    <string name="backup_error">Échec. Vérifiez le fichier et les autorisations.</string>
+    <string name="backup_confirm">Fusionner avec les données actuelles ? La progression la plus récente sera conservée.</string>
+</resources>

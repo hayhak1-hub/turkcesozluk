@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">راجع أخطائي</string>
+    <string name="study_no_mistakes">لا توجد أخطاء محفوظة في وضع القاموس هذا.</string>
+    <string name="study_due">المراجعات المستحقة</string>
+    <string name="study_nothing_due">لا توجد بطاقات مستحقة. أضف كلمات إلى المفضلة.</string>
+    <string name="study_again">راجع مجدداً (10 دقائق)</string>
+    <string name="study_known">أعرفها</string>
+    <string name="backup_title">نسخة احتياطية</string>
+    <string name="backup_description">المفضلة والكلمات والسجل والإحصاءات وتقدم التعلم. يحتوي الملف على بيانات شخصية؛ احفظه بأمان.</string>
+    <string name="backup_export">حفظ نسخة احتياطية</string>
+    <string name="backup_restore">استعادة نسخة احتياطية</string>
+    <string name="backup_success">اكتمل.</string>
+    <string name="backup_error">تعذر الإكمال. تحقق من الملف وأذونات الوصول.</string>
+    <string name="backup_confirm">دمج النسخة مع السجلات الحالية؟ سيُحتفظ بتقدم التعلم الأحدث.</string>
+</resources>

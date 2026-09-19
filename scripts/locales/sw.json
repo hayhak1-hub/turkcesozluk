@@ -169,5 +169,8 @@
   "share_mode_adjectives": "maana",
   "share_mode_all": "maana/kisawe",
   "weekly_day_detail": "%1$s · shughuli %2$d",
-  "cd_open_menu": "Fungua menyu"
+  "cd_open_menu": "Fungua menyu",
+  "tdk_error_server": "TDK haikujibu",
+  "tdk_error_network": "Hakuna muunganisho wa intaneti au TDK haipatikani",
+  "share_result_template": "📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Ninajifunza na Kamusi ya Kituruki!_"
 }

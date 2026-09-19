@@ -5,6 +5,8 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface SearchHistoryDao {
+    @Query("SELECT * FROM search_history")
+    suspend fun all(): List<SearchHistory>
     @Query("SELECT * FROM search_history ORDER BY timestamp DESC LIMIT 10")
     fun getRecentSearches(): Flow<List<SearchHistory>>
 

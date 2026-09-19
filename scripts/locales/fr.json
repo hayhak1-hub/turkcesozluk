@@ -169,5 +169,8 @@
   "share_mode_adjectives": "signification",
   "share_mode_all": "signification/synonyme",
   "weekly_day_detail": "%1$s · %2$d activités",
-  "cd_open_menu": "Ouvrir le menu"
+  "cd_open_menu": "Ouvrir le menu",
+  "tdk_error_server": "TDK n'a pas répondu",
+  "tdk_error_network": "Pas de connexion Internet ou TDK est inaccessible",
+  "share_result_template": "📖 *%1$s* — %2$s :\n\n✨ %3$s\n\n_J'apprends avec Dictionnaire turc !_"
 }

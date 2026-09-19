@@ -169,5 +169,8 @@
   "share_mode_adjectives": "பொருள்",
   "share_mode_all": "பொருள்/ஒத்த சொல்",
   "weekly_day_detail": "%1$s · %2$d செயல்பாடுகள்",
-  "cd_open_menu": "மெனுவைத் திற"
+  "cd_open_menu": "மெனுவைத் திற",
+  "tdk_error_server": "TDK பதிலளிக்கவில்லை",
+  "tdk_error_network": "இணைய இணைப்பு இல்லை அல்லது TDK-ஐ அணுக முடியவில்லை",
+  "share_result_template": "📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_துருக்கிய அகராதியுடன் கற்றுக்கொண்டிருக்கிறேன்!_"
 }

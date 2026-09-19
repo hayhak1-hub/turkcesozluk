@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Repasar errores</string>
+    <string name="study_no_mistakes">No hay errores guardados en este modo.</string>
+    <string name="study_due">Repasos pendientes</string>
+    <string name="study_nothing_due">No hay tarjetas pendientes. Añade palabras a favoritos.</string>
+    <string name="study_again">Repetir (10 min)</string>
+    <string name="study_known">Lo sé</string>
+    <string name="backup_title">Copia de seguridad</string>
+    <string name="backup_description">Favoritos, palabras, historial, estadísticas y progreso. El archivo contiene datos personales; guárdalo de forma segura.</string>
+    <string name="backup_export">Guardar copia</string>
+    <string name="backup_restore">Restaurar copia</string>
+    <string name="backup_success">Completado.</string>
+    <string name="backup_error">No se pudo completar. Revisa el archivo y los permisos.</string>
+    <string name="backup_confirm">¿Combinar con los datos actuales? Se conservará el progreso más reciente.</string>
+</resources>

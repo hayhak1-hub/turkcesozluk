@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Xatolarni takrorlash</string>
+    <string name="study_no_mistakes">Bu lug‘at rejimida saqlangan xato yo‘q.</string>
+    <string name="study_due">Bugungi takrorlashlar</string>
+    <string name="study_nothing_due">Takrorlash vaqti kelgan kartochka yo‘q. So‘zlarni tanlanganlarga qo‘shing.</string>
+    <string name="study_again">Qayta ko‘rsatish (10 daq.)</string>
+    <string name="study_known">Bilaman</string>
+    <string name="backup_title">Zaxira nusxa</string>
+    <string name="backup_description">Tanlanganlar, so‘zlar, tarix, statistika va o‘rganish jarayoni. Shaxsiy ma’lumotli faylni xavfsiz saqlang.</string>
+    <string name="backup_export">Nusxani saqlash</string>
+    <string name="backup_restore">Nusxani tiklash</string>
+    <string name="backup_success">Bajarildi.</string>
+    <string name="backup_error">Bajarilmadi. Fayl va ruxsatlarni tekshiring.</string>
+    <string name="backup_confirm">Mavjud yozuvlar bilan birlashtirilsinmi? Yangiroq o‘rganish jarayoni saqlanadi.</string>
+</resources>

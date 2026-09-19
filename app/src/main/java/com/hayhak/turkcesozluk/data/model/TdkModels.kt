@@ -15,8 +15,18 @@ data class TdkEntry(
     val compounds: List<String> = emptyList()
 )
 
+/**
+ * Hata metinleri arayüz katmanında yerelleştirilir; repository yalnızca nedeni taşır.
+ */
+enum class TdkErrorReason {
+    /** Sunucuya ulaşıldı ama 2xx dışında bir yanıt döndü. */
+    SERVER,
+    /** Bağlantı kurulamadı veya yanıt ayrıştırılamadı. */
+    NETWORK,
+}
+
 sealed class TdkLookupResult {
     data class Success(val entry: TdkEntry) : TdkLookupResult()
     data object NotFound : TdkLookupResult()
-    data class Error(val message: String) : TdkLookupResult()
+    data class Error(val reason: TdkErrorReason) : TdkLookupResult()
 }

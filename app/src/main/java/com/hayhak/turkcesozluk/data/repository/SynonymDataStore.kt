@@ -34,10 +34,21 @@ object SynonymDataStore {
         _cachedMeanings = null
     }
 
+    /**
+     * ConcurrentHashMap tek basina "oku-degistir-yaz" dizisini korumaz; es zamanli
+     * ekleme yapilirsa guncelleme kaybolabilir. compute()/merge() API 24 istedigi
+     * icin (minSdk 23) putIfAbsent/replace ile CAS dongusu kullaniyoruz.
+     */
     fun addSynonym(word: String, synonym: String) {
-        val set = _synonymMap.getOrPut(word) { emptySet() }.toMutableSet()
-        set.add(synonym)
-        _synonymMap[word] = set.toSet()
+        while (true) {
+            val existing = _synonymMap[word]
+            if (existing == null) {
+                if (_synonymMap.putIfAbsent(word, setOf(synonym)) == null) break
+            } else {
+                if (synonym in existing) break
+                if (_synonymMap.replace(word, existing, existing + synonym)) break
+            }
+        }
         _cachedMeanings = null
     }
 

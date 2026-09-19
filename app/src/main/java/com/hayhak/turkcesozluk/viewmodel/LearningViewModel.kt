@@ -14,11 +14,15 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import com.hayhak.turkcesozluk.data.db.AppDatabase
+import com.hayhak.turkcesozluk.data.db.StudyRecord
+import com.hayhak.turkcesozluk.data.db.ReviewSchedule
 
 @HiltViewModel
 class LearningViewModel @Inject constructor(
     application: Application,
-    private val favoriteDao: FavoriteDao
+    private val favoriteDao: FavoriteDao,
+    private val database: AppDatabase
 ) : AndroidViewModel(application) {
 
     private var cards = emptyList<FavoriteWord>()
@@ -26,28 +30,55 @@ class LearningViewModel @Inject constructor(
     var isFlipped by mutableStateOf(false)
     var isLearningActive by mutableStateOf(false)
     var isLoading by mutableStateOf(true)
+    var nothingDue by mutableStateOf(false)
+    var saving by mutableStateOf(false)
 
     init {
         // Otomatik başlatma kaldırıldı
         isLoading = false
     }
 
-    fun startLearning() {
+    fun startLearning(dueOnly: Boolean = false) {
+        if (isLoading || saving) return
+        isLoading = true
         viewModelScope.launch {
-            isLoading = true
+            try {
             val favorites = favoriteDao.getAllFavorites().first()
-            if (favorites.isNotEmpty()) {
-                cards = favorites.shuffled()
+            val records = database.studyDao().all().filter { it.kind == "review" }
+            val now = System.currentTimeMillis()
+            cards = favorites.filter { favorite -> !dueOnly || records.none {
+                it.word == favorite.word && it.answer == favorite.synonym && it.dueAt > now
+            } }.shuffled()
+            nothingDue = cards.isEmpty()
+            if (cards.isNotEmpty()) {
                 currentCardIndex = 0
                 isFlipped = false
                 isLearningActive = true
             }
-            isLoading = false
+            } finally { isLoading = false }
         }
     }
 
     fun stopLearning() {
         isLearningActive = false
+    }
+
+    fun rateCard(known: Boolean) {
+        val card = getCurrentCard() ?: return
+        if (!isFlipped || saving) return
+        saving = true
+        viewModelScope.launch {
+            try {
+                val old = database.studyDao().all().firstOrNull {
+                    it.kind == "review" && it.word == card.word && it.answer == card.synonym
+                }
+                val now = System.currentTimeMillis()
+                val (streak, due) = ReviewSchedule.next(old?.streak ?: 0, known, now)
+                database.studyDao().put(StudyRecord("review", "", card.word, card.synonym,
+                    streak = streak, dueAt = due, updatedAt = now))
+                nextCard()
+            } finally { saving = false }
+        }
     }
 
     fun nextCard() {

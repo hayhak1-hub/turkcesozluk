@@ -13,7 +13,4 @@ interface FavoriteDao {
 
     @Delete
     suspend fun deleteFavorite(favoriteWord: FavoriteWord)
-
-    @Query("SELECT EXISTS(SELECT 1 FROM favorites WHERE word = :word LIMIT 1)")
-    fun isFavorite(word: String): Flow<Boolean>
 }

@@ -170,4 +170,7 @@
     <string name="share_mode_idioms">значение</string>
     <string name="share_mode_adjectives">значение</string>
     <string name="share_mode_all">значение/синоним</string>
+    <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Учу турецкий с приложением Турецкий словарь!_</string>
+    <string name="tdk_error_server">TDK не ответил</string>
+    <string name="tdk_error_network">Нет подключения к интернету или TDK недоступен</string>
 </resources>

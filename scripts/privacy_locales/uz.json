@@ -5,7 +5,7 @@
   "metaPackage": "paket nomi",
   "metaDeveloper": "Ishlab chiquvchi",
   "metaUpdated": "Oxirgi yangilanish",
-  "updatedDate": "2026-yil 7-avgust",
+  "updatedDate": "2026-09-19",
   "langLabel": "Til",
   "intro": "Bu maxfiylik siyosati Google Play orqali taqdim etilgan <strong>Turk lug'ati</strong> ilovasi foydalanuvchi ma'lumotlarini qanday qayta ishlashini tushuntiradi. Ilovani yuklab olish yoki foydalanish orqali siz ushbu siyosatga rozilik bildirasiz.",
   "sections": [
@@ -25,7 +25,7 @@
     {
       "title": "3. Qurilmada mahalliy saqlanadigan ma'lumotlar",
       "paragraphs": [
-        "Quyidagi ma'lumotlar faqat qurilmangizda (mahalliy xotira / ma'lumotlar bazasi) saqlanadi va qurilmadan tashqariga uzatilmaydi:",
+        "Sevimlilar, foydalanuvchi qo‘shgan so‘zlar, qidiruv tarixi, statistika, test xatolari va oraliqli takrorlash jarayoni odatda faqat qurilmangizda qoladi. Bu ma’lumotlar faqat “Zaxirani saqlash”ni tanlaganingizda siz tanlagan fayl yoki saqlash xizmatiga uzatiladi.",
         "Ilovani o'chirib tashlaganingizda bu mahalliy ma'lumotlar ham qurilmadan o'chiriladi."
       ],
       "items": [
@@ -62,7 +62,7 @@
       "title": "6. Uchinchi tomonlar",
       "paragraphs": [
         "Ilova quyidagi uchinchi tomon xizmatlari bilan o'zaro aloqada bo'lishi mumkin:",
-        "Biz reklama SDK, analitika SDK yoki foydalanuvchini kuzatish vositalaridan foydalanmaymiz."
+        "Biz reklama SDK-sidan foydalanmaymiz. Foydalanish va barqarorlikni tushunish uchun Google Firebase Analytics va Firebase Crashlytics’dan foydalanamiz. Analytics ilova harakatlari, seans ma’lumoti, ilova nusxasi/qurilma identifikatorlari, qurilma va ilova ma’lumoti hamda taxminiy hududni qayta ishlashi mumkin. Crashlytics nosozlik va ANR jurnallari, stek izlari, ilova/qurilma/OT ma’lumoti va o‘rnatish identifikatorlarini qayta ishlashi mumkin. Google bu ma’lumotlarni Firebase shartlari va Google maxfiylik siyosatiga muvofiq qayta ishlaydi. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
         "<strong>Google Play / Play Store:</strong> Ilovani tarqatish va “Bizni baholang” orqali Play Store sahifasini ochish uchun. Bu jarayon Google tomonidan boshqariladi.",
@@ -73,13 +73,13 @@
     {
       "title": "7. Ma'lumotlarni ulashish va sotish",
       "paragraphs": [
-        "Biz foydalanuvchi ma'lumotlarini sotmaymiz. O'z serverlarimizda foydalanuvchi profili yaratmaymiz. 4-bo'limda tushuntirilganidek, faqat lug'at so'rovi uchun qidirilgan so'z TDK saytiga uzatilishi mumkin."
+        "Foydalanuvchi ma’lumotlarini sotmaymiz. Ma’lumot faqat shu yerda ko‘rsatilgan maqsadlarda Google/Firebase’ga, onlayn lug‘at so‘rovi uchun TDK’ga va zaxira uchun siz tanlagan saqlash xizmatiga yuborilishi mumkin."
       ]
     },
     {
       "title": "8. Ma'lumotlar xavfsizligi",
       "paragraphs": [
-        "Mahalliy ma'lumotlar qurilmangizda saqlanadi. Onlayn lug'at so'rovlari HTTPS orqali amalga oshiriladi. Hech qanday xavfsizlik chorasi mutlaq emas; qurilmangizni yangilab turishingizni tavsiya qilamiz."
+        "Onlayn uzatish HTTPS orqali amalga oshiriladi. Eksport qilingan JSON zaxirasi ilova tomonidan shifrlanmaydi; uni xavfsiz saqlash va kerak bo‘lmaganda o‘chirish sizning mas’uliyatingiz. Tanlangan saqlash xizmatining maxfiylik shartlari amal qiladi."
       ]
     },
     {

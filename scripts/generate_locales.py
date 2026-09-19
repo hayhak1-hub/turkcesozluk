@@ -81,6 +81,7 @@ REQUIRED_KEYS = [
     "day_mon_full", "day_tue_full", "day_wed_full", "day_thu_full", "day_fri_full", "day_sat_full", "day_sun_full",
     "notification_channel_name", "notification_title", "notification_body",
     "share_mode_verbs", "share_mode_definitions", "share_mode_idioms", "share_mode_adjectives", "share_mode_all",
+    "share_result_template", "tdk_error_server", "tdk_error_network",
 ]
 
 

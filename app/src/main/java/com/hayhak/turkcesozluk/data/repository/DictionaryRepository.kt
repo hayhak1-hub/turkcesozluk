@@ -2,6 +2,8 @@ package com.hayhak.turkcesozluk.data.repository
 
 import com.hayhak.turkcesozluk.util.capitalizeTR
 import com.hayhak.turkcesozluk.util.normalizeTR
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import java.util.Calendar
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -28,8 +30,9 @@ class DictionaryRepository @Inject constructor() {
             .toList()
     }
 
-    fun getDailyWord(): Pair<String, String> {
-        if (SynonymDataStore.primaryKeys.isEmpty()) return "Sözlük" to "Hazırlanıyor"
+    /** Veri henüz hazır değilse null döner; metni çağıran katman yerelleştirir. */
+    fun getDailyWord(): Pair<String, String>? {
+        if (SynonymDataStore.primaryKeys.isEmpty()) return null
         val calendar = Calendar.getInstance()
         val seed = (calendar.get(Calendar.YEAR) * 1000) + calendar.get(Calendar.DAY_OF_YEAR)
         val index = seed % SynonymDataStore.primaryKeys.size
@@ -55,10 +58,14 @@ class DictionaryRepository @Inject constructor() {
         return tree
     }
 
-    fun addWordManual(word: String, synonym: String) {
+    /**
+     * updateCache() burada ön-sıralı liste veremediği için on binlerce anahtarı
+     * yeniden sıralar; ana thread'i bloklamamak adına arka plana alınır.
+     */
+    suspend fun addWordManual(word: String, synonym: String) = withContext(Dispatchers.Default) {
         val w = word.normalizeTR()
         val s = synonym.normalizeTR()
-        if (w.isEmpty() || s.isEmpty()) return
+        if (w.isEmpty() || s.isEmpty()) return@withContext
 
         SynonymDataStore.addSynonym(w, s)
         SynonymDataStore.addSynonym(s, w)
@@ -69,9 +76,25 @@ class DictionaryRepository @Inject constructor() {
         SynonymDataStore.updateCache(updatedPrimary)
     }
 
-    fun getRandomWord(): Pair<String, String> {
-        if (SynonymDataStore.primaryKeys.isEmpty()) return "Kelime" to "Yükleniyor"
-        val randomKey = SynonymDataStore.primaryKeys.random()
+    suspend fun addWordsManual(words: List<Pair<String, String>>) = withContext(Dispatchers.Default) {
+        val primary = SynonymDataStore.primaryKeys.toMutableSet()
+        words.forEach { (word, answer) ->
+            val w = word.normalizeTR()
+            val s = answer.normalizeTR()
+            if (w.isNotEmpty() && s.isNotEmpty()) {
+                SynonymDataStore.addSynonym(w, s)
+                SynonymDataStore.addSynonym(s, w)
+                primary.add(w)
+            }
+        }
+        if (words.isNotEmpty()) SynonymDataStore.updateCache(primary)
+    }
+
+    /** Veri henüz hazır değilse null döner. */
+    fun getRandomWord(): Pair<String, String>? {
+        val keys = SynonymDataStore.primaryKeys
+        if (keys.isEmpty()) return null
+        val randomKey = keys.random()
         return randomKey to (SynonymDataStore.synonymMap[randomKey]?.firstOrNull() ?: "")
     }
 

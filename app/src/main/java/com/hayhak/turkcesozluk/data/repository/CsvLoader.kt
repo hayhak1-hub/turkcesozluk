@@ -15,7 +15,7 @@ import java.io.InputStreamReader
 import javax.inject.Inject
 import javax.inject.Singleton
 
-private const val CACHE_VERSION = 2
+private const val CACHE_VERSION = 3
 
 @Singleton
 class CsvLoader @Inject constructor(
@@ -50,7 +50,16 @@ class CsvLoader @Inject constructor(
         return result
     }
 
-    private fun cacheFileFor(name: String): File = File(context.cacheDir, "$name.v$CACHE_VERSION.bin")
+    private fun cacheFileFor(name: String): File {
+        val current = "$name.v$CACHE_VERSION.bin"
+        // Surum atlandiginda eski cache dosyalari (megabaytlarca) bosuna yer kaplamasin.
+        runCatching {
+            context.cacheDir.listFiles { f ->
+                f.name.startsWith("$name.v") && f.name.endsWith(".bin") && f.name != current
+            }?.forEach { it.delete() }
+        }
+        return File(context.cacheDir, current)
+    }
 
     private fun readLoadResultCache(file: File): LoadResult? {
         if (!file.exists()) return null
@@ -267,24 +276,35 @@ class CsvLoader @Inject constructor(
         return result
     }
 
-    private fun parseCsvLine(line: String): List<String> {
-        val result = mutableListOf<String>()
-        var inQuotes = false
-        var current = StringBuilder()
-        var i = 0
-        while (i < line.length) {
-            val char = line[i]
-            if (char == '\"') {
-                inQuotes = !inQuotes
-            } else if (char == ',' && !inQuotes) {
-                result.add(current.toString())
-                current = StringBuilder()
-            } else {
-                current.append(char)
+    companion object {
+        /**
+         * RFC 4180 tarzi ayristirma: tirnak icindeki virguller alan ayraci degildir ve
+         * tirnakli alanda cift tirnak ("") tek bir tirnak karakteri anlamina gelir.
+         */
+        internal fun parseCsvLine(line: String): List<String> {
+            val result = mutableListOf<String>()
+            var inQuotes = false
+            var current = StringBuilder()
+            var i = 0
+            while (i < line.length) {
+                val char = line[i]
+                when {
+                    char == '"' && inQuotes && i + 1 < line.length && line[i + 1] == '"' -> {
+                        // Kacisli tirnak: tek tirnak olarak yaz, ikinci tirnagi atla
+                        current.append('"')
+                        i++
+                    }
+                    char == '"' -> inQuotes = !inQuotes
+                    char == ',' && !inQuotes -> {
+                        result.add(current.toString())
+                        current = StringBuilder()
+                    }
+                    else -> current.append(char)
+                }
+                i++
             }
-            i++
+            result.add(current.toString())
+            return result
         }
-        result.add(current.toString())
-        return result
     }
 }

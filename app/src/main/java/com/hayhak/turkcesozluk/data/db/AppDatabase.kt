@@ -7,13 +7,19 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [FavoriteWord::class, SearchHistory::class, UserSynonym::class], version = 4, exportSchema = false)
+@Database(entities = [FavoriteWord::class, SearchHistory::class, UserSynonym::class, StudyRecord::class], version = 5, exportSchema = true)
 abstract class AppDatabase : RoomDatabase() {
+    abstract fun studyDao(): StudyDao
     abstract fun favoriteDao(): FavoriteDao
     abstract fun searchHistoryDao(): SearchHistoryDao
     abstract fun userSynonymDao(): UserSynonymDao
 
     companion object {
+        val MIGRATION_4_5 = object : Migration(4, 5) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("CREATE TABLE IF NOT EXISTS `study_records` (`kind` TEXT NOT NULL, `mode` TEXT NOT NULL, `word` TEXT NOT NULL, `answer` TEXT NOT NULL, `options` TEXT NOT NULL, `streak` INTEGER NOT NULL, `dueAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, PRIMARY KEY(`kind`, `mode`, `word`, `answer`))")
+            }
+        }
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
@@ -50,7 +56,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "esanlamli_database"
                 )
-                .addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4)
+                .addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5)
                 .build()
                 INSTANCE = instance
                 instance

@@ -112,7 +112,7 @@ fun DefinitionScreen(viewModel: DefinitionViewModel = hiltViewModel()) {
             Spacer(Modifier.height(12.dp))
 
             Button(
-                onClick = { viewModel.updateQuery(viewModel.getRandomWord()) },
+                onClick = { viewModel.getRandomWord().takeIf { it.isNotEmpty() }?.let(viewModel::updateQuery) },
                 modifier = Modifier.fillMaxWidth().height(52.dp),
                 shape = RoundedCornerShape(16.dp),
                 enabled = !isLoading

@@ -170,4 +170,7 @@
     <string name="share_mode_idioms">المعنى</string>
     <string name="share_mode_adjectives">المعنى</string>
     <string name="share_mode_all">المعنى/المرادف</string>
+    <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_أتعلّم مع قاموس التركية!_</string>
+    <string name="tdk_error_server">لم يستجب TDK</string>
+    <string name="tdk_error_network">لا يوجد اتصال بالإنترنت أو تعذّر الوصول إلى TDK</string>
 </resources>

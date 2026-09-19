@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Каталарды кайталоо</string>
+    <string name="study_no_mistakes">Бул сөздүк режиминде сакталган ката жок.</string>
+    <string name="study_due">Кайталоо убактысы</string>
+    <string name="study_nothing_due">Кайталоочу карточка жок. Сөздөрдү тандалгандарга кошуңуз.</string>
+    <string name="study_again">Кайра көрсөтүү (10 мүн)</string>
+    <string name="study_known">Билем</string>
+    <string name="backup_title">Камдык көчүрмө</string>
+    <string name="backup_description">Тандалгандар, сөздөр, тарых, статистика жана окуу жүрүшү. Жеке маалыматтары бар файлды коопсуз сактаңыз.</string>
+    <string name="backup_export">Көчүрмөнү сактоо</string>
+    <string name="backup_restore">Көчүрмөнү калыбына келтирүү</string>
+    <string name="backup_success">Аяктады.</string>
+    <string name="backup_error">Аткарылган жок. Файлды жана уруксаттарды текшериңиз.</string>
+    <string name="backup_confirm">Учурдагы жазуулар менен бириктирилсинби? Жаңыраак окуу жүрүшү сакталат.</string>
+</resources>

@@ -170,4 +170,7 @@
     <string name="share_mode_idioms">ma\'nosi</string>
     <string name="share_mode_adjectives">ma\'nosi</string>
     <string name="share_mode_all">ma\'nosi/sinonim</string>
+    <string name="share_result_template">📖 *%1$s* so\'zining %2$s:\n\n✨ %3$s\n\n_Turk lug\'ati bilan o\'rganyapman!_</string>
+    <string name="tdk_error_server">TDK javob bermadi</string>
+    <string name="tdk_error_network">Internet aloqasi yo\'q yoki TDK\'ga ulanib bo\'lmadi</string>
 </resources>

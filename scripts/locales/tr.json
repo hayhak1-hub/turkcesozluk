@@ -169,5 +169,8 @@
   "share_mode_adjectives": "anlamı",
   "share_mode_all": "anlamı/eş anlamlısı",
   "weekly_day_detail": "%1$s · %2$d aktivite",
-  "cd_open_menu": "Menüyü aç"
+  "cd_open_menu": "Menüyü aç",
+  "tdk_error_server": "TDK yanıt vermedi",
+  "tdk_error_network": "İnternet bağlantısı yok veya TDK'ya ulaşılamadı",
+  "share_result_template": "📖 *%1$s* kelimesinin %2$s:\n\n✨ %3$s\n\n_Türkçe Sözlük ile öğreniyorum!_"
 }

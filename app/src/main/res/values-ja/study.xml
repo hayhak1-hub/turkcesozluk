@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">間違いを復習</string>
+    <string name="study_no_mistakes">この辞書モードには保存された間違いがありません。</string>
+    <string name="study_due">今日の復習</string>
+    <string name="study_nothing_due">復習するカードはありません。単語をお気に入りに追加してください。</string>
+    <string name="study_again">もう一度（10分後）</string>
+    <string name="study_known">わかる</string>
+    <string name="backup_title">バックアップ</string>
+    <string name="backup_description">お気に入り、単語、履歴、統計、学習状況。個人データを含むため安全に保管してください。</string>
+    <string name="backup_export">バックアップを保存</string>
+    <string name="backup_restore">バックアップを復元</string>
+    <string name="backup_success">完了しました。</string>
+    <string name="backup_error">完了できません。ファイルとアクセス権限を確認してください。</string>
+    <string name="backup_confirm">現在の記録と統合しますか？新しい学習状況を保持します。</string>
+</resources>

@@ -169,5 +169,8 @@
   "share_mode_adjectives": "mənası",
   "share_mode_all": "mənası/eyni mənalı",
   "weekly_day_detail": "%1$s · %2$d fəaliyyət",
-  "cd_open_menu": "Menyunu aç"
+  "cd_open_menu": "Menyunu aç",
+  "tdk_error_server": "TDK cavab vermədi",
+  "tdk_error_network": "İnternet bağlantısı yoxdur və ya TDK-ya çıxış yoxdur",
+  "share_result_template": "📖 *%1$s* sözünün %2$s:\n\n✨ %3$s\n\n_Türk Lüğəti ilə öyrənirəm!_"
 }

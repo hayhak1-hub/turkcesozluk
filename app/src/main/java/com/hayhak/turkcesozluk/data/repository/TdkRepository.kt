@@ -1,8 +1,10 @@
 package com.hayhak.turkcesozluk.data.repository
 
 import com.hayhak.turkcesozluk.data.model.TdkEntry
+import com.hayhak.turkcesozluk.data.model.TdkErrorReason
 import com.hayhak.turkcesozluk.data.model.TdkLookupResult
 import com.hayhak.turkcesozluk.data.model.TdkMeaning
+import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
@@ -43,7 +45,8 @@ class TdkRepository @Inject constructor() {
                     .orEmpty()
 
                 if (code !in 200..299) {
-                    return@withContext TdkLookupResult.Error("TDK yanıt vermedi ($code)")
+                    Log.w(TAG, "TDK returned HTTP $code for '$trimmed'")
+                    return@withContext TdkLookupResult.Error(TdkErrorReason.SERVER)
                 }
                 if (body.isBlank()) {
                     return@withContext TdkLookupResult.NotFound
@@ -72,8 +75,8 @@ class TdkRepository @Inject constructor() {
                 connection.disconnect()
             }
         } catch (e: Exception) {
-            android.util.Log.w(TAG, "TDK lookup failed for '$trimmed'", e)
-            TdkLookupResult.Error("İnternet bağlantısı yok veya TDK'ya ulaşılamadı")
+            Log.w(TAG, "TDK lookup failed for '$trimmed'", e)
+            TdkLookupResult.Error(TdkErrorReason.NETWORK)
         }
     }
 

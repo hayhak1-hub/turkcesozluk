@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Practice mistakes</string>
+    <string name="study_no_mistakes">No saved mistakes in this dictionary mode.</string>
+    <string name="study_due">Due reviews</string>
+    <string name="study_nothing_due">No cards due. You can add words to favorites first.</string>
+    <string name="study_again">Review again (10 min)</string>
+    <string name="study_known">I know this</string>
+    <string name="backup_title">Backup</string>
+    <string name="backup_description">Favorites, words, history, statistics and study progress. The file contains personal data; keep it safe.</string>
+    <string name="backup_export">Save backup</string>
+    <string name="backup_restore">Restore backup</string>
+    <string name="backup_success">Completed.</string>
+    <string name="backup_error">Could not complete. Check the file and access permission.</string>
+    <string name="backup_confirm">Merge this backup with existing records? Newer study progress is kept.</string>
+</resources>

@@ -5,13 +5,23 @@ import com.hayhak.turkcesozluk.util.capitalizeTR
 import javax.inject.Inject
 import javax.inject.Singleton
 
+private const val OPTION_COUNT = 4
+
 @Singleton
 class QuizRepository @Inject constructor() {
 
-    fun getRandomWord(): Pair<String, String> {
-        if (SynonymDataStore.cachedKeys.isEmpty()) return "Kelime" to "Yükleniyor"
-        val randomKey = SynonymDataStore.cachedKeys.random()
-        return randomKey to (SynonymDataStore.synonymMap[randomKey]?.firstOrNull() ?: "")
+    /**
+     * Soru köküne yalnızca "ana" kelimeler uygundur. cachedKeys ters eşlemeleri
+     * (yani anlam cümlelerini) de içerdiğinden burada primaryKeys kullanılır.
+     * Veri henüz hazır değilse veya kelimenin karşılığı yoksa null döner.
+     */
+    fun getRandomWord(): Pair<String, String>? {
+        val keys = SynonymDataStore.primaryKeys
+        if (keys.isEmpty()) return null
+        val randomKey = keys.random()
+        val answer = SynonymDataStore.synonymMap[randomKey]?.firstOrNull()?.takeIf { it.isNotBlank() }
+            ?: return null
+        return randomKey to answer
     }
 
     fun getRandomDistractors(count: Int, excluding: Set<String>): List<String> {
@@ -19,10 +29,10 @@ class QuizRepository @Inject constructor() {
         if (pool.isEmpty()) return emptyList()
         val result = mutableListOf<String>()
         var tries = 0
-        val maxTries = pool.size.coerceAtMost(200)
+        val maxTries = (count * 20).coerceAtMost(pool.size * 4)
         while (result.size < count && tries < maxTries) {
             val candidate = pool.random()
-            if (candidate !in excluding && candidate !in result) {
+            if (candidate.isNotBlank() && candidate !in excluding && candidate !in result) {
                 result.add(candidate)
             }
             tries++
@@ -30,18 +40,27 @@ class QuizRepository @Inject constructor() {
         return result
     }
 
-    fun generateQuestion(): QuizQuestion {
-        val pair = getRandomWord()
-        val word = pair.first
-        val correct = pair.second
-        val distractors = getRandomDistractors(3, excluding = setOf(word, correct))
+    /**
+     * Şıkları büyük harfe çevirdikten sonra çakışma olabileceğinden (ör. iki farklı
+     * kayıt aynı metne normalize olursa) benzersizlik son adımda doğrulanır; tam
+     * [OPTION_COUNT] şık üretilemezse soru atlanır ve null dönülür.
+     */
+    fun generateQuestion(): QuizQuestion? {
+        val (word, correct) = getRandomWord() ?: return null
 
-        val options = (distractors + correct).shuffled().map { it.capitalizeTR() }
+        val distractors = getRandomDistractors(OPTION_COUNT - 1, excluding = setOf(word, correct))
+        if (distractors.size < OPTION_COUNT - 1) return null
+
+        val correctLabel = correct.capitalizeTR()
+        val options = LinkedHashSet<String>()
+        options.add(correctLabel)
+        distractors.forEach { options.add(it.capitalizeTR()) }
+        if (options.size < OPTION_COUNT) return null
 
         return QuizQuestion(
             word = word.capitalizeTR(),
-            correctAnswer = correct.capitalizeTR(),
-            options = options
+            correctAnswer = correctLabel,
+            options = options.toList().shuffled()
         )
     }
 }

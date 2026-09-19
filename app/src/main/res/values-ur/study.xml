@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">غلطیوں کی مشق</string>
+    <string name="study_no_mistakes">اس لغت کے موڈ میں کوئی محفوظ غلطی نہیں۔</string>
+    <string name="study_due">آج کی دہرائی</string>
+    <string name="study_nothing_due">کوئی کارڈ دہرائی کے لیے تیار نہیں۔ پسندیدہ میں الفاظ شامل کریں۔</string>
+    <string name="study_again">دوبارہ دکھائیں (10 منٹ)</string>
+    <string name="study_known">مجھے معلوم ہے</string>
+    <string name="backup_title">بیک اپ</string>
+    <string name="backup_description">پسندیدہ، الفاظ، تاریخ، اعداد و شمار اور سیکھنے کی پیش رفت۔ فائل میں ذاتی معلومات ہیں؛ محفوظ رکھیں۔</string>
+    <string name="backup_export">بیک اپ محفوظ کریں</string>
+    <string name="backup_restore">بیک اپ بحال کریں</string>
+    <string name="backup_success">مکمل ہو گیا۔</string>
+    <string name="backup_error">مکمل نہیں ہوا۔ فائل اور اجازتیں دیکھیں۔</string>
+    <string name="backup_confirm">موجودہ ریکارڈ کے ساتھ ملائیں؟ نئی پیش رفت محفوظ رہے گی۔</string>
+</resources>

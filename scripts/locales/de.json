@@ -169,5 +169,8 @@
   "share_mode_adjectives": "Bedeutung",
   "share_mode_all": "Bedeutung/Synonym",
   "weekly_day_detail": "%1$s · %2$d Aktivitäten",
-  "cd_open_menu": "Menü öffnen"
+  "cd_open_menu": "Menü öffnen",
+  "tdk_error_server": "TDK hat nicht geantwortet",
+  "tdk_error_network": "Keine Internetverbindung oder TDK ist nicht erreichbar",
+  "share_result_template": "📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Ich lerne mit Türkisches Wörterbuch!_"
 }

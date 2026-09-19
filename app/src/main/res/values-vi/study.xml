@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Ôn các câu sai</string>
+    <string name="study_no_mistakes">Chưa có câu sai trong chế độ từ điển này.</string>
+    <string name="study_due">Ôn tập đến hạn</string>
+    <string name="study_nothing_due">Chưa có thẻ đến hạn. Hãy thêm từ vào mục yêu thích.</string>
+    <string name="study_again">Xem lại (10 phút)</string>
+    <string name="study_known">Tôi đã nhớ</string>
+    <string name="backup_title">Sao lưu</string>
+    <string name="backup_description">Mục yêu thích, từ, lịch sử, thống kê và tiến độ học. Tệp chứa dữ liệu cá nhân; hãy giữ an toàn.</string>
+    <string name="backup_export">Lưu bản sao</string>
+    <string name="backup_restore">Khôi phục bản sao</string>
+    <string name="backup_success">Đã hoàn tất.</string>
+    <string name="backup_error">Không thể hoàn tất. Kiểm tra tệp và quyền truy cập.</string>
+    <string name="backup_confirm">Gộp với dữ liệu hiện có? Tiến độ học mới hơn sẽ được giữ lại.</string>
+</resources>

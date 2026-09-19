@@ -169,5 +169,8 @@
   "share_mode_adjectives": "معنی",
   "share_mode_all": "معنی/مترادف",
   "weekly_day_detail": "%1$s · %2$d سرگرمیاں",
-  "cd_open_menu": "مینو کھولیں"
+  "cd_open_menu": "مینو کھولیں",
+  "tdk_error_server": "TDK نے جواب نہیں دیا",
+  "tdk_error_network": "انٹرنیٹ کنکشن نہیں ہے یا TDK تک رسائی ممکن نہیں",
+  "share_result_template": "📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_ترکی لغت کے ساتھ سیکھ رہا ہوں!_"
 }

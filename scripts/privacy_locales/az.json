@@ -5,7 +5,7 @@
   "metaPackage": "paket adı",
   "metaDeveloper": "İnkişafçı",
   "metaUpdated": "Son yenilənmə",
-  "updatedDate": "7 avqust 2026",
+  "updatedDate": "2026-09-19",
   "langLabel": "Dil",
   "intro": "Bu məxfilik siyasəti Google Play-də təqdim olunan <strong>Türk Lüğəti</strong> tətbiqinin istifadəçi məlumatlarını necə emal etdiyini izah edir. Tətbiqi yükləyərək və ya istifadə edərək bu siyasəti qəbul etmiş sayılırsınız.",
   "sections": [
@@ -25,7 +25,7 @@
     {
       "title": "3. Cihazda Yerli Olaraq Saxlanılan Məlumatlar",
       "paragraphs": [
-        "Aşağıdakı məlumatlar yalnız cihazınızda (yerli yaddaş / verilənlər bazası) saxlanılır və cihazınızdan kənara ötürülmür:",
+        "Sevimlilər, əlavə etdiyiniz sözlər, axtarış tarixçəsi, statistika, quiz səhvləri və aralıqlı təkrar irəliləyişi adətən yalnız cihazınızda qalır. Bu məlumatlar yalnız “Yedəyi saxla” seçdikdə sizin seçdiyiniz fayla və ya yaddaş xidmətinə ötürülür.",
         "Tətbiqi siləndə bu yerli məlumatlar da cihazınızdan silinir."
       ],
       "items": [
@@ -62,7 +62,7 @@
       "title": "6. Üçüncü Tərəflər",
       "paragraphs": [
         "Tətbiq aşağıdakı üçüncü tərəf xidmətləri ilə qarşılıqlı əlaqədə ola bilər:",
-        "Reklam SDK-sı, analitika SDK-sı və ya istifadəçi izləmə alətləri istifadə etmirik."
+        "Reklam SDK-sı istifadə etmirik. İstifadə və sabitliyi anlamaq üçün Google Firebase Analytics və Firebase Crashlytics istifadə edirik. Analytics tətbiq fəaliyyəti, sessiya məlumatı, tətbiq nümunəsi/cihaz identifikatorları, cihaz və tətbiq məlumatı və təxmini bölgəni emal edə bilər. Crashlytics çökmə və ANR qeydləri, yığın izləri, tətbiq/cihaz/ƏS məlumatı və quraşdırma identifikatorlarını emal edə bilər. Google bu məlumatları Firebase şərtləri və Google məxfilik siyasətinə əsasən emal edir. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
         "<strong>Google Play / Play Store:</strong> Tətbiqin paylanması və “Bizi qiymətləndirin” vasitəsilə Play Store səhifəsinin açılması üçün. Bu proses Google tərəfindən idarə olunur.",
@@ -73,13 +73,13 @@
     {
       "title": "7. Məlumatların Paylaşılması və Satışı",
       "paragraphs": [
-        "İstifadəçi məlumatlarını satmırıq. Öz serverlərimizdə istifadəçi profili yaratmırıq. 4-cü bölmədə izah olunduğu kimi, yalnız lüğət sorğusu üçün axtarılan söz TDK saytına ötürülə bilər."
+        "İstifadəçi məlumatlarını satmırıq. Məlumat yalnız burada göstərilən məqsədlərlə Google/Firebase-ə, onlayn lüğət sorğuları üçün TDK-ya və yedək üçün seçdiyiniz yaddaş xidmətinə ötürülə bilər."
       ]
     },
     {
       "title": "8. Məlumat Təhlükəsizliyi",
       "paragraphs": [
-        "Yerli məlumatlar cihazınızda saxlanılır. Onlayn lüğət sorğuları HTTPS vasitəsilə aparılır. Heç bir təhlükəsizlik tədbiri mütləq deyil; cihazınızı yenilək saxlamağı tövsiyə edirik."
+        "Onlayn ötürmələr HTTPS istifadə edir. İxrac edilən JSON yedəyi tətbiq tərəfindən şifrələnmir; onu təhlükəsiz saxlamaq və lazım olmadıqda silmək sizin məsuliyyətinizdir. Seçdiyiniz xidmətin məxfilik şərtləri tətbiq olunur."
       ]
     },
     {

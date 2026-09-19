@@ -169,5 +169,8 @@
   "share_mode_adjectives": "含义",
   "share_mode_all": "含义/同义词",
   "weekly_day_detail": "%1$s · %2$d 次活动",
-  "cd_open_menu": "打开菜单"
+  "cd_open_menu": "打开菜单",
+  "tdk_error_server": "TDK 未响应",
+  "tdk_error_network": "无网络连接，或无法访问 TDK",
+  "share_result_template": "📖 *%1$s* — %2$s：\n\n✨ %3$s\n\n_我正在用土耳其语词典学习！_"
 }

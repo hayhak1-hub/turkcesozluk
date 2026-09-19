@@ -11,6 +11,7 @@ import com.hayhak.turkcesozluk.data.db.UserSynonym
 import com.hayhak.turkcesozluk.data.db.UserSynonymDao
 import com.hayhak.turkcesozluk.data.db.UserStatsManager
 import com.hayhak.turkcesozluk.data.model.TdkEntry
+import com.hayhak.turkcesozluk.data.model.TdkErrorReason
 import com.hayhak.turkcesozluk.data.model.TdkLookupResult
 import com.hayhak.turkcesozluk.data.model.WordDefinition
 import com.hayhak.turkcesozluk.data.repository.CoreRepository
@@ -34,7 +35,7 @@ data class SearchUiState(
     val definitionResult: WordDefinition? = null,
     val tdkResult: TdkEntry? = null,
     val tdkLoading: Boolean = false,
-    val tdkError: String? = null
+    val tdkError: TdkErrorReason? = null
 )
 
 @OptIn(FlowPreview::class)
@@ -69,7 +70,7 @@ class DictionaryViewModel @Inject constructor(
 
     val dailyWord = coreRepository.isInitialized
         .filter { it }
-        .map { dictionaryRepository.getDailyWord() }
+        .mapNotNull { dictionaryRepository.getDailyWord() }
         .stateIn(
             viewModelScope,
             SharingStarted.WhileSubscribed(5000),
@@ -169,14 +170,14 @@ class DictionaryViewModel @Inject constructor(
                 }
                 is TdkLookupResult.Error -> {
                     _searchUiState.update {
-                        it.copy(tdkLoading = false, tdkResult = null, tdkError = tdk.message)
+                        it.copy(tdkLoading = false, tdkResult = null, tdkError = tdk.reason)
                     }
                 }
             }
         }
     }
 
-    fun getRandomWord(): Pair<String, String> = dictionaryRepository.getRandomWord()
+    fun getRandomWord(): Pair<String, String>? = dictionaryRepository.getRandomWord()
 
     fun addNewWord(word: String, synonym: String) {
         viewModelScope.launch {

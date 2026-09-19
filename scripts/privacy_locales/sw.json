@@ -5,7 +5,7 @@
   "metaPackage": "jina la kifurushi",
   "metaDeveloper": "Msanidi",
   "metaUpdated": "Imesasishwa mwisho",
-  "updatedDate": "Agosti 7, 2026",
+  "updatedDate": "2026-09-19",
   "langLabel": "Lugha",
   "intro": "Sera hii ya faragha inaeleza jinsi programu ya <strong>Kamusi ya Kituruki</strong> inavyopatikana kwenye Google Play inavyoshughulikia data ya mtumiaji. Kwa kupakua au kutumia programu, unakubali sera hii.",
   "sections": [
@@ -25,7 +25,7 @@
     {
       "title": "3. Data iliyohifadhiwa ndani ya kifaa chako",
       "paragraphs": [
-        "Data ifuatayo huhifadhiwa tu kwenye kifaa chako (hifadhi ya ndani / hifadhidata) na haihamishwi kutoka kifaa chako:",
+        "Vipendwa, maneno yaliyoongezwa, historia ya utafutaji, takwimu, makosa ya jaribio na maendeleo ya marudio kwa vipindi kwa kawaida hubaki kwenye kifaa chako. Hutumwa kwenye faili au huduma ya hifadhi uliyochagua tu unapotumia “Hifadhi nakala”.",
         "Unapoondoa programu, data hii ya ndani pia huondolewa kwenye kifaa chako."
       ],
       "items": [
@@ -62,7 +62,7 @@
       "title": "6. Wahusika wengine",
       "paragraphs": [
         "Programu inaweza kuingiliana na huduma za wahusika wengine zifuatazo:",
-        "Hatutumii SDK za matangazo, SDK za uchanganuzi au zana za ufuatiliaji wa watumiaji."
+        "Hatutumii SDK ya matangazo. Tunatumia Google Firebase Analytics na Firebase Crashlytics kuelewa matumizi na uthabiti. Analytics inaweza kuchakata mwingiliano wa programu, taarifa za kipindi, vitambulisho vya programu/kifaa, taarifa za kifaa na programu na eneo la kukadiria. Crashlytics inaweza kuchakata kumbukumbu za hitilafu na ANR, ufuatiliaji wa rundo, taarifa za programu/kifaa/OS na vitambulisho vya usakinishaji. Google huchakata data hii kwa masharti ya Firebase na sera ya faragha ya Google. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
         "<strong>Google Play / Play Store:</strong> Usambazaji wa programu na kufungua ukurasa wa Play Store kupitia “Tukadirie”. Mchakato huu unasimamiwa na Google.",
@@ -73,13 +73,13 @@
     {
       "title": "7. Kushiriki na kuuza data",
       "paragraphs": [
-        "Hatuuzi data ya watumiaji. Hatushi data ya wasifu wa mtumiaji kwenye seva zetu. Kama ilivyoelezwa katika Sehemu ya 4, neno lililotafutwa tu linaweza kutumwa kwenye tovuti ya TDK kwa utafutaji wa kamusi."
+        "Hatuuzi data ya watumiaji. Data inaweza kutumwa tu kwa madhumuni yaliyoelezwa: Google/Firebase, TDK kwa hoja za kamusi mtandaoni na huduma ya hifadhi uliyochagua kwa nakala."
       ]
     },
     {
       "title": "8. Usalama wa data",
       "paragraphs": [
-        "Data ya ndani hubaki kwenye kifaa chako. Maswali ya kamusi ya mtandaoni hufanywa kupitia HTTPS. Hakuna hatua ya usalama iliyo kamili; tunapendekeza uweke kifaa chako kisasishwe."
+        "Uhamisho mtandaoni hutumia HTTPS. Nakala ya JSON inayohamishwa haisimbwi na programu; una wajibu wa kuihifadhi salama na kuifuta isipohitajika. Masharti ya faragha ya huduma uliyochagua yanatumika."
       ]
     },
     {

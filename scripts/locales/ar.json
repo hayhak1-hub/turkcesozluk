@@ -169,5 +169,8 @@
   "share_mode_adjectives": "المعنى",
   "share_mode_all": "المعنى/المرادف",
   "weekly_day_detail": "%1$s · %2$d نشاط",
-  "cd_open_menu": "فتح القائمة"
+  "cd_open_menu": "فتح القائمة",
+  "tdk_error_server": "لم يستجب TDK",
+  "tdk_error_network": "لا يوجد اتصال بالإنترنت أو تعذّر الوصول إلى TDK",
+  "share_result_template": "📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_أتعلّم مع قاموس التركية!_"
 }

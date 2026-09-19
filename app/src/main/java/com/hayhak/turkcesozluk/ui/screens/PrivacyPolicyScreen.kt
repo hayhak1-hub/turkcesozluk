@@ -2,6 +2,8 @@ package com.hayhak.turkcesozluk.ui.screens
 
 import android.annotation.SuppressLint
 import android.content.res.Configuration
+import android.webkit.WebResourceRequest
+import androidx.core.os.ConfigurationCompat
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.compose.foundation.layout.WindowInsets
@@ -26,6 +28,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import com.hayhak.turkcesozluk.R
 import com.hayhak.turkcesozluk.data.db.AppLocale
 import com.hayhak.turkcesozluk.data.db.SettingsManager
+import com.hayhak.turkcesozluk.util.PlayStoreHelper
 import org.json.JSONObject
 
 private const val PRIVACY_POLICY_ASSET = "file:///android_asset/privacy-policy.html"
@@ -33,7 +36,7 @@ private const val PRIVACY_POLICY_ASSET = "file:///android_asset/privacy-policy.h
 internal fun resolvePrivacyLangTag(language: AppLocale, configuration: Configuration): String {
     if (language.tag.isNotEmpty()) return normalizePrivacyLangTag(language.tag)
 
-    val deviceTag = configuration.locales[0]?.toLanguageTag().orEmpty()
+    val deviceTag = ConfigurationCompat.getLocales(configuration)[0]?.toLanguageTag().orEmpty()
     if (deviceTag.isNotEmpty()) return normalizePrivacyLangTag(deviceTag)
 
     return "tr"
@@ -92,10 +95,23 @@ fun PrivacyPolicyScreen(onBack: () -> Unit) {
                 WebView(ctx).apply {
                     @SuppressLint("SetJavaScriptEnabled")
                     settings.javaScriptEnabled = true
-                    settings.domStorageEnabled = true
+                    settings.domStorageEnabled = false
+                    settings.allowContentAccess = false
                     webViewClient = object : WebViewClient() {
+                        override fun shouldOverrideUrlLoading(
+                            view: WebView?,
+                            request: WebResourceRequest?
+                        ): Boolean {
+                            val target = request?.url?.toString() ?: return true
+                            if (target == PRIVACY_POLICY_ASSET) return false
+                            PlayStoreHelper.openUrl(ctx, target)
+                            return true
+                        }
+
                         override fun onPageFinished(view: WebView?, url: String?) {
-                            view?.evaluateJavascript(renderScript, null)
+                            if (url == PRIVACY_POLICY_ASSET) {
+                                view?.evaluateJavascript(renderScript, null)
+                            }
                         }
                     }
                     loadUrl(PRIVACY_POLICY_ASSET)

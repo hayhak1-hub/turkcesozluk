@@ -39,6 +39,14 @@ fun FavoritesScreen(
         )
     } else {
         Column(modifier = Modifier.fillMaxSize()) {
+            OutlinedButton(
+                onClick = { learningViewModel.startLearning(dueOnly = true) },
+                enabled = !learningViewModel.isLoading,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)
+            ) { Text(stringResource(R.string.study_due)) }
+            if (learningViewModel.nothingDue) {
+                Text(stringResource(R.string.study_nothing_due), modifier = Modifier.padding(16.dp))
+            }
             Text(
                 text = stringResource(R.string.favorites_title),
                 style = MaterialTheme.typography.headlineMedium,

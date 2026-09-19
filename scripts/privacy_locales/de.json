@@ -5,7 +5,7 @@
   "metaPackage": "Paketname",
   "metaDeveloper": "Entwickler",
   "metaUpdated": "Zuletzt aktualisiert",
-  "updatedDate": "7. August 2026",
+  "updatedDate": "2026-09-19",
   "langLabel": "Sprache",
   "intro": "Diese Datenschutzerklärung erläutert, wie die App <strong>Türkisches Wörterbuch</strong> über Google Play Nutzerdaten verarbeitet. Durch das Herunterladen oder Verwenden der App stimmen Sie dieser Richtlinie zu.",
   "sections": [
@@ -25,7 +25,7 @@
     {
       "title": "3. Lokal auf dem Gerät gespeicherte Daten",
       "paragraphs": [
-        "Die folgenden Daten werden nur auf Ihrem Gerät (lokaler Speicher / Datenbank) gespeichert und nicht vom Gerät exportiert:",
+        "Favoriten, eigene Wörter, Suchverlauf, Statistiken, Quizfehler und Lernfortschritt bleiben normalerweise nur auf deinem Gerät. Nur wenn du „Sicherung speichern“ wählst, werden diese Daten in eine Datei oder an den von dir gewählten Speicheranbieter übertragen.",
         "Wenn Sie die App deinstallieren, werden diese lokalen Daten von Ihrem Gerät entfernt."
       ],
       "items": [
@@ -62,7 +62,7 @@
       "title": "6. Drittanbieter",
       "paragraphs": [
         "Die App kann mit folgenden Drittanbieterdiensten interagieren:",
-        "Wir verwenden keine Werbe-SDKs, Analyse-SDKs oder Tracking-Tools."
+        "Wir verwenden kein Werbe-SDK. Zur Analyse von Nutzung und Stabilität verwenden wir Google Firebase Analytics und Firebase Crashlytics. Analytics kann App-Interaktionen, Sitzungsdaten, App-Instanz-/Gerätekennungen, Geräte- und App-Informationen sowie die ungefähre Region verarbeiten. Crashlytics kann Absturz- und ANR-Protokolle, Stacktraces, App-/Geräte-/Betriebssystemdaten und Installationskennungen verarbeiten. Google verarbeitet diese Daten gemäß den Firebase-Bedingungen und der Google-Datenschutzerklärung. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
         "<strong>Google Play / Play Store:</strong> App-Verteilung und Öffnen der Play-Store-Seite über „Bewerten“.",
@@ -73,13 +73,13 @@
     {
       "title": "7. Weitergabe und Verkauf von Daten",
       "paragraphs": [
-        "Wir verkaufen keine Nutzerdaten. Wir erstellen keine Nutzerprofile auf eigenen Servern. Wie in Abschnitt 4 beschrieben, kann nur das gesuchte Wort für die Wörterbuchsuche an die TDK-Website gesendet werden."
+        "Wir verkaufen keine Nutzerdaten. Daten können nur für die hier beschriebenen Zwecke an Google/Firebase, für Online-Wörterbuchabfragen an TDK und bei der Sicherung an den von dir gewählten Speicheranbieter übermittelt werden."
       ]
     },
     {
       "title": "8. Datensicherheit",
       "paragraphs": [
-        "Lokale Daten verbleiben auf Ihrem Gerät. Online-Wörterbuchabfragen erfolgen über HTTPS. Keine Sicherheitsmaßnahme ist absolut; wir empfehlen, Ihr Gerät aktuell zu halten."
+        "Online-Übertragungen erfolgen per HTTPS. Die exportierte JSON-Sicherungsdatei wird von der App nicht verschlüsselt; du bist für die sichere Aufbewahrung und Löschung verantwortlich. Es gelten die Datenschutzbedingungen des gewählten Speicheranbieters."
       ]
     },
     {

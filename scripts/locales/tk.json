@@ -169,5 +169,8 @@
   "share_mode_adjectives": "many",
   "share_mode_all": "many/sinonim",
   "weekly_day_detail": "%1$s · %2$d işjeňlik",
-  "cd_open_menu": "Menýany aç"
+  "cd_open_menu": "Menýany aç",
+  "tdk_error_server": "TDK jogap bermedi",
+  "tdk_error_network": "Internet birikmesi ýok ýa-da TDK elýeterli däl",
+  "share_result_template": "📖 *%1$s* sözüniň %2$s:\n\n✨ %3$s\n\n_Türkçe sözlük bilen öwrenýärin!_"
 }

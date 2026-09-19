@@ -21,14 +21,31 @@ android {
     namespace = "com.hayhak.turkcesozluk"
     compileSdk = 36
 
+    // Bundle every UI language so language changes work offline after installation.
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
     defaultConfig {
         applicationId = "com.hayhak.turkcesozluk"
         minSdk = 23
         targetSdk = 36
-        versionCode = 19
-        versionName = "1.9.2"
+        versionCode = 20
+        versionName = "1.10.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // Room şemalarını repoya yaz: sonraki sürümün migration'ı MigrationTestHelper ile
+    // gerçek bir testle doğrulanabilsin.
+    ksp {
+        arg("room.schemaLocation", "$projectDir/schemas")
+    }
+
+    sourceSets {
+        getByName("androidTest").assets.srcDir("$projectDir/schemas")
     }
 
     flavorDimensions += "version"
@@ -118,6 +135,7 @@ dependencies {
     implementation(libs.kotlinx.coroutines.play.services)
     ksp(libs.androidx.room.compiler)
     testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation(libs.androidx.espresso.core)

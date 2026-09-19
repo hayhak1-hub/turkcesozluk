@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">复习错题</string>
+    <string name="study_no_mistakes">此词典模式没有保存的错题。</string>
+    <string name="study_due">到期复习</string>
+    <string name="study_nothing_due">没有到期卡片。请先收藏单词。</string>
+    <string name="study_again">再次复习（10分钟）</string>
+    <string name="study_known">我记住了</string>
+    <string name="backup_title">备份</string>
+    <string name="backup_description">收藏、单词、历史、统计和学习进度。文件含个人数据，请妥善保管。</string>
+    <string name="backup_export">保存备份</string>
+    <string name="backup_restore">恢复备份</string>
+    <string name="backup_success">已完成。</string>
+    <string name="backup_error">无法完成。请检查文件和访问权限。</string>
+    <string name="backup_confirm">与现有记录合并？将保留较新的学习进度。</string>
+</resources>

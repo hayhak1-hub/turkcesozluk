@@ -169,5 +169,8 @@
   "share_mode_adjectives": "অর্থ",
   "share_mode_all": "অর্থ/প্রতিশব্দ",
   "weekly_day_detail": "%1$s · %2$d কার্যকলাপ",
-  "cd_open_menu": "মেনু খুলুন"
+  "cd_open_menu": "মেনু খুলুন",
+  "tdk_error_server": "TDK সাড়া দেয়নি",
+  "tdk_error_network": "ইন্টারনেট সংযোগ নেই বা TDK-তে পৌঁছানো যায়নি",
+  "share_result_template": "📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_তুর্কি অভিধান দিয়ে শিখছি!_"
 }

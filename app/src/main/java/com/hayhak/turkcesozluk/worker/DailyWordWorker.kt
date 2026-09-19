@@ -30,6 +30,10 @@ class DailyWordWorker @AssistedInject constructor(
         return try {
             coreRepository.ensureInitialized()
             val dailyWord = dictionaryRepository.getDailyWord()
+            if (dailyWord == null) {
+                // Sözlük verisi bu çalıştırmada hazırlanamadı; bir sonraki periyotta tekrar denenir.
+                return Result.retry()
+            }
             showNotification(dailyWord.first, dailyWord.second)
             Result.success()
         } catch (e: Exception) {

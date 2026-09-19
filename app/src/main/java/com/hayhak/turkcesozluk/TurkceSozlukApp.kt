@@ -13,7 +13,6 @@ import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
@@ -28,6 +27,8 @@ class TurkceSozlukApp : Application(), Configuration.Provider {
     @Inject
     lateinit var workerFactory: HiltWorkerFactory
 
+    // Uygulama sureci boyunca yasar; onTerminate() gercek cihazlarda cagrilmadigi
+    // icin ayrica iptal edilmesi anlamli degil.
     private val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
 
     override val workManagerConfiguration: Configuration
@@ -64,7 +65,6 @@ class TurkceSozlukApp : Application(), Configuration.Provider {
                     android.util.Log.d("TurkceSozlukApp", "Starting CoreRepository.initialize()")
                     coreRepository.initialize()
                 }
-// ...
 
                 launch {
                     android.util.Log.d("TurkceSozlukApp", "Scheduling daily notification")
@@ -87,10 +87,5 @@ class TurkceSozlukApp : Application(), Configuration.Provider {
             ExistingPeriodicWorkPolicy.KEEP,
             dailyWorkRequest
         )
-    }
-
-    override fun onTerminate() {
-        super.onTerminate()
-        applicationScope.cancel()
     }
 }

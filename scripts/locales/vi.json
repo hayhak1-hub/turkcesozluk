@@ -169,5 +169,8 @@
   "share_mode_adjectives": "nghĩa",
   "share_mode_all": "nghĩa/từ đồng nghĩa",
   "weekly_day_detail": "%1$s · %2$d hoạt động",
-  "cd_open_menu": "Mở menu"
+  "cd_open_menu": "Mở menu",
+  "tdk_error_server": "TDK không phản hồi",
+  "tdk_error_network": "Không có kết nối Internet hoặc không truy cập được TDK",
+  "share_result_template": "📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Mình đang học với Từ điển tiếng Thổ Nhĩ Kỳ!_"
 }

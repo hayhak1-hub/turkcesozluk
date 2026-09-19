@@ -21,3 +21,11 @@ release_build.log
 
 app/esanlamli/release/
 *.aab
+
+# Python yardimci betiklerinin uretimleri
+scripts/__pycache__/
+__pycache__/
+*.pyc
+
+# privacy-policy.html'in kok dizindeki kopyasi
+/index.html

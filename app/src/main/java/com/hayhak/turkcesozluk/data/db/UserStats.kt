@@ -7,6 +7,26 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 object UserStatsManager {
+    suspend fun exportStats(context: Context): Map<String, Any?> = mutex.withLock {
+        context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE).all.toMap()
+    }
+
+    suspend fun mergeStats(context: Context, data: Map<String, Any>) = mutex.withLock {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val editor = prefs.edit()
+        data.forEach { (key, value) ->
+            if (key.startsWith(KEY_STATS_PREFIX) && value is Int) {
+                editor.putInt(key, maxOf(value, prefs.getInt(key, 0)))
+            }
+        }
+        val incomingDate = data[KEY_LAST_ACTIVITY] as? String ?: ""
+        val currentDate = prefs.getString(KEY_LAST_ACTIVITY, "").orEmpty()
+        if (incomingDate > currentDate) {
+            editor.putString(KEY_LAST_ACTIVITY, incomingDate)
+            editor.putInt(KEY_STREAK_COUNT, data[KEY_STREAK_COUNT] as? Int ?: 0)
+        }
+        check(editor.commit())
+    }
     private const val PREFS_NAME = "user_stats_prefs"
     private const val KEY_LAST_ACTIVITY = "last_activity_date"
     private const val KEY_STREAK_COUNT = "streak_count"

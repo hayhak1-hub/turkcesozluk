@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">Rudia makosa</string>
+    <string name="study_no_mistakes">Hakuna makosa yaliyohifadhiwa katika hali hii.</string>
+    <string name="study_due">Marudio ya leo</string>
+    <string name="study_nothing_due">Hakuna kadi za kurudia sasa. Ongeza maneno kwenye vipendwa.</string>
+    <string name="study_again">Onyesha tena (dakika 10)</string>
+    <string name="study_known">Ninajua</string>
+    <string name="backup_title">Nakala rudufu</string>
+    <string name="backup_description">Vipendwa, maneno, historia, takwimu na maendeleo ya kujifunza. Faili ina data binafsi; ihifadhi salama.</string>
+    <string name="backup_export">Hifadhi nakala</string>
+    <string name="backup_restore">Rejesha nakala</string>
+    <string name="backup_success">Imekamilika.</string>
+    <string name="backup_error">Imeshindikana. Kagua faili na ruhusa.</string>
+    <string name="backup_confirm">Unganisha na rekodi zilizopo? Maendeleo mapya zaidi yatahifadhiwa.</string>
+</resources>

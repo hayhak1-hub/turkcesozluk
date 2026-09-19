@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">चुकांचा सराव</string>
+    <string name="study_no_mistakes">या शब्दकोश प्रकारात जतन केलेल्या चुका नाहीत.</string>
+    <string name="study_due">आजची उजळणी</string>
+    <string name="study_nothing_due">उजळणीसाठी कार्ड नाही. आवडत्यांमध्ये शब्द जोडा.</string>
+    <string name="study_again">पुन्हा दाखवा (१० मिनिटे)</string>
+    <string name="study_known">मला माहीत आहे</string>
+    <string name="backup_title">बॅकअप</string>
+    <string name="backup_description">आवडते, शब्द, इतिहास, आकडेवारी आणि शिकण्याची प्रगती. फाइलमध्ये वैयक्तिक माहिती आहे; सुरक्षित ठेवा.</string>
+    <string name="backup_export">बॅकअप जतन करा</string>
+    <string name="backup_restore">बॅकअप पुनर्संचयित करा</string>
+    <string name="backup_success">पूर्ण झाले.</string>
+    <string name="backup_error">पूर्ण झाले नाही. फाइल आणि परवानग्या तपासा.</string>
+    <string name="backup_confirm">सध्याच्या नोंदींमध्ये विलीन करायचे? नवीन प्रगती जतन केली जाईल.</string>
+</resources>

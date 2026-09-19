@@ -1,0 +1,15 @@
+<resources>
+    <string name="study_mistakes">गलतियों का अभ्यास</string>
+    <string name="study_no_mistakes">इस शब्दकोश मोड में कोई गलती सहेजी नहीं गई है।</string>
+    <string name="study_due">आज की पुनरावृत्ति</string>
+    <string name="study_nothing_due">दोहराने के लिए कोई कार्ड नहीं। पसंदीदा में शब्द जोड़ें।</string>
+    <string name="study_again">फिर दिखाएँ (10 मिनट)</string>
+    <string name="study_known">मुझे पता है</string>
+    <string name="backup_title">बैकअप</string>
+    <string name="backup_description">पसंदीदा, शब्द, इतिहास, आँकड़े और सीखने की प्रगति। फ़ाइल में निजी डेटा है; सुरक्षित रखें।</string>
+    <string name="backup_export">बैकअप सहेजें</string>
+    <string name="backup_restore">बैकअप बहाल करें</string>
+    <string name="backup_success">पूरा हुआ।</string>
+    <string name="backup_error">पूरा नहीं हुआ। फ़ाइल और अनुमति जाँचें।</string>
+    <string name="backup_confirm">मौजूदा रिकॉर्ड के साथ मिलाएँ? नई सीखने की प्रगति सुरक्षित रहेगी।</string>
+</resources>

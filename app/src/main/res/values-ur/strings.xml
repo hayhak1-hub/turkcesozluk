@@ -146,6 +146,7 @@
     <string name="cd_speak">بلند آواز میں پڑھیں</string>
     <string name="cd_voice_search">آواز سے تلاش</string>
     <string name="voice_search_prompt">ایک لفظ بولیں...</string>
+    <string name="voice_search_unavailable">اس ڈیوائس پر آواز سے تلاش دستیاب نہیں</string>
     <string name="weekly_last_7_days">گزشتہ 7 دن</string>
     <string name="weekly_day_detail">%1$s · %2$d سرگرمیاں</string>
     <string name="day_mon">پیر</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_ترکی لغت کے ساتھ سیکھ رہا ہوں!_</string>
     <string name="tdk_error_server">TDK نے جواب نہیں دیا</string>
     <string name="tdk_error_network">انٹرنیٹ کنکشن نہیں ہے یا TDK تک رسائی ممکن نہیں</string>
+    <string name="tab_game">کھیل</string>
+    <string name="game_intro_title">لفظ کا اندازہ لگائیں</string>
+    <string name="game_intro_body">اشارے میں لفظ کا مطلب دکھایا جاتا ہے۔ اسے 6 کوششوں میں تلاش کریں۔ ہر اندازے کے بعد حروف کے رنگ آپ کی رہنمائی کرتے ہیں۔</string>
+    <string name="game_start">کھیل شروع کریں</string>
+    <string name="game_clue_label">اشارہ</string>
+    <string name="game_letter_count">%1$d حروف</string>
+    <string name="game_attempts_left">%1$d مواقع باقی</string>
+    <string name="game_won_title">آپ نے پا لیا!</string>
+    <string name="game_lost_title">اس بار نہیں</string>
+    <string name="game_correct_answer">درست جواب: %1$s</string>
+    <string name="game_new_word">نیا لفظ</string>
+    <string name="game_no_word">اس لغت موڈ میں کھیل کے لیے موزوں لفظ نہیں ملا۔ ترتیبات سے کوئی اور موڈ منتخب کر کے دیکھیں۔</string>
+    <string name="game_saved_to_mistakes">آپ کی غلطیوں میں محفوظ — کوئز میں مشق کر سکتے ہیں۔</string>
+    <string name="game_solved_count">%1$d درست</string>
+    <string name="game_submit">اندازہ لگائیں</string>
+    <string name="cd_game_delete">آخری حرف مٹائیں</string>
+    <string name="game_legend_correct">درست جگہ پر</string>
+    <string name="game_legend_present">لفظ میں موجود</string>
+    <string name="game_legend_absent">لفظ میں نہیں</string>
+    <string name="cd_game_hint">ایک حرف ظاہر کریں</string>
+    <string name="game_hint_explainer">پھنس گئے؟ ہر راؤنڈ میں آپ کو %1$d مفت حروف ملتے ہیں۔</string>
 </resources>

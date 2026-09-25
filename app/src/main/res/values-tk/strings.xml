@@ -146,6 +146,7 @@
     <string name="cd_speak">Sesli oka</string>
     <string name="cd_voice_search">Sesli gözleg</string>
     <string name="voice_search_prompt">Bir söz aýdyň...</string>
+    <string name="voice_search_unavailable">Bu enjamda sesli gözleg elýeterli däl</string>
     <string name="weekly_last_7_days">Soňky 7 gün</string>
     <string name="weekly_day_detail">%1$s · %2$d işjeňlik</string>
     <string name="day_mon">Duş</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* sözüniň %2$s:\n\n✨ %3$s\n\n_Türkçe sözlük bilen öwrenýärin!_</string>
     <string name="tdk_error_server">TDK jogap bermedi</string>
     <string name="tdk_error_network">Internet birikmesi ýok ýa-da TDK elýeterli däl</string>
+    <string name="tab_game">Oýun</string>
+    <string name="game_intro_title">Söz tapmak oýny</string>
+    <string name="game_intro_body">Yşaratda sözüň manysy ýazylýar. Sözi 6 synanyşykda tapmaga çalyş. Her çaklamadan soň harplaryň reňki saňa ýol görkezýär.</string>
+    <string name="game_start">Oýny başla</string>
+    <string name="game_clue_label">Yşarat</string>
+    <string name="game_letter_count">%1$d harp</string>
+    <string name="game_attempts_left">%1$d hukuk galdy</string>
+    <string name="game_won_title">Tapdyň!</string>
+    <string name="game_lost_title">Tapyp bilmediň</string>
+    <string name="game_correct_answer">Dogry jogap: %1$s</string>
+    <string name="game_new_word">Täze söz</string>
+    <string name="game_no_word">Bu sözlük tertibinde oýna laýyk söz tapylmady. Sözlük sazlamalaryndan başga tertip saýlap gör.</string>
+    <string name="game_saved_to_mistakes">Söz ýalňyşlaryňa ýazyldy, wiktorinada gaýtalap bilersiň.</string>
+    <string name="game_solved_count">%1$d dogry</string>
+    <string name="game_submit">Çakla</string>
+    <string name="cd_game_delete">Soňky harpy poz</string>
+    <string name="game_legend_correct">Dogry ýerinde</string>
+    <string name="game_legend_present">Sözde bar</string>
+    <string name="game_legend_absent">Sözde ýok</string>
+    <string name="cd_game_hint">Bir harp sowgat al</string>
+    <string name="game_hint_explainer">Kynalsaň, her tapgyrda %1$d harp sowgady hukugyň bar.</string>
 </resources>

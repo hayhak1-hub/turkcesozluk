@@ -53,8 +53,9 @@ import com.hayhak.turkcesozluk.data.db.DictionaryMode
 import com.hayhak.turkcesozluk.viewmodel.DictionaryViewModel
 import java.util.Locale
 
+/** Sözlük kipinin kullanıcıya gösterilen adı; Oyun ekranı da bunu kullanır. */
 @Composable
-private fun dictionaryModeTitle(mode: DictionaryMode): String = when (mode) {
+internal fun dictionaryModeTitle(mode: DictionaryMode): String = when (mode) {
     DictionaryMode.SYNONYMS -> stringResource(R.string.dictionary_title_synonyms)
     DictionaryMode.VERBS -> stringResource(R.string.dictionary_title_verbs)
     DictionaryMode.DEFINITIONS -> stringResource(R.string.mode_definitions)

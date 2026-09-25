@@ -146,6 +146,7 @@
     <string name="cd_speak">Ler em voz alta</string>
     <string name="cd_voice_search">Pesquisa por voz</string>
     <string name="voice_search_prompt">Diga uma palavra...</string>
+    <string name="voice_search_unavailable">A pesquisa por voz não está disponível neste dispositivo</string>
     <string name="weekly_last_7_days">Últimos 7 dias</string>
     <string name="weekly_day_detail">%1$s · %2$d atividades</string>
     <string name="day_mon">Seg</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Estou a aprender com Dicionário turco!_</string>
     <string name="tdk_error_server">O TDK não respondeu</string>
     <string name="tdk_error_network">Sem ligação à Internet ou o TDK está inacessível</string>
+    <string name="tab_game">Jogo</string>
+    <string name="game_intro_title">Adivinha a palavra</string>
+    <string name="game_intro_body">A pista mostra o significado da palavra. Tenta encontrá-la em 6 tentativas. Depois de cada tentativa, as cores das letras orientam-te.</string>
+    <string name="game_start">Começar jogo</string>
+    <string name="game_clue_label">Pista</string>
+    <string name="game_letter_count">%1$d letras</string>
+    <string name="game_attempts_left">Restam %1$d tentativas</string>
+    <string name="game_won_title">Acertaste!</string>
+    <string name="game_lost_title">Desta vez não</string>
+    <string name="game_correct_answer">Resposta correta: %1$s</string>
+    <string name="game_new_word">Nova palavra</string>
+    <string name="game_no_word">Não foi encontrada nenhuma palavra adequada ao jogo neste modo do dicionário. Experimenta outro modo nas definições.</string>
+    <string name="game_saved_to_mistakes">Guardado nos teus erros — podes praticar no quiz.</string>
+    <string name="game_solved_count">%1$d certas</string>
+    <string name="game_submit">Adivinhar</string>
+    <string name="cd_game_delete">Apagar a última letra</string>
+    <string name="game_legend_correct">No sítio certo</string>
+    <string name="game_legend_present">Está na palavra</string>
+    <string name="game_legend_absent">Não está na palavra</string>
+    <string name="cd_game_hint">Revelar uma letra</string>
+    <string name="game_hint_explainer">Empacaste? Tens %1$d letras grátis em cada ronda.</string>
 </resources>

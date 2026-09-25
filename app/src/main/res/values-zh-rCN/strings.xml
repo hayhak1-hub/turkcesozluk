@@ -146,6 +146,7 @@
     <string name="cd_speak">朗读</string>
     <string name="cd_voice_search">语音搜索</string>
     <string name="voice_search_prompt">说一个单词...</string>
+    <string name="voice_search_unavailable">此设备不支持语音搜索</string>
     <string name="weekly_last_7_days">最近7天</string>
     <string name="weekly_day_detail">%1$s · %2$d 次活动</string>
     <string name="day_mon">周一</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s：\n\n✨ %3$s\n\n_我正在用土耳其语词典学习！_</string>
     <string name="tdk_error_server">TDK 未响应</string>
     <string name="tdk_error_network">无网络连接，或无法访问 TDK</string>
+    <string name="tab_game">游戏</string>
+    <string name="game_intro_title">猜单词</string>
+    <string name="game_intro_body">提示会显示这个词的含义。请在 6 次机会内猜出它。每次猜测后，字母的颜色会给你线索。</string>
+    <string name="game_start">开始游戏</string>
+    <string name="game_clue_label">提示</string>
+    <string name="game_letter_count">%1$d 个字母</string>
+    <string name="game_attempts_left">还剩 %1$d 次</string>
+    <string name="game_won_title">猜对了！</string>
+    <string name="game_lost_title">这次没猜中</string>
+    <string name="game_correct_answer">正确答案：%1$s</string>
+    <string name="game_new_word">换一个词</string>
+    <string name="game_no_word">在当前词典模式下没有找到适合游戏的词。请到词典设置里换一个模式试试。</string>
+    <string name="game_saved_to_mistakes">已存入错题，可以在测验中复习。</string>
+    <string name="game_solved_count">答对 %1$d 个</string>
+    <string name="game_submit">猜</string>
+    <string name="cd_game_delete">删除最后一个字母</string>
+    <string name="game_legend_correct">位置正确</string>
+    <string name="game_legend_present">词中含有</string>
+    <string name="game_legend_absent">词中没有</string>
+    <string name="cd_game_hint">揭示一个字母</string>
+    <string name="game_hint_explainer">卡住了？每轮可以免费获得 %1$d 个字母。</string>
 </resources>

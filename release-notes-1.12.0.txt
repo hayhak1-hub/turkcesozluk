@@ -1,0 +1,115 @@
+<tr-TR>
+• Yeni kelime oyunu: anlam ipucuyla 6 denemede tahmin et.
+• Sözlük kipi değişince bulunduğun sekmede kalıyorsun.
+• Sesli arama, konuşma tanıması olmayan cihazlarda artık çökmüyor.
+</tr-TR>
+<ar>
+• لعبة كلمات جديدة: خمّن الكلمة من معناها في 6 محاولات.
+• عند تغيير نوع المعجم تبقى في التبويب الحالي.
+• البحث الصوتي لم يعد يتسبب في تعطل التطبيق على الأجهزة بلا تعرّف على الكلام.
+</ar>
+<az-AZ>
+• Yeni söz oyunu: məna ipucu ilə 6 cəhddə tap.
+• Lüğət tipi dəyişəndə olduğun vərəqdə qalırsan.
+• Səsli axtarış nitq tanıması olmayan cihazlarda artıq çökmür.
+</az-AZ>
+<bn-BD>
+• নতুন শব্দ খেলা: অর্থ ইঙ্গিত থেকে ৬ চেষ্টায় অনুমান করুন।
+• অভিধানের ধরন বদলালে আপনি একই ট্যাবে থাকবেন।
+• স্পিচ রিকগনিশন নেই এমন ডিভাইসে ভয়েস সার্চ আর ক্র্যাশ করে না।
+</bn-BD>
+<de-DE>
+• Neues Wortspiel: errate das Wort anhand der Bedeutung in 6 Versuchen.
+• Beim Wechsel des Wörterbuchmodus bleibst du auf dem aktuellen Tab.
+• Die Sprachsuche stürzt auf Geräten ohne Spracherkennung nicht mehr ab.
+</de-DE>
+<en-US>
+• New word game: guess the word from its meaning in 6 tries.
+• Switching dictionary mode no longer leaves the current tab.
+• Voice search no longer crashes on devices without speech recognition.
+</en-US>
+<es-ES>
+• Nuevo juego de palabras: adivina la palabra por su significado en 6 intentos.
+• Al cambiar el modo del diccionario te quedas en la pestaña actual.
+• La búsqueda por voz ya no se cierra en dispositivos sin reconocimiento de voz.
+</es-ES>
+<fr-FR>
+• Nouveau jeu de mots : devinez le mot d’après son sens en 6 essais.
+• Changer de mode de dictionnaire ne quitte plus l’onglet actuel.
+• La recherche vocale ne plante plus sur les appareils sans reconnaissance vocale.
+</fr-FR>
+<hi-IN>
+• नया शब्द खेल: अर्थ संकेत से 6 कोशिशों में अनुमान लगाएँ।
+• शब्दकोश मोड बदलने पर आप उसी टैब पर रहते हैं।
+• बिना स्पीच रिकग्निशन वाले डिवाइस पर वॉइस सर्च अब क्रैश नहीं करता।
+</hi-IN>
+<id>
+• Permainan kata baru: tebak kata dari maknanya dalam 6 percobaan.
+• Mengganti mode kamus tidak mengeluarkan Anda dari tab saat ini.
+• Pencarian suara tidak lagi mogok di perangkat tanpa pengenalan ucapan.
+</id>
+<ja-JP>
+• 新しい単語ゲーム：意味のヒントから6回で当てます。
+• 辞書モードを切り替えても今のタブに残ります。
+• 音声認識がない端末でも音声検索でクラッシュしなくなりました。
+</ja-JP>
+<kk>
+• Жаңа сөз ойыны: мағына белгісімен 6 әрекетте табыңыз.
+• Сөздік түрін ауыстырғанда сол қойындыда қаласыз.
+• Дауыс тануы жоқ құрылғыларда дауыспен іздеу енді құлап қалмайды.
+</kk>
+<ko-KR>
+• 새 단어 게임: 뜻 힌트로 6번 안에 맞혀 보세요.
+• 사전 모드를 바꿔도 현재 탭에 머무릅니다.
+• 음성 인식이 없는 기기에서 음성 검색이 더 이상 중단되지 않습니다.
+</ko-KR>
+<ky-KG>
+• Жаңы сөз оюну: маани ишараты менен 6 аракетте табыңыз.
+• Сөздүк түрүн алмаштырганда учурдагы өтмөктө каласыз.
+• Үн таануусу жок түзмөктөрдө үн издөө эми кыйрабайт.
+</ky-KG>
+<mr-IN>
+• नवीन शब्द खेळ: अर्थ संकेतावरून ६ प्रयत्नांत अंदाज लावा.
+• शब्दकोश मोड बदलला तरी तुम्ही त्याच टॅबवर राहता.
+• स्पीच रेकग्निशन नसलेल्या डिव्हाइसवर व्हॉइस शोध आता क्रॅश होत नाही.
+</mr-IN>
+<pt-BR>
+• Novo jogo de palavras: adivinhe a palavra pelo significado em 6 tentativas.
+• Ao mudar o modo do dicionário, você permanece na aba atual.
+• A pesquisa por voz não trava mais em aparelhos sem reconhecimento de fala.
+</pt-BR>
+<ru-RU>
+• Новая игра в слова: угадайте слово по значению за 6 попыток.
+• При смене режима словаря вы остаётесь на текущей вкладке.
+• Голосовой поиск больше не закрывает приложение на устройствах без распознавания речи.
+</ru-RU>
+<sw>
+• Mchezo mpya wa maneno: bakisha neno kutokana na maana yake katika majaribio 6.
+• Kubadilisha hali ya kamusi hakuondoi kwenye kichupo cha sasa.
+• Utafutaji wa sauti hausimami tena kwenye vifaa bila utambuzi wa usemi.
+</sw>
+<ta-IN>
+• புதிய சொல் விளையாட்டு: பொருள் குறிப்பிலிருந்து 6 முயற்சிகளில் யூகிக்கவும்.
+• அகராதி முறையை மாற்றினாலும் தற்போதைய தாவலிலேயே இருப்பீர்கள்.
+• பேச்சு அறிதல் இல்லாத சாதனங்களில் குரல் தேடல் இனி செயலிழக்காது.
+</ta-IN>
+<te-IN>
+• కొత్త పదం ఆట: అర్థ సూచనతో 6 ప్రయత్నాల్లో ఊహించండి.
+• నిఘంటువు మోడ్ మార్చినా ప్రస్తుత ట్యాబ్‌లోనే ఉంటారు.
+• స్పీచ్ రికగ్నిషన్ లేని పరికరాల్లో వాయిస్ సెర్చ్ ఇక క్రాష్ కాదు.
+</te-IN>
+<ur>
+• نیا لفظی کھیل: معنی کے اشارے سے 6 کوششوں میں اندازہ لگائیں۔
+• لغت کا موڈ بدلنے پر آپ اسی ٹیب پر رہتے ہیں۔
+• اسپیچ ریکگنیشن کے بغیر ڈیوائسز پر وائس سرچ اب کریش نہیں کرتا۔
+</ur>
+<vi>
+• Trò chơi từ mới: đoán từ theo nghĩa trong 6 lần thử.
+• Đổi chế độ từ điển vẫn giữ bạn ở tab hiện tại.
+• Tìm kiếm bằng giọng nói không còn bị lỗi trên máy không có nhận dạng giọng nói.
+</vi>
+<zh-CN>
+• 新的猜词游戏：根据释义在 6 次内猜出单词。
+• 切换词典模式后仍停留在当前标签页。
+• 在没有语音识别的设备上，语音搜索不再导致闪退。
+</zh-CN>

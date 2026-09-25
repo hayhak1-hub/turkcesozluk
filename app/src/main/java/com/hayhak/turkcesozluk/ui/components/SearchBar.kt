@@ -1,7 +1,10 @@
 package com.hayhak.turkcesozluk.ui.components
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.speech.RecognizerIntent
+import android.widget.Toast
 import androidx.activity.compose.ManagedActivityResultLauncher
 import androidx.activity.result.ActivityResult
 import androidx.compose.foundation.layout.Row
@@ -13,6 +16,7 @@ import androidx.compose.material.icons.rounded.Mic
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -26,6 +30,10 @@ fun SearchBar(
     voiceLauncher: ManagedActivityResultLauncher<Intent, ActivityResult>? = null
 ) {
     val context = LocalContext.current
+    val speechAvailable = remember(context) {
+        val probe = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+        context.packageManager.resolveActivity(probe, PackageManager.MATCH_DEFAULT_ONLY) != null
+    }
     OutlinedTextField(
         value = query,
         onValueChange = onQueryChange,
@@ -40,14 +48,22 @@ fun SearchBar(
                         Icon(Icons.Default.Clear, contentDescription = stringResource(R.string.cd_clear))
                     }
                 }
-                if (voiceLauncher != null) {
+                if (voiceLauncher != null && speechAvailable) {
                     IconButton(onClick = {
                         val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
                             putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
                             putExtra(RecognizerIntent.EXTRA_LANGUAGE, "tr-TR")
                             putExtra(RecognizerIntent.EXTRA_PROMPT, context.getString(R.string.voice_search_prompt))
                         }
-                        voiceLauncher.launch(intent)
+                        try {
+                            voiceLauncher.launch(intent)
+                        } catch (_: ActivityNotFoundException) {
+                            Toast.makeText(
+                                context,
+                                context.getString(R.string.voice_search_unavailable),
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
                     }) {
                         Icon(Icons.Rounded.Mic, contentDescription = stringResource(R.string.cd_voice_search), tint = MaterialTheme.colorScheme.primary)
                     }

@@ -146,6 +146,7 @@
     <string name="cd_speak">Vorlesen</string>
     <string name="cd_voice_search">Sprachsuche</string>
     <string name="voice_search_prompt">Sagen Sie ein Wort...</string>
+    <string name="voice_search_unavailable">Sprachsuche ist auf diesem Gerät nicht verfügbar</string>
     <string name="weekly_last_7_days">Letzte 7 Tage</string>
     <string name="weekly_day_detail">%1$s · %2$d Aktivitäten</string>
     <string name="day_mon">Mo</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Ich lerne mit Türkisches Wörterbuch!_</string>
     <string name="tdk_error_server">TDK hat nicht geantwortet</string>
     <string name="tdk_error_network">Keine Internetverbindung oder TDK ist nicht erreichbar</string>
+    <string name="tab_game">Spiel</string>
+    <string name="game_intro_title">Errate das Wort</string>
+    <string name="game_intro_body">Der Hinweis zeigt die Bedeutung des Wortes. Finde es in 6 Versuchen. Nach jedem Versuch weisen dir die Buchstabenfarben den Weg.</string>
+    <string name="game_start">Spiel starten</string>
+    <string name="game_clue_label">Hinweis</string>
+    <string name="game_letter_count">%1$d Buchstaben</string>
+    <string name="game_attempts_left">Noch %1$d Versuche</string>
+    <string name="game_won_title">Erraten!</string>
+    <string name="game_lost_title">Diesmal nicht</string>
+    <string name="game_correct_answer">Richtige Antwort: %1$s</string>
+    <string name="game_new_word">Neues Wort</string>
+    <string name="game_no_word">In diesem Wörterbuchmodus wurde kein passendes Wort für das Spiel gefunden. Wähle in den Einstellungen einen anderen Modus.</string>
+    <string name="game_saved_to_mistakes">Zu deinen Fehlern gespeichert – du kannst es im Quiz üben.</string>
+    <string name="game_solved_count">%1$d richtig</string>
+    <string name="game_submit">Raten</string>
+    <string name="cd_game_delete">Letzten Buchstaben löschen</string>
+    <string name="game_legend_correct">Richtige Stelle</string>
+    <string name="game_legend_present">Kommt im Wort vor</string>
+    <string name="game_legend_absent">Kommt nicht vor</string>
+    <string name="cd_game_hint">Einen Buchstaben aufdecken</string>
+    <string name="game_hint_explainer">Steckst du fest? Du hast pro Runde %1$d Gratis-Buchstaben.</string>
 </resources>

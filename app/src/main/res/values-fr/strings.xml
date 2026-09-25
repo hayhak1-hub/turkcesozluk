@@ -146,6 +146,7 @@
     <string name="cd_speak">Lire à voix haute</string>
     <string name="cd_voice_search">Recherche vocale</string>
     <string name="voice_search_prompt">Dites un mot...</string>
+    <string name="voice_search_unavailable">La recherche vocale n\'est pas disponible sur cet appareil</string>
     <string name="weekly_last_7_days">7 derniers jours</string>
     <string name="weekly_day_detail">%1$s · %2$d activités</string>
     <string name="day_mon">Lun</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s :\n\n✨ %3$s\n\n_J\'apprends avec Dictionnaire turc !_</string>
     <string name="tdk_error_server">TDK n\'a pas répondu</string>
     <string name="tdk_error_network">Pas de connexion Internet ou TDK est inaccessible</string>
+    <string name="tab_game">Jeu</string>
+    <string name="game_intro_title">Devine le mot</string>
+    <string name="game_intro_body">L\'indice donne le sens du mot. Essaie de le trouver en 6 coups. Après chaque essai, la couleur des lettres te guide.</string>
+    <string name="game_start">Commencer</string>
+    <string name="game_clue_label">Indice</string>
+    <string name="game_letter_count">%1$d lettres</string>
+    <string name="game_attempts_left">%1$d essais restants</string>
+    <string name="game_won_title">Trouvé !</string>
+    <string name="game_lost_title">Raté</string>
+    <string name="game_correct_answer">Bonne réponse : %1$s</string>
+    <string name="game_new_word">Nouveau mot</string>
+    <string name="game_no_word">Aucun mot adapté au jeu n\'a été trouvé dans ce mode du dictionnaire. Essaie un autre mode dans les réglages.</string>
+    <string name="game_saved_to_mistakes">Enregistré dans tes erreurs : tu peux le réviser dans le quiz.</string>
+    <string name="game_solved_count">%1$d trouvés</string>
+    <string name="game_submit">Deviner</string>
+    <string name="cd_game_delete">Effacer la dernière lettre</string>
+    <string name="game_legend_correct">Bien placée</string>
+    <string name="game_legend_present">Dans le mot</string>
+    <string name="game_legend_absent">Pas dans le mot</string>
+    <string name="cd_game_hint">Révéler une lettre</string>
+    <string name="game_hint_explainer">Bloqué ? Tu as %1$d lettres offertes à chaque manche.</string>
 </resources>

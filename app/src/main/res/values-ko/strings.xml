@@ -146,6 +146,7 @@
     <string name="cd_speak">읽어주기</string>
     <string name="cd_voice_search">음성 검색</string>
     <string name="voice_search_prompt">단어를 말하세요...</string>
+    <string name="voice_search_unavailable">이 기기에서는 음성 검색을 사용할 수 없습니다</string>
     <string name="weekly_last_7_days">최근 7일</string>
     <string name="weekly_day_detail">%1$s · %2$d 활동</string>
     <string name="day_mon">월</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_터키어 사전으로 배우고 있어요!_</string>
     <string name="tdk_error_server">TDK가 응답하지 않았습니다</string>
     <string name="tdk_error_network">인터넷 연결이 없거나 TDK에 연결할 수 없습니다</string>
+    <string name="tab_game">게임</string>
+    <string name="game_intro_title">단어 맞히기</string>
+    <string name="game_intro_body">힌트에 단어의 뜻이 표시됩니다. 6번 안에 맞혀 보세요. 추측할 때마다 글자 색이 힌트를 줍니다.</string>
+    <string name="game_start">게임 시작</string>
+    <string name="game_clue_label">힌트</string>
+    <string name="game_letter_count">%1$d글자</string>
+    <string name="game_attempts_left">%1$d번 남음</string>
+    <string name="game_won_title">맞혔어요!</string>
+    <string name="game_lost_title">이번엔 아니에요</string>
+    <string name="game_correct_answer">정답: %1$s</string>
+    <string name="game_new_word">새 단어</string>
+    <string name="game_no_word">이 사전 모드에서는 게임에 적합한 단어를 찾지 못했습니다. 사전 설정에서 다른 모드를 선택해 보세요.</string>
+    <string name="game_saved_to_mistakes">오답에 저장했어요. 퀴즈에서 복습할 수 있습니다.</string>
+    <string name="game_solved_count">%1$d개 정답</string>
+    <string name="game_submit">추측</string>
+    <string name="cd_game_delete">마지막 글자 지우기</string>
+    <string name="game_legend_correct">자리까지 정확</string>
+    <string name="game_legend_present">단어에 있음</string>
+    <string name="game_legend_absent">단어에 없음</string>
+    <string name="cd_game_hint">글자 하나 공개</string>
+    <string name="game_hint_explainer">막혔나요? 라운드마다 %1$d글자를 무료로 열 수 있어요.</string>
 </resources>

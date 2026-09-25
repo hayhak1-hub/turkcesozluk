@@ -146,6 +146,7 @@
     <string name="cd_speak">Дауыспен оқу</string>
     <string name="cd_voice_search">Дауыс іздеу</string>
     <string name="voice_search_prompt">Сөз айтыңыз...</string>
+    <string name="voice_search_unavailable">Бұл құрылғыда дауыспен іздеу қолжетімді емес</string>
     <string name="weekly_last_7_days">Соңғы 7 күн</string>
     <string name="weekly_day_detail">%1$s · %2$d белсенділік</string>
     <string name="day_mon">Дс</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* сөзінің %2$s:\n\n✨ %3$s\n\n_Тürkше сөздік арқылы үйреніп жүрмін!_</string>
     <string name="tdk_error_server">TDK жауап бермеді</string>
     <string name="tdk_error_network">Интернет байланысы жоқ немесе TDK-ға қол жеткізу мүмкін емес</string>
+    <string name="tab_game">Ойын</string>
+    <string name="game_intro_title">Сөз табу ойыны</string>
+    <string name="game_intro_body">Нұсқауда сөздің мағынасы жазылады. Сөзді 6 әрекетте табуға тырыс. Әр болжамнан кейін әріптердің түсі саған жол көрсетеді.</string>
+    <string name="game_start">Ойынды бастау</string>
+    <string name="game_clue_label">Нұсқау</string>
+    <string name="game_letter_count">%1$d әріп</string>
+    <string name="game_attempts_left">%1$d мүмкіндік қалды</string>
+    <string name="game_won_title">Таптың!</string>
+    <string name="game_lost_title">Таба алмадың</string>
+    <string name="game_correct_answer">Дұрыс жауап: %1$s</string>
+    <string name="game_new_word">Жаңа сөз</string>
+    <string name="game_no_word">Бұл сөздік режимінде ойынға жарамды сөз табылмады. Сөздік баптауларынан басқа режимді таңдап көр.</string>
+    <string name="game_saved_to_mistakes">Сөз қателеріңе жазылды, викторинада қайталай аласың.</string>
+    <string name="game_solved_count">%1$d дұрыс</string>
+    <string name="game_submit">Болжау</string>
+    <string name="cd_game_delete">Соңғы әріпті өшіру</string>
+    <string name="game_legend_correct">Дұрыс орында</string>
+    <string name="game_legend_present">Сөзде бар</string>
+    <string name="game_legend_absent">Сөзде жоқ</string>
+    <string name="cd_game_hint">Бір әріп сыйға ал</string>
+    <string name="game_hint_explainer">Қиналсаң, әр раундта %1$d әріп сыйлық мүмкіндігің бар.</string>
 </resources>

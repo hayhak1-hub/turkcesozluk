@@ -146,6 +146,7 @@
     <string name="cd_speak">読み上げ</string>
     <string name="cd_voice_search">音声検索</string>
     <string name="voice_search_prompt">単語を話してください...</string>
+    <string name="voice_search_unavailable">この端末では音声検索を利用できません</string>
     <string name="weekly_last_7_days">過去7日間</string>
     <string name="weekly_day_detail">%1$s · %2$d 件のアクティビティ</string>
     <string name="day_mon">月</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_トルコ語辞書で学習中！_</string>
     <string name="tdk_error_server">TDK が応答しませんでした</string>
     <string name="tdk_error_network">インターネット接続がないか、TDK に接続できません</string>
+    <string name="tab_game">ゲーム</string>
+    <string name="game_intro_title">単語当てゲーム</string>
+    <string name="game_intro_body">ヒントには単語の意味が表示されます。6回以内に当ててみましょう。推測するたびに、文字の色が手がかりになります。</string>
+    <string name="game_start">ゲームを始める</string>
+    <string name="game_clue_label">ヒント</string>
+    <string name="game_letter_count">%1$d文字</string>
+    <string name="game_attempts_left">残り%1$d回</string>
+    <string name="game_won_title">正解！</string>
+    <string name="game_lost_title">今回は不正解</string>
+    <string name="game_correct_answer">正解: %1$s</string>
+    <string name="game_new_word">次の単語</string>
+    <string name="game_no_word">この辞書モードではゲームに適した単語が見つかりませんでした。辞書の設定で別のモードを試してください。</string>
+    <string name="game_saved_to_mistakes">間違いに保存しました。クイズで復習できます。</string>
+    <string name="game_solved_count">正解%1$d個</string>
+    <string name="game_submit">推測する</string>
+    <string name="cd_game_delete">最後の文字を削除</string>
+    <string name="game_legend_correct">位置も正解</string>
+    <string name="game_legend_present">単語に含まれる</string>
+    <string name="game_legend_absent">含まれない</string>
+    <string name="cd_game_hint">文字を1つ開く</string>
+    <string name="game_hint_explainer">行き詰まったら、1ラウンドにつき%1$d文字まで無料で開けます。</string>
 </resources>

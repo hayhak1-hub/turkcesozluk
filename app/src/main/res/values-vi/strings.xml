@@ -146,6 +146,7 @@
     <string name="cd_speak">Đọc to</string>
     <string name="cd_voice_search">Tìm bằng giọng nói</string>
     <string name="voice_search_prompt">Nói một từ...</string>
+    <string name="voice_search_unavailable">Tìm kiếm bằng giọng nói không khả dụng trên thiết bị này</string>
     <string name="weekly_last_7_days">7 ngày qua</string>
     <string name="weekly_day_detail">%1$s · %2$d hoạt động</string>
     <string name="day_mon">T2</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Mình đang học với Từ điển tiếng Thổ Nhĩ Kỳ!_</string>
     <string name="tdk_error_server">TDK không phản hồi</string>
     <string name="tdk_error_network">Không có kết nối Internet hoặc không truy cập được TDK</string>
+    <string name="tab_game">Trò chơi</string>
+    <string name="game_intro_title">Đoán từ</string>
+    <string name="game_intro_body">Gợi ý cho biết nghĩa của từ. Hãy tìm ra từ đó trong 6 lượt. Sau mỗi lần đoán, màu của các chữ cái sẽ dẫn đường cho bạn.</string>
+    <string name="game_start">Bắt đầu chơi</string>
+    <string name="game_clue_label">Gợi ý</string>
+    <string name="game_letter_count">%1$d chữ cái</string>
+    <string name="game_attempts_left">Còn %1$d lượt</string>
+    <string name="game_won_title">Đoán đúng rồi!</string>
+    <string name="game_lost_title">Lần này chưa được</string>
+    <string name="game_correct_answer">Đáp án đúng: %1$s</string>
+    <string name="game_new_word">Từ mới</string>
+    <string name="game_no_word">Không tìm thấy từ nào phù hợp với trò chơi ở chế độ từ điển này. Hãy thử chọn chế độ khác trong cài đặt.</string>
+    <string name="game_saved_to_mistakes">Đã lưu vào phần lỗi sai — bạn có thể ôn lại trong câu đố.</string>
+    <string name="game_solved_count">Đúng %1$d</string>
+    <string name="game_submit">Đoán</string>
+    <string name="cd_game_delete">Xóa chữ cái cuối</string>
+    <string name="game_legend_correct">Đúng vị trí</string>
+    <string name="game_legend_present">Có trong từ</string>
+    <string name="game_legend_absent">Không có trong từ</string>
+    <string name="cd_game_hint">Mở một chữ cái</string>
+    <string name="game_hint_explainer">Bí rồi? Mỗi lượt bạn được %1$d chữ cái miễn phí.</string>
 </resources>

@@ -146,6 +146,7 @@
     <string name="cd_speak">Үн менен окуу</string>
     <string name="cd_voice_search">Үн издөө</string>
     <string name="voice_search_prompt">Сөз айтыңыз...</string>
+    <string name="voice_search_unavailable">Бул түзмөктө үн издөө жеткиликтүү эмес</string>
     <string name="weekly_last_7_days">Акыркы 7 күн</string>
     <string name="weekly_day_detail">%1$s · %2$d иш-аракет</string>
     <string name="day_mon">Дүй</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* сөзүнүн %2$s:\n\n✨ %3$s\n\n_Түркчө сөздүк менен үйрөнүп жатам!_</string>
     <string name="tdk_error_server">TDK жооп берген жок</string>
     <string name="tdk_error_network">Интернет байланышы жок же TDK жеткиликсиз</string>
+    <string name="tab_game">Оюн</string>
+    <string name="game_intro_title">Сөз табуу оюну</string>
+    <string name="game_intro_body">Жышаанда сөздүн мааниси жазылат. Сөздү 6 аракетте табууга аракет кыл. Ар бир болжолдон кийин тамгалардын түсү сага жол көрсөтөт.</string>
+    <string name="game_start">Оюнду баштоо</string>
+    <string name="game_clue_label">Жышаан</string>
+    <string name="game_letter_count">%1$d тамга</string>
+    <string name="game_attempts_left">%1$d мүмкүнчүлүк калды</string>
+    <string name="game_won_title">Таптың!</string>
+    <string name="game_lost_title">Таба албадың</string>
+    <string name="game_correct_answer">Туура жооп: %1$s</string>
+    <string name="game_new_word">Жаңы сөз</string>
+    <string name="game_no_word">Бул сөздүк режиминде оюнга ылайыктуу сөз табылган жок. Сөздүк жөндөөлөрүнөн башка режимди тандап көр.</string>
+    <string name="game_saved_to_mistakes">Сөз каталарыңа жазылды, викторинада кайталай аласың.</string>
+    <string name="game_solved_count">%1$d туура</string>
+    <string name="game_submit">Болжоо</string>
+    <string name="cd_game_delete">Акыркы тамганы өчүрүү</string>
+    <string name="game_legend_correct">Туура ордунда</string>
+    <string name="game_legend_present">Сөздө бар</string>
+    <string name="game_legend_absent">Сөздө жок</string>
+    <string name="cd_game_hint">Бир тамга белекке ал</string>
+    <string name="game_hint_explainer">Кыйналсаң, ар раундда %1$d тамга белек мүмкүнчүлүгүң бар.</string>
 </resources>

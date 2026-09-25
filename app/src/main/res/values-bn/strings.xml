@@ -146,6 +146,7 @@
     <string name="cd_speak">জোরে পড়ুন</string>
     <string name="cd_voice_search">ভয়েস অনুসন্ধান</string>
     <string name="voice_search_prompt">একটি শব্দ বলুন...</string>
+    <string name="voice_search_unavailable">এই ডিভাইসে ভয়েস অনুসন্ধান উপলব্ধ নয়</string>
     <string name="weekly_last_7_days">গত ৭ দিন</string>
     <string name="weekly_day_detail">%1$s · %2$d কার্যকলাপ</string>
     <string name="day_mon">সো</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_তুর্কি অভিধান দিয়ে শিখছি!_</string>
     <string name="tdk_error_server">TDK সাড়া দেয়নি</string>
     <string name="tdk_error_network">ইন্টারনেট সংযোগ নেই বা TDK-তে পৌঁছানো যায়নি</string>
+    <string name="tab_game">খেলা</string>
+    <string name="game_intro_title">শব্দ অনুমান করো</string>
+    <string name="game_intro_body">ইঙ্গিতে শব্দের অর্থ দেখানো হয়। ৬ বারের চেষ্টায় শব্দটি খুঁজে বের করো। প্রতিটি অনুমানের পর অক্ষরের রং তোমাকে পথ দেখাবে।</string>
+    <string name="game_start">খেলা শুরু করো</string>
+    <string name="game_clue_label">ইঙ্গিত</string>
+    <string name="game_letter_count">%1$d অক্ষর</string>
+    <string name="game_attempts_left">%1$d বার বাকি</string>
+    <string name="game_won_title">পেরেছ!</string>
+    <string name="game_lost_title">এবার হলো না</string>
+    <string name="game_correct_answer">সঠিক উত্তর: %1$s</string>
+    <string name="game_new_word">নতুন শব্দ</string>
+    <string name="game_no_word">এই অভিধান মোডে খেলার উপযোগী শব্দ পাওয়া যায়নি। সেটিংস থেকে অন্য মোড বেছে দেখো।</string>
+    <string name="game_saved_to_mistakes">তোমার ভুলের তালিকায় সংরক্ষিত — কুইজে অনুশীলন করতে পারবে।</string>
+    <string name="game_solved_count">%1$d সঠিক</string>
+    <string name="game_submit">অনুমান করো</string>
+    <string name="cd_game_delete">শেষ অক্ষর মুছো</string>
+    <string name="game_legend_correct">সঠিক জায়গায়</string>
+    <string name="game_legend_present">শব্দে আছে</string>
+    <string name="game_legend_absent">শব্দে নেই</string>
+    <string name="cd_game_hint">একটি অক্ষর খুলুন</string>
+    <string name="game_hint_explainer">আটকে গেছ? প্রতি রাউন্ডে তুমি %1$d টি বিনামূল্যে অক্ষর পাবে।</string>
 </resources>

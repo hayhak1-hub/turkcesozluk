@@ -146,6 +146,7 @@
     <string name="cd_speak">قراءة بصوت</string>
     <string name="cd_voice_search">بحث صوتي</string>
     <string name="voice_search_prompt">قل كلمة...</string>
+    <string name="voice_search_unavailable">البحث الصوتي غير متوفر على هذا الجهاز</string>
     <string name="weekly_last_7_days">آخر 7 أيام</string>
     <string name="weekly_day_detail">%1$s · %2$d نشاط</string>
     <string name="day_mon">إث</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_أتعلّم مع قاموس التركية!_</string>
     <string name="tdk_error_server">لم يستجب TDK</string>
     <string name="tdk_error_network">لا يوجد اتصال بالإنترنت أو تعذّر الوصول إلى TDK</string>
+    <string name="tab_game">لعبة</string>
+    <string name="game_intro_title">خمّن الكلمة</string>
+    <string name="game_intro_body">يوضح التلميح معنى الكلمة. حاول إيجادها في 6 محاولات. بعد كل محاولة ترشدك ألوان الحروف.</string>
+    <string name="game_start">ابدأ اللعبة</string>
+    <string name="game_clue_label">تلميح</string>
+    <string name="game_letter_count">%1$d حروف</string>
+    <string name="game_attempts_left">بقيت %1$d محاولات</string>
+    <string name="game_won_title">أصبت!</string>
+    <string name="game_lost_title">لم توفّق هذه المرة</string>
+    <string name="game_correct_answer">الإجابة الصحيحة: %1$s</string>
+    <string name="game_new_word">كلمة جديدة</string>
+    <string name="game_no_word">لم يُعثر على كلمة مناسبة للعبة في وضع القاموس هذا. جرّب اختيار وضع آخر من الإعدادات.</string>
+    <string name="game_saved_to_mistakes">حُفظت في أخطائك — يمكنك التدرب عليها في الاختبار.</string>
+    <string name="game_solved_count">%1$d صحيحة</string>
+    <string name="game_submit">خمّن</string>
+    <string name="cd_game_delete">احذف آخر حرف</string>
+    <string name="game_legend_correct">في موضعها</string>
+    <string name="game_legend_present">موجود في الكلمة</string>
+    <string name="game_legend_absent">غير موجود</string>
+    <string name="cd_game_hint">اكشف حرفًا</string>
+    <string name="game_hint_explainer">هل تعثّرت؟ لديك %1$d حروف مجانية في كل جولة.</string>
 </resources>

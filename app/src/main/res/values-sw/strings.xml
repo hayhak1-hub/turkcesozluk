@@ -146,6 +146,7 @@
     <string name="cd_speak">Soma kwa sauti</string>
     <string name="cd_voice_search">Utafutaji wa sauti</string>
     <string name="voice_search_prompt">Sema neno...</string>
+    <string name="voice_search_unavailable">Utafutaji wa sauti haupatikani kwenye kifaa hiki</string>
     <string name="weekly_last_7_days">Siku 7 zilizopita</string>
     <string name="weekly_day_detail">%1$s · shughuli %2$d</string>
     <string name="day_mon">Jtt</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Ninajifunza na Kamusi ya Kituruki!_</string>
     <string name="tdk_error_server">TDK haikujibu</string>
     <string name="tdk_error_network">Hakuna muunganisho wa intaneti au TDK haipatikani</string>
+    <string name="tab_game">Mchezo</string>
+    <string name="game_intro_title">Bahatisha Neno</string>
+    <string name="game_intro_body">Dokezo linaonyesha maana ya neno. Jaribu kulipata kwa majaribio 6. Baada ya kila jaribio, rangi za herufi zitakuongoza.</string>
+    <string name="game_start">Anza Mchezo</string>
+    <string name="game_clue_label">Dokezo</string>
+    <string name="game_letter_count">Herufi %1$d</string>
+    <string name="game_attempts_left">Majaribio %1$d yamesalia</string>
+    <string name="game_won_title">Umelipata!</string>
+    <string name="game_lost_title">Si safari hii</string>
+    <string name="game_correct_answer">Jibu sahihi: %1$s</string>
+    <string name="game_new_word">Neno Jipya</string>
+    <string name="game_no_word">Hakuna neno linalofaa kwa mchezo katika hali hii ya kamusi. Jaribu kuchagua hali nyingine kwenye mipangilio.</string>
+    <string name="game_saved_to_mistakes">Limehifadhiwa kwenye makosa yako — unaweza kulifanyia mazoezi kwenye jaribio.</string>
+    <string name="game_solved_count">Sahihi %1$d</string>
+    <string name="game_submit">Bahatisha</string>
+    <string name="cd_game_delete">Futa herufi ya mwisho</string>
+    <string name="game_legend_correct">Mahali sahihi</string>
+    <string name="game_legend_present">Lipo kwenye neno</string>
+    <string name="game_legend_absent">Halipo</string>
+    <string name="cd_game_hint">Fichua herufi moja</string>
+    <string name="game_hint_explainer">Umekwama? Unapata herufi %1$d bure kila raundi.</string>
 </resources>

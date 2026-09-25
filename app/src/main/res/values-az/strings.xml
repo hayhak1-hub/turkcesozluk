@@ -146,6 +146,7 @@
     <string name="cd_speak">Səsli oxu</string>
     <string name="cd_voice_search">Səsli axtar</string>
     <string name="voice_search_prompt">Bir söz deyin...</string>
+    <string name="voice_search_unavailable">Bu cihazda səsli axtarış əlçatan deyil</string>
     <string name="weekly_last_7_days">Son 7 gün</string>
     <string name="weekly_day_detail">%1$s · %2$d fəaliyyət</string>
     <string name="day_mon">B.e.</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* sözünün %2$s:\n\n✨ %3$s\n\n_Türk Lüğəti ilə öyrənirəm!_</string>
     <string name="tdk_error_server">TDK cavab vermədi</string>
     <string name="tdk_error_network">İnternet bağlantısı yoxdur və ya TDK-ya çıxış yoxdur</string>
+    <string name="tab_game">Oyun</string>
+    <string name="game_intro_title">Söz Tapma Oyunu</string>
+    <string name="game_intro_body">İpucunda sözün mənası yazılır. Sözü 6 cəhddə tapmağa çalış. Hər təxmindən sonra hərflərin rəngi sənə yol göstərir.</string>
+    <string name="game_start">Oyuna Başla</string>
+    <string name="game_clue_label">İpucu</string>
+    <string name="game_letter_count">%1$d hərf</string>
+    <string name="game_attempts_left">%1$d haqq qaldı</string>
+    <string name="game_won_title">Tapdın!</string>
+    <string name="game_lost_title">Tapa bilmədin</string>
+    <string name="game_correct_answer">Doğru cavab: %1$s</string>
+    <string name="game_new_word">Yeni Söz</string>
+    <string name="game_no_word">Bu lüğət rejimində oyuna uyğun söz tapılmadı. Lüğət ayarlarından başqa rejim seçməyi sına.</string>
+    <string name="game_saved_to_mistakes">Söz səhvlərinə yazıldı, viktorinada təkrar edə bilərsən.</string>
+    <string name="game_solved_count">%1$d doğru</string>
+    <string name="game_submit">Təxmin Et</string>
+    <string name="cd_game_delete">Son hərfi sil</string>
+    <string name="game_legend_correct">Doğru yerdə</string>
+    <string name="game_legend_present">Sözdə var</string>
+    <string name="game_legend_absent">Sözdə yoxdur</string>
+    <string name="cd_game_hint">Bir hərf hədiyyə al</string>
+    <string name="game_hint_explainer">Çətinlik çəksən, hər tur üçün %1$d hərf hədiyyəsi haqqın var.</string>
 </resources>

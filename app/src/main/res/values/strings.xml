@@ -148,6 +148,7 @@
     <string name="cd_speak">Sesli oku</string>
     <string name="cd_voice_search">Sesli Ara</string>
     <string name="voice_search_prompt">Bir kelime söyleyin...</string>
+    <string name="voice_search_unavailable">Ses tanıma bu cihazda kullanılamıyor</string>
     <string name="weekly_last_7_days">Son 7 gün</string>
     <string name="weekly_day_detail">%1$s · %2$d aktivite</string>
     <string name="day_mon">Pzt</string>
@@ -175,4 +176,25 @@
     <string name="share_result_template">📖 *%1$s* kelimesinin %2$s:\n\n✨ %3$s\n\n_Türkçe Sözlük ile öğreniyorum!_</string>
     <string name="tdk_error_server">TDK yanıt vermedi</string>
     <string name="tdk_error_network">İnternet bağlantısı yok veya TDK\'ya ulaşılamadı</string>
+    <string name="tab_game">Oyun</string>
+    <string name="game_intro_title">Kelime Tahmin Oyunu</string>
+    <string name="game_intro_body">İpucunda kelimenin anlamı yazar. Kelimeyi 6 denemede bulmaya çalış. Her tahminden sonra harflerin rengi sana yol gösterir.</string>
+    <string name="game_start">Oyuna Başla</string>
+    <string name="game_clue_label">İpucu</string>
+    <string name="game_letter_count">%1$d harf</string>
+    <string name="game_attempts_left">%1$d hak kaldı</string>
+    <string name="game_won_title">Bildin!</string>
+    <string name="game_lost_title">Bilemedin</string>
+    <string name="game_correct_answer">Doğru cevap: %1$s</string>
+    <string name="game_new_word">Yeni Kelime</string>
+    <string name="game_no_word">Bu sözlük kipinde oyuna uygun kelime bulunamadı. Sözlük ayarlarından başka bir kip seçmeyi dene.</string>
+    <string name="game_saved_to_mistakes">Kelime yanlışlarına kaydedildi, quizde tekrar edebilirsin.</string>
+    <string name="game_solved_count">%1$d doğru</string>
+    <string name="game_submit">Tahmin Et</string>
+    <string name="cd_game_delete">Son harfi sil</string>
+    <string name="game_legend_correct">Doğru yerde</string>
+    <string name="game_legend_present">Kelimede var</string>
+    <string name="game_legend_absent">Kelimede yok</string>
+    <string name="cd_game_hint">Bir harf hediye al</string>
+    <string name="game_hint_explainer">Takılırsan tur başına %1$d harf hediyesi hakkın var.</string>
 </resources>

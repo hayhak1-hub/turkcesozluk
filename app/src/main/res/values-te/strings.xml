@@ -146,6 +146,7 @@
     <string name="cd_speak">గట్టిగా చదవండి</string>
     <string name="cd_voice_search">వాయిస్ శోధన</string>
     <string name="voice_search_prompt">ఒక పదం చెప్పండి...</string>
+    <string name="voice_search_unavailable">ఈ పరికరంలో వాయిస్ శోధన అందుబాటులో లేదు</string>
     <string name="weekly_last_7_days">గత 7 రోజులు</string>
     <string name="weekly_day_detail">%1$s · %2$d కార్యకలాపాలు</string>
     <string name="day_mon">సో</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_టర్కిష్ నిఘంటువుతో నేర్చుకుంటున్నాను!_</string>
     <string name="tdk_error_server">TDK స్పందించలేదు</string>
     <string name="tdk_error_network">ఇంటర్నెట్ కనెక్షన్ లేదు లేదా TDKని చేరుకోలేకపోయాం</string>
+    <string name="tab_game">ఆట</string>
+    <string name="game_intro_title">పదాన్ని ఊహించండి</string>
+    <string name="game_intro_body">సూచనలో పదం అర్థం కనిపిస్తుంది. 6 ప్రయత్నాల్లో దాన్ని కనుగొనడానికి ప్రయత్నించండి. ప్రతి ఊహ తర్వాత అక్షరాల రంగులు మీకు దారి చూపుతాయి.</string>
+    <string name="game_start">ఆట ప్రారంభించు</string>
+    <string name="game_clue_label">సూచన</string>
+    <string name="game_letter_count">%1$d అక్షరాలు</string>
+    <string name="game_attempts_left">%1$d అవకాశాలు మిగిలాయి</string>
+    <string name="game_won_title">కనుగొన్నారు!</string>
+    <string name="game_lost_title">ఈసారి కాదు</string>
+    <string name="game_correct_answer">సరైన సమాధానం: %1$s</string>
+    <string name="game_new_word">కొత్త పదం</string>
+    <string name="game_no_word">ఈ నిఘంటువు రీతిలో ఆటకు తగిన పదం దొరకలేదు. సెట్టింగ్‌ల నుండి వేరే రీతిని ఎంచుకుని చూడండి.</string>
+    <string name="game_saved_to_mistakes">మీ తప్పులలో భద్రపరచబడింది — క్విజ్‌లో సాధన చేయవచ్చు.</string>
+    <string name="game_solved_count">%1$d సరైనవి</string>
+    <string name="game_submit">ఊహించు</string>
+    <string name="cd_game_delete">చివరి అక్షరాన్ని తొలగించు</string>
+    <string name="game_legend_correct">సరైన స్థానంలో</string>
+    <string name="game_legend_present">పదంలో ఉంది</string>
+    <string name="game_legend_absent">పదంలో లేదు</string>
+    <string name="cd_game_hint">ఒక అక్షరాన్ని చూపించు</string>
+    <string name="game_hint_explainer">ఇరుక్కుపోయారా? ప్రతి రౌండ్‌లో మీకు %1$d ఉచిత అక్షరాలు ఉంటాయి.</string>
 </resources>

@@ -77,11 +77,18 @@ REQUIRED_KEYS = [
     "cd_close", "cd_add_word", "cd_settings", "mode_hint_title", "mode_hint_body", "mode_hint_ok",
     "menu_show_daily_word", "share_word_title", "word_tree_title", "cd_reset",
     "cd_favorite", "cd_listen", "cd_share", "cd_speak", "cd_voice_search", "voice_search_prompt",
+    "voice_search_unavailable",
     "weekly_last_7_days", "weekly_day_detail", "day_mon", "day_tue", "day_wed", "day_thu", "day_fri", "day_sat", "day_sun",
     "day_mon_full", "day_tue_full", "day_wed_full", "day_thu_full", "day_fri_full", "day_sat_full", "day_sun_full",
     "notification_channel_name", "notification_title", "notification_body",
     "share_mode_verbs", "share_mode_definitions", "share_mode_idioms", "share_mode_adjectives", "share_mode_all",
     "share_result_template", "tdk_error_server", "tdk_error_network",
+    "tab_game", "game_intro_title", "game_intro_body", "game_start", "game_clue_label",
+    "game_letter_count", "game_attempts_left", "game_won_title", "game_lost_title",
+    "game_correct_answer", "game_new_word", "game_no_word", "game_saved_to_mistakes",
+    "game_solved_count", "game_submit", "cd_game_delete",
+    "game_legend_correct", "game_legend_present", "game_legend_absent",
+    "cd_game_hint", "game_hint_explainer",
 ]
 
 

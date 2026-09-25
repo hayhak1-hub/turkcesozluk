@@ -146,6 +146,7 @@
     <string name="cd_speak">Ovozli o\'qish</string>
     <string name="cd_voice_search">Ovozli qidiruv</string>
     <string name="voice_search_prompt">So\'z ayting...</string>
+    <string name="voice_search_unavailable">Bu qurilmada ovozli qidiruv mavjud emas</string>
     <string name="weekly_last_7_days">So\'nggi 7 kun</string>
     <string name="weekly_day_detail">%1$s · %2$d faollik</string>
     <string name="day_mon">Dush</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* so\'zining %2$s:\n\n✨ %3$s\n\n_Turk lug\'ati bilan o\'rganyapman!_</string>
     <string name="tdk_error_server">TDK javob bermadi</string>
     <string name="tdk_error_network">Internet aloqasi yo\'q yoki TDK\'ga ulanib bo\'lmadi</string>
+    <string name="tab_game">O\'yin</string>
+    <string name="game_intro_title">So\'z topish o\'yini</string>
+    <string name="game_intro_body">Ishorada so\'zning ma\'nosi yoziladi. So\'zni 6 urinishda topishga harakat qil. Har bir taxmindan keyin harflarning rangi senga yo\'l ko\'rsatadi.</string>
+    <string name="game_start">O\'yinni boshlash</string>
+    <string name="game_clue_label">Ishora</string>
+    <string name="game_letter_count">%1$d harf</string>
+    <string name="game_attempts_left">%1$d imkon qoldi</string>
+    <string name="game_won_title">Topding!</string>
+    <string name="game_lost_title">Topa olmading</string>
+    <string name="game_correct_answer">To\'g\'ri javob: %1$s</string>
+    <string name="game_new_word">Yangi so\'z</string>
+    <string name="game_no_word">Bu lug\'at rejimida o\'yinga mos so\'z topilmadi. Lug\'at sozlamalaridan boshqa rejimni tanlab ko\'r.</string>
+    <string name="game_saved_to_mistakes">So\'z xatolaringga yozildi, viktorinada takrorlashing mumkin.</string>
+    <string name="game_solved_count">%1$d to\'g\'ri</string>
+    <string name="game_submit">Taxmin qil</string>
+    <string name="cd_game_delete">Oxirgi harfni o\'chir</string>
+    <string name="game_legend_correct">To\'g\'ri joyda</string>
+    <string name="game_legend_present">So\'zda bor</string>
+    <string name="game_legend_absent">So\'zda yo\'q</string>
+    <string name="cd_game_hint">Bitta harf sovg\'a ol</string>
+    <string name="game_hint_explainer">Qiynalsang, har raundda %1$d ta harf sovg\'asi imkoning bor.</string>
 </resources>

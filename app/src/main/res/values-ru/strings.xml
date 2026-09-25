@@ -146,6 +146,7 @@
     <string name="cd_speak">Прочитать вслух</string>
     <string name="cd_voice_search">Голосовой поиск</string>
     <string name="voice_search_prompt">Произнесите слово...</string>
+    <string name="voice_search_unavailable">Голосовой поиск недоступен на этом устройстве</string>
     <string name="weekly_last_7_days">Последние 7 дней</string>
     <string name="weekly_day_detail">%1$s · %2$d активностей</string>
     <string name="day_mon">Пн</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Учу турецкий с приложением Турецкий словарь!_</string>
     <string name="tdk_error_server">TDK не ответил</string>
     <string name="tdk_error_network">Нет подключения к интернету или TDK недоступен</string>
+    <string name="tab_game">Игра</string>
+    <string name="game_intro_title">Угадай слово</string>
+    <string name="game_intro_body">В подсказке указано значение слова. Попробуй найти его за 6 попыток. После каждой попытки цвета букв подскажут направление.</string>
+    <string name="game_start">Начать игру</string>
+    <string name="game_clue_label">Подсказка</string>
+    <string name="game_letter_count">Букв: %1$d</string>
+    <string name="game_attempts_left">Осталось попыток: %1$d</string>
+    <string name="game_won_title">Угадал!</string>
+    <string name="game_lost_title">В этот раз не вышло</string>
+    <string name="game_correct_answer">Правильный ответ: %1$s</string>
+    <string name="game_new_word">Новое слово</string>
+    <string name="game_no_word">В этом режиме словаря не нашлось подходящего для игры слова. Попробуй выбрать другой режим в настройках.</string>
+    <string name="game_saved_to_mistakes">Сохранено в ошибки — можно повторить в викторине.</string>
+    <string name="game_solved_count">Верно: %1$d</string>
+    <string name="game_submit">Угадать</string>
+    <string name="cd_game_delete">Удалить последнюю букву</string>
+    <string name="game_legend_correct">На своём месте</string>
+    <string name="game_legend_present">Есть в слове</string>
+    <string name="game_legend_absent">Нет в слове</string>
+    <string name="cd_game_hint">Открыть букву</string>
+    <string name="game_hint_explainer">Застрял? В каждом раунде у тебя есть бесплатных букв: %1$d.</string>
 </resources>

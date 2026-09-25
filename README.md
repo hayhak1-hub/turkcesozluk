@@ -11,6 +11,11 @@ Google Play'de `com.hayhak.turkcesozluk` kimliğiyle yayınlanıyor.
 - **Çevrimdışı veri:** tüm sözlük `app/src/main/assets/*.csv` içinde gelir (~7,8 MB).
 - **TDK yedeği:** yerelde bulunamayan kelimeler için `sozluk.gov.tr` sorgulanır.
 - **Quiz, favoriler, öğrenme kartları, haftalık istatistik ve seri (streak) takibi.**
+- **Oyun (Wordle tarzı):** ipucu olarak kelimenin anlamı verilir, kullanıcı kelimeyi
+  6 denemede harf harf tahmin eder. Yeri kesinleşen harfler sonraki satıra taşınıp
+  kilitlenir, işe yaramayacak tuşlar klavyede pasifleşir. Tur başına 2 "harf hediyesi"
+  hakkı vardır. Hangi sözlükten oynanacağı oyun ekranındaki kip seçiciyle değiştirilir.
+  Bilinemeyen kelime quizin "sadece yanlışlar" tekrar listesine yazılır.
 - **Günün kelimesi** kartı ve günlük bildirim (WorkManager).
 - **25 dilde arayüz**; tüm dil kaynakları çevrimdışı kullanım için uygulama paketine dahildir.
 
@@ -75,7 +80,12 @@ imzasız devam eder.
 ## Test
 
 Birim testler saf JVM üzerinde çalışır (`app/src/test`): CSV ayrıştırıcı, Türkçe
-büyük/küçük harf kuralları, `SynonymDataStore` ve sözlük/quiz repository'leri.
+büyük/küçük harf kuralları, `SynonymDataStore`, sözlük/quiz repository'leri ve
+oyunun tahmin değerlendirme motoru (`WordleEngine`).
+
+Oyun mantığı bilerek Android'e bağımsız tutulmuştur: harf durumu hesabı
+`game/WordleEngine.kt` içinde saf Kotlin'dir, aday kelime seçimi
+`GameRepository`'dedir; ikisi de birim testle doğrulanır.
 
 Room şemaları `app/schemas/` altına yazılır; bir sonraki şema sürümünün migration'ı
 `MigrationTestHelper` ile enstrümantasyon testi olarak doğrulanabilir.

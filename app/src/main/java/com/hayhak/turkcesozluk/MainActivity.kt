@@ -8,7 +8,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.animation.*
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.navigationBarsPadding
@@ -18,6 +20,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DarkMode
+import androidx.compose.material.icons.filled.Extension
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material.icons.filled.Menu
@@ -26,7 +29,10 @@ import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.pointer.PointerEventPass
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -44,6 +50,7 @@ import com.hayhak.turkcesozluk.data.repository.CoreRepository
 import com.hayhak.turkcesozluk.ui.components.UpdateAvailableDialog
 import com.hayhak.turkcesozluk.ui.screens.DictionaryScreen
 import com.hayhak.turkcesozluk.ui.screens.FavoritesScreen
+import com.hayhak.turkcesozluk.ui.screens.GameScreen
 import com.hayhak.turkcesozluk.ui.screens.HelpScreen
 import com.hayhak.turkcesozluk.ui.screens.LoadingScreen
 import com.hayhak.turkcesozluk.ui.screens.PrivacyPolicyScreen
@@ -63,6 +70,7 @@ import javax.inject.Inject
 sealed class Screen(val route: String, val titleRes: Int, val icon: androidx.compose.ui.graphics.vector.ImageVector) {
     object Dictionary : Screen("dictionary", R.string.tab_dictionary, Icons.Default.Search)
     object Quiz : Screen("quiz", R.string.tab_quiz, Icons.Default.PlayArrow)
+    object Game : Screen("game", R.string.tab_game, Icons.Default.Extension)
     object Favorites : Screen("favorites", R.string.tab_favorites, Icons.Default.Favorite)
     object Profile : Screen("profile", R.string.tab_profile, Icons.Default.Person)
 }
@@ -94,14 +102,50 @@ class MainActivity : AppCompatActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    if (isInitialized) {
-                        MainScreen()
-                    } else {
+                    // Sözlük kipi değişince CoreRepository veriyi baştan yükler ve
+                    // isInitialized kısa süre false olur. MainScreen'i bu sırada
+                    // kompozisyondan çıkarmak rememberNavController'ı da sıfırlar,
+                    // yani kullanıcıyı bulunduğu sekmeden atardı. İlk açılışta tam
+                    // ekran yükleme gösteriyoruz; sonraki yeniden yüklemelerde ise
+                    // ekranın üstüne örtü koyup gezinme yığınını koruyoruz.
+                    var everInitialized by rememberSaveable { mutableStateOf(false) }
+                    LaunchedEffect(isInitialized) {
+                        if (isInitialized) everInitialized = true
+                    }
+
+                    if (!everInitialized) {
                         LoadingScreen()
+                    } else {
+                        Box(Modifier.fillMaxSize()) {
+                            MainScreen()
+                            if (!isInitialized) {
+                                ReloadingOverlay()
+                            }
+                        }
                     }
                 }
             }
         }
+    }
+}
+
+/**
+ * Veri yeniden yüklenirken ekranı kapatan örtü. Arkadaki MainScreen kompozisyonda
+ * kalır (gezinme yığını korunur) ama dokunuşlar buraya takılır.
+ */
+@Composable
+private fun ReloadingOverlay() {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background)
+            .pointerInput(Unit) {
+                awaitPointerEventScope {
+                    while (true) awaitPointerEvent(PointerEventPass.Initial)
+                }
+            }
+    ) {
+        LoadingScreen()
     }
 }
 
@@ -132,6 +176,7 @@ fun MainScreen() {
     val items = listOf(
         Screen.Dictionary,
         Screen.Quiz,
+        Screen.Game,
         Screen.Favorites,
         Screen.Profile
     )
@@ -254,6 +299,7 @@ fun MainScreen() {
             ) {
                 composable(Screen.Dictionary.route) { DictionaryScreen() }
                 composable(Screen.Quiz.route) { QuizScreen() }
+                composable(Screen.Game.route) { GameScreen() }
                 composable(Screen.Favorites.route) { FavoritesScreen() }
                 composable(Screen.Profile.route) {
                     StatsScreen(

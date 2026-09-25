@@ -146,6 +146,7 @@
     <string name="cd_speak">Baca keras</string>
     <string name="cd_voice_search">Pencarian suara</string>
     <string name="voice_search_prompt">Ucapkan kata...</string>
+    <string name="voice_search_unavailable">Pencarian suara tidak tersedia di perangkat ini</string>
     <string name="weekly_last_7_days">7 hari terakhir</string>
     <string name="weekly_day_detail">%1$s · %2$d aktivitas</string>
     <string name="day_mon">Sen</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Belajar dengan Kamus Turki!_</string>
     <string name="tdk_error_server">TDK tidak merespons</string>
     <string name="tdk_error_network">Tidak ada koneksi internet atau TDK tidak dapat dijangkau</string>
+    <string name="tab_game">Permainan</string>
+    <string name="game_intro_title">Tebak Kata</string>
+    <string name="game_intro_body">Petunjuk menampilkan arti kata tersebut. Coba temukan dalam 6 percobaan. Setelah setiap tebakan, warna huruf akan memandumu.</string>
+    <string name="game_start">Mulai Permainan</string>
+    <string name="game_clue_label">Petunjuk</string>
+    <string name="game_letter_count">%1$d huruf</string>
+    <string name="game_attempts_left">Sisa %1$d percobaan</string>
+    <string name="game_won_title">Tebakanmu benar!</string>
+    <string name="game_lost_title">Belum berhasil</string>
+    <string name="game_correct_answer">Jawaban benar: %1$s</string>
+    <string name="game_new_word">Kata Baru</string>
+    <string name="game_no_word">Tidak ada kata yang cocok untuk permainan dalam mode kamus ini. Coba pilih mode lain di pengaturan kamus.</string>
+    <string name="game_saved_to_mistakes">Disimpan ke daftar kesalahanmu — bisa dilatih di kuis.</string>
+    <string name="game_solved_count">%1$d benar</string>
+    <string name="game_submit">Tebak</string>
+    <string name="cd_game_delete">Hapus huruf terakhir</string>
+    <string name="game_legend_correct">Posisi tepat</string>
+    <string name="game_legend_present">Ada di kata</string>
+    <string name="game_legend_absent">Tidak ada</string>
+    <string name="cd_game_hint">Buka satu huruf</string>
+    <string name="game_hint_explainer">Buntu? Kamu dapat %1$d huruf gratis setiap ronde.</string>
 </resources>

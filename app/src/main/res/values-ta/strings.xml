@@ -146,6 +146,7 @@
     <string name="cd_speak">சத்தமாக படி</string>
     <string name="cd_voice_search">குரல் தேடல்</string>
     <string name="voice_search_prompt">ஒரு சொல்லை சொல்லுங்கள்...</string>
+    <string name="voice_search_unavailable">இந்த சாதனத்தில் குரல் தேடல் இல்லை</string>
     <string name="weekly_last_7_days">கடந்த 7 நாட்கள்</string>
     <string name="weekly_day_detail">%1$s · %2$d செயல்பாடுகள்</string>
     <string name="day_mon">தி</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_துருக்கிய அகராதியுடன் கற்றுக்கொண்டிருக்கிறேன்!_</string>
     <string name="tdk_error_server">TDK பதிலளிக்கவில்லை</string>
     <string name="tdk_error_network">இணைய இணைப்பு இல்லை அல்லது TDK-ஐ அணுக முடியவில்லை</string>
+    <string name="tab_game">விளையாட்டு</string>
+    <string name="game_intro_title">சொல்லை யூகி</string>
+    <string name="game_intro_body">குறிப்பில் சொல்லின் பொருள் காட்டப்படும். 6 முயற்சிகளில் அதைக் கண்டுபிடிக்க முயற்சி செய். ஒவ்வொரு யூகத்திற்குப் பிறகும் எழுத்துகளின் நிறம் உனக்கு வழிகாட்டும்.</string>
+    <string name="game_start">விளையாட்டைத் தொடங்கு</string>
+    <string name="game_clue_label">குறிப்பு</string>
+    <string name="game_letter_count">%1$d எழுத்துகள்</string>
+    <string name="game_attempts_left">%1$d வாய்ப்புகள் உள்ளன</string>
+    <string name="game_won_title">கண்டுபிடித்துவிட்டாய்!</string>
+    <string name="game_lost_title">இந்த முறை இல்லை</string>
+    <string name="game_correct_answer">சரியான விடை: %1$s</string>
+    <string name="game_new_word">புதிய சொல்</string>
+    <string name="game_no_word">இந்த அகராதி முறையில் விளையாட்டுக்கு ஏற்ற சொல் கிடைக்கவில்லை. அமைப்புகளில் வேறு முறையைத் தேர்வுசெய்து பார்.</string>
+    <string name="game_saved_to_mistakes">உன் தவறுகளில் சேமிக்கப்பட்டது — வினாடி வினாவில் பயிற்சி செய்யலாம்.</string>
+    <string name="game_solved_count">%1$d சரி</string>
+    <string name="game_submit">யூகி</string>
+    <string name="cd_game_delete">கடைசி எழுத்தை அழி</string>
+    <string name="game_legend_correct">சரியான இடத்தில்</string>
+    <string name="game_legend_present">சொல்லில் உள்ளது</string>
+    <string name="game_legend_absent">சொல்லில் இல்லை</string>
+    <string name="cd_game_hint">ஒரு எழுத்தை வெளிப்படுத்து</string>
+    <string name="game_hint_explainer">சிக்கிக்கொண்டாயா? ஒவ்வொரு சுற்றிலும் %1$d இலவச எழுத்துகள் கிடைக்கும்.</string>
 </resources>

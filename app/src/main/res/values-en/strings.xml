@@ -146,6 +146,7 @@
     <string name="cd_speak">Read aloud</string>
     <string name="cd_voice_search">Voice search</string>
     <string name="voice_search_prompt">Say a word...</string>
+    <string name="voice_search_unavailable">Voice search is not available on this device</string>
     <string name="weekly_last_7_days">Last 7 days</string>
     <string name="weekly_day_detail">%1$s · %2$d activities</string>
     <string name="day_mon">Mon</string>
@@ -173,4 +174,25 @@
     <string name="share_result_template">📖 *%1$s* — %2$s:\n\n✨ %3$s\n\n_Learning with Turkish Dictionary!_</string>
     <string name="tdk_error_server">TDK did not respond</string>
     <string name="tdk_error_network">No internet connection or TDK is unreachable</string>
+    <string name="tab_game">Game</string>
+    <string name="game_intro_title">Guess the Word</string>
+    <string name="game_intro_body">The hint shows what the word means. Try to find it in 6 tries. After each guess the letter colours point you in the right direction.</string>
+    <string name="game_start">Start Game</string>
+    <string name="game_clue_label">Hint</string>
+    <string name="game_letter_count">%1$d letters</string>
+    <string name="game_attempts_left">%1$d tries left</string>
+    <string name="game_won_title">You got it!</string>
+    <string name="game_lost_title">Not this time</string>
+    <string name="game_correct_answer">Correct answer: %1$s</string>
+    <string name="game_new_word">New Word</string>
+    <string name="game_no_word">No word suitable for the game was found in this dictionary mode. Try picking another mode in the dictionary settings.</string>
+    <string name="game_saved_to_mistakes">Saved to your mistakes — you can practise it in the quiz.</string>
+    <string name="game_solved_count">%1$d correct</string>
+    <string name="game_submit">Guess</string>
+    <string name="cd_game_delete">Delete last letter</string>
+    <string name="game_legend_correct">Right spot</string>
+    <string name="game_legend_present">In the word</string>
+    <string name="game_legend_absent">Not in the word</string>
+    <string name="cd_game_hint">Reveal a letter</string>
+    <string name="game_hint_explainer">Stuck? You get %1$d free letters each round.</string>
 </resources>

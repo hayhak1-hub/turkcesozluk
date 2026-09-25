@@ -31,6 +31,12 @@ object TurkishUtils {
         
         return newFirst + rest
     }
+
+    /**
+     * Metni Türkçe kurallarına göre tümüyle büyütür.
+     * 'i' -> 'İ', 'ı' -> 'I' (varsayılan yerel ayardan bağımsız).
+     */
+    fun uppercase(text: String): String = text.uppercase(trLocale)
 }
 
 /**
@@ -38,3 +44,4 @@ object TurkishUtils {
  */
 fun String.normalizeTR(): String = TurkishUtils.normalize(this)
 fun String.capitalizeTR(): String = TurkishUtils.capitalize(this)
+fun String.uppercaseTR(): String = TurkishUtils.uppercase(this)

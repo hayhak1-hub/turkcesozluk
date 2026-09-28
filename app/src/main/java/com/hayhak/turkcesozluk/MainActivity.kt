@@ -4,7 +4,6 @@ import android.content.Context
 import android.os.Bundle
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.animation.*
 import androidx.compose.animation.core.FastOutSlowInEasing
@@ -51,6 +50,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.core.view.WindowCompat
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -103,8 +103,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         LocaleHelper.applyAppLocale(LocaleHelper.savedTag(this))
         installSplashScreen()
-        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+        // Edge-to-edge without Window.setStatusBarColor, setNavigationBarColor,
+        // or LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES. Those calls live inside
+        // enableEdgeToEdge() and are what Play Console flags on Android 15.
+        // Cutout mode is "always" in the v30 theme. Icon contrast is set in the theme.
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
             val isInitialized by coreRepository.isInitialized.collectAsState()
             val appTheme by SettingsManager.themeState.collectAsState()

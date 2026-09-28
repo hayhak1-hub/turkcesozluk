@@ -1,9 +1,5 @@
 package com.hayhak.turkcesozluk.ui.theme
 
-import android.graphics.Color as AndroidColor
-import androidx.activity.ComponentActivity
-import androidx.activity.SystemBarStyle
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
@@ -15,6 +11,7 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.unit.dp
+import androidx.core.view.WindowInsetsControllerCompat
 import com.hayhak.turkcesozluk.util.findActivity
 
 val AppShapes = Shapes(
@@ -96,16 +93,11 @@ fun TurkceSozlukTheme(
 
     if (!view.isInEditMode) {
         SideEffect {
-            val activity = view.context.findActivity() as? ComponentActivity ?: return@SideEffect
-            val barStyle = if (darkTheme) {
-                SystemBarStyle.dark(AndroidColor.TRANSPARENT)
-            } else {
-                SystemBarStyle.light(AndroidColor.TRANSPARENT, AndroidColor.TRANSPARENT)
+            val window = view.context.findActivity()?.window ?: return@SideEffect
+            WindowInsetsControllerCompat(window, view).apply {
+                isAppearanceLightStatusBars = !darkTheme
+                isAppearanceLightNavigationBars = !darkTheme
             }
-            activity.enableEdgeToEdge(
-                statusBarStyle = barStyle,
-                navigationBarStyle = barStyle,
-            )
         }
     }
 

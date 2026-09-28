@@ -1,0 +1,69 @@
+<tr-TR>
+• Android 15 ve sonrasında kenardan kenara görünüm düzeltildi.
+</tr-TR>
+<ar>
+• تم إصلاح العرض من الحافة إلى الحافة على Android 15 والإصدارات الأحدث.
+</ar>
+<az-AZ>
+• Android 15 və sonrakı versiyalarda kənardan kənara görünüş düzəldildi.
+</az-AZ>
+<bn-BD>
+• Android 15 ও পরবর্তী সংস্করণে প্রান্ত-থেকে-প্রান্ত প্রদর্শন ঠিক করা হয়েছে।
+</bn-BD>
+<de-DE>
+• Randlose Anzeige unter Android 15 und höher korrigiert.
+</de-DE>
+<en-US>
+• Edge-to-edge display is fixed on Android 15 and later.
+</en-US>
+<es-ES>
+• Se corrigió la visualización de borde a borde en Android 15 y versiones posteriores.
+</es-ES>
+<fr-FR>
+• Affichage bord à bord corrigé sur Android 15 et versions ultérieures.
+</fr-FR>
+<hi-IN>
+• Android 15 और बाद के संस्करणों में किनारे-से-किनारे प्रदर्शन ठीक किया गया।
+</hi-IN>
+<id>
+• Tampilan tepi-ke-tepi diperbaiki di Android 15 dan yang lebih baru.
+</id>
+<ja-JP>
+• Android 15 以降で端から端までの表示を修正しました。
+</ja-JP>
+<kk>
+• Android 15 және одан кейінгі нұсқаларда шеттен шетке көрсету түзетілді.
+</kk>
+<ko-KR>
+• Android 15 이상에서 가장자리까지 표시를 수정했습니다.
+</ko-KR>
+<ky-KG>
+• Android 15 жана андан кийинки версияларда четинен четине көрсөтүү оңдолду.
+</ky-KG>
+<mr-IN>
+• Android 15 आणि नंतरच्या आवृत्त्यांवर कडे-ते-कडे प्रदर्शन दुरुस्त केले.
+</mr-IN>
+<pt-BR>
+• A exibição de ponta a ponta foi corrigida no Android 15 e versões mais recentes.
+</pt-BR>
+<ru-RU>
+• Исправлен вывод от края до края на Android 15 и новее.
+</ru-RU>
+<sw>
+• Onyesho la ukingo hadi ukingo limerekebishwa kwenye Android 15 na matoleo mapya.
+</sw>
+<ta-IN>
+• Android 15 மற்றும் அதற்குப் பிறகான பதிப்புகளில் விளிம்பு-முதல்-விளிம்பு காட்சி சரிசெய்யப்பட்டது.
+</ta-IN>
+<te-IN>
+• Android 15 మరియు తర్వాతి వెర్షన్లలో అంచు-నుండి-అంచు ప్రదర్శన సరిచేయబడింది.
+</te-IN>
+<ur>
+• Android 15 اور بعد کے ورژنز پر کنارے سے کنارے ڈسپلے درست کر دیا گیا۔
+</ur>
+<vi>
+• Đã sửa hiển thị tràn viền trên Android 15 trở lên.
+</vi>
+<zh-CN>
+• 已修复 Android 15 及更高版本上的边到边显示。
+</zh-CN>

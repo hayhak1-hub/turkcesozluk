@@ -7,22 +7,29 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.animation.*
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.DarkMode
+import androidx.compose.material.icons.automirrored.filled.ExitToApp
+import androidx.compose.material.icons.filled.Brightness4
+import androidx.compose.material.icons.filled.Brightness7
 import androidx.compose.material.icons.filled.Extension
 import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PlayArrow
@@ -31,12 +38,17 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.NavHost
@@ -159,9 +171,11 @@ fun MainScreen() {
     var showExitDialog by remember { mutableStateOf(false) }
     var startupUpdateInfo by remember { mutableStateOf<PlayUpdateInfo?>(null) }
     LaunchedEffect(Unit) {
-        val info = withContext(Dispatchers.IO) {
-            PlayUpdateChecker.checkForStartupPrompt(context)
-        }
+        val info = runCatching {
+            withContext(Dispatchers.IO) {
+                PlayUpdateChecker.checkForStartupPrompt(context)
+            }
+        }.getOrNull()
         if (info != null) {
             startupUpdateInfo = info
         }
@@ -213,35 +227,67 @@ fun MainScreen() {
         )
     }
 
+    val layoutDirection = LocalLayoutDirection.current
+    val density = LocalDensity.current
+    val drawerOpening = drawerState.targetValue == DrawerValue.Open
+    val drawerProgress by animateFloatAsState(
+        targetValue = if (drawerOpening) 1f else 0f,
+        animationSpec = tween(durationMillis = 320, easing = FastOutSlowInEasing),
+        label = "drawerProgress"
+    )
+    val menuIconRotation by animateFloatAsState(
+        targetValue = if (drawerOpening) 90f else 0f,
+        animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessMedium),
+        label = "menuIconRotation"
+    )
+
     ModalNavigationDrawer(
         drawerState = drawerState,
         gesturesEnabled = showDrawer,
         drawerContent = {
             ModalDrawerSheet(
                 modifier = Modifier
+                    .fillMaxHeight()
                     .width(280.dp)
                     .navigationBarsPadding()
+                    .graphicsLayer {
+                        val dir = if (layoutDirection == LayoutDirection.Rtl) 1f else -1f
+                        translationX = dir * (1f - drawerProgress) * with(density) { 18.dp.toPx() }
+                        alpha = 0.55f + 0.45f * drawerProgress
+                    }
             ) {
                 Spacer(Modifier.statusBarsPadding())
                 Text(
                     text = stringResource(R.string.app_name),
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.padding(horizontal = 28.dp, vertical = 20.dp)
                 )
-                HorizontalDivider(modifier = Modifier.padding(bottom = 8.dp))
+                HorizontalDivider()
+                Spacer(modifier = Modifier.height(8.dp))
                 items.forEach { screen ->
+                    val selected = currentRoute == screen.route
+                    val iconScale by animateFloatAsState(
+                        targetValue = if (selected) 1.15f else 1f,
+                        animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy),
+                        label = "drawerIconScale-${screen.route}"
+                    )
                     NavigationDrawerItem(
-                        icon = { Icon(screen.icon, contentDescription = null) },
+                        icon = {
+                            Icon(
+                                screen.icon,
+                                contentDescription = null,
+                                modifier = Modifier.scale(iconScale)
+                            )
+                        },
                         label = {
                             Text(
                                 text = stringResource(screen.titleRes),
-                                maxLines = 2,
+                                maxLines = 1,
                                 overflow = TextOverflow.Ellipsis
                             )
                         },
-                        selected = currentRoute == screen.route,
+                        selected = selected,
                         onClick = {
                             scope.launch { drawerState.close() }
                             if (currentRoute != screen.route) {
@@ -254,26 +300,60 @@ fun MainScreen() {
                         modifier = Modifier.padding(horizontal = 12.dp)
                     )
                 }
+                Spacer(modifier = Modifier.weight(1f))
+                HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+                NavigationDrawerItem(
+                    label = {
+                        Text(
+                            stringResource(R.string.exit_dialog_confirm),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    },
+                    icon = { Icon(Icons.AutoMirrored.Filled.ExitToApp, contentDescription = null) },
+                    selected = false,
+                    onClick = {
+                        scope.launch { drawerState.close() }
+                        showExitDialog = true
+                    },
+                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)
+                )
             }
         }
     ) {
         Scaffold(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .graphicsLayer {
+                    val t = drawerProgress
+                    val push = with(density) { 12.dp.toPx() } * t
+                    scaleX = 1f - 0.035f * t
+                    scaleY = 1f - 0.035f * t
+                    translationX = if (layoutDirection == LayoutDirection.Rtl) -push else push
+                    alpha = 1f - 0.06f * t
+                },
+            containerColor = MaterialTheme.colorScheme.background,
             topBar = {
                 if (showDrawer && currentScreen != null) {
                     TopAppBar(
                         title = {
                             Text(
                                 text = stringResource(currentScreen.titleRes),
+                                fontWeight = FontWeight.Bold,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis
                             )
                         },
                         navigationIcon = {
-                            IconButton(onClick = { scope.launch { drawerState.open() } }) {
+                            IconButton(onClick = {
+                                scope.launch {
+                                    if (drawerState.isOpen) drawerState.close() else drawerState.open()
+                                }
+                            }) {
                                 Icon(
                                     Icons.Default.Menu,
-                                    contentDescription = stringResource(R.string.cd_open_menu)
+                                    contentDescription = stringResource(R.string.cd_open_menu),
+                                    modifier = Modifier.graphicsLayer { rotationZ = menuIconRotation }
                                 )
                             }
                         },
@@ -282,7 +362,9 @@ fun MainScreen() {
                         },
                         colors = TopAppBarDefaults.topAppBarColors(
                             containerColor = MaterialTheme.colorScheme.surface,
-                            titleContentColor = MaterialTheme.colorScheme.primary
+                            titleContentColor = MaterialTheme.colorScheme.onSurface,
+                            navigationIconContentColor = MaterialTheme.colorScheme.onSurface,
+                            actionIconContentColor = MaterialTheme.colorScheme.onSurface
                         )
                     )
                 }
@@ -337,7 +419,7 @@ private fun AppThemeToggleButton() {
         }
     ) {
         Icon(
-            imageVector = if (isDark) Icons.Default.LightMode else Icons.Default.DarkMode,
+            imageVector = if (isDark) Icons.Default.Brightness7 else Icons.Default.Brightness4,
             contentDescription = stringResource(
                 if (isDark) R.string.theme_light else R.string.theme_dark
             )

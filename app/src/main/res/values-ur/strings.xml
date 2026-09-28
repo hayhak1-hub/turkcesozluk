@@ -188,6 +188,7 @@
     <string name="game_no_word">اس لغت موڈ میں کھیل کے لیے موزوں لفظ نہیں ملا۔ ترتیبات سے کوئی اور موڈ منتخب کر کے دیکھیں۔</string>
     <string name="game_saved_to_mistakes">آپ کی غلطیوں میں محفوظ — کوئز میں مشق کر سکتے ہیں۔</string>
     <string name="game_solved_count">%1$d درست</string>
+    <string name="game_record_count">ریکارڈ %1$d</string>
     <string name="game_submit">اندازہ لگائیں</string>
     <string name="cd_game_delete">آخری حرف مٹائیں</string>
     <string name="game_legend_correct">درست جگہ پر</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">لفظ میں نہیں</string>
     <string name="cd_game_hint">ایک حرف ظاہر کریں</string>
     <string name="game_hint_explainer">پھنس گئے؟ ہر راؤنڈ میں آپ کو %1$d مفت حروف ملتے ہیں۔</string>
+    <string name="game_hint_count_title">ہر راؤنڈ میں حرفی اشارے</string>
+    <string name="cd_game_hint_settings">حرفی اشاروں کی تعداد</string>
 </resources>

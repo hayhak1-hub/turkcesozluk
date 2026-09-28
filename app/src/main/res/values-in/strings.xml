@@ -188,6 +188,7 @@
     <string name="game_no_word">Tidak ada kata yang cocok untuk permainan dalam mode kamus ini. Coba pilih mode lain di pengaturan kamus.</string>
     <string name="game_saved_to_mistakes">Disimpan ke daftar kesalahanmu — bisa dilatih di kuis.</string>
     <string name="game_solved_count">%1$d benar</string>
+    <string name="game_record_count">Rekor %1$d</string>
     <string name="game_submit">Tebak</string>
     <string name="cd_game_delete">Hapus huruf terakhir</string>
     <string name="game_legend_correct">Posisi tepat</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">Tidak ada</string>
     <string name="cd_game_hint">Buka satu huruf</string>
     <string name="game_hint_explainer">Buntu? Kamu dapat %1$d huruf gratis setiap ronde.</string>
+    <string name="game_hint_count_title">Petunjuk huruf per ronde</string>
+    <string name="cd_game_hint_settings">Jumlah petunjuk huruf</string>
 </resources>

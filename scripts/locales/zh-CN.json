@@ -188,11 +188,14 @@
   "game_no_word": "在当前词典模式下没有找到适合游戏的词。请到词典设置里换一个模式试试。",
   "game_saved_to_mistakes": "已存入错题，可以在测验中复习。",
   "game_solved_count": "答对 %1$d 个",
+  "game_record_count": "纪录 %1$d",
   "game_submit": "猜",
   "cd_game_delete": "删除最后一个字母",
   "game_legend_correct": "位置正确",
   "game_legend_present": "词中含有",
   "game_legend_absent": "词中没有",
   "cd_game_hint": "揭示一个字母",
-  "game_hint_explainer": "卡住了？每轮可以免费获得 %1$d 个字母。"
+  "game_hint_explainer": "卡住了？每轮可以免费获得 %1$d 个字母。",
+  "game_hint_count_title": "每轮字母提示",
+  "cd_game_hint_settings": "字母提示次数"
 }

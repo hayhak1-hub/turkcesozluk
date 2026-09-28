@@ -188,11 +188,14 @@
   "game_no_word": "In diesem Wörterbuchmodus wurde kein passendes Wort für das Spiel gefunden. Wähle in den Einstellungen einen anderen Modus.",
   "game_saved_to_mistakes": "Zu deinen Fehlern gespeichert – du kannst es im Quiz üben.",
   "game_solved_count": "%1$d richtig",
+  "game_record_count": "Rekord %1$d",
   "game_submit": "Raten",
   "cd_game_delete": "Letzten Buchstaben löschen",
   "game_legend_correct": "Richtige Stelle",
   "game_legend_present": "Kommt im Wort vor",
   "game_legend_absent": "Kommt nicht vor",
   "cd_game_hint": "Einen Buchstaben aufdecken",
-  "game_hint_explainer": "Steckst du fest? Du hast pro Runde %1$d Gratis-Buchstaben."
+  "game_hint_explainer": "Steckst du fest? Du hast pro Runde %1$d Gratis-Buchstaben.",
+  "game_hint_count_title": "Buchstaben-Tipps pro Runde",
+  "cd_game_hint_settings": "Anzahl der Buchstaben-Tipps"
 }

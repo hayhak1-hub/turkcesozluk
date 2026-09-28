@@ -28,7 +28,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
@@ -39,10 +38,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.window.Popup
-import androidx.core.os.ConfigurationCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.hayhak.turkcesozluk.R
 import com.hayhak.turkcesozluk.ui.components.DailyWordCard
+import com.hayhak.turkcesozluk.ui.components.DictionaryModeMenuItems
 import com.hayhak.turkcesozluk.ui.components.ResultCard
 import com.hayhak.turkcesozluk.ui.components.SearchBar
 import com.hayhak.turkcesozluk.ui.components.TdkResultCard
@@ -84,10 +83,6 @@ fun DictionaryScreen(
     val showDailyWord by viewModel.showDailyWord.collectAsState()
     val currentMode by viewModel.currentMode.collectAsState()
     val hasSeenModeHint by viewModel.hasSeenModeHint.collectAsState()
-    val configuration = LocalConfiguration.current
-    val displayLocale = remember(configuration) {
-        ConfigurationCompat.getLocales(configuration)[0] ?: Locale.getDefault()
-    }
     val dictionaryTitle = dictionaryModeTitle(currentMode)
     val trLocale = remember { Locale("tr", "TR") }
     
@@ -167,10 +162,9 @@ fun DictionaryScreen(
                     verticalAlignment = Alignment.Top // Butonların yukarıda hizalanmasını sağlar
                 ) {
                     Text(
-                        text = dictionaryTitle.uppercase(displayLocale),
+                        text = dictionaryTitle,
                         style = MaterialTheme.typography.headlineMedium,
-                        fontWeight = FontWeight.ExtraBold,
-                        color = MaterialTheme.colorScheme.primary,
+                        color = MaterialTheme.colorScheme.onSurface,
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis,
                         modifier = Modifier.weight(1f)
@@ -259,71 +253,12 @@ fun DictionaryScreen(
                                     expanded = showSettingsMenu,
                                     onDismissRequest = { showSettingsMenu = false }
                                 ) {
-                                    Text(
-                                        text = stringResource(R.string.settings_dictionary_mode),
-                                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
-                                        style = MaterialTheme.typography.labelSmall,
-                                        color = MaterialTheme.colorScheme.primary
-                                    )
-                                    DropdownMenuItem(
-                                        text = { Text(stringResource(R.string.mode_synonyms)) },
-                                        onClick = {
-                                            com.hayhak.turkcesozluk.data.db.SettingsManager.setDictionaryMode(context, com.hayhak.turkcesozluk.data.db.DictionaryMode.SYNONYMS)
+                                    DictionaryModeMenuItems(
+                                        currentMode = currentMode,
+                                        onSelect = { mode ->
+                                            com.hayhak.turkcesozluk.data.db.SettingsManager.setDictionaryMode(context, mode)
                                             showSettingsMenu = false
                                         },
-                                        leadingIcon = { 
-                                            RadioButton(selected = currentMode == com.hayhak.turkcesozluk.data.db.DictionaryMode.SYNONYMS, onClick = null) 
-                                        }
-                                    )
-                                    DropdownMenuItem(
-                                        text = { Text(stringResource(R.string.mode_verbs)) },
-                                        onClick = {
-                                            com.hayhak.turkcesozluk.data.db.SettingsManager.setDictionaryMode(context, com.hayhak.turkcesozluk.data.db.DictionaryMode.VERBS)
-                                            showSettingsMenu = false
-                                        },
-                                        leadingIcon = {
-                                            RadioButton(selected = currentMode == com.hayhak.turkcesozluk.data.db.DictionaryMode.VERBS, onClick = null)
-                                        }
-                                    )
-                                    DropdownMenuItem(
-                                        text = { Text(stringResource(R.string.mode_definitions)) },
-                                        onClick = {
-                                            com.hayhak.turkcesozluk.data.db.SettingsManager.setDictionaryMode(context, com.hayhak.turkcesozluk.data.db.DictionaryMode.DEFINITIONS)
-                                            showSettingsMenu = false
-                                        },
-                                        leadingIcon = {
-                                            RadioButton(selected = currentMode == com.hayhak.turkcesozluk.data.db.DictionaryMode.DEFINITIONS, onClick = null)
-                                        }
-                                    )
-                                    DropdownMenuItem(
-                                        text = { Text(stringResource(R.string.mode_idioms)) },
-                                        onClick = {
-                                            com.hayhak.turkcesozluk.data.db.SettingsManager.setDictionaryMode(context, com.hayhak.turkcesozluk.data.db.DictionaryMode.IDIOMS)
-                                            showSettingsMenu = false
-                                        },
-                                        leadingIcon = {
-                                            RadioButton(selected = currentMode == com.hayhak.turkcesozluk.data.db.DictionaryMode.IDIOMS, onClick = null)
-                                        }
-                                    )
-                                    DropdownMenuItem(
-                                        text = { Text(stringResource(R.string.mode_adjectives)) },
-                                        onClick = {
-                                            com.hayhak.turkcesozluk.data.db.SettingsManager.setDictionaryMode(context, com.hayhak.turkcesozluk.data.db.DictionaryMode.ADJECTIVES)
-                                            showSettingsMenu = false
-                                        },
-                                        leadingIcon = {
-                                            RadioButton(selected = currentMode == com.hayhak.turkcesozluk.data.db.DictionaryMode.ADJECTIVES, onClick = null)
-                                        }
-                                    )
-                                    DropdownMenuItem(
-                                        text = { Text(stringResource(R.string.mode_all)) },
-                                        onClick = {
-                                            com.hayhak.turkcesozluk.data.db.SettingsManager.setDictionaryMode(context, com.hayhak.turkcesozluk.data.db.DictionaryMode.ALL)
-                                            showSettingsMenu = false
-                                        },
-                                        leadingIcon = {
-                                            RadioButton(selected = currentMode == com.hayhak.turkcesozluk.data.db.DictionaryMode.ALL, onClick = null)
-                                        }
                                     )
                                     HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
                                     DropdownMenuItem(

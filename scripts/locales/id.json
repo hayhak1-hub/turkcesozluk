@@ -188,11 +188,14 @@
   "game_no_word": "Tidak ada kata yang cocok untuk permainan dalam mode kamus ini. Coba pilih mode lain di pengaturan kamus.",
   "game_saved_to_mistakes": "Disimpan ke daftar kesalahanmu — bisa dilatih di kuis.",
   "game_solved_count": "%1$d benar",
+  "game_record_count": "Rekor %1$d",
   "game_submit": "Tebak",
   "cd_game_delete": "Hapus huruf terakhir",
   "game_legend_correct": "Posisi tepat",
   "game_legend_present": "Ada di kata",
   "game_legend_absent": "Tidak ada",
   "cd_game_hint": "Buka satu huruf",
-  "game_hint_explainer": "Buntu? Kamu dapat %1$d huruf gratis setiap ronde."
+  "game_hint_explainer": "Buntu? Kamu dapat %1$d huruf gratis setiap ronde.",
+  "game_hint_count_title": "Petunjuk huruf per ronde",
+  "cd_game_hint_settings": "Jumlah petunjuk huruf"
 }

@@ -86,9 +86,9 @@ REQUIRED_KEYS = [
     "tab_game", "game_intro_title", "game_intro_body", "game_start", "game_clue_label",
     "game_letter_count", "game_attempts_left", "game_won_title", "game_lost_title",
     "game_correct_answer", "game_new_word", "game_no_word", "game_saved_to_mistakes",
-    "game_solved_count", "game_submit", "cd_game_delete",
+    "game_solved_count", "game_record_count", "game_submit", "cd_game_delete",
     "game_legend_correct", "game_legend_present", "game_legend_absent",
-    "cd_game_hint", "game_hint_explainer",
+    "cd_game_hint", "game_hint_explainer", "game_hint_count_title", "cd_game_hint_settings",
 ]
 
 

@@ -188,6 +188,7 @@
     <string name="game_no_word">Бұл сөздік режимінде ойынға жарамды сөз табылмады. Сөздік баптауларынан басқа режимді таңдап көр.</string>
     <string name="game_saved_to_mistakes">Сөз қателеріңе жазылды, викторинада қайталай аласың.</string>
     <string name="game_solved_count">%1$d дұрыс</string>
+    <string name="game_record_count">Рекорд %1$d</string>
     <string name="game_submit">Болжау</string>
     <string name="cd_game_delete">Соңғы әріпті өшіру</string>
     <string name="game_legend_correct">Дұрыс орында</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">Сөзде жоқ</string>
     <string name="cd_game_hint">Бір әріп сыйға ал</string>
     <string name="game_hint_explainer">Қиналсаң, әр раундта %1$d әріп сыйлық мүмкіндігің бар.</string>
+    <string name="game_hint_count_title">Әр раундта әріп көрсету құқығы</string>
+    <string name="cd_game_hint_settings">Әріп көрсету саны</string>
 </resources>

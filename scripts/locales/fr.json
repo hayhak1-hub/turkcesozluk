@@ -188,11 +188,14 @@
   "game_no_word": "Aucun mot adapté au jeu n'a été trouvé dans ce mode du dictionnaire. Essaie un autre mode dans les réglages.",
   "game_saved_to_mistakes": "Enregistré dans tes erreurs : tu peux le réviser dans le quiz.",
   "game_solved_count": "%1$d trouvés",
+  "game_record_count": "Record %1$d",
   "game_submit": "Deviner",
   "cd_game_delete": "Effacer la dernière lettre",
   "game_legend_correct": "Bien placée",
   "game_legend_present": "Dans le mot",
   "game_legend_absent": "Pas dans le mot",
   "cd_game_hint": "Révéler une lettre",
-  "game_hint_explainer": "Bloqué ? Tu as %1$d lettres offertes à chaque manche."
+  "game_hint_explainer": "Bloqué ? Tu as %1$d lettres offertes à chaque manche.",
+  "game_hint_count_title": "Indices de lettres par manche",
+  "cd_game_hint_settings": "Nombre d'indices de lettres"
 }

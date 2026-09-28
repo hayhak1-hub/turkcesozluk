@@ -188,6 +188,7 @@
     <string name="game_no_word">Aucun mot adapté au jeu n\'a été trouvé dans ce mode du dictionnaire. Essaie un autre mode dans les réglages.</string>
     <string name="game_saved_to_mistakes">Enregistré dans tes erreurs : tu peux le réviser dans le quiz.</string>
     <string name="game_solved_count">%1$d trouvés</string>
+    <string name="game_record_count">Record %1$d</string>
     <string name="game_submit">Deviner</string>
     <string name="cd_game_delete">Effacer la dernière lettre</string>
     <string name="game_legend_correct">Bien placée</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">Pas dans le mot</string>
     <string name="cd_game_hint">Révéler une lettre</string>
     <string name="game_hint_explainer">Bloqué ? Tu as %1$d lettres offertes à chaque manche.</string>
+    <string name="game_hint_count_title">Indices de lettres par manche</string>
+    <string name="cd_game_hint_settings">Nombre d\'indices de lettres</string>
 </resources>

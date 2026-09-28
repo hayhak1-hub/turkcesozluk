@@ -1,5 +1,7 @@
 package com.hayhak.turkcesozluk.game
 
+import kotlin.random.Random
+
 /** Bir tahmindeki tek bir harfin durumu. */
 enum class LetterState {
     /** Harf doğru ve doğru yerde. */
@@ -28,8 +30,11 @@ object WordleEngine {
 
     const val MAX_ATTEMPTS = 6
 
-    /** Tur başına kullanıcıya hediye edilebilecek harf sayısı. */
+    /** Tur başına varsayılan harf hediyesi hakkı; kullanıcı ayardan değiştirebilir. */
     const val HINTS_PER_ROUND = 2
+
+    /** Ayar menüsünde sunulan en yüksek harf hediyesi hakkı. */
+    const val MAX_HINTS_PER_ROUND = 3
 
     /** Türk alfabesi (29 harf), klavye düzeni ve kelime süzme için tek kaynak. */
     const val ALPHABET = "abcçdefgğhıijklmnoöprsştuüvyz"
@@ -102,18 +107,27 @@ object WordleEngine {
     }
 
     /**
-     * Önceki tahminlerden yeri kesin olarak bilinen konumlar. Harf hediyesi bu
-     * konumları tekrar açıp hakkı boşa harcamasın diye kullanılır.
+     * Önceki tahminlerden yeri kesin olarak bilinen harfler (konum → harf).
+     * Sonraki satırlara taşınır ve yeşil kutu olarak gösterilir.
      */
-    fun knownCorrectPositions(results: List<GuessResult>): Set<Int> {
-        val known = mutableSetOf<Int>()
+    fun knownCorrectLetters(results: List<GuessResult>): Map<Int, Char> {
+        val known = mutableMapOf<Int, Char>()
         results.forEach { result ->
             result.states.forEachIndexed { index, state ->
-                if (state == LetterState.CORRECT) known.add(index)
+                if (state == LetterState.CORRECT) {
+                    known[index] = result.letters[index]
+                }
             }
         }
         return known
     }
+
+    /**
+     * Önceki tahminlerden yeri kesin olarak bilinen konumlar. Harf hediyesi bu
+     * konumları tekrar açıp hakkı boşa harcamasın diye kullanılır.
+     */
+    fun knownCorrectPositions(results: List<GuessResult>): Set<Int> =
+        knownCorrectLetters(results).keys
 
     /**
      * Harf hediyesiyle açılabilecek konumlar: yeri tahminlerden zaten bilinenler ve
@@ -126,6 +140,22 @@ object WordleEngine {
     ): List<Int> {
         val known = knownCorrectPositions(guesses)
         return (0 until wordLength).filter { it !in known && it !in alreadyRevealed }
+    }
+
+    /**
+     * Bir harf hediyesi: henüz bilinmeyen bir harf seçilir ve kelimedeki o harfin
+     * bütün bilinmeyen kopyaları birden açılır. Tek kullanım hakkı, tekrar eden
+     * harfleri de kapsar.
+     */
+    fun hintRevealPositions(
+        word: String,
+        alreadyKnown: Set<Int>,
+        random: Random = Random.Default,
+    ): List<Int> {
+        val hidden = word.indices.filter { it !in alreadyKnown }
+        if (hidden.isEmpty()) return emptyList()
+        val letter = word[hidden[random.nextInt(hidden.size)]]
+        return hidden.filter { word[it] == letter }
     }
 
     /**

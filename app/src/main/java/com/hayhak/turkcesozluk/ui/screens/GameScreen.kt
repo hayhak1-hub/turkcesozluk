@@ -1,5 +1,6 @@
 package com.hayhak.turkcesozluk.ui.screens
 
+import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
@@ -11,9 +12,10 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.Backspace
 import androidx.compose.material.icons.rounded.EmojiEvents
+import androidx.compose.material.icons.rounded.ExpandLess
+import androidx.compose.material.icons.rounded.ExpandMore
 import androidx.compose.material.icons.rounded.Lightbulb
 import androidx.compose.material.icons.rounded.PlayArrow
-import androidx.compose.material.icons.rounded.ExpandMore
 import androidx.compose.material.icons.rounded.Redeem
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -21,6 +23,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -30,6 +33,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.hayhak.turkcesozluk.R
 import com.hayhak.turkcesozluk.data.db.DictionaryMode
+import com.hayhak.turkcesozluk.ui.components.DictionaryModeMenuButton
+import com.hayhak.turkcesozluk.ui.components.GameHintCountMenuButton
 import com.hayhak.turkcesozluk.game.LetterState
 import com.hayhak.turkcesozluk.game.WordleEngine
 import com.hayhak.turkcesozluk.util.uppercaseTR
@@ -51,6 +56,7 @@ fun GameScreen(viewModel: GameViewModel = hiltViewModel()) {
     val state by viewModel.uiState.collectAsState()
     val shakeSignal by viewModel.shakeSignal.collectAsState()
     val currentMode by viewModel.currentMode.collectAsState()
+    val hintCount by viewModel.hintCount.collectAsState()
 
     val shakeOffset = remember { Animatable(0f) }
     LaunchedEffect(shakeSignal) {
@@ -66,6 +72,10 @@ fun GameScreen(viewModel: GameViewModel = hiltViewModel()) {
         GameStatus.IDLE -> GameIntro(
             currentMode = currentMode,
             onModeChange = viewModel::setMode,
+            hintCount = hintCount,
+            onHintCountChange = viewModel::setHintCount,
+            solvedCount = state.solvedCount,
+            recordCount = state.recordCount,
             onStart = viewModel::startGame,
         )
         GameStatus.LOADING -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -74,12 +84,18 @@ fun GameScreen(viewModel: GameViewModel = hiltViewModel()) {
         GameStatus.NO_WORD -> GameUnavailable(
             currentMode = currentMode,
             onModeChange = viewModel::setMode,
+            hintCount = hintCount,
+            onHintCountChange = viewModel::setHintCount,
+            solvedCount = state.solvedCount,
+            recordCount = state.recordCount,
             onRetry = viewModel::startGame,
         )
         else -> GameBoard(
             state = state,
             currentMode = currentMode,
             onModeChange = viewModel::setMode,
+            hintCount = hintCount,
+            onHintCountChange = viewModel::setHintCount,
             shakeOffsetPx = shakeOffset.value,
             onLetter = viewModel::onLetter,
             onDelete = viewModel::onDelete,
@@ -94,6 +110,10 @@ fun GameScreen(viewModel: GameViewModel = hiltViewModel()) {
 private fun GameIntro(
     currentMode: DictionaryMode,
     onModeChange: (DictionaryMode) -> Unit,
+    hintCount: Int,
+    onHintCountChange: (Int) -> Unit,
+    solvedCount: Int,
+    recordCount: Int,
     onStart: () -> Unit,
 ) {
     Column(
@@ -103,9 +123,11 @@ private fun GameIntro(
             .padding(horizontal = 24.dp, vertical = 12.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        GameModeSelector(
+        GameSettingsBar(
             currentMode = currentMode,
             onModeChange = onModeChange,
+            hintCount = hintCount,
+            onHintCountChange = onHintCountChange,
             modifier = Modifier.align(Alignment.End),
         )
         Spacer(Modifier.height(12.dp))
@@ -116,11 +138,14 @@ private fun GameIntro(
             modifier = Modifier.size(64.dp),
         )
         Spacer(Modifier.height(16.dp))
+        GameScoreRow(solvedCount = solvedCount, recordCount = recordCount)
+        Spacer(Modifier.height(16.dp))
         Text(
             text = stringResource(R.string.game_intro_title),
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.ExtraBold,
             textAlign = TextAlign.Center,
+            color = MaterialTheme.colorScheme.onSurface,
         )
         Spacer(Modifier.height(12.dp))
         Text(
@@ -131,7 +156,7 @@ private fun GameIntro(
         )
         Spacer(Modifier.height(8.dp))
         Text(
-            text = stringResource(R.string.game_hint_explainer, WordleEngine.HINTS_PER_ROUND),
+            text = stringResource(R.string.game_hint_explainer, hintCount),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center,
@@ -155,52 +180,102 @@ private fun GameIntro(
     }
 }
 
-/**
- * Oyunun hangi sözlükten kelime çekeceğini kullanıcı seçer. Kip değişimi
- * uygulama genelindeki sözlük kipini değiştirir (veri o kipten yüklenir).
- */
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun GameModeSelector(
+private fun GameSettingsBar(
     currentMode: DictionaryMode,
     onModeChange: (DictionaryMode) -> Unit,
+    hintCount: Int,
+    onHintCountChange: (Int) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    var expanded by remember { mutableStateOf(false) }
-
-    Box(modifier = modifier) {
-        AssistChip(
-            onClick = { expanded = true },
-            label = {
-                Text(
-                    text = dictionaryModeTitle(currentMode),
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            },
-            trailingIcon = {
-                Icon(
-                    Icons.Rounded.ExpandMore,
-                    contentDescription = stringResource(R.string.settings_dictionary_mode),
-                    modifier = Modifier.size(18.dp),
-                )
-            },
-            shape = RoundedCornerShape(12.dp),
+    Row(
+        modifier = modifier,
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        GameHintCountMenuButton(
+            hintCount = hintCount,
+            onHintCountSelected = onHintCountChange,
         )
+        DictionaryModeMenuButton(
+            currentMode = currentMode,
+            onModeSelected = onModeChange,
+        )
+    }
+}
 
-        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
-            DictionaryMode.entries.forEach { mode ->
-                DropdownMenuItem(
-                    text = { Text(dictionaryModeTitle(mode)) },
-                    onClick = {
-                        expanded = false
-                        onModeChange(mode)
-                    },
-                    leadingIcon = {
-                        RadioButton(selected = mode == currentMode, onClick = null)
-                    },
+@Composable
+private fun GameScoreRow(
+    solvedCount: Int,
+    recordCount: Int,
+    stacked: Boolean = false,
+) {
+    val solved = @Composable {
+        GameScoreChip(
+            text = stringResource(R.string.game_solved_count, solvedCount),
+            containerColor = MaterialTheme.colorScheme.primary,
+            contentColor = MaterialTheme.colorScheme.onPrimary,
+        )
+    }
+    val record = @Composable {
+        GameScoreChip(
+            text = stringResource(R.string.game_record_count, recordCount),
+            containerColor = MaterialTheme.colorScheme.secondaryContainer,
+            contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
+            icon = Icons.Rounded.EmojiEvents,
+        )
+    }
+    if (stacked) {
+        Column(
+            horizontalAlignment = Alignment.End,
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
+            solved()
+            record()
+        }
+    } else {
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            solved()
+            record()
+        }
+    }
+}
+
+@Composable
+private fun GameScoreChip(
+    text: String,
+    containerColor: Color,
+    contentColor: Color,
+    icon: ImageVector? = null,
+) {
+    Surface(
+        color = containerColor,
+        contentColor = contentColor,
+        shape = RoundedCornerShape(12.dp),
+        tonalElevation = 0.dp,
+        shadowElevation = 0.dp,
+    ) {
+        Row(
+            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            if (icon != null) {
+                Icon(
+                    icon,
+                    contentDescription = null,
+                    modifier = Modifier.size(16.dp),
+                    tint = contentColor,
                 )
+                Spacer(Modifier.width(4.dp))
             }
+            Text(
+                text = text,
+                style = MaterialTheme.typography.labelLarge,
+                fontWeight = FontWeight.ExtraBold,
+                maxLines = 1,
+            )
         }
     }
 }
@@ -240,6 +315,10 @@ private fun LegendItem(color: Color, label: String) {
 private fun GameUnavailable(
     currentMode: DictionaryMode,
     onModeChange: (DictionaryMode) -> Unit,
+    hintCount: Int,
+    onHintCountChange: (Int) -> Unit,
+    solvedCount: Int,
+    recordCount: Int,
     onRetry: () -> Unit,
 ) {
     Column(
@@ -249,12 +328,16 @@ private fun GameUnavailable(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        GameModeSelector(
+        GameSettingsBar(
             currentMode = currentMode,
             onModeChange = onModeChange,
+            hintCount = hintCount,
+            onHintCountChange = onHintCountChange,
             modifier = Modifier.align(Alignment.End),
         )
         Spacer(Modifier.height(24.dp))
+        GameScoreRow(solvedCount = solvedCount, recordCount = recordCount)
+        Spacer(Modifier.height(16.dp))
         Text(
             text = stringResource(R.string.game_no_word),
             style = MaterialTheme.typography.bodyLarge,
@@ -273,6 +356,8 @@ private fun GameBoard(
     state: GameUiState,
     currentMode: DictionaryMode,
     onModeChange: (DictionaryMode) -> Unit,
+    hintCount: Int,
+    onHintCountChange: (Int) -> Unit,
     shakeOffsetPx: Float,
     onLetter: (Char) -> Unit,
     onDelete: () -> Unit,
@@ -294,12 +379,14 @@ private fun GameBoard(
     }
 
     Column(modifier = Modifier.fillMaxSize()) {
-        GameModeSelector(
+        GameSettingsBar(
             currentMode = currentMode,
             onModeChange = onModeChange,
+            hintCount = hintCount,
+            onHintCountChange = onHintCountChange,
             modifier = Modifier
                 .align(Alignment.End)
-                .padding(end = 16.dp, top = 8.dp),
+                .padding(end = 8.dp, top = 4.dp),
         )
         ClueCard(state)
 
@@ -334,6 +421,10 @@ private fun GameBoard(
 
 @Composable
 private fun ClueCard(state: GameUiState) {
+    var expanded by remember(state.clue) { mutableStateOf(false) }
+    val clueScroll = rememberScrollState()
+    LaunchedEffect(state.clue) { clueScroll.scrollTo(0) }
+
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -342,14 +433,21 @@ private fun ClueCard(state: GameUiState) {
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f)
         ),
+        onClick = { expanded = !expanded },
     ) {
-        Column(Modifier.padding(16.dp)) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
+        Column(
+            Modifier
+                .animateContentSize()
+                .padding(16.dp),
+        ) {
+            Row(verticalAlignment = Alignment.Top) {
                 Icon(
                     Icons.Rounded.Lightbulb,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.size(18.dp),
+                    modifier = Modifier
+                        .padding(top = 2.dp)
+                        .size(18.dp),
                 )
                 Spacer(Modifier.width(6.dp))
                 Text(
@@ -357,24 +455,44 @@ private fun ClueCard(state: GameUiState) {
                     style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(top = 2.dp),
+                )
+                Icon(
+                    imageVector = if (expanded) Icons.Rounded.ExpandLess else Icons.Rounded.ExpandMore,
+                    contentDescription = stringResource(R.string.game_clue_label),
+                    tint = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier
+                        .padding(start = 2.dp, top = 1.dp)
+                        .size(22.dp),
                 )
                 Spacer(Modifier.weight(1f))
-                if (state.solvedCount > 0) {
-                    Text(
-                        text = stringResource(R.string.game_solved_count, state.solvedCount),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
+                GameScoreRow(
+                    solvedCount = state.solvedCount,
+                    recordCount = state.recordCount,
+                    stacked = true,
+                )
             }
             Spacer(Modifier.height(6.dp))
-            Text(
-                text = state.clue,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
-                maxLines = 3,
-                overflow = TextOverflow.Ellipsis,
-            )
+            if (expanded) {
+                Text(
+                    text = state.clue,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .heightIn(max = 220.dp)
+                        .verticalScroll(clueScroll),
+                )
+            } else {
+                Text(
+                    text = state.clue,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
             Spacer(Modifier.height(8.dp))
             Text(
                 text = stringResource(R.string.game_letter_count, state.wordLength) +
@@ -391,7 +509,7 @@ private fun ClueCard(state: GameUiState) {
 private fun GuessGrid(state: GameUiState, shakeOffsetPx: Float) {
     if (state.wordLength <= 0) return
 
-    val lockedPositions = state.lockedPositions
+    val lockedLetters = state.lockedLetters
 
     BoxWithConstraints {
         val gap = 6.dp
@@ -410,8 +528,8 @@ private fun GuessGrid(state: GameUiState, shakeOffsetPx: Float) {
                 ) {
                     repeat(state.wordLength) { column ->
                         val guess = state.guesses.getOrNull(row)
+                        val lockedLetter = lockedLetters[column]
                         val gifted = column in state.revealedPositions
-                        val locked = column in lockedPositions
                         when {
                             guess != null -> LetterCell(
                                 letter = guess.letters[column],
@@ -419,11 +537,16 @@ private fun GuessGrid(state: GameUiState, shakeOffsetPx: Float) {
                                 size = cell,
                             )
                             isActiveRow -> LetterCell(
-                                letter = state.slots.getOrNull(column),
-                                // Kilitli harf (hediye ya da yeri kesinleşmiş) zaten doğru.
-                                state = if (locked) LetterState.CORRECT else null,
+                                letter = state.slots.getOrNull(column) ?: lockedLetter,
+                                state = if (lockedLetter != null) LetterState.CORRECT else null,
                                 size = cell,
                                 highlighted = column == state.activeIndex,
+                                gifted = gifted,
+                            )
+                            lockedLetter != null -> LetterCell(
+                                letter = lockedLetter,
+                                state = LetterState.CORRECT,
+                                size = cell,
                                 gifted = gifted,
                             )
                             else -> LetterCell(letter = null, state = null, size = cell)
@@ -448,7 +571,7 @@ private fun LetterCell(
         LetterState.CORRECT -> CorrectGreen
         LetterState.PRESENT -> PresentAmber
         LetterState.ABSENT -> MaterialTheme.colorScheme.outline
-        null -> MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f)
+        null -> MaterialTheme.colorScheme.surface
     }
     val contentColor = if (state == null) {
         MaterialTheme.colorScheme.onSurface
@@ -460,7 +583,7 @@ private fun LetterCell(
         gifted -> BorderStroke(2.dp, MaterialTheme.colorScheme.primary)
         state != null -> null
         highlighted -> BorderStroke(2.dp, MaterialTheme.colorScheme.primary)
-        else -> BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
+        else -> BorderStroke(1.5.dp, MaterialTheme.colorScheme.outline)
     }
 
     Surface(

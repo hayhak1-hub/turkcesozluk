@@ -188,11 +188,14 @@
   "game_no_word": "Bu sözlük tertibinde oýna laýyk söz tapylmady. Sözlük sazlamalaryndan başga tertip saýlap gör.",
   "game_saved_to_mistakes": "Söz ýalňyşlaryňa ýazyldy, wiktorinada gaýtalap bilersiň.",
   "game_solved_count": "%1$d dogry",
+  "game_record_count": "Rekord %1$d",
   "game_submit": "Çakla",
   "cd_game_delete": "Soňky harpy poz",
   "game_legend_correct": "Dogry ýerinde",
   "game_legend_present": "Sözde bar",
   "game_legend_absent": "Sözde ýok",
   "cd_game_hint": "Bir harp sowgat al",
-  "game_hint_explainer": "Kynalsaň, her tapgyrda %1$d harp sowgady hukugyň bar."
+  "game_hint_explainer": "Kynalsaň, her tapgyrda %1$d harp sowgady hukugyň bar.",
+  "game_hint_count_title": "Her tapgyrda harp görkezmek hukugy",
+  "cd_game_hint_settings": "Harp görkezmek sany"
 }

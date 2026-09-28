@@ -188,6 +188,7 @@
     <string name="game_no_word">এই অভিধান মোডে খেলার উপযোগী শব্দ পাওয়া যায়নি। সেটিংস থেকে অন্য মোড বেছে দেখো।</string>
     <string name="game_saved_to_mistakes">তোমার ভুলের তালিকায় সংরক্ষিত — কুইজে অনুশীলন করতে পারবে।</string>
     <string name="game_solved_count">%1$d সঠিক</string>
+    <string name="game_record_count">রেকর্ড %1$d</string>
     <string name="game_submit">অনুমান করো</string>
     <string name="cd_game_delete">শেষ অক্ষর মুছো</string>
     <string name="game_legend_correct">সঠিক জায়গায়</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">শব্দে নেই</string>
     <string name="cd_game_hint">একটি অক্ষর খুলুন</string>
     <string name="game_hint_explainer">আটকে গেছ? প্রতি রাউন্ডে তুমি %1$d টি বিনামূল্যে অক্ষর পাবে।</string>
+    <string name="game_hint_count_title">প্রতি রাউন্ডে অক্ষর ইঙ্গিত</string>
+    <string name="cd_game_hint_settings">অক্ষর ইঙ্গিতের সংখ্যা</string>
 </resources>

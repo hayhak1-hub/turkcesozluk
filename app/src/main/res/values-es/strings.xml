@@ -188,6 +188,7 @@
     <string name="game_no_word">No se encontró ninguna palabra adecuada para el juego en este modo del diccionario. Prueba a elegir otro modo en los ajustes.</string>
     <string name="game_saved_to_mistakes">Guardado en tus errores: puedes practicarlo en el cuestionario.</string>
     <string name="game_solved_count">%1$d aciertos</string>
+    <string name="game_record_count">Récord %1$d</string>
     <string name="game_submit">Adivinar</string>
     <string name="cd_game_delete">Borrar última letra</string>
     <string name="game_legend_correct">En su sitio</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">No está en la palabra</string>
     <string name="cd_game_hint">Revelar una letra</string>
     <string name="game_hint_explainer">¿Atascado? Tienes %1$d letras gratis en cada ronda.</string>
+    <string name="game_hint_count_title">Pistas de letras por ronda</string>
+    <string name="cd_game_hint_settings">Número de pistas de letras</string>
 </resources>

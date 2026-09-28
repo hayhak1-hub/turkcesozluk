@@ -188,6 +188,7 @@
     <string name="game_no_word">Không tìm thấy từ nào phù hợp với trò chơi ở chế độ từ điển này. Hãy thử chọn chế độ khác trong cài đặt.</string>
     <string name="game_saved_to_mistakes">Đã lưu vào phần lỗi sai — bạn có thể ôn lại trong câu đố.</string>
     <string name="game_solved_count">Đúng %1$d</string>
+    <string name="game_record_count">Kỷ lục %1$d</string>
     <string name="game_submit">Đoán</string>
     <string name="cd_game_delete">Xóa chữ cái cuối</string>
     <string name="game_legend_correct">Đúng vị trí</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">Không có trong từ</string>
     <string name="cd_game_hint">Mở một chữ cái</string>
     <string name="game_hint_explainer">Bí rồi? Mỗi lượt bạn được %1$d chữ cái miễn phí.</string>
+    <string name="game_hint_count_title">Gợi ý chữ cái mỗi lượt</string>
+    <string name="cd_game_hint_settings">Số lần gợi ý chữ cái</string>
 </resources>

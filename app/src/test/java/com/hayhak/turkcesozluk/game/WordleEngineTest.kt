@@ -102,6 +102,20 @@ class WordleEngineTest {
     }
 
     @Test
+    fun `known correct letters are carried with their positions`() {
+        val first = GuessResult("kava".toList(), WordleEngine.evaluate("kava", "kaya"))
+        assertEquals(
+            mapOf(0 to 'k', 1 to 'a', 3 to 'a'),
+            WordleEngine.knownCorrectLetters(listOf(first))
+        )
+        val second = GuessResult("saya".toList(), WordleEngine.evaluate("saya", "kaya"))
+        assertEquals(
+            mapOf(0 to 'k', 1 to 'a', 2 to 'y', 3 to 'a'),
+            WordleEngine.knownCorrectLetters(listOf(first, second))
+        )
+    }
+
+    @Test
     fun `known correct positions are collected across guesses`() {
         // hedef "kaya": ilk tahminde 'k' (0) yerinde, ikincide 'y' (2) yerinde
         val first = GuessResult("kava".toList(), WordleEngine.evaluate("kava", "kaya"))
@@ -150,6 +164,29 @@ class WordleEngineTest {
         val solved = GuessResult("kaya".toList(), WordleEngine.evaluate("kaya", "kaya"))
         assertTrue(WordleEngine.hintCandidates(4, listOf(solved), emptySet()).isEmpty())
         assertTrue(WordleEngine.hintCandidates(4, emptyList(), setOf(0, 1, 2, 3)).isEmpty())
+    }
+
+    @Test
+    fun `a hint reveals every remaining copy of the chosen letter`() {
+        // "abba": b'ler zaten biliniyor; kalan yalnız 'a' → 0 ve 3 birlikte açılır.
+        assertEquals(
+            listOf(0, 3),
+            WordleEngine.hintRevealPositions("abba", alreadyKnown = setOf(1, 2))
+        )
+    }
+
+    @Test
+    fun `a hint skips positions the player already knows`() {
+        // "kaya" içinde iki 'a'; 1. sıradaki zaten biliniyor → yalnızca 3 açılır.
+        assertEquals(
+            listOf(3),
+            WordleEngine.hintRevealPositions("kaya", alreadyKnown = setOf(0, 1, 2))
+        )
+    }
+
+    @Test
+    fun `a hint returns nothing when the whole word is known`() {
+        assertTrue(WordleEngine.hintRevealPositions("kaya", setOf(0, 1, 2, 3)).isEmpty())
     }
 
     @Test

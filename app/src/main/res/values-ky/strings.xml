@@ -188,6 +188,7 @@
     <string name="game_no_word">Бул сөздүк режиминде оюнга ылайыктуу сөз табылган жок. Сөздүк жөндөөлөрүнөн башка режимди тандап көр.</string>
     <string name="game_saved_to_mistakes">Сөз каталарыңа жазылды, викторинада кайталай аласың.</string>
     <string name="game_solved_count">%1$d туура</string>
+    <string name="game_record_count">Рекорд %1$d</string>
     <string name="game_submit">Болжоо</string>
     <string name="cd_game_delete">Акыркы тамганы өчүрүү</string>
     <string name="game_legend_correct">Туура ордунда</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">Сөздө жок</string>
     <string name="cd_game_hint">Бир тамга белекке ал</string>
     <string name="game_hint_explainer">Кыйналсаң, ар раундда %1$d тамга белек мүмкүнчүлүгүң бар.</string>
+    <string name="game_hint_count_title">Ар раунддагы тамга көрсөтүү укугу</string>
+    <string name="cd_game_hint_settings">Тамга көрсөтүү саны</string>
 </resources>

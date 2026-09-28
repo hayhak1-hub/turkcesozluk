@@ -188,6 +188,7 @@
     <string name="game_no_word">இந்த அகராதி முறையில் விளையாட்டுக்கு ஏற்ற சொல் கிடைக்கவில்லை. அமைப்புகளில் வேறு முறையைத் தேர்வுசெய்து பார்.</string>
     <string name="game_saved_to_mistakes">உன் தவறுகளில் சேமிக்கப்பட்டது — வினாடி வினாவில் பயிற்சி செய்யலாம்.</string>
     <string name="game_solved_count">%1$d சரி</string>
+    <string name="game_record_count">சாதனை %1$d</string>
     <string name="game_submit">யூகி</string>
     <string name="cd_game_delete">கடைசி எழுத்தை அழி</string>
     <string name="game_legend_correct">சரியான இடத்தில்</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">சொல்லில் இல்லை</string>
     <string name="cd_game_hint">ஒரு எழுத்தை வெளிப்படுத்து</string>
     <string name="game_hint_explainer">சிக்கிக்கொண்டாயா? ஒவ்வொரு சுற்றிலும் %1$d இலவச எழுத்துகள் கிடைக்கும்.</string>
+    <string name="game_hint_count_title">சுற்றுக்கு எழுத்து குறிப்புகள்</string>
+    <string name="cd_game_hint_settings">எழுத்து குறிப்பு எண்ணிக்கை</string>
 </resources>

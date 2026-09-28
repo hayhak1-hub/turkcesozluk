@@ -188,11 +188,14 @@
   "game_no_word": "この辞書モードではゲームに適した単語が見つかりませんでした。辞書の設定で別のモードを試してください。",
   "game_saved_to_mistakes": "間違いに保存しました。クイズで復習できます。",
   "game_solved_count": "正解%1$d個",
+  "game_record_count": "記録 %1$d",
   "game_submit": "推測する",
   "cd_game_delete": "最後の文字を削除",
   "game_legend_correct": "位置も正解",
   "game_legend_present": "単語に含まれる",
   "game_legend_absent": "含まれない",
   "cd_game_hint": "文字を1つ開く",
-  "game_hint_explainer": "行き詰まったら、1ラウンドにつき%1$d文字まで無料で開けます。"
+  "game_hint_explainer": "行き詰まったら、1ラウンドにつき%1$d文字まで無料で開けます。",
+  "game_hint_count_title": "ラウンドごとの文字ヒント",
+  "cd_game_hint_settings": "文字ヒントの回数"
 }

@@ -188,11 +188,14 @@
   "game_no_word": "Bu lug'at rejimida o'yinga mos so'z topilmadi. Lug'at sozlamalaridan boshqa rejimni tanlab ko'r.",
   "game_saved_to_mistakes": "So'z xatolaringga yozildi, viktorinada takrorlashing mumkin.",
   "game_solved_count": "%1$d to'g'ri",
+  "game_record_count": "Rekord %1$d",
   "game_submit": "Taxmin qil",
   "cd_game_delete": "Oxirgi harfni o'chir",
   "game_legend_correct": "To'g'ri joyda",
   "game_legend_present": "So'zda bor",
   "game_legend_absent": "So'zda yo'q",
   "cd_game_hint": "Bitta harf sovg'a ol",
-  "game_hint_explainer": "Qiynalsang, har raundda %1$d ta harf sovg'asi imkoning bor."
+  "game_hint_explainer": "Qiynalsang, har raundda %1$d ta harf sovg'asi imkoning bor.",
+  "game_hint_count_title": "Har raundda harf ko'rsatish huquqi",
+  "cd_game_hint_settings": "Harf ko'rsatish soni"
 }

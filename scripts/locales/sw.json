@@ -188,11 +188,14 @@
   "game_no_word": "Hakuna neno linalofaa kwa mchezo katika hali hii ya kamusi. Jaribu kuchagua hali nyingine kwenye mipangilio.",
   "game_saved_to_mistakes": "Limehifadhiwa kwenye makosa yako — unaweza kulifanyia mazoezi kwenye jaribio.",
   "game_solved_count": "Sahihi %1$d",
+  "game_record_count": "Rekodi %1$d",
   "game_submit": "Bahatisha",
   "cd_game_delete": "Futa herufi ya mwisho",
   "game_legend_correct": "Mahali sahihi",
   "game_legend_present": "Lipo kwenye neno",
   "game_legend_absent": "Halipo",
   "cd_game_hint": "Fichua herufi moja",
-  "game_hint_explainer": "Umekwama? Unapata herufi %1$d bure kila raundi."
+  "game_hint_explainer": "Umekwama? Unapata herufi %1$d bure kila raundi.",
+  "game_hint_count_title": "Vidokezo vya herufi kwa raundi",
+  "cd_game_hint_settings": "Idadi ya vidokezo vya herufi"
 }

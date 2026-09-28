@@ -188,6 +188,7 @@
     <string name="game_no_word">この辞書モードではゲームに適した単語が見つかりませんでした。辞書の設定で別のモードを試してください。</string>
     <string name="game_saved_to_mistakes">間違いに保存しました。クイズで復習できます。</string>
     <string name="game_solved_count">正解%1$d個</string>
+    <string name="game_record_count">記録 %1$d</string>
     <string name="game_submit">推測する</string>
     <string name="cd_game_delete">最後の文字を削除</string>
     <string name="game_legend_correct">位置も正解</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">含まれない</string>
     <string name="cd_game_hint">文字を1つ開く</string>
     <string name="game_hint_explainer">行き詰まったら、1ラウンドにつき%1$d文字まで無料で開けます。</string>
+    <string name="game_hint_count_title">ラウンドごとの文字ヒント</string>
+    <string name="cd_game_hint_settings">文字ヒントの回数</string>
 </resources>

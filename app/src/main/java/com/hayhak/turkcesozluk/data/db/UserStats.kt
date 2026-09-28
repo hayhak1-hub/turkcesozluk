@@ -25,12 +25,20 @@ object UserStatsManager {
             editor.putString(KEY_LAST_ACTIVITY, incomingDate)
             editor.putInt(KEY_STREAK_COUNT, data[KEY_STREAK_COUNT] as? Int ?: 0)
         }
+        (data[KEY_GAME_STREAK] as? Int)?.let { incoming ->
+            editor.putInt(KEY_GAME_STREAK, maxOf(incoming, prefs.getInt(KEY_GAME_STREAK, 0)))
+        }
+        (data[KEY_GAME_RECORD] as? Int)?.let { incoming ->
+            editor.putInt(KEY_GAME_RECORD, maxOf(incoming, prefs.getInt(KEY_GAME_RECORD, 0)))
+        }
         check(editor.commit())
     }
     private const val PREFS_NAME = "user_stats_prefs"
     private const val KEY_LAST_ACTIVITY = "last_activity_date"
     private const val KEY_STREAK_COUNT = "streak_count"
     private const val KEY_STATS_PREFIX = "daily_stat_"
+    private const val KEY_GAME_STREAK = "game_win_streak"
+    private const val KEY_GAME_RECORD = "game_best_streak"
 
     private val mutex = Mutex()
     private val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.ROOT)
@@ -119,5 +127,32 @@ object UserStatsManager {
             }
             return total
         }
+    }
+
+    data class GameScores(val streak: Int, val record: Int)
+
+    suspend fun getGameScores(context: Context): GameScores = mutex.withLock {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val streak = prefs.getInt(KEY_GAME_STREAK, 0)
+        val record = maxOf(prefs.getInt(KEY_GAME_RECORD, 0), streak)
+        GameScores(streak, record)
+    }
+
+    suspend fun recordGameWin(context: Context): GameScores = mutex.withLock {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val streak = prefs.getInt(KEY_GAME_STREAK, 0) + 1
+        val record = maxOf(prefs.getInt(KEY_GAME_RECORD, 0), streak)
+        prefs.edit()
+            .putInt(KEY_GAME_STREAK, streak)
+            .putInt(KEY_GAME_RECORD, record)
+            .apply()
+        GameScores(streak, record)
+    }
+
+    suspend fun recordGameLoss(context: Context): GameScores = mutex.withLock {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val record = prefs.getInt(KEY_GAME_RECORD, 0)
+        prefs.edit().putInt(KEY_GAME_STREAK, 0).apply()
+        GameScores(0, record)
     }
 }

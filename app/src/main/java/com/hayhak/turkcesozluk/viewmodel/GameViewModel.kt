@@ -51,6 +51,7 @@ data class GameUiState(
     /** Basılması işe yaramayacağı için pasifleştirilen klavye tuşları. */
     val disabledKeys: Set<Char> = emptySet(),
     val solvedCount: Int = 0,
+    val recordCount: Int = 0,
     val savedToMistakes: Boolean = false,
 ) {
     val attemptsLeft: Int get() = WordleEngine.MAX_ATTEMPTS - guesses.size
@@ -62,6 +63,19 @@ data class GameUiState(
      */
     val lockedPositions: Set<Int>
         get() = revealedPositions + WordleEngine.knownCorrectPositions(guesses)
+
+    /**
+     * Yeri kesinleşmiş harfler: tahminden yeşil çıkanlar ve hediye edilenler.
+     * Sonraki satırlarda kutu hem yeşil hem dolu gösterilir.
+     */
+    val lockedLetters: Map<Int, Char>
+        get() {
+            val known = WordleEngine.knownCorrectLetters(guesses).toMutableMap()
+            revealedPositions.forEach { index ->
+                slots.getOrNull(index)?.let { known.putIfAbsent(index, it) }
+            }
+            return known
+        }
 
     /** İmlecin bulunduğu (ilk boş) konum; satır doluysa -1. */
     val activeIndex: Int get() = slots.indexOfFirst { it == null }
@@ -81,7 +95,27 @@ class GameViewModel @Inject constructor(
     val currentMode = SettingsManager.modeState
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), SettingsManager.modeState.value)
 
+    val hintCount = SettingsManager.gameHintCountState
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), SettingsManager.gameHintCountState.value)
+
+    private val _uiState = MutableStateFlow(GameUiState())
+    val uiState = _uiState.asStateFlow()
+
+    /** Tahmin eksik harfli gönderildiğinde ekranın titreşim/uyarı tetiklemesi için sayaç. */
+    private val _shakeSignal = MutableStateFlow(0)
+    val shakeSignal = _shakeSignal.asStateFlow()
+
+    private var target: GameTarget? = null
+    private var sessionMode: String = SettingsManager.modeState.value.name
+    private val playedWords = mutableSetOf<String>()
+
     init {
+        viewModelScope.launch {
+            val scores = UserStatsManager.getGameScores(getApplication())
+            _uiState.update {
+                it.copy(solvedCount = scores.streak, recordCount = scores.record)
+            }
+        }
         // Kip değişince sözlük verisi baştan yüklenir; yeni kelime ancak yükleme
         // bittikten sonra seçilebilir. Devam eden bir tur varsa kendiliğinden
         // yeni kipten bir kelimeyle başlatılır.
@@ -103,16 +137,10 @@ class GameViewModel @Inject constructor(
         SettingsManager.setDictionaryMode(getApplication(), mode)
     }
 
-    private val _uiState = MutableStateFlow(GameUiState())
-    val uiState = _uiState.asStateFlow()
-
-    /** Tahmin eksik harfli gönderildiğinde ekranın titreşim/uyarı tetiklemesi için sayaç. */
-    private val _shakeSignal = MutableStateFlow(0)
-    val shakeSignal = _shakeSignal.asStateFlow()
-
-    private var target: GameTarget? = null
-    private var sessionMode: String = SettingsManager.modeState.value.name
-    private val playedWords = mutableSetOf<String>()
+    fun setHintCount(count: Int) {
+        if (count == SettingsManager.gameHintCountState.value) return
+        SettingsManager.setGameHintCount(getApplication(), count)
+    }
 
     fun startGame() = startGame(force = false)
 
@@ -129,7 +157,13 @@ class GameViewModel @Inject constructor(
 
             if (next == null) {
                 target = null
-                _uiState.update { GameUiState(status = GameStatus.NO_WORD, solvedCount = it.solvedCount) }
+                _uiState.update {
+                    GameUiState(
+                        status = GameStatus.NO_WORD,
+                        solvedCount = it.solvedCount,
+                        recordCount = it.recordCount,
+                    )
+                }
                 return@launch
             }
 
@@ -137,15 +171,17 @@ class GameViewModel @Inject constructor(
             playedWords.add(next.word)
             if (playedWords.size > 200) playedWords.clear()
 
+            val hints = SettingsManager.gameHintCountState.value
             _uiState.update {
                 GameUiState(
                     status = GameStatus.PLAYING,
                     clue = next.clue.capitalizeTR(),
                     wordLength = next.word.length,
                     slots = List(next.word.length) { null },
-                    hintsLeft = WordleEngine.HINTS_PER_ROUND,
-                    hintAvailable = true,
+                    hintsLeft = hints,
+                    hintAvailable = hints > 0,
                     solvedCount = it.solvedCount,
+                    recordCount = it.recordCount,
                 )
             }
         }
@@ -175,38 +211,41 @@ class GameViewModel @Inject constructor(
     }
 
     /**
-     * Bir harfi hediye eder: henüz bilinmeyen bir konumu açar ve o konumu kilitler.
-     * Boş konumlar önceliklidir ki kullanıcının yazdığı harfler boşuna silinmesin.
+     * Bir harfi hediye eder: henüz bilinmeyen bir harf seçilir ve kelimedeki
+     * bütün kopyaları açılıp kilitlenir. Tek hak, tekrar eden harfleri de kapsar.
      */
     fun revealHint() {
         val state = _uiState.value
         val current = target ?: return
         if (state.status != GameStatus.PLAYING || state.hintsLeft <= 0) return
 
-        val candidates = WordleEngine.hintCandidates(
-            wordLength = state.wordLength,
-            guesses = state.guesses,
-            alreadyRevealed = state.revealedPositions,
-        )
-        if (candidates.isEmpty()) {
+        val alreadyKnown = state.lockedPositions
+        val positions = WordleEngine.hintRevealPositions(current.word, alreadyKnown)
+        if (positions.isEmpty()) {
             _uiState.update { it.copy(hintAvailable = false) }
             return
         }
 
-        val index = candidates.filter { state.slots[it] == null }.ifEmpty { candidates }.random()
-        val letter = current.word[index]
-        val revealed = state.revealedPositions + index
+        val letter = current.word[positions.first()]
+        val revealed = state.revealedPositions + positions
         val hintsLeft = state.hintsLeft - 1
-
+        val nextSlots = state.slots.toMutableList().also { slots ->
+            positions.forEach { index -> slots[index] = current.word[index] }
+        }
         val nextKeyboard = state.keyboard + (letter to LetterState.CORRECT)
         val nextLocked = revealed + WordleEngine.knownCorrectPositions(state.guesses)
+        val stillHintable = WordleEngine.hintCandidates(
+            wordLength = state.wordLength,
+            guesses = state.guesses,
+            alreadyRevealed = revealed,
+        ).isNotEmpty()
 
         _uiState.update {
             it.copy(
-                slots = it.slots.toMutableList().also { slots -> slots[index] = letter },
+                slots = nextSlots,
                 revealedPositions = revealed,
                 hintsLeft = hintsLeft,
-                hintAvailable = hintsLeft > 0 && candidates.size > 1,
+                hintAvailable = hintsLeft > 0 && stillHintable,
                 keyboard = nextKeyboard,
                 disabledKeys = WordleEngine.unusableKeys(current.word, nextLocked, nextKeyboard),
             )
@@ -232,9 +271,10 @@ class GameViewModel @Inject constructor(
 
         // Hediye harfler ve bu tahminle birlikte yeri kesinleşen harfler sonraki
         // satıra taşınır; oyuncu bildiği harfleri yeniden yazmak zorunda kalmaz.
-        val nextLocked = state.revealedPositions + WordleEngine.knownCorrectPositions(guesses)
+        val proven = WordleEngine.knownCorrectLetters(guesses)
+        val nextLocked = proven.keys + state.revealedPositions
         val nextSlots = List(state.wordLength) { index ->
-            if (index in nextLocked) current.word[index] else null
+            proven[index] ?: if (index in state.revealedPositions) current.word[index] else null
         }
         val revealedLetters = state.revealedPositions.associate { current.word[it] to LetterState.CORRECT }
         val stillHintable = WordleEngine
@@ -256,7 +296,12 @@ class GameViewModel @Inject constructor(
                 },
                 hintAvailable = it.hintsLeft > 0 && stillHintable,
                 revealedAnswer = if (won || lost) current.word.capitalizeTR() else "",
-                solvedCount = if (won) it.solvedCount + 1 else it.solvedCount,
+                solvedCount = when {
+                    won -> it.solvedCount + 1
+                    lost -> 0
+                    else -> it.solvedCount
+                },
+                recordCount = if (won) maxOf(it.recordCount, it.solvedCount + 1) else it.recordCount,
             )
         }
 
@@ -266,6 +311,8 @@ class GameViewModel @Inject constructor(
     private fun onWin(current: GameTarget) {
         viewModelScope.launch {
             UserStatsManager.updateStreak(getApplication())
+            val scores = UserStatsManager.recordGameWin(getApplication())
+            _uiState.update { it.copy(solvedCount = scores.streak, recordCount = scores.record) }
             // Daha önce bu kelimede yanılmışsa artık biliyor; tekrar listesinden düşsün.
             database.studyDao().delete(current.toStudyRecord(sessionMode))
         }
@@ -273,10 +320,17 @@ class GameViewModel @Inject constructor(
 
     private fun onLoss(current: GameTarget) {
         viewModelScope.launch {
+            val scores = UserStatsManager.recordGameLoss(getApplication())
             database.studyDao().put(
                 current.toStudyRecord(sessionMode).copy(updatedAt = System.currentTimeMillis())
             )
-            _uiState.update { it.copy(savedToMistakes = true) }
+            _uiState.update {
+                it.copy(
+                    savedToMistakes = true,
+                    solvedCount = scores.streak,
+                    recordCount = scores.record,
+                )
+            }
         }
     }
 

@@ -1,0 +1,138 @@
+<tr-TR>
+• Mor tema, yan menü ve başlıklar yenilendi.
+• Oyunda harf kutuları daha net; ipucu açılıp kapanıyor.
+• Üst üste doğru sayısı ve rekor sayacı eklendi.
+• Açılış ekranında uygulama ikonu görünüyor.
+</tr-TR>
+<ar>
+• ثيم بنفسجي وقائمة جانبية وعناوين محدّثة.
+• مربعات الحروف أوضح، والتلميح يُفتح ويُغلق.
+• عدّاد الإجابات المتتالية والرقم القياسي في اللعبة.
+• شاشة البدء تعرض أيقونة التطبيق.
+</ar>
+<az-AZ>
+• Bənövşəyi tema, yan menyu və başlıqlar yeniləndi.
+• Oyunda hərf qutuları daha aydındır; ipucu açılıb bağlanır.
+• Ardıcıl düzgün sayı və rekord sayğacı əlavə olundu.
+• Açılış ekranında tətbiq ikonu görünür.
+</az-AZ>
+<bn-BD>
+• বেগুনি থিম, সাইড মেনু ও শিরোনাম নতুন করা হয়েছে।
+• অক্ষরের ঘর আরও স্পষ্ট; ইঙ্গিত খোলা-বন্ধ হয়।
+• ধারাবাহিক সঠিক সংখ্যা ও রেকর্ড কাউন্টার যোগ হয়েছে।
+• শুরুর স্ক্রিনে অ্যাপ আইকন দেখায়।
+</bn-BD>
+<de-DE>
+• Violettes Design, Seitenmenü und Titel überarbeitet.
+• Buchstabenfelder sind klarer; der Hinweis lässt sich auf- und zuklappen.
+• Siegesserie und persönlicher Rekord in der Spielansicht.
+• Der Startbildschirm zeigt das App-Symbol.
+</de-DE>
+<en-US>
+• Refreshed violet theme, side menu, and titles.
+• Letter tiles are clearer, and the clue expands and collapses.
+• Win streak and personal record are shown in the game.
+• The splash screen now shows the app icon.
+</en-US>
+<es-ES>
+• Tema violeta, menú lateral y títulos renovados.
+• Las casillas se ven mejor y la pista se abre y se cierra.
+• Racha de aciertos y récord personal en el juego.
+• La pantalla de inicio muestra el icono de la app.
+</es-ES>
+<fr-FR>
+• Thème violet, menu latéral et titres renouvelés.
+• Les cases sont plus nettes et l’indice se déplie.
+• Série de bonnes réponses et record personnel dans le jeu.
+• L’écran de démarrage affiche l’icône de l’application.
+</fr-FR>
+<hi-IN>
+• बैंगनी थीम, साइड मेनू और शीर्षक नए किए गए।
+• अक्षर के खाने साफ़ दिखते हैं; संकेत खुलता और बंद होता है।
+• लगातार सही जवाब और रिकॉर्ड काउंटर जोड़ा गया।
+• शुरुआत स्क्रीन पर ऐप आइकन दिखता है।
+</hi-IN>
+<id>
+• Tema ungu, menu samping, dan judul diperbarui.
+• Kotak huruf lebih jelas; petunjuk bisa dibuka dan ditutup.
+• Hitungan benar beruntun dan rekor pribadi di permainan.
+• Layar pembuka menampilkan ikon aplikasi.
+</id>
+<ja-JP>
+• 紫のテーマ、サイドメニュー、見出しを刷新しました。
+• 文字マスが見やすくなり、ヒントを開閉できます。
+• 連続正解数と自己記録を表示します。
+• 起動画面にアプリアイコンを表示します。
+</ja-JP>
+<kk>
+• Күлгін тема, бүйір мәзір және тақырыптар жаңартылды.
+• Әріп ұяшықтары анығырақ; нұсқау ашылып-жабылады.
+• Қатарынан дұрыс саны және рекорд есептегіші қосылды.
+• Ашылу экранында қолданба белгішесі көрінеді.
+</kk>
+<ko-KR>
+• 보라색 테마, 사이드 메뉴, 제목을 새로 다듬었습니다.
+• 글자 칸이 더 뚜렷하고 힌트를 펼치고 접을 수 있습니다.
+• 연속 정답과 개인 기록을 보여 줍니다.
+• 시작 화면에 앱 아이콘이 표시됩니다.
+</ko-KR>
+<ky-KG>
+• Кызгылт көк тема, каптал меню жана аталыштар жаңыланды.
+• Тамга уячалары даанараак; жышаан ачылып-жабылат.
+• Катарлаш туура саны жана рекорд эсептегичи кошулду.
+• Ачылыш экранында колдонмо сүрөтчөсү көрүнөт.
+</ky-KG>
+<mr-IN>
+• जांभळी थीम, साइड मेनू आणि शीर्षके नव्याने केली.
+• अक्षराचे चौकोन स्पष्ट; सूचना उघडते आणि बंद होते.
+• सलग बरोबर संख्या आणि रेकॉर्ड काउंटर जोडला.
+• सुरुवातीच्या स्क्रीनवर अॅप आयकॉन दिसतो.
+</mr-IN>
+<pt-BR>
+• Tema violeta, menu lateral e títulos renovados.
+• As casas das letras estão mais nítidas e a pista abre e fecha.
+• Sequência de acertos e recorde pessoal no jogo.
+• A tela inicial mostra o ícone do app.
+</pt-BR>
+<ru-RU>
+• Фиолетовая тема, боковое меню и заголовки обновлены.
+• Клетки букв заметнее, подсказку можно развернуть.
+• Счётчик серии верных ответов и личный рекорд.
+• На заставке показывается значок приложения.
+</ru-RU>
+<sw>
+• Mandhari ya zambarau, menyu ya kando na vichwa vimeboreshwa.
+• Visanduku vya herufi vinaonekana wazi; dokezo linafunguka na kufungwa.
+• Mfululizo wa majibu sahihi na rekodi binafsi kwenye mchezo.
+• Skrini ya kuanzia inaonyesha aikoni ya programu.
+</sw>
+<ta-IN>
+• ஊதா தீம், பக்க மெனு மற்றும் தலைப்புகள் புதுப்பிக்கப்பட்டன.
+• எழுத்துப் பெட்டிகள் தெளிவாகத் தெரியும்; குறிப்பை திறந்து மூடலாம்.
+• தொடர் சரியான எண்ணும் சாதனை எண்ணும் சேர்க்கப்பட்டன.
+• தொடக்கத் திரையில் செயலி சின்னம் தெரியும்.
+</ta-IN>
+<te-IN>
+• ఊదా రంగు థీమ్, సైడ్ మెనూ మరియు శీర్షికలు నవీకరించబడ్డాయి.
+• అక్షర పెట్టెలు స్పష్టంగా కనిపిస్తాయి; సూచన తెరుచుకుంటుంది.
+• వరుస సరైన సంఖ్య మరియు రికార్డు కౌంటర్ చేర్చబడ్డాయి.
+• ప్రారంభ స్క్రీన్‌లో యాప్ చిహ్నం కనిపిస్తుంది.
+</te-IN>
+<ur>
+• بنفشی تھیم، سائیڈ مینو اور عنوانات نئے کیے گئے۔
+• حرف کے خانے واضح ہیں؛ اشارہ کھلتا اور بند ہوتا ہے۔
+• لگاتار درست جواب اور ریکارڈ کاؤنٹر شامل ہوا۔
+• ابتدائی اسکرین پر ایپ آئیکن دکھتا ہے۔
+</ur>
+<vi>
+• Giao diện tím, menu cạnh và tiêu đề được làm mới.
+• Ô chữ rõ hơn; gợi ý có thể mở và đóng.
+• Chuỗi đúng liên tiếp và kỷ lục cá nhân trong trò chơi.
+• Màn hình khởi động hiển thị biểu tượng ứng dụng.
+</vi>
+<zh-CN>
+• 更新了紫色主题、侧边菜单和标题。
+• 字母格更清晰，提示可以展开和收起。
+• 游戏中显示连对次数和个人纪录。
+• 启动画面显示应用图标。
+</zh-CN>

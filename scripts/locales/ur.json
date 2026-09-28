@@ -188,11 +188,14 @@
   "game_no_word": "اس لغت موڈ میں کھیل کے لیے موزوں لفظ نہیں ملا۔ ترتیبات سے کوئی اور موڈ منتخب کر کے دیکھیں۔",
   "game_saved_to_mistakes": "آپ کی غلطیوں میں محفوظ — کوئز میں مشق کر سکتے ہیں۔",
   "game_solved_count": "%1$d درست",
+  "game_record_count": "ریکارڈ %1$d",
   "game_submit": "اندازہ لگائیں",
   "cd_game_delete": "آخری حرف مٹائیں",
   "game_legend_correct": "درست جگہ پر",
   "game_legend_present": "لفظ میں موجود",
   "game_legend_absent": "لفظ میں نہیں",
   "cd_game_hint": "ایک حرف ظاہر کریں",
-  "game_hint_explainer": "پھنس گئے؟ ہر راؤنڈ میں آپ کو %1$d مفت حروف ملتے ہیں۔"
+  "game_hint_explainer": "پھنس گئے؟ ہر راؤنڈ میں آپ کو %1$d مفت حروف ملتے ہیں۔",
+  "game_hint_count_title": "ہر راؤنڈ میں حرفی اشارے",
+  "cd_game_hint_settings": "حرفی اشاروں کی تعداد"
 }

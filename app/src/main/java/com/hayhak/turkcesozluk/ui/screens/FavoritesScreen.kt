@@ -50,8 +50,7 @@ fun FavoritesScreen(
             Text(
                 text = stringResource(R.string.favorites_title),
                 style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.ExtraBold,
-                color = MaterialTheme.colorScheme.primary,
+                color = MaterialTheme.colorScheme.onSurface,
                 modifier = Modifier.padding(horizontal = 24.dp, vertical = 16.dp)
             )
 

@@ -50,10 +50,9 @@ fun DefinitionScreen(viewModel: DefinitionViewModel = hiltViewModel()) {
     ) {
         item {
             Text(
-                text = stringResource(R.string.tab_definition).uppercase(trLocale),
+                text = stringResource(R.string.tab_definition),
                 style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.ExtraBold,
-                color = MaterialTheme.colorScheme.primary
+                color = MaterialTheme.colorScheme.onSurface
             )
             if (isLoading) {
                 Row(verticalAlignment = Alignment.CenterVertically) {

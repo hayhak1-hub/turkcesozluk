@@ -188,6 +188,7 @@
     <string name="game_no_word">No word suitable for the game was found in this dictionary mode. Try picking another mode in the dictionary settings.</string>
     <string name="game_saved_to_mistakes">Saved to your mistakes — you can practise it in the quiz.</string>
     <string name="game_solved_count">%1$d correct</string>
+    <string name="game_record_count">Record %1$d</string>
     <string name="game_submit">Guess</string>
     <string name="cd_game_delete">Delete last letter</string>
     <string name="game_legend_correct">Right spot</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">Not in the word</string>
     <string name="cd_game_hint">Reveal a letter</string>
     <string name="game_hint_explainer">Stuck? You get %1$d free letters each round.</string>
+    <string name="game_hint_count_title">Letter hints per round</string>
+    <string name="cd_game_hint_settings">Letter hint count</string>
 </resources>

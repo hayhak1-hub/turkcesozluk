@@ -188,11 +188,14 @@
   "game_no_word": "Bu sözlük kipinde oyuna uygun kelime bulunamadı. Sözlük ayarlarından başka bir kip seçmeyi dene.",
   "game_saved_to_mistakes": "Kelime yanlışlarına kaydedildi, quizde tekrar edebilirsin.",
   "game_solved_count": "%1$d doğru",
+  "game_record_count": "Rekor %1$d",
   "game_submit": "Tahmin Et",
   "cd_game_delete": "Son harfi sil",
   "game_legend_correct": "Doğru yerde",
   "game_legend_present": "Kelimede var",
   "game_legend_absent": "Kelimede yok",
   "cd_game_hint": "Bir harf hediye al",
-  "game_hint_explainer": "Takılırsan tur başına %1$d harf hediyesi hakkın var."
+  "game_hint_explainer": "Takılırsan tur başına %1$d harf hediyesi hakkın var.",
+  "game_hint_count_title": "Harf göster hakkı",
+  "cd_game_hint_settings": "Harf göster sayısı"
 }

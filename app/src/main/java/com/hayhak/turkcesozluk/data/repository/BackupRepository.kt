@@ -91,7 +91,8 @@ class BackupRepository @Inject constructor(
         statsObject.keys().forEach { key ->
             when {
                 key == "last_activity_date" -> stats[key] = statsObject.getString(key).also { require(it.isEmpty() || it.matches(Regex("\\d{4}-\\d{2}-\\d{2}"))) }
-                key == "streak_count" || key.matches(Regex("daily_stat_\\d{4}-\\d{2}-\\d{2}")) ->
+                key == "streak_count" || key == "game_win_streak" || key == "game_best_streak" ||
+                    key.matches(Regex("daily_stat_\\d{4}-\\d{2}-\\d{2}")) ->
                     stats[key] = statsObject.getInt(key).also { require(it in 0..10_000_000) }
                 else -> error("Unknown statistics field")
             }

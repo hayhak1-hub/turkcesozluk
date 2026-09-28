@@ -188,6 +188,7 @@
     <string name="game_no_word">لم يُعثر على كلمة مناسبة للعبة في وضع القاموس هذا. جرّب اختيار وضع آخر من الإعدادات.</string>
     <string name="game_saved_to_mistakes">حُفظت في أخطائك — يمكنك التدرب عليها في الاختبار.</string>
     <string name="game_solved_count">%1$d صحيحة</string>
+    <string name="game_record_count">الرقم القياسي %1$d</string>
     <string name="game_submit">خمّن</string>
     <string name="cd_game_delete">احذف آخر حرف</string>
     <string name="game_legend_correct">في موضعها</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">غير موجود</string>
     <string name="cd_game_hint">اكشف حرفًا</string>
     <string name="game_hint_explainer">هل تعثّرت؟ لديك %1$d حروف مجانية في كل جولة.</string>
+    <string name="game_hint_count_title">تلميحات الحروف في كل جولة</string>
+    <string name="cd_game_hint_settings">عدد تلميحات الحروف</string>
 </resources>

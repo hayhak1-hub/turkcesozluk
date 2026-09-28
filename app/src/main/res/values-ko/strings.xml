@@ -188,6 +188,7 @@
     <string name="game_no_word">이 사전 모드에서는 게임에 적합한 단어를 찾지 못했습니다. 사전 설정에서 다른 모드를 선택해 보세요.</string>
     <string name="game_saved_to_mistakes">오답에 저장했어요. 퀴즈에서 복습할 수 있습니다.</string>
     <string name="game_solved_count">%1$d개 정답</string>
+    <string name="game_record_count">기록 %1$d</string>
     <string name="game_submit">추측</string>
     <string name="cd_game_delete">마지막 글자 지우기</string>
     <string name="game_legend_correct">자리까지 정확</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">단어에 없음</string>
     <string name="cd_game_hint">글자 하나 공개</string>
     <string name="game_hint_explainer">막혔나요? 라운드마다 %1$d글자를 무료로 열 수 있어요.</string>
+    <string name="game_hint_count_title">라운드당 글자 힌트</string>
+    <string name="cd_game_hint_settings">글자 힌트 횟수</string>
 </resources>

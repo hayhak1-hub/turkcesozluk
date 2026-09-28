@@ -65,22 +65,28 @@ object PlayUpdateChecker {
 
     /**
      * Silent startup check: only when online; skips versions the user already dismissed.
+     * Offline or Play errors never surface to the user.
      */
     suspend fun checkForStartupPrompt(context: Context): PlayUpdateInfo? {
-        if (!NetworkUtils.isOnline(context)) {
-            Log.d(TAG, "Startup update check skipped: offline")
-            return null
+        return try {
+            if (!NetworkUtils.isOnline(context)) {
+                Log.d(TAG, "Startup update check skipped: offline")
+                return null
+            }
+            val result = checkDetailed(context)
+            val info = result.info ?: return null
+            if (result.status != UpdateCheckStatus.AVAILABLE || !info.isOutdated) return null
+            val dismissed = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+                .getInt(KEY_DISMISSED_UPDATE_CODE, 0)
+            if (info.availableVersionCode <= dismissed) {
+                Log.d(TAG, "Startup update prompt skipped: dismissed for ${info.availableVersionCode}")
+                return null
+            }
+            info
+        } catch (e: Exception) {
+            Log.d(TAG, "Startup update check skipped: ${e.message}")
+            null
         }
-        val result = checkDetailed(context)
-        val info = result.info ?: return null
-        if (result.status != UpdateCheckStatus.AVAILABLE || !info.isOutdated) return null
-        val dismissed = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
-            .getInt(KEY_DISMISSED_UPDATE_CODE, 0)
-        if (info.availableVersionCode <= dismissed) {
-            Log.d(TAG, "Startup update prompt skipped: dismissed for ${info.availableVersionCode}")
-            return null
-        }
-        return info
     }
 
     fun markUpdateDismissed(context: Context, availableVersionCode: Int) {

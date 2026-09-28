@@ -188,11 +188,14 @@
   "game_no_word": "No word suitable for the game was found in this dictionary mode. Try picking another mode in the dictionary settings.",
   "game_saved_to_mistakes": "Saved to your mistakes — you can practise it in the quiz.",
   "game_solved_count": "%1$d correct",
+  "game_record_count": "Record %1$d",
   "game_submit": "Guess",
   "cd_game_delete": "Delete last letter",
   "game_legend_correct": "Right spot",
   "game_legend_present": "In the word",
   "game_legend_absent": "Not in the word",
   "cd_game_hint": "Reveal a letter",
-  "game_hint_explainer": "Stuck? You get %1$d free letters each round."
+  "game_hint_explainer": "Stuck? You get %1$d free letters each round.",
+  "game_hint_count_title": "Letter hints per round",
+  "cd_game_hint_settings": "Letter hint count"
 }

@@ -44,6 +44,25 @@ class GameUiStateTest {
     }
 
     @Test
+    fun `proven letters are listed for the next rows`() {
+        val after = state(guesses = listOf(guess("keali", "teali")))
+        assertEquals(
+            mapOf(1 to 'e', 2 to 'a', 3 to 'l', 4 to 'i'),
+            after.lockedLetters
+        )
+        assertEquals(setOf(1, 2, 3, 4), after.lockedPositions)
+    }
+
+    @Test
+    fun `gifted letters appear in lockedLetters when the slot is filled`() {
+        val gifted = state(
+            slots = listOf(null, 'e', 'a', null, null),
+            revealed = setOf(1, 2),
+        )
+        assertEquals(mapOf(1 to 'e', 2 to 'a'), gifted.lockedLetters)
+    }
+
+    @Test
     fun `gifted and proven positions are locked together`() {
         val locked = state(
             guesses = listOf(guess("keali", "teali")),

@@ -188,6 +188,7 @@
     <string name="game_no_word">इस शब्दकोश मोड में खेल के लिए उपयुक्त शब्द नहीं मिला। सेटिंग्स से दूसरा मोड चुनकर देखें।</string>
     <string name="game_saved_to_mistakes">आपकी गलतियों में सहेजा गया — क्विज़ में अभ्यास कर सकते हैं।</string>
     <string name="game_solved_count">%1$d सही</string>
+    <string name="game_record_count">रिकॉर्ड %1$d</string>
     <string name="game_submit">अनुमान लगाएँ</string>
     <string name="cd_game_delete">अंतिम अक्षर मिटाएँ</string>
     <string name="game_legend_correct">सही जगह</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">शब्द में नहीं</string>
     <string name="cd_game_hint">एक अक्षर खोलें</string>
     <string name="game_hint_explainer">अटक गए? हर दौर में आपको %1$d मुफ़्त अक्षर मिलते हैं।</string>
+    <string name="game_hint_count_title">प्रत्येक दौर में अक्षर संकेत</string>
+    <string name="cd_game_hint_settings">अक्षर संकेतों की संख्या</string>
 </resources>

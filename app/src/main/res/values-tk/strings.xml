@@ -188,6 +188,7 @@
     <string name="game_no_word">Bu sözlük tertibinde oýna laýyk söz tapylmady. Sözlük sazlamalaryndan başga tertip saýlap gör.</string>
     <string name="game_saved_to_mistakes">Söz ýalňyşlaryňa ýazyldy, wiktorinada gaýtalap bilersiň.</string>
     <string name="game_solved_count">%1$d dogry</string>
+    <string name="game_record_count">Rekord %1$d</string>
     <string name="game_submit">Çakla</string>
     <string name="cd_game_delete">Soňky harpy poz</string>
     <string name="game_legend_correct">Dogry ýerinde</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">Sözde ýok</string>
     <string name="cd_game_hint">Bir harp sowgat al</string>
     <string name="game_hint_explainer">Kynalsaň, her tapgyrda %1$d harp sowgady hukugyň bar.</string>
+    <string name="game_hint_count_title">Her tapgyrda harp görkezmek hukugy</string>
+    <string name="cd_game_hint_settings">Harp görkezmek sany</string>
 </resources>

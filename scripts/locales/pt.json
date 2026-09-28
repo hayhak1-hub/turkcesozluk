@@ -188,11 +188,14 @@
   "game_no_word": "Não foi encontrada nenhuma palavra adequada ao jogo neste modo do dicionário. Experimenta outro modo nas definições.",
   "game_saved_to_mistakes": "Guardado nos teus erros — podes praticar no quiz.",
   "game_solved_count": "%1$d certas",
+  "game_record_count": "Recorde %1$d",
   "game_submit": "Adivinhar",
   "cd_game_delete": "Apagar a última letra",
   "game_legend_correct": "No sítio certo",
   "game_legend_present": "Está na palavra",
   "game_legend_absent": "Não está na palavra",
   "cd_game_hint": "Revelar uma letra",
-  "game_hint_explainer": "Empacaste? Tens %1$d letras grátis em cada ronda."
+  "game_hint_explainer": "Empacaste? Tens %1$d letras grátis em cada ronda.",
+  "game_hint_count_title": "Dicas de letras por ronda",
+  "cd_game_hint_settings": "Número de dicas de letras"
 }

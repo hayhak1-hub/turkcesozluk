@@ -188,6 +188,7 @@
     <string name="game_no_word">Bu lüğət rejimində oyuna uyğun söz tapılmadı. Lüğət ayarlarından başqa rejim seçməyi sına.</string>
     <string name="game_saved_to_mistakes">Söz səhvlərinə yazıldı, viktorinada təkrar edə bilərsən.</string>
     <string name="game_solved_count">%1$d doğru</string>
+    <string name="game_record_count">Rekord %1$d</string>
     <string name="game_submit">Təxmin Et</string>
     <string name="cd_game_delete">Son hərfi sil</string>
     <string name="game_legend_correct">Doğru yerdə</string>
@@ -195,4 +196,6 @@
     <string name="game_legend_absent">Sözdə yoxdur</string>
     <string name="cd_game_hint">Bir hərf hədiyyə al</string>
     <string name="game_hint_explainer">Çətinlik çəksən, hər tur üçün %1$d hərf hədiyyəsi haqqın var.</string>
+    <string name="game_hint_count_title">Hər tur üçün hərf göstərmə haqqı</string>
+    <string name="cd_game_hint_settings">Hərf göstərmə sayı</string>
 </resources>

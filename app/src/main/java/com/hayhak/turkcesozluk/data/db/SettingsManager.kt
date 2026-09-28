@@ -1,6 +1,7 @@
 package com.hayhak.turkcesozluk.data.db
 
 import android.content.Context
+import com.hayhak.turkcesozluk.game.WordleEngine
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
@@ -19,6 +20,7 @@ object SettingsManager {
     private const val KEY_LANGUAGE = "app_language"
     private const val KEY_SHOW_DAILY_WORD = "show_daily_word"
     private const val KEY_HAS_SEEN_MODE_HINT = "has_seen_mode_hint"
+    private const val KEY_GAME_HINT_COUNT = "game_hint_count"
 
     private val _themeState = MutableStateFlow(AppTheme.SYSTEM)
     val themeState = _themeState.asStateFlow()
@@ -35,6 +37,9 @@ object SettingsManager {
     private val _hasSeenModeHintState = MutableStateFlow(false)
     val hasSeenModeHintState = _hasSeenModeHintState.asStateFlow()
 
+    private val _gameHintCountState = MutableStateFlow(WordleEngine.HINTS_PER_ROUND)
+    val gameHintCountState = _gameHintCountState.asStateFlow()
+
     fun init(context: Context) {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
@@ -49,6 +54,8 @@ object SettingsManager {
 
         _showDailyWordState.value = prefs.getBoolean(KEY_SHOW_DAILY_WORD, true)
         _hasSeenModeHintState.value = prefs.getBoolean(KEY_HAS_SEEN_MODE_HINT, false)
+        _gameHintCountState.value = prefs.getInt(KEY_GAME_HINT_COUNT, WordleEngine.HINTS_PER_ROUND)
+            .coerceIn(0, WordleEngine.MAX_HINTS_PER_ROUND)
     }
 
     fun setTheme(context: Context, theme: AppTheme) {
@@ -87,5 +94,12 @@ object SettingsManager {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         prefs.edit().putBoolean(KEY_HAS_SEEN_MODE_HINT, true).apply()
         _hasSeenModeHintState.value = true
+    }
+
+    fun setGameHintCount(context: Context, count: Int) {
+        val clamped = count.coerceIn(0, WordleEngine.MAX_HINTS_PER_ROUND)
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit().putInt(KEY_GAME_HINT_COUNT, clamped).apply()
+        _gameHintCountState.value = clamped
     }
 }

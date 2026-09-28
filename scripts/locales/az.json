@@ -188,11 +188,14 @@
   "game_no_word": "Bu lüğət rejimində oyuna uyğun söz tapılmadı. Lüğət ayarlarından başqa rejim seçməyi sına.",
   "game_saved_to_mistakes": "Söz səhvlərinə yazıldı, viktorinada təkrar edə bilərsən.",
   "game_solved_count": "%1$d doğru",
+  "game_record_count": "Rekord %1$d",
   "game_submit": "Təxmin Et",
   "cd_game_delete": "Son hərfi sil",
   "game_legend_correct": "Doğru yerdə",
   "game_legend_present": "Sözdə var",
   "game_legend_absent": "Sözdə yoxdur",
   "cd_game_hint": "Bir hərf hədiyyə al",
-  "game_hint_explainer": "Çətinlik çəksən, hər tur üçün %1$d hərf hədiyyəsi haqqın var."
+  "game_hint_explainer": "Çətinlik çəksən, hər tur üçün %1$d hərf hədiyyəsi haqqın var.",
+  "game_hint_count_title": "Hər tur üçün hərf göstərmə haqqı",
+  "cd_game_hint_settings": "Hərf göstərmə sayı"
 }

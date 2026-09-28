@@ -23,7 +23,7 @@ for code in expected:
     if len(data.get("sections", [])) != 12:
         errors.append(f"{code}: sections={len(data.get('sections', []))}")
     text = json.dumps(data)
-    if "hayhak1@gmail.com" not in text:
+    if "thunderbascraft@gmail.com" not in text:
         errors.append(f"{code}: no email")
     if "com.hayhak.turkcesozluk" not in data["footer"]:
         errors.append(f"{code}: footer")

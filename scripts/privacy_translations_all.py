@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from generate_privacy_policy import section
 
-EMAIL = '<a href="mailto:hayhak1@gmail.com">hayhak1@gmail.com</a>'
+EMAIL = '<a href="mailto:thunderbascraft@gmail.com">thunderbascraft@gmail.com</a>'
 TDK = '<a href="https://sozluk.gov.tr" rel="noopener noreferrer">sozluk.gov.tr</a>'
 
 APP_NAMES = {

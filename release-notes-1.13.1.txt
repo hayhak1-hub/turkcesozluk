@@ -1,0 +1,69 @@
+<tr-TR>
+• Gizlilik politikasındaki iletişim adresi güncellendi.
+</tr-TR>
+<ar>
+• تم تحديث عنوان البريد في سياسة الخصوصية.
+</ar>
+<az-AZ>
+• Məxfilik siyasətindəki əlaqə ünvanı yeniləndi.
+</az-AZ>
+<bn-BD>
+• গোপনীয়তা নীতিতে যোগাযোগের ইমেইল আপডেট করা হয়েছে।
+</bn-BD>
+<de-DE>
+• Die Kontaktadresse in der Datenschutzerklärung wurde aktualisiert.
+</de-DE>
+<en-US>
+• The contact email in the privacy policy was updated.
+</en-US>
+<es-ES>
+• Se actualizó el correo de contacto en la política de privacidad.
+</es-ES>
+<fr-FR>
+• L’adresse de contact de la politique de confidentialité a été mise à jour.
+</fr-FR>
+<hi-IN>
+• गोपनीयता नीति में संपर्क ईमेल अपडेट किया गया।
+</hi-IN>
+<id>
+• Alamat email kontak di kebijakan privasi diperbarui.
+</id>
+<ja-JP>
+• プライバシーポリシーの連絡先メールを更新しました。
+</ja-JP>
+<kk>
+• Құпиялылық саясатындағы байланыс поштасы жаңартылды.
+</kk>
+<ko-KR>
+• 개인정보 처리방침의 연락처 이메일을 업데이트했습니다.
+</ko-KR>
+<ky-KG>
+• Купуялык саясатындагы байланыш почтасы жаңыртылды.
+</ky-KG>
+<mr-IN>
+• गोपनीयता धोरणातील संपर्क ईमेल अद्ययावत केला.
+</mr-IN>
+<pt-BR>
+• O e-mail de contato na política de privacidade foi atualizado.
+</pt-BR>
+<ru-RU>
+• Обновлён контактный адрес в политике конфиденциальности.
+</ru-RU>
+<sw>
+• Barua pepe ya mawasiliano katika sera ya faragha imesasishwa.
+</sw>
+<ta-IN>
+• தனியுரிமைக் கொள்கையில் உள்ள தொடர்பு மின்னஞ்சல் புதுப்பிக்கப்பட்டது.
+</ta-IN>
+<te-IN>
+• గోప్యతా విధానంలోని సంప్రదింపు ఇమెయిల్ నవీకరించబడింది.
+</te-IN>
+<ur>
+• رازداری کی پالیسی میں رابطہ ای میل اپ ڈیٹ کر دی گئی۔
+</ur>
+<vi>
+• Đã cập nhật email liên hệ trong chính sách quyền riêng tư.
+</vi>
+<zh-CN>
+• 已更新隐私政策中的联系邮箱。
+</zh-CN>

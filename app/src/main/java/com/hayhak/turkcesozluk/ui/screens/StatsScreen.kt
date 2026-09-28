@@ -492,7 +492,7 @@ fun PrivacyPolicyDialog(onDismiss: () -> Unit) {
                                 "2. Yerel saklama: Favoriler, arama geçmişi, eklenen kelimeler ve istatistikler yalnızca cihazınızda tutulur.\n\n" +
                                 "3. İnternet: Yerelde bulunamayan kelimeler için aranan kelime metni TDK (sozluk.gov.tr) sitesine gönderilebilir.\n\n" +
                                 "4. Bildirim ve sesli arama isteğe bağlıdır. Reklam veya analitik SDK kullanmayız.\n\n" +
-                                "İletişim: hayhak1@gmail.com",
+                                "İletişim: thunderbascraft@gmail.com",
                         style = MaterialTheme.typography.bodyMedium
                     )
                 }

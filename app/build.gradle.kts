@@ -30,10 +30,10 @@ android {
 
     defaultConfig {
         applicationId = "com.hayhak.turkcesozluk"
-        minSdk = 23
+        minSdk = 24
         targetSdk = 36
-        versionCode = 26
-        versionName = "1.14.0"
+        versionCode = 27
+        versionName = "1.14.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

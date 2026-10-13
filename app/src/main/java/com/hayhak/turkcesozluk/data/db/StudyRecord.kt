@@ -21,6 +21,10 @@ interface StudyDao {
     fun observe(): Flow<List<StudyRecord>>
     @Query("SELECT * FROM study_records")
     suspend fun all(): List<StudyRecord>
+    @Query("SELECT * FROM study_records WHERE kind = :kind")
+    suspend fun byKind(kind: String): List<StudyRecord>
+    @Query("SELECT * FROM study_records WHERE kind = 'review' AND word = :word AND answer = :answer")
+    suspend fun findReview(word: String, answer: String): StudyRecord?
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun put(record: StudyRecord)
     @Delete

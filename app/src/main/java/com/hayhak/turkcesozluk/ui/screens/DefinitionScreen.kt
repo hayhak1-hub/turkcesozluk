@@ -134,12 +134,13 @@ fun DefinitionScreen(viewModel: DefinitionViewModel = hiltViewModel()) {
                 enter = expandVertically(tween(300)) + fadeIn(),
                 exit = shrinkVertically(tween(200)) + fadeOut()
             ) {
+                val result = uiState.result
                 when {
-                    uiState.result != null -> {
+                    result != null -> {
                         DefinitionCard(
-                            definition = uiState.result!!,
+                            definition = result,
                             onSpeak = {
-                                tts?.speak(uiState.result!!.word, TextToSpeech.QUEUE_FLUSH, null, null)
+                                tts?.speak(result.word, TextToSpeech.QUEUE_FLUSH, null, null)
                             }
                         )
                     }

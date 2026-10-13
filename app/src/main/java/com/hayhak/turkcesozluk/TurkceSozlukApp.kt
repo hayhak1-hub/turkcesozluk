@@ -45,22 +45,14 @@ class TurkceSozlukApp : Application(), Configuration.Provider {
         LocaleHelper.applyAppLocale(LocaleHelper.savedTag(this))
         android.util.Log.d("TurkceSozlukApp", "onCreate started")
 
-        // WorkManager kurulumu ve CoreRepository'nin CSV/cache okuması potansiyel olarak ağır iş;
-        // ana thread'i bloklamamaları için hepsini arka plana taşıyoruz (ilk frame'in bir an önce çizilmesi için).
+        // Ayarlar küçük bir SharedPreferences okuması; ilk karede doğru tema ve sözlük kipi
+        // kullanılsın diye ana thread'de, CoreRepository başlamadan önce yüklenir.
+        com.hayhak.turkcesozluk.data.db.SettingsManager.init(this)
+
+        // CSV/cache okuma ve bildirim planlama ağır olabilir; arka plana alınır.
+        // WorkManager, Configuration.Provider sayesinde ilk kullanımda kendini başlatır.
         applicationScope.launch(Dispatchers.IO) {
-            val startTime = System.currentTimeMillis()
             try {
-                WorkManager.initialize(this@TurkceSozlukApp, workManagerConfiguration)
-                android.util.Log.d("TurkceSozlukApp", "WorkManager initialized in ${System.currentTimeMillis() - startTime}ms")
-            } catch (e: Exception) {
-                android.util.Log.e("TurkceSozlukApp", "WorkManager initialization failed", e)
-            }
-
-            try {
-                val settingsStart = System.currentTimeMillis()
-                com.hayhak.turkcesozluk.data.db.SettingsManager.init(this@TurkceSozlukApp)
-                android.util.Log.d("TurkceSozlukApp", "SettingsManager init in ${System.currentTimeMillis() - settingsStart}ms")
-
                 launch {
                     android.util.Log.d("TurkceSozlukApp", "Starting CoreRepository.initialize()")
                     coreRepository.initialize()

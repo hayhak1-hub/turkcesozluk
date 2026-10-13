@@ -72,7 +72,7 @@ data class GameUiState(
         get() {
             val known = WordleEngine.knownCorrectLetters(guesses).toMutableMap()
             revealedPositions.forEach { index ->
-                slots.getOrNull(index)?.let { known.putIfAbsent(index, it) }
+                slots.getOrNull(index)?.let { if (index !in known) known[index] = it }
             }
             return known
         }

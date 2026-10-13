@@ -75,9 +75,9 @@ class QuizViewModel @Inject constructor(
     }
 
     fun checkAnswer(isCorrect: Boolean) {
-        if (isGameOver || answered || currentQuestion == null) return
+        if (isGameOver || answered) return
+        val question = currentQuestion ?: return
         answered = true
-        val question = currentQuestion!!
         val record = activeMistake ?: StudyRecord("mistake", sessionMode, question.word,
             question.correctAnswer, JSONArray(question.options).toString())
         answerWriteJob = viewModelScope.launch {

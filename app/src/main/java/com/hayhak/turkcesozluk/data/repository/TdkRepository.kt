@@ -34,7 +34,7 @@ class TdkRepository @Inject constructor() {
                 connectTimeout = 8_000
                 readTimeout = 10_000
                 setRequestProperty("Accept", "application/json")
-                setRequestProperty("User-Agent", "TurkceSozluk/1.2 (Android)")
+                setRequestProperty("User-Agent", "TurkceSozluk/" + com.hayhak.turkcesozluk.BuildConfig.VERSION_NAME + " (Android)")
             }
 
             try {

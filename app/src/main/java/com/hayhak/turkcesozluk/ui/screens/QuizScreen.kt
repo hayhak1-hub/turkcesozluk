@@ -37,6 +37,7 @@ fun QuizScreen(viewModel: QuizViewModel = hiltViewModel()) {
     val currentQuestion = viewModel.currentQuestion
     val isGameOver = viewModel.isGameOver
     val isGameStarted = viewModel.isGameStarted
+    com.hayhak.turkcesozluk.ui.components.RatePromptEffect(trigger = isGameOver)
     val currentMode by viewModel.currentMode.collectAsState()
     val savedMistakes by viewModel.savedMistakes.collectAsState()
 

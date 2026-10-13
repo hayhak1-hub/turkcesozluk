@@ -18,6 +18,7 @@ class CoreRepository @Inject constructor(
     private val userSynonymDao: UserSynonymDao
 ) {
     private val mutex = Mutex()
+    private val definitionsMutex = Mutex()
 
     private val _isInitialized = MutableStateFlow(false)
     val isInitialized = _isInitialized.asStateFlow()
@@ -38,6 +39,13 @@ class CoreRepository @Inject constructor(
      */
     suspend fun ensureDefinitionsLoaded() {
         if (DefinitionDataStore.definitionMap.isNotEmpty()) return
+        definitionsMutex.withLock {
+            if (DefinitionDataStore.definitionMap.isNotEmpty()) return
+            loadDefinitions()
+        }
+    }
+
+    private suspend fun loadDefinitions() {
         try {
             DefinitionDataStore.definitionMap.putAll(csvLoader.loadDefinitionsCached())
             DefinitionDataStore.updateCache()
@@ -62,11 +70,9 @@ class CoreRepository @Inject constructor(
         val startTime = System.currentTimeMillis()
         android.util.Log.d("CoreRepository", "Loading data for mode: $mode")
         try {
-            SynonymDataStore.clear()
-
             // 1. Assets'den yükle
             val loadResult = csvLoader.loadFromAssetsCached(mode)
-            SynonymDataStore.putAll(loadResult.data)
+            SynonymDataStore.replaceAll(loadResult.data)
             val primaryWords = loadResult.primaryWords.toMutableSet()
             android.util.Log.d("CoreRepository", "Loaded ${loadResult.data.size} words from assets in ${System.currentTimeMillis() - startTime}ms")
 

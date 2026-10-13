@@ -1,0 +1,184 @@
+<tr-TR>
+• Mor tema, yan menü ve başlıklar yenilendi.
+• Oyunda harf kutuları daha net; ipucu açılıp kapanıyor.
+• Üst üste doğru sayısı ve rekor sayacı eklendi.
+• Açılış ekranında uygulama ikonu görünüyor.
+• Gizlilik politikasındaki iletişim adresi güncellendi.
+• Android 15 ve sonrasında kenardan kenara görünüm düzeltildi.
+</tr-TR>
+<ar>
+• ثيم بنفسجي وقائمة جانبية وعناوين محدّثة.
+• مربعات الحروف أوضح، والتلميح يُفتح ويُغلق.
+• عدّاد الإجابات المتتالية والرقم القياسي في اللعبة.
+• شاشة البدء تعرض أيقونة التطبيق.
+• تم تحديث عنوان البريد في سياسة الخصوصية.
+• تم إصلاح العرض من الحافة إلى الحافة على Android 15 والإصدارات الأحدث.
+</ar>
+<az-AZ>
+• Bənövşəyi tema, yan menyu və başlıqlar yeniləndi.
+• Oyunda hərf qutuları daha aydındır; ipucu açılıb bağlanır.
+• Ardıcıl düzgün sayı və rekord sayğacı əlavə olundu.
+• Açılış ekranında tətbiq ikonu görünür.
+• Məxfilik siyasətindəki əlaqə ünvanı yeniləndi.
+• Android 15 və sonrakı versiyalarda kənardan kənara görünüş düzəldildi.
+</az-AZ>
+<bn-BD>
+• বেগুনি থিম, সাইড মেনু ও শিরোনাম নতুন করা হয়েছে।
+• অক্ষরের ঘর আরও স্পষ্ট; ইঙ্গিত খোলা-বন্ধ হয়।
+• ধারাবাহিক সঠিক সংখ্যা ও রেকর্ড কাউন্টার যোগ হয়েছে।
+• শুরুর স্ক্রিনে অ্যাপ আইকন দেখায়।
+• গোপনীয়তা নীতিতে যোগাযোগের ইমেইল আপডেট করা হয়েছে।
+• Android 15 ও পরবর্তী সংস্করণে প্রান্ত-থেকে-প্রান্ত প্রদর্শন ঠিক করা হয়েছে।
+</bn-BD>
+<de-DE>
+• Violettes Design, Seitenmenü und Titel überarbeitet.
+• Buchstabenfelder sind klarer; der Hinweis lässt sich auf- und zuklappen.
+• Siegesserie und persönlicher Rekord in der Spielansicht.
+• Der Startbildschirm zeigt das App-Symbol.
+• Die Kontaktadresse in der Datenschutzerklärung wurde aktualisiert.
+• Randlose Anzeige unter Android 15 und höher korrigiert.
+</de-DE>
+<en-US>
+• Refreshed violet theme, side menu, and titles.
+• Letter tiles are clearer, and the clue expands and collapses.
+• Win streak and personal record are shown in the game.
+• The splash screen now shows the app icon.
+• The contact email in the privacy policy was updated.
+• Edge-to-edge display is fixed on Android 15 and later.
+</en-US>
+<es-ES>
+• Tema violeta, menú lateral y títulos renovados.
+• Las casillas se ven mejor y la pista se abre y se cierra.
+• Racha de aciertos y récord personal en el juego.
+• La pantalla de inicio muestra el icono de la app.
+• Se actualizó el correo de contacto en la política de privacidad.
+• Se corrigió la visualización de borde a borde en Android 15 y versiones posteriores.
+</es-ES>
+<fr-FR>
+• Thème violet, menu latéral et titres renouvelés.
+• Les cases sont plus nettes et l’indice se déplie.
+• Série de bonnes réponses et record personnel dans le jeu.
+• L’écran de démarrage affiche l’icône de l’application.
+• L’adresse de contact de la politique de confidentialité a été mise à jour.
+• Affichage bord à bord corrigé sur Android 15 et versions ultérieures.
+</fr-FR>
+<hi-IN>
+• बैंगनी थीम, साइड मेनू और शीर्षक नए किए गए।
+• अक्षर के खाने साफ़ दिखते हैं; संकेत खुलता और बंद होता है।
+• लगातार सही जवाब और रिकॉर्ड काउंटर जोड़ा गया।
+• शुरुआत स्क्रीन पर ऐप आइकन दिखता है।
+• गोपनीयता नीति में संपर्क ईमेल अपडेट किया गया।
+• Android 15 और बाद के संस्करणों में किनारे-से-किनारे प्रदर्शन ठीक किया गया।
+</hi-IN>
+<id>
+• Tema ungu, menu samping, dan judul diperbarui.
+• Kotak huruf lebih jelas; petunjuk bisa dibuka dan ditutup.
+• Hitungan benar beruntun dan rekor pribadi di permainan.
+• Layar pembuka menampilkan ikon aplikasi.
+• Alamat email kontak di kebijakan privasi diperbarui.
+• Tampilan tepi-ke-tepi diperbaiki di Android 15 dan yang lebih baru.
+</id>
+<ja-JP>
+• 紫のテーマ、サイドメニュー、見出しを刷新しました。
+• 文字マスが見やすくなり、ヒントを開閉できます。
+• 連続正解数と自己記録を表示します。
+• 起動画面にアプリアイコンを表示します。
+• プライバシーポリシーの連絡先メールを更新しました。
+• Android 15 以降で端から端までの表示を修正しました。
+</ja-JP>
+<kk>
+• Күлгін тема, бүйір мәзір және тақырыптар жаңартылды.
+• Әріп ұяшықтары анығырақ; нұсқау ашылып-жабылады.
+• Қатарынан дұрыс саны және рекорд есептегіші қосылды.
+• Ашылу экранында қолданба белгішесі көрінеді.
+• Құпиялылық саясатындағы байланыс поштасы жаңартылды.
+• Android 15 және одан кейінгі нұсқаларда шеттен шетке көрсету түзетілді.
+</kk>
+<ko-KR>
+• 보라색 테마, 사이드 메뉴, 제목을 새로 다듬었습니다.
+• 글자 칸이 더 뚜렷하고 힌트를 펼치고 접을 수 있습니다.
+• 연속 정답과 개인 기록을 보여 줍니다.
+• 시작 화면에 앱 아이콘이 표시됩니다.
+• 개인정보 처리방침의 연락처 이메일을 업데이트했습니다.
+• Android 15 이상에서 가장자리까지 표시를 수정했습니다.
+</ko-KR>
+<ky-KG>
+• Кызгылт көк тема, каптал меню жана аталыштар жаңыланды.
+• Тамга уячалары даанараак; жышаан ачылып-жабылат.
+• Катарлаш туура саны жана рекорд эсептегичи кошулду.
+• Ачылыш экранында колдонмо сүрөтчөсү көрүнөт.
+• Купуялык саясатындагы байланыш почтасы жаңыртылды.
+• Android 15 жана андан кийинки версияларда четинен четине көрсөтүү оңдолду.
+</ky-KG>
+<mr-IN>
+• जांभळी थीम, साइड मेनू आणि शीर्षके नव्याने केली.
+• अक्षराचे चौकोन स्पष्ट; सूचना उघडते आणि बंद होते.
+• सलग बरोबर संख्या आणि रेकॉर्ड काउंटर जोडला.
+• सुरुवातीच्या स्क्रीनवर अॅप आयकॉन दिसतो.
+• गोपनीयता धोरणातील संपर्क ईमेल अद्ययावत केला.
+• Android 15 आणि नंतरच्या आवृत्त्यांवर कडे-ते-कडे प्रदर्शन दुरुस्त केले.
+</mr-IN>
+<pt-BR>
+• Tema violeta, menu lateral e títulos renovados.
+• As casas das letras estão mais nítidas e a pista abre e fecha.
+• Sequência de acertos e recorde pessoal no jogo.
+• A tela inicial mostra o ícone do app.
+• O e-mail de contato na política de privacidade foi atualizado.
+• A exibição de ponta a ponta foi corrigida no Android 15 e versões mais recentes.
+</pt-BR>
+<ru-RU>
+• Фиолетовая тема, боковое меню и заголовки обновлены.
+• Клетки букв заметнее, подсказку можно развернуть.
+• Счётчик серии верных ответов и личный рекорд.
+• На заставке показывается значок приложения.
+• Обновлён контактный адрес в политике конфиденциальности.
+• Исправлен вывод от края до края на Android 15 и новее.
+</ru-RU>
+<sw>
+• Mandhari ya zambarau, menyu ya kando na vichwa vimeboreshwa.
+• Visanduku vya herufi vinaonekana wazi; dokezo linafunguka na kufungwa.
+• Mfululizo wa majibu sahihi na rekodi binafsi kwenye mchezo.
+• Skrini ya kuanzia inaonyesha aikoni ya programu.
+• Barua pepe ya mawasiliano katika sera ya faragha imesasishwa.
+• Onyesho la ukingo hadi ukingo limerekebishwa kwenye Android 15 na matoleo mapya.
+</sw>
+<ta-IN>
+• ஊதா தீம், பக்க மெனு மற்றும் தலைப்புகள் புதுப்பிக்கப்பட்டன.
+• எழுத்துப் பெட்டிகள் தெளிவாகத் தெரியும்; குறிப்பை திறந்து மூடலாம்.
+• தொடர் சரியான எண்ணும் சாதனை எண்ணும் சேர்க்கப்பட்டன.
+• தொடக்கத் திரையில் செயலி சின்னம் தெரியும்.
+• தனியுரிமைக் கொள்கையில் உள்ள தொடர்பு மின்னஞ்சல் புதுப்பிக்கப்பட்டது.
+• Android 15 மற்றும் அதற்குப் பிறகான பதிப்புகளில் விளிம்பு-முதல்-விளிம்பு காட்சி சரிசெய்யப்பட்டது.
+</ta-IN>
+<te-IN>
+• ఊదా రంగు థీమ్, సైడ్ మెనూ మరియు శీర్షికలు నవీకరించబడ్డాయి.
+• అక్షర పెట్టెలు స్పష్టంగా కనిపిస్తాయి; సూచన తెరుచుకుంటుంది.
+• వరుస సరైన సంఖ్య మరియు రికార్డు కౌంటర్ చేర్చబడ్డాయి.
+• ప్రారంభ స్క్రీన్‌లో యాప్ చిహ్నం కనిపిస్తుంది.
+• గోప్యతా విధానంలోని సంప్రదింపు ఇమెయిల్ నవీకరించబడింది.
+• Android 15 మరియు తర్వాతి వెర్షన్లలో అంచు-నుండి-అంచు ప్రదర్శన సరిచేయబడింది.
+</te-IN>
+<ur>
+• بنفشی تھیم، سائیڈ مینو اور عنوانات نئے کیے گئے۔
+• حرف کے خانے واضح ہیں؛ اشارہ کھلتا اور بند ہوتا ہے۔
+• لگاتار درست جواب اور ریکارڈ کاؤنٹر شامل ہوا۔
+• ابتدائی اسکرین پر ایپ آئیکن دکھتا ہے۔
+• رازداری کی پالیسی میں رابطہ ای میل اپ ڈیٹ کر دی گئی۔
+• Android 15 اور بعد کے ورژنز پر کنارے سے کنارے ڈسپلے درست کر دیا گیا۔
+</ur>
+<vi>
+• Giao diện tím, menu cạnh và tiêu đề được làm mới.
+• Ô chữ rõ hơn; gợi ý có thể mở và đóng.
+• Chuỗi đúng liên tiếp và kỷ lục cá nhân trong trò chơi.
+• Màn hình khởi động hiển thị biểu tượng ứng dụng.
+• Đã cập nhật email liên hệ trong chính sách quyền riêng tư.
+• Đã sửa hiển thị tràn viền trên Android 15 trở lên.
+</vi>
+<zh-CN>
+• 更新了紫色主题、侧边菜单和标题。
+• 字母格更清晰，提示可以展开和收起。
+• 游戏中显示连对次数和个人纪录。
+• 启动画面显示应用图标。
+• 已更新隐私政策中的联系邮箱。
+• 已修复 Android 15 及更高版本上的边到边显示。
+</zh-CN>

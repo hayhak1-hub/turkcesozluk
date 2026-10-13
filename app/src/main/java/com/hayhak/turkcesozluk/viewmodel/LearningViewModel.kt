@@ -44,7 +44,7 @@ class LearningViewModel @Inject constructor(
         viewModelScope.launch {
             try {
             val favorites = favoriteDao.getAllFavorites().first()
-            val records = database.studyDao().all().filter { it.kind == "review" }
+            val records = database.studyDao().byKind("review")
             val now = System.currentTimeMillis()
             cards = favorites.filter { favorite -> !dueOnly || records.none {
                 it.word == favorite.word && it.answer == favorite.synonym && it.dueAt > now
@@ -69,9 +69,7 @@ class LearningViewModel @Inject constructor(
         saving = true
         viewModelScope.launch {
             try {
-                val old = database.studyDao().all().firstOrNull {
-                    it.kind == "review" && it.word == card.word && it.answer == card.synonym
-                }
+                val old = database.studyDao().findReview(card.word, card.synonym)
                 val now = System.currentTimeMillis()
                 val (streak, due) = ReviewSchedule.next(old?.streak ?: 0, known, now)
                 database.studyDao().put(StudyRecord("review", "", card.word, card.synonym,

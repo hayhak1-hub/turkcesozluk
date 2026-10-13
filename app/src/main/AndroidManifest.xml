@@ -16,6 +16,9 @@
         </intent>
     </queries>
 
+    <!-- Bulut/cihaz yedeklemesi kapali; kullanici verisi yalnizca uygulamanin kendi
+         yedekle-geri yukle ozelligiyle tasinir. fullBackupContent ve dataExtractionRules
+         allowBackup/Android surum farklari icin savunma amacli duruyor. -->
     <application
         android:name=".TurkceSozlukApp"
         android:allowBackup="false"

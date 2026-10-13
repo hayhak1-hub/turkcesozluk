@@ -29,6 +29,16 @@ object SynonymDataStore {
         _cachedMeanings = null
     }
 
+    /**
+     * Haritayi bosaltmadan yeni veriyle degistirir; kip degisirken esanli bir arama
+     * kisa sureligine bos sonuc gormesin.
+     */
+    fun replaceAll(data: Map<String, Set<String>>) {
+        _synonymMap.putAll(data)
+        _synonymMap.keys.retainAll(data.keys)
+        _cachedMeanings = null
+    }
+
     fun putAll(data: Map<String, Set<String>>) {
         _synonymMap.putAll(data)
         _cachedMeanings = null

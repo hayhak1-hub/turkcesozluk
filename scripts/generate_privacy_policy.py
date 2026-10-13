@@ -156,20 +156,20 @@ RENDER_SCRIPT = """
 """
 
 WEB_BOOTSTRAP = """
-    function getRequestedLang() {{
+    function getRequestedLang() {
       return new URLSearchParams(location.search).get("lang") || "tr";
-    }}
+    }
 
-    function setLang(lang) {{
+    function setLang(lang) {
       const url = new URL(location.href);
       url.searchParams.set("lang", lang);
       history.replaceState(null, "", url);
       renderContent(lang);
-    }}
+    }
 
-    document.getElementById("lang-select").addEventListener("change", (e) => {{
+    document.getElementById("lang-select").addEventListener("change", (e) => {
       setLang(e.target.value);
-    }});
+    });
 
     renderContent(getRequestedLang());
 """

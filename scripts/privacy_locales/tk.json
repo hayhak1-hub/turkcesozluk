@@ -5,7 +5,7 @@
   "metaPackage": "paket ady",
   "metaDeveloper": "Öndüriji",
   "metaUpdated": "Soňky täzelenme",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-13",
   "langLabel": "Dil",
   "intro": "Bu gizlinlik syýasaty Google Play arkaly hödürlenýän <strong>Türkçe sözlük</strong> programmasynyň ulanyjy maglumatlaryny nädip işleýändigini düşündirýär. Programmany göçürip almak ýa-da ulanmak bilen siz bu syýasata razylaşýarsyňyz.",
   "sections": [
@@ -46,6 +46,7 @@
         "Iberilýän maglumat: diňe gözleg meýdançasynda ýazylan söz",
         "Maksat: sözlük manyny / kesgitlemesini görkezmek",
         "Şahsy identifikasiýa maglumatlary iberilmeýär",
+        "Islendik web haýyşynda bolşy ýaly, TDK serweri tehniki taýdan IP salgyňyzy we programmanyň ady/wersiýasy ýaly adaty haýyş maglumatlaryny görüp biler",
         "Bu sorag TDK-nyň açyk sahypasyna iberilýär; programma TDK bilen resmi hyzmatdaşlykda däl"
       ]
     },
@@ -54,6 +55,7 @@
       "paragraphs": [],
       "items": [
         "<strong>Internet (INTERNET):</strong> Ýerli tapylmadyk sözler üçin TDK sözlük soragyny ýerine ýetirmek üçin ulanylýar.",
+        "<strong>Tor ýagdaýy (ACCESS_NETWORK_STATE):</strong> Onlaýn gözlegden ýa-da täzelenme barlagyndan öň enjamyň internete birikendigini barlamak üçin ulanylýar. Tor maglumaty saklanmaýar we ugradylmaýar.",
         "<strong>Bildirişler (POST_NOTIFICATIONS):</strong> Islege bagly. “Günüň sözi” bildirişini görkezmek üçin sorag edilýär. Enjam sazlamalaryndan öçürilip bilner.",
         "<strong>Sesli gözleg / mikrofon:</strong> Mikrofon nyşanyna basylanda enjamyňyzyň ses tanamak hyzmaty (mes. Google) açylyp bilner. Biz audio ýazgylary saklamaýarys; diňe tanalan tekst gözleg meýdançasyna ýazylýar."
       ]
@@ -65,7 +67,7 @@
         "Mahabat SDK-syny ulanmaýarys. Ulanylyşy we durnuklylygy düşünmek üçin Google Firebase Analytics we Firebase Crashlytics ulanýarys. Analytics programma hereketlerini, sessiýa maglumatyny, programma nusgasy/enjam kesgitleýjilerini, enjam we programma maglumatyny hem-de takmynan sebiti işläp biler. Crashlytics çökme we ANR ýazgylaryny, stek yzlaryny, programma/enjam/OS maglumatyny we gurnama kesgitleýjilerini işläp biler. Google bu maglumatlary Firebase şertlerine we Google gizlinlik syýasatyna laýyklykda işleýär. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
-        "<strong>Google Play / Play Store:</strong> Programmanyň paýlanmagy we “Bize baha beriň” arkaly Play Store sahypasyny açmak üçin. Bu proses Google tarapyndan dolandyrylýar.",
+        "<strong>Google Play / Play Store:</strong> Programmany paýlamak, täzelenmeleri barlamak (Google Play programma içindäki täzelenmeler) we “Bizi bahalandyryň” arkaly Play Store sahypasyny açmak üçin. Bu prosesi Google dolandyrýar.",
         "<strong>sozluk.gov.tr (TDK):</strong> Ýerli tapylmadyk sözler üçin many soragy. Diňe gözlenen söz iberilýär.",
         "<strong>Enjam ses tanamak hyzmaty:</strong> Ulanyjy sesli gözlegi başlanda."
       ]

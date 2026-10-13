@@ -31,7 +31,7 @@ for code in expected:
         errors.append(f"{code}: no tdk")
     if "ThunderCraft" not in text:
         errors.append(f"{code}: no developer")
-    if data.get("updatedDate") != "2026-09-19":
+    if data.get("updatedDate") != "2026-10-13":
         errors.append(f"{code}: stale update date")
     for required_text in (
         "Firebase Analytics",

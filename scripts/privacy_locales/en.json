@@ -5,7 +5,7 @@
   "metaPackage": "package name",
   "metaDeveloper": "Developer",
   "metaUpdated": "Last updated",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-13",
   "langLabel": "Language",
   "intro": "This privacy policy explains how the <strong>Turkish Dictionary</strong> app available on Google Play handles user data. By downloading or using the app, you agree to this policy.",
   "sections": [
@@ -46,6 +46,7 @@
         "Data sent: only the word typed in the search box",
         "Purpose: to display dictionary meaning / definition",
         "No personal identity information is sent",
+        "As with any web request, the TDK server can technically see your IP address and standard request details such as the app name and version",
         "This request is made to TDK's public website; the app is not in an official partnership with TDK"
       ]
     },
@@ -54,6 +55,7 @@
       "paragraphs": [],
       "items": [
         "<strong>Internet (INTERNET):</strong> Used to query the TDK dictionary for words not found locally.",
+        "<strong>Network state (ACCESS_NETWORK_STATE):</strong> Used only to check whether the device is online before an online lookup or update check. No network information is stored or sent.",
         "<strong>Notifications (POST_NOTIFICATIONS):</strong> Optional. Requested to show the “Word of the day” notification. Can be disabled in device settings.",
         "<strong>Voice search / microphone:</strong> When you tap the microphone icon, your device's speech recognition service (e.g. Google) may open. We do not store audio recordings; only the recognized text is placed in the search box."
       ]
@@ -65,7 +67,7 @@
         "We do not use an advertising SDK. We use Google Firebase Analytics and Firebase Crashlytics to understand usage and stability. Analytics may process app interactions, session information, app-instance/device identifiers, device and app information, and approximate region. Crashlytics may process crash and ANR logs, stack traces, app/device/OS information, and installation identifiers. Google processes this data under the Firebase terms and Google privacy policy. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
-        "<strong>Google Play / Play Store:</strong> App distribution and opening the Play Store page via “Rate us”. This process is managed by Google.",
+        "<strong>Google Play / Play Store:</strong> App distribution, update checks (Google Play In-App Updates), and opening the Play Store page via “Rate us”. This process is managed by Google.",
         "<strong>sozluk.gov.tr (TDK):</strong> Definition lookup for words not found locally. Only the searched word is transmitted.",
         "<strong>Device speech recognition service:</strong> When the user starts voice search."
       ]

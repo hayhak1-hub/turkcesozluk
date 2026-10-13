@@ -5,7 +5,7 @@
   "metaPackage": "jina la kifurushi",
   "metaDeveloper": "Msanidi",
   "metaUpdated": "Imesasishwa mwisho",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-13",
   "langLabel": "Lugha",
   "intro": "Sera hii ya faragha inaeleza jinsi programu ya <strong>Kamusi ya Kituruki</strong> inavyopatikana kwenye Google Play inavyoshughulikia data ya mtumiaji. Kwa kupakua au kutumia programu, unakubali sera hii.",
   "sections": [
@@ -46,6 +46,7 @@
         "Data inayotumwa: neno lililoandikwa kwenye kisanduku cha utafutaji tu",
         "Lengo: kuonyesha maana / ufafanuzi wa kamusi",
         "Hakuna taarifa za utambulisho wa kibinafsi zinazotumwa",
+        "Kama ilivyo kwa ombi lolote la wavuti, seva ya TDK kiufundi inaweza kuona anwani yako ya IP na maelezo ya kawaida ya ombi kama jina na toleo la programu",
         "Ombi hili linafanywa kwenye tovuti ya umma ya TDK; programu haiko katika ushirikiano rasmi na TDK"
       ]
     },
@@ -54,6 +55,7 @@
       "paragraphs": [],
       "items": [
         "<strong>Intaneti (INTERNET):</strong> Inatumika kuuliza kamusi ya TDK kwa maneno yasiyopatikana ndani.",
+        "<strong>Hali ya mtandao (ACCESS_NETWORK_STATE):</strong> Hutumika tu kuangalia kama kifaa kiko mtandaoni kabla ya utafutaji wa mtandaoni au ukaguzi wa masasisho. Hakuna taarifa za mtandao zinazohifadhiwa au kutumwa.",
         "<strong>Arifa (POST_NOTIFICATIONS):</strong> Hiari. Inaombwa kuonyesha arifa ya “Neno la siku”. Inaweza kuzimwa kwenye mipangilio ya kifaa.",
         "<strong>Utafutaji wa sauti / kipaza sauti:</strong> Unapogusa ikoni ya kipaza sauti, huduma ya utambuzi wa sauti ya kifaa (k.m. Google) inaweza kufunguka. Hatuhifadhi rekodi za sauti; maandishi yaliyotambuliwa tu huwekwa kwenye kisanduku cha utafutaji."
       ]
@@ -65,7 +67,7 @@
         "Hatutumii SDK ya matangazo. Tunatumia Google Firebase Analytics na Firebase Crashlytics kuelewa matumizi na uthabiti. Analytics inaweza kuchakata mwingiliano wa programu, taarifa za kipindi, vitambulisho vya programu/kifaa, taarifa za kifaa na programu na eneo la kukadiria. Crashlytics inaweza kuchakata kumbukumbu za hitilafu na ANR, ufuatiliaji wa rundo, taarifa za programu/kifaa/OS na vitambulisho vya usakinishaji. Google huchakata data hii kwa masharti ya Firebase na sera ya faragha ya Google. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
-        "<strong>Google Play / Play Store:</strong> Usambazaji wa programu na kufungua ukurasa wa Play Store kupitia “Tukadirie”. Mchakato huu unasimamiwa na Google.",
+        "<strong>Google Play / Play Store:</strong> Usambazaji wa programu, ukaguzi wa masasisho (Masasisho ya Ndani ya Programu ya Google Play) na kufungua ukurasa wa Play Store kupitia “Tupe ukadiriaji”. Mchakato huu unasimamiwa na Google.",
         "<strong>sozluk.gov.tr (TDK):</strong> Utafutaji wa ufafanuzi kwa maneno yasiyopatikana ndani. Neno lililotafutwa tu ndilo hutumwa.",
         "<strong>Huduma ya utambuzi wa sauti ya kifaa:</strong> Mtumiaji anapoanzisha utafutaji wa sauti."
       ]

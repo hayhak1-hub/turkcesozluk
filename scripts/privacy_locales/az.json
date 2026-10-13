@@ -5,7 +5,7 @@
   "metaPackage": "paket adı",
   "metaDeveloper": "İnkişafçı",
   "metaUpdated": "Son yenilənmə",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-13",
   "langLabel": "Dil",
   "intro": "Bu məxfilik siyasəti Google Play-də təqdim olunan <strong>Türk Lüğəti</strong> tətbiqinin istifadəçi məlumatlarını necə emal etdiyini izah edir. Tətbiqi yükləyərək və ya istifadə edərək bu siyasəti qəbul etmiş sayılırsınız.",
   "sections": [
@@ -46,6 +46,7 @@
         "Göndərilən məlumat: yalnız axtarış qutusuna yazılan söz",
         "Məqsəd: lüğət mənası / tərif məlumatını göstərmək",
         "Şəxsi identifikasiya məlumatı göndərilmir",
+        "Hər veb sorğusunda olduğu kimi, TDK serveri texniki cəhətdən IP ünvanınızı və tətbiqin adı/versiyası kimi standart sorğu məlumatlarını görə bilər",
         "Bu sorğu TDK-nın ictimai saytına edilir; tətbiq TDK ilə rəsmi tərəfdaşlıqda deyil"
       ]
     },
@@ -54,6 +55,7 @@
       "paragraphs": [],
       "items": [
         "<strong>İnternet (INTERNET):</strong> Yerli olaraq tapılmayan sözlər üçün TDK lüğət sorğusu aparmaq məqsədilə istifadə olunur.",
+        "<strong>Şəbəkə vəziyyəti (ACCESS_NETWORK_STATE):</strong> Onlayn sorğudan və ya yeniləmə yoxlamasından əvvəl cihazın internetə qoşulub-qoşulmadığını yoxlamaq üçün istifadə olunur. Şəbəkə məlumatı saxlanmır və göndərilmir.",
         "<strong>Bildirişlər (POST_NOTIFICATIONS):</strong> İstəyə bağlıdır. “Günün sözü” bildirişini göstərmək üçün tələb olunur. Cihaz parametrlərindən söndürülə bilər.",
         "<strong>Səsli axtarış / mikrofon:</strong> Mikrofon simgesinə toxunduqda cihazınızın öz səs tanıma xidməti (məs. Google) açıla bilər. Səs qeydləri tətbiqimiz tərəfindən saxlanılmır; yalnız tanınan mətn axtarış qutusuna yazılır."
       ]
@@ -65,7 +67,7 @@
         "Reklam SDK-sı istifadə etmirik. İstifadə və sabitliyi anlamaq üçün Google Firebase Analytics və Firebase Crashlytics istifadə edirik. Analytics tətbiq fəaliyyəti, sessiya məlumatı, tətbiq nümunəsi/cihaz identifikatorları, cihaz və tətbiq məlumatı və təxmini bölgəni emal edə bilər. Crashlytics çökmə və ANR qeydləri, yığın izləri, tətbiq/cihaz/ƏS məlumatı və quraşdırma identifikatorlarını emal edə bilər. Google bu məlumatları Firebase şərtləri və Google məxfilik siyasətinə əsasən emal edir. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
-        "<strong>Google Play / Play Store:</strong> Tətbiqin paylanması və “Bizi qiymətləndirin” vasitəsilə Play Store səhifəsinin açılması üçün. Bu proses Google tərəfindən idarə olunur.",
+        "<strong>Google Play / Play Store:</strong> Tətbiqin yayımı, yeniləmə yoxlaması (Google Play tətbiqdaxili yeniləmələr) və “Bizi qiymətləndirin” vasitəsilə Play Store səhifəsinin açılması üçün. Bu proses Google tərəfindən idarə olunur.",
         "<strong>sozluk.gov.tr (TDK):</strong> Yerli olaraq tapılmayan sözlər üçün mənə sorğusu. Yalnız axtarılan söz ötürülür.",
         "<strong>Cihaz səs tanıma xidməti:</strong> İstifadəçi səsli axtarışı başlatdıqda."
       ]

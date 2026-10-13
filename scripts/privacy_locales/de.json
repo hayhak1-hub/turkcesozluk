@@ -5,7 +5,7 @@
   "metaPackage": "Paketname",
   "metaDeveloper": "Entwickler",
   "metaUpdated": "Zuletzt aktualisiert",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-13",
   "langLabel": "Sprache",
   "intro": "Diese Datenschutzerklärung erläutert, wie die App <strong>Türkisches Wörterbuch</strong> über Google Play Nutzerdaten verarbeitet. Durch das Herunterladen oder Verwenden der App stimmen Sie dieser Richtlinie zu.",
   "sections": [
@@ -46,6 +46,7 @@
         "Gesendete Daten: nur das in das Suchfeld eingegebene Wort",
         "Zweck: Anzeige von Wörterbuchbedeutung / Definition",
         "Es werden keine persönlichen Identifikationsdaten gesendet",
+        "Wie bei jeder Webanfrage kann der TDK-Server technisch Ihre IP-Adresse und übliche Anfragedaten wie App-Name und Version sehen",
         "Die Anfrage geht an die öffentliche TDK-Website; die App steht nicht in offizieller Partnerschaft mit TDK"
       ]
     },
@@ -54,6 +55,7 @@
       "paragraphs": [],
       "items": [
         "<strong>Internet (INTERNET):</strong> Für TDK-Wörterbuchabfragen zu lokal nicht gefundenen Wörtern.",
+        "<strong>Netzwerkstatus (ACCESS_NETWORK_STATE):</strong> Wird nur verwendet, um vor einer Online-Abfrage oder Update-Prüfung festzustellen, ob das Gerät online ist. Netzwerkinformationen werden weder gespeichert noch gesendet.",
         "<strong>Benachrichtigungen (POST_NOTIFICATIONS):</strong> Optional. Für die Benachrichtigung „Wort des Tages“. In den Geräteeinstellungen deaktivierbar.",
         "<strong>Sprachsuche / Mikrofon:</strong> Beim Tippen auf das Mikrofonsymbol kann der Spracherkennungsdienst des Geräts (z. B. Google) geöffnet werden. Wir speichern keine Audioaufnahmen; nur der erkannte Text wird ins Suchfeld eingetragen."
       ]
@@ -65,7 +67,7 @@
         "Wir verwenden kein Werbe-SDK. Zur Analyse von Nutzung und Stabilität verwenden wir Google Firebase Analytics und Firebase Crashlytics. Analytics kann App-Interaktionen, Sitzungsdaten, App-Instanz-/Gerätekennungen, Geräte- und App-Informationen sowie die ungefähre Region verarbeiten. Crashlytics kann Absturz- und ANR-Protokolle, Stacktraces, App-/Geräte-/Betriebssystemdaten und Installationskennungen verarbeiten. Google verarbeitet diese Daten gemäß den Firebase-Bedingungen und der Google-Datenschutzerklärung. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
-        "<strong>Google Play / Play Store:</strong> App-Verteilung und Öffnen der Play-Store-Seite über „Bewerten“.",
+        "<strong>Google Play / Play Store:</strong> App-Verteilung, Update-Prüfung (Google Play In-App-Updates) und das Öffnen der Play-Store-Seite über „Bewerten“. Dieser Vorgang wird von Google verwaltet.",
         "<strong>sozluk.gov.tr (TDK):</strong> Definitionsabfrage für lokal nicht gefundene Wörter. Es wird nur das gesuchte Wort übermittelt.",
         "<strong>Spracherkennungsdienst des Geräts:</strong> Wenn der Benutzer die Sprachsuche startet."
       ]

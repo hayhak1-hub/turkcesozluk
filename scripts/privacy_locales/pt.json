@@ -5,7 +5,7 @@
   "metaPackage": "nome do pacote",
   "metaDeveloper": "Desenvolvedor",
   "metaUpdated": "Última atualização",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-13",
   "langLabel": "Idioma",
   "intro": "Esta política de privacidade explica como o aplicativo <strong>Dicionário turco</strong> disponível no Google Play trata os dados do usuário. Ao baixar ou usar o aplicativo, você concorda com esta política.",
   "sections": [
@@ -46,6 +46,7 @@
         "Dados enviados: apenas a palavra digitada na caixa de pesquisa",
         "Finalidade: apresentar significado / definição do dicionário",
         "Nenhuma informação de identidade pessoal é enviada",
+        "Como em qualquer solicitação web, o servidor do TDK pode, tecnicamente, ver seu endereço IP e dados padrão da solicitação, como o nome e a versão do app",
         "Este pedido é feito ao site público do TDK; a aplicação não tem parceria oficial com o TDK"
       ]
     },
@@ -54,6 +55,7 @@
       "paragraphs": [],
       "items": [
         "<strong>Internet (INTERNET):</strong> Utilizado para consultar o dicionário TDK de palavras não encontradas localmente.",
+        "<strong>Estado da rede (ACCESS_NETWORK_STATE):</strong> Usada apenas para verificar se o dispositivo está online antes de uma consulta online ou da verificação de atualizações. Nenhuma informação de rede é armazenada ou enviada.",
         "<strong>Notificações (POST_NOTIFICATIONS):</strong> Opcional. Solicitado para mostrar a notificação «Palavra do dia». Pode ser desativado nas definições do dispositivo.",
         "<strong>Pesquisa por voz / microfone:</strong> Ao tocar no ícone do microfone, o serviço de reconhecimento de voz do dispositivo (p. ex., Google) pode abrir. Não armazenamos gravações de áudio; apenas o texto reconhecido é colocado na caixa de pesquisa."
       ]
@@ -65,7 +67,7 @@
         "Não usamos SDK de publicidade. Usamos Google Firebase Analytics e Firebase Crashlytics para entender o uso e a estabilidade. O Analytics pode processar interações, dados de sessão, identificadores da instância/dispositivo, informações do dispositivo e app e região aproximada. O Crashlytics pode processar registros de falhas e ANR, rastreamentos de pilha, informações do app/dispositivo/SO e identificadores de instalação. O Google processa esses dados segundo os termos do Firebase e sua política de privacidade. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
-        "<strong>Google Play / Play Store:</strong> Distribuição da aplicação e abertura da página da Play Store através de «Avalie-nos». Este processo é gerido pelo Google.",
+        "<strong>Google Play / Play Store:</strong> Distribuição do app, verificação de atualizações (atualizações no app do Google Play) e abertura da página da Play Store por “Avalie-nos”. Esse processo é gerenciado pelo Google.",
         "<strong>sozluk.gov.tr (TDK):</strong> Consulta de definições de palavras não encontradas localmente. Apenas a palavra pesquisada é transmitida.",
         "<strong>Serviço de reconhecimento de voz do dispositivo:</strong> Quando o utilizador inicia a pesquisa por voz."
       ]

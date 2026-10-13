@@ -5,7 +5,7 @@
   "metaPackage": "nom du package",
   "metaDeveloper": "Développeur",
   "metaUpdated": "Dernière mise à jour",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-13",
   "langLabel": "Langue",
   "intro": "Cette politique de confidentialité explique comment l'application <strong>Dictionnaire turc</strong> disponible sur Google Play traite les données des utilisateurs. En téléchargeant ou en utilisant l'application, vous acceptez cette politique.",
   "sections": [
@@ -46,6 +46,7 @@
         "Données envoyées : uniquement le mot saisi dans la zone de recherche",
         "Objectif : afficher le sens / la définition du dictionnaire",
         "Aucune information d'identité personnelle n'est envoyée",
+        "Comme pour toute requête web, le serveur du TDK peut techniquement voir votre adresse IP et des informations de requête standard, comme le nom et la version de l’application",
         "Cette requête est adressée au site public de TDK ; l'application n'est pas en partenariat officiel avec TDK"
       ]
     },
@@ -54,6 +55,7 @@
       "paragraphs": [],
       "items": [
         "<strong>Internet (INTERNET) :</strong> Utilisé pour interroger le dictionnaire TDK pour les mots non trouvés localement.",
+        "<strong>État du réseau (ACCESS_NETWORK_STATE) :</strong> Utilisé uniquement pour vérifier si l’appareil est en ligne avant une recherche en ligne ou une vérification de mise à jour. Aucune information réseau n’est enregistrée ni envoyée.",
         "<strong>Notifications (POST_NOTIFICATIONS) :</strong> Facultatif. Demandé pour afficher la notification « Mot du jour ». Peut être désactivé dans les paramètres de l'appareil.",
         "<strong>Recherche vocale / microphone :</strong> Lorsque vous appuyez sur l'icône du microphone, le service de reconnaissance vocale de votre appareil (p. ex. Google) peut s'ouvrir. Nous ne stockons pas d'enregistrements audio ; seul le texte reconnu est placé dans la zone de recherche."
       ]
@@ -65,7 +67,7 @@
         "Nous n’utilisons aucun SDK publicitaire. Nous utilisons Google Firebase Analytics et Firebase Crashlytics pour comprendre l’usage et la stabilité. Analytics peut traiter les interactions, données de session, identifiants d’instance/appareil, informations sur l’appareil et l’application et région approximative. Crashlytics peut traiter les journaux de plantage et d’ANR, traces de pile, informations application/appareil/OS et identifiants d’installation. Google traite ces données selon les conditions Firebase et sa politique de confidentialité. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
-        "<strong>Google Play / Play Store :</strong> Distribution de l'application et ouverture de la page Play Store via « Évaluez-nous ». Ce processus est géré par Google.",
+        "<strong>Google Play / Play Store :</strong> Distribution de l’application, vérification des mises à jour (mises à jour in-app de Google Play) et ouverture de la page Play Store via « Évaluer l’application ». Ce processus est géré par Google.",
         "<strong>sozluk.gov.tr (TDK) :</strong> Recherche de définitions pour les mots non trouvés localement. Seul le mot recherché est transmis.",
         "<strong>Service de reconnaissance vocale de l'appareil :</strong> Lorsque l'utilisateur lance la recherche vocale."
       ]

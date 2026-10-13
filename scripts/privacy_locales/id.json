@@ -5,7 +5,7 @@
   "metaPackage": "nama paket",
   "metaDeveloper": "Pengembang",
   "metaUpdated": "Terakhir diperbarui",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-13",
   "langLabel": "Bahasa",
   "intro": "Kebijakan privasi ini menjelaskan bagaimana aplikasi <strong>Kamus Turki</strong> yang tersedia di Google Play menangani data pengguna. Dengan mengunduh atau menggunakan aplikasi, Anda setuju dengan kebijakan ini.",
   "sections": [
@@ -46,6 +46,7 @@
         "Data yang dikirim: hanya kata yang diketik di kotak pencarian",
         "Tujuan: menampilkan arti / definisi kamus",
         "Tidak ada informasi identitas pribadi yang dikirim",
+        "Seperti permintaan web pada umumnya, server TDK secara teknis dapat melihat alamat IP Anda dan detail permintaan standar seperti nama dan versi aplikasi",
         "Permintaan ini dibuat ke situs web publik TDK; aplikasi tidak bekerja sama resmi dengan TDK"
       ]
     },
@@ -54,6 +55,7 @@
       "paragraphs": [],
       "items": [
         "<strong>Internet (INTERNET):</strong> Digunakan untuk menanyakan kamus TDK untuk kata yang tidak ditemukan secara lokal.",
+        "<strong>Status jaringan (ACCESS_NETWORK_STATE):</strong> Hanya digunakan untuk memeriksa apakah perangkat online sebelum pencarian online atau pemeriksaan pembaruan. Tidak ada informasi jaringan yang disimpan atau dikirim.",
         "<strong>Notifikasi (POST_NOTIFICATIONS):</strong> Opsional. Diminta untuk menampilkan notifikasi “Kata hari ini”. Dapat dinonaktifkan di pengaturan perangkat.",
         "<strong>Pencarian suara / mikrofon:</strong> Saat Anda mengetuk ikon mikrofon, layanan pengenalan suara perangkat (mis. Google) dapat terbuka. Kami tidak menyimpan rekaman audio; hanya teks yang dikenali yang dimasukkan ke kotak pencarian."
       ]
@@ -65,7 +67,7 @@
         "Kami tidak menggunakan SDK iklan. Kami menggunakan Google Firebase Analytics dan Firebase Crashlytics untuk memahami penggunaan dan stabilitas. Analytics dapat memproses interaksi aplikasi, informasi sesi, pengenal instans aplikasi/perangkat, informasi perangkat dan aplikasi, serta perkiraan wilayah. Crashlytics dapat memproses log crash dan ANR, stack trace, informasi aplikasi/perangkat/OS, dan pengenal instalasi. Google memproses data ini berdasarkan persyaratan Firebase dan kebijakan privasi Google. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
-        "<strong>Google Play / Play Store:</strong> Distribusi aplikasi dan membuka halaman Play Store melalui “Beri kami rating”. Proses ini dikelola oleh Google.",
+        "<strong>Google Play / Play Store:</strong> Distribusi aplikasi, pemeriksaan pembaruan (Pembaruan Dalam Aplikasi Google Play), dan pembukaan halaman Play Store melalui “Beri kami nilai”. Proses ini dikelola oleh Google.",
         "<strong>sozluk.gov.tr (TDK):</strong> Pencarian definisi untuk kata yang tidak ditemukan secara lokal. Hanya kata yang dicari yang dikirim.",
         "<strong>Layanan pengenalan suara perangkat:</strong> Saat pengguna memulai pencarian suara."
       ]

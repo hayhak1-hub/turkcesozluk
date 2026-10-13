@@ -5,7 +5,7 @@
   "metaPackage": "tên gói",
   "metaDeveloper": "Nhà phát triển",
   "metaUpdated": "Cập nhật lần cuối",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-13",
   "langLabel": "Ngôn ngữ",
   "intro": "Chính sách quyền riêng tư này giải thích cách ứng dụng <strong>Từ điển tiếng Thổ Nhĩ Kỳ</strong> trên Google Play xử lý dữ liệu người dùng. Bằng việc tải xuống hoặc sử dụng ứng dụng, bạn đồng ý với chính sách này.",
   "sections": [
@@ -46,6 +46,7 @@
         "Dữ liệu gửi: chỉ từ được nhập trong ô tìm kiếm",
         "Mục đích: hiển thị nghĩa / định nghĩa từ điển",
         "Không gửi thông tin nhận dạng cá nhân",
+        "Như với mọi yêu cầu web, máy chủ TDK về mặt kỹ thuật có thể thấy địa chỉ IP của bạn và thông tin yêu cầu tiêu chuẩn như tên và phiên bản ứng dụng",
         "Yêu cầu này được gửi đến trang web công khai của TDK; ứng dụng không có quan hệ đối tác chính thức với TDK"
       ]
     },
@@ -54,6 +55,7 @@
       "paragraphs": [],
       "items": [
         "<strong>Internet (INTERNET):</strong> Dùng để truy vấn từ điển TDK cho các từ không tìm thấy cục bộ.",
+        "<strong>Trạng thái mạng (ACCESS_NETWORK_STATE):</strong> Chỉ dùng để kiểm tra thiết bị có trực tuyến hay không trước khi tra cứu trực tuyến hoặc kiểm tra bản cập nhật. Không có thông tin mạng nào được lưu hoặc gửi đi.",
         "<strong>Thông báo (POST_NOTIFICATIONS):</strong> Tùy chọn. Được yêu cầu để hiển thị thông báo “Từ trong ngày”. Có thể tắt trong cài đặt thiết bị.",
         "<strong>Tìm kiếm bằng giọng nói / micrô:</strong> Khi bạn chạm biểu tượng micrô, dịch vụ nhận dạng giọng nói của thiết bị (ví dụ: Google) có thể mở. Chúng tôi không lưu bản ghi âm; chỉ văn bản được nhận dạng được đặt vào ô tìm kiếm."
       ]
@@ -65,7 +67,7 @@
         "Chúng tôi không dùng SDK quảng cáo. Chúng tôi dùng Google Firebase Analytics và Firebase Crashlytics để hiểu việc sử dụng và độ ổn định. Analytics có thể xử lý tương tác trong ứng dụng, thông tin phiên, mã nhận dạng phiên bản ứng dụng/thiết bị, thông tin thiết bị và ứng dụng và khu vực gần đúng. Crashlytics có thể xử lý nhật ký sự cố và ANR, dấu vết ngăn xếp, thông tin ứng dụng/thiết bị/HĐH và mã nhận dạng cài đặt. Google xử lý dữ liệu theo điều khoản Firebase và chính sách quyền riêng tư của Google. <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
-        "<strong>Google Play / Play Store:</strong> Phân phối ứng dụng và mở trang Play Store qua “Đánh giá chúng tôi”. Quy trình này do Google quản lý.",
+        "<strong>Google Play / Play Store:</strong> Phân phối ứng dụng, kiểm tra bản cập nhật (Cập nhật trong ứng dụng của Google Play) và mở trang Play Store qua “Đánh giá chúng tôi”. Quy trình này do Google quản lý.",
         "<strong>sozluk.gov.tr (TDK):</strong> Tra cứu định nghĩa cho từ không tìm thấy cục bộ. Chỉ từ được tìm kiếm được truyền.",
         "<strong>Dịch vụ nhận dạng giọng nói của thiết bị:</strong> Khi người dùng bắt đầu tìm kiếm bằng giọng nói."
       ]

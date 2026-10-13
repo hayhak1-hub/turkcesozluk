@@ -5,7 +5,7 @@
   "metaPackage": "パッケージ名",
   "metaDeveloper": "開発者",
   "metaUpdated": "最終更新",
-  "updatedDate": "2026-09-19",
+  "updatedDate": "2026-10-13",
   "langLabel": "言語",
   "intro": "本プライバシーポリシーは、Google Playで提供される<strong>トルコ語辞書</strong>アプリがユーザーデータをどのように取り扱うかを説明します。アプリをダウンロードまたは使用することで、本ポリシーに同意したものとみなされます。",
   "sections": [
@@ -46,6 +46,7 @@
         "送信データ：検索ボックスに入力された単語のみ",
         "目的：辞書の意味 / 定義情報を表示する",
         "個人識別情報は送信されません",
+        "ウェブへのリクエストと同様に、TDK のサーバーは技術的にお客様の IP アドレスや、アプリ名・バージョンなどの標準的なリクエスト情報を確認できます",
         "このリクエストは TDK の公開サイトに行われます。本アプリは TDK と公式提携していません"
       ]
     },
@@ -54,6 +55,7 @@
       "paragraphs": [],
       "items": [
         "<strong>インターネット (INTERNET)：</strong>ローカルで見つからない単語の TDK 辞書照会に使用します。",
+        "<strong>ネットワーク状態（ACCESS_NETWORK_STATE）：</strong>オンライン検索やアップデート確認の前に、端末がオンラインかどうかを確認する目的でのみ使用します。ネットワーク情報は保存も送信もされません。",
         "<strong>通知 (POST_NOTIFICATIONS)：</strong>任意。「今日の単語」通知を表示するために要求されます。デバイス設定で無効にできます。",
         "<strong>音声検索 / マイク：</strong>マイクアイコンをタップすると、デバイスの音声認識サービス（例：Google）が開く場合があります。音声録音は保存せず、認識されたテキストのみ検索ボックスに入力されます。"
       ]
@@ -65,7 +67,7 @@
         "広告 SDK は使用していません。利用状況と安定性を把握するため、Google Firebase Analytics と Firebase Crashlytics を使用します。Analytics はアプリ操作、セッション情報、アプリインスタンス／端末識別子、端末・アプリ情報、概算地域を処理する場合があります。Crashlytics はクラッシュ・ANR ログ、スタックトレース、アプリ／端末／OS 情報、インストール識別子を処理する場合があります。Google は Firebase の規約とプライバシーポリシーに従って処理します。 <a href=\"https://firebase.google.com/support/privacy\" rel=\"noopener noreferrer\">Firebase Privacy and Security</a> · <a href=\"https://policies.google.com/privacy\" rel=\"noopener noreferrer\">Google Privacy Policy</a>"
       ],
       "items": [
-        "<strong>Google Play / Play Store：</strong>アプリの配布および「評価する」から Play Store ページを開くため。これは Google によって管理されます。",
+        "<strong>Google Play / Play ストア：</strong>アプリの配信、アップデートの確認（Google Play アプリ内アップデート）、「アプリを評価」からの Play ストアページの表示に使用します。この処理は Google が管理します。",
         "<strong>sozluk.gov.tr (TDK)：</strong>ローカルで見つからない単語の定義照会。検索した単語のみ送信されます。",
         "<strong>デバイスの音声認識サービス：</strong>ユーザーが音声検索を開始したとき。"
       ]

@@ -91,7 +91,7 @@ class GameRepository @Inject constructor(
      * yine tutulur, yalnızca quizde tekrar edilemez.
      */
     private fun buildQuizOptions(word: String, clue: String): List<String> {
-        val distractors = quizRepository.getRandomDistractors(3, excluding = setOf(word, clue))
+        val distractors = quizRepository.getRandomDistractors(3, excluding = quizRepository.distractorExclusions(word, clue))
         if (distractors.size < 3) return emptyList()
         val options = LinkedHashSet<String>()
         options.add(clue.capitalizeTR())

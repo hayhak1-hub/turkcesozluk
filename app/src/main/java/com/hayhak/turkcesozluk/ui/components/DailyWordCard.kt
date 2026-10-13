@@ -32,6 +32,7 @@ fun DailyWordCard(
     onClose: () -> Unit
 ) {
     Card(
+        border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
         modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
         shape = RoundedCornerShape(24.dp),
         colors = CardDefaults.cardColors(containerColor = Color.Transparent)

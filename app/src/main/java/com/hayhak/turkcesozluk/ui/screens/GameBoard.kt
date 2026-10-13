@@ -117,6 +117,7 @@ private fun ClueCard(state: GameUiState) {
     LaunchedEffect(state.clue) { clueScroll.scrollTo(0) }
 
     Card(
+        border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 12.dp),

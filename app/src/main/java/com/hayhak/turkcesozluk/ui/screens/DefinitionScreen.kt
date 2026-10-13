@@ -82,6 +82,7 @@ fun DefinitionScreen(viewModel: DefinitionViewModel = hiltViewModel()) {
 
             if (uiState.suggestions.isNotEmpty() && uiState.result == null) {
                 Card(
+                    border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
                     modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
                     shape = RoundedCornerShape(16.dp),
                     colors = CardDefaults.cardColors(
@@ -146,6 +147,7 @@ fun DefinitionScreen(viewModel: DefinitionViewModel = hiltViewModel()) {
                     }
                     uiState.suggestions.isEmpty() && uiState.query.length > 1 -> {
                         Card(
+                            border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
                             colors = CardDefaults.cardColors(
                                 containerColor = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.1f)
                             ),

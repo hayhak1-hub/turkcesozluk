@@ -54,7 +54,7 @@ class DictionaryViewModel @Inject constructor(
     val searchUiState = _searchUiState.asStateFlow()
 
     val currentMode = com.hayhak.turkcesozluk.data.db.SettingsManager.modeState
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), com.hayhak.turkcesozluk.data.db.DictionaryMode.SYNONYMS)
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), com.hayhak.turkcesozluk.data.db.DictionaryMode.ALL)
 
     val recentSearches = historyDao.getRecentSearches()
         .stateIn(
@@ -103,6 +103,9 @@ class DictionaryViewModel @Inject constructor(
             .onEach { q ->
                 if (_searchUiState.value.results.isNotEmpty()) {
                     historyDao.insertSearch(SearchHistory(q.normalizeTR()))
+                    // Etkinlik, her tuş vuruşunda değil arama yazılıp bekleyince bir kez sayılır.
+                    UserStatsManager.updateStreak(getApplication())
+                    _streakCount.value = UserStatsManager.getStreak(getApplication())
                 }
             }
             .launchIn(viewModelScope)
@@ -142,11 +145,7 @@ class DictionaryViewModel @Inject constructor(
                     tdkError = null
                 )
             }
-            if (synonymList.isNotEmpty()) {
-                UserStatsManager.updateStreak(getApplication())
-                _streakCount.value = UserStatsManager.getStreak(getApplication())
-                return@launch
-            }
+            if (synonymList.isNotEmpty()) return@launch
 
             // Yerelde yoksa TDK'ya düş (yazmayı bitirmeyi bekle)
             if (normalized.length < 2) return@launch
@@ -183,7 +182,10 @@ class DictionaryViewModel @Inject constructor(
         viewModelScope.launch {
             val w = word.normalizeTR()
             val s = synonym.normalizeTR()
-            userSynonymDao.insertUserSynonym(UserSynonym(word = w, synonym = s))
+            if (w.isEmpty() || s.isEmpty()) return@launch
+            // Aynı çift tekrar eklenirse veritabanında kopya satır oluşmasın.
+            val exists = userSynonymDao.getAllUserSynonyms().first().any { it.word == w && it.synonym == s }
+            if (!exists) userSynonymDao.insertUserSynonym(UserSynonym(word = w, synonym = s))
             dictionaryRepository.addWordManual(w, s)
             UserStatsManager.updateStreak(getApplication())
             _streakCount.value = UserStatsManager.getStreak(getApplication())

@@ -17,3 +17,9 @@ val CardDark = Color(0xFF222831)
 val SurfaceLight = Color(0xFFF5F7FF)
 val OnSurfaceLight = Color(0xFF0D1117)
 val OnSurfaceDark = Color(0xFFF0F3F6)
+
+// Marka renkleri (WifiGuard ile aynı).
+val BrandBlue = Color(0xFF58A6FF)
+val BrandPurple = Color(0xFF8B5CF6)
+val BrandTeal = Color(0xFF00D2D3)
+val BrandOrange = Color(0xFFFF6B35)

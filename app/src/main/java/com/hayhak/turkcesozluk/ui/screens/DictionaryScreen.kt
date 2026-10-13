@@ -219,6 +219,7 @@ fun DictionaryScreen(
                                         onDismissRequest = { viewModel.dismissModeHint() }
                                     ) {
                                         Card(
+                                            border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
                                             modifier = Modifier.width(220.dp),
                                             shape = RoundedCornerShape(16.dp),
                                             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primary),
@@ -350,6 +351,7 @@ fun DictionaryScreen(
 
                 if (suggestions.isNotEmpty() && results.isEmpty()) {
                     Card(
+                        border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
                         modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
                         shape = RoundedCornerShape(16.dp),
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))
@@ -465,6 +467,7 @@ fun DictionaryScreen(
                         )
                     } else if (key == "loading") {
                         Card(
+                            border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
                             modifier = Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(16.dp),
                             colors = CardDefaults.cardColors(
@@ -517,6 +520,7 @@ fun DictionaryScreen(
                                 stringResource(R.string.tdk_error_network)
                         }
                         Card(
+                            border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
                             colors = CardDefaults.cardColors(
                                 containerColor = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.15f)
                             ),

@@ -1,5 +1,6 @@
 package com.hayhak.turkcesozluk.ui.components
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -13,7 +14,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.luminance
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -61,15 +65,26 @@ fun ResultCard(
     }
 
     Card(
+        border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(24.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.5f))
+        colors = CardDefaults.cardColors(containerColor = Color.Transparent)
     ) {
-        Column(modifier = Modifier.padding(24.dp).fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+        // Canlı mor-mavi gradyan zemin (WifiGuard paleti); üstündeki metinler beyaz.
+        val gradient = Brush.linearGradient(
+            if (MaterialTheme.colorScheme.background.luminance() < 0.5f) listOf(Color(0xFF4527A0), Color(0xFF1565C0))
+            else listOf(Color(0xFF6D44E0), Color(0xFF3B82F6))
+        )
+        val onGradient = Color.White
+        val tonalButtons = IconButtonDefaults.filledTonalIconButtonColors(
+            containerColor = Color.White.copy(alpha = 0.22f),
+            contentColor = onGradient
+        )
+        Column(modifier = Modifier.background(gradient).padding(24.dp).fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 label.uppercase(TurkishUtils.trLocale),
                 style = MaterialTheme.typography.labelLarge, 
-                color = MaterialTheme.colorScheme.secondary, 
+                color = onGradient.copy(alpha = 0.85f),
                 fontWeight = FontWeight.Bold
             )
             Spacer(Modifier.height(8.dp))
@@ -78,7 +93,7 @@ fun ResultCard(
                 Text(
                     TurkishUtils.capitalize(synonym),
                     style = if (index == 0) MaterialTheme.typography.displayMedium else MaterialTheme.typography.headlineSmall, 
-                    color = MaterialTheme.colorScheme.onSecondaryContainer.copy(alpha = if (index == 0) 1f else 0.75f), 
+                    color = onGradient.copy(alpha = if (index == 0) 1f else 0.85f), 
                     fontWeight = if (index == 0) FontWeight.ExtraBold else FontWeight.SemiBold, 
                     textAlign = TextAlign.Center,
                     modifier = if (isClickable) Modifier.clickable { onWordClick(synonym) } else Modifier
@@ -89,42 +104,48 @@ fun ResultCard(
             Row {
                 FilledTonalIconButton(
                     onClick = onToggleFavorite,
-                    modifier = Modifier.size(56.dp)
+                    modifier = Modifier.size(56.dp),
+                    colors = tonalButtons
                 ) {
                     Icon(
                         imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder, 
                         contentDescription = stringResource(R.string.cd_favorite), 
-                        tint = if (isFavorite) Color.Red else MaterialTheme.colorScheme.onSecondaryContainer
+                        tint = if (isFavorite) Color(0xFFFF8FA3) else onGradient
                     )
                 }
                 Spacer(Modifier.width(12.dp))
-                FilledIconButton(onClick = onSpeak, modifier = Modifier.size(56.dp)) {
+                FilledIconButton(
+                    onClick = onSpeak,
+                    modifier = Modifier.size(56.dp),
+                    colors = IconButtonDefaults.filledIconButtonColors(containerColor = Color.White, contentColor = Color(0xFF4527A0))
+                ) {
                     Icon(Icons.Rounded.PlayArrow, contentDescription = stringResource(R.string.cd_listen), modifier = Modifier.size(32.dp))
                 }
                 Spacer(Modifier.width(12.dp))
-                FilledTonalIconButton(onClick = onShare, modifier = Modifier.size(56.dp)) {
+                FilledTonalIconButton(onClick = onShare, modifier = Modifier.size(56.dp), colors = tonalButtons) {
                     Icon(Icons.Rounded.Share, contentDescription = stringResource(R.string.cd_share))
                 }
             }
 
             if (wordTree.isNotEmpty()) {
                 Spacer(Modifier.height(32.dp))
-                Text(stringResource(R.string.word_tree_title), style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+                Text(stringResource(R.string.word_tree_title), style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold, color = onGradient)
                 Spacer(Modifier.height(16.dp))
                 
                 @OptIn(ExperimentalLayoutApi::class)
                 wordTree.forEach { (parent, children) ->
                     Card(
+                        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.35f)),
                         modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
                         shape = RoundedCornerShape(12.dp),
-                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f))
+                        colors = CardDefaults.cardColors(containerColor = Color.White.copy(alpha = 0.16f))
                     ) {
                         Column(modifier = Modifier.padding(12.dp)) {
                             val isParentClickable = parent.split(" ").size <= 3
                             Text(
                                 TurkishUtils.capitalize(parent), 
-                                fontWeight = FontWeight.Bold, 
-                                color = MaterialTheme.colorScheme.primary,
+                                fontWeight = FontWeight.Bold,
+                                color = onGradient,
                                 modifier = if (isParentClickable) Modifier.clickable { onWordClick(parent) } else Modifier
                             )
                             Spacer(Modifier.height(4.dp))
@@ -135,6 +156,7 @@ fun ResultCard(
                                 Icon(
                                     Icons.AutoMirrored.Rounded.ArrowForward, 
                                     contentDescription = null, 
+                                    tint = onGradient,
                                     modifier = Modifier.size(16.dp).align(Alignment.CenterVertically)
                                 )
                                 children.forEach { child ->
@@ -148,7 +170,7 @@ fun ResultCard(
                                         Text(
                                             TurkishUtils.capitalize(child),
                                             style = MaterialTheme.typography.bodyMedium,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                            color = onGradient.copy(alpha = 0.92f),
                                             modifier = Modifier.padding(horizontal = 4.dp)
                                         )
                                     }

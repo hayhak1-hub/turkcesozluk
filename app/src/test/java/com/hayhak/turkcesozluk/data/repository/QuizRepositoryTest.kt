@@ -54,6 +54,22 @@ class QuizRepositoryTest {
     }
 
     @Test
+    fun `other synonyms of the word never appear as wrong options`() {
+        val data = mutableMapOf("güzel" to setOf("hoş", "nefis", "latif", "zarif"))
+        (1..40).forEach { data["kelime$it"] = setOf("anlam$it") }
+        SynonymDataStore.putAll(data)
+        SynonymDataStore.updateCache(setOf("güzel"))
+
+        repeat(100) {
+            val question = repository.generateQuestion()
+            assertNotNull(question)
+            val synonyms = setOf("Hoş", "Nefis", "Latif", "Zarif")
+            val valid = question!!.options.filter { it in synonyms }
+            assertEquals("yalnızca doğru cevap eş anlamlı olabilir", listOf(question.correctAnswer), valid)
+        }
+    }
+
+    @Test
     fun `generated question always has four distinct options including the answer`() {
         seed(50)
         repeat(50) {

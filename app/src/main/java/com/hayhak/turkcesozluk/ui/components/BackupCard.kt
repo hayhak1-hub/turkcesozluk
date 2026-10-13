@@ -4,6 +4,8 @@ import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -27,14 +29,29 @@ fun BackupCard(viewModel: BackupViewModel = hiltViewModel(), onRestored: () -> U
     val restore = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) {
         pending = it?.toString()
     }
-    Card(modifier = Modifier.fillMaxWidth()) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        border = com.hayhak.turkcesozluk.ui.theme.appCardBorder()
+    ) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            Text(stringResource(R.string.backup_title), style = MaterialTheme.typography.titleMedium)
-            Text(stringResource(R.string.backup_description), style = MaterialTheme.typography.bodySmall)
-            OutlinedButton(onClick = { export.launch("turkcesozluk-backup.json") }, enabled = !viewModel.busy,
+            Text(
+                stringResource(R.string.backup_title),
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.primary,
+                fontWeight = FontWeight.Bold
+            )
+            Text(
+                stringResource(R.string.backup_description),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Button(onClick = { export.launch("turkcesozluk-backup.json") }, enabled = !viewModel.busy,
                 modifier = Modifier.fillMaxWidth()) { Text(stringResource(R.string.backup_export)) }
             OutlinedButton(onClick = { restore.launch(arrayOf("application/json", "text/plain", "application/octet-stream")) },
-                enabled = !viewModel.busy, modifier = Modifier.fillMaxWidth()) { Text(stringResource(R.string.backup_restore)) }
+                enabled = !viewModel.busy, modifier = Modifier.fillMaxWidth(),
+                border = com.hayhak.turkcesozluk.ui.theme.appCardBorder()) { Text(stringResource(R.string.backup_restore)) }
             if (viewModel.busy) LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
             viewModel.result?.let { Text(stringResource(if (it) R.string.backup_success else R.string.backup_error)) }
         }

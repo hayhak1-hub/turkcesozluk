@@ -20,6 +20,7 @@ import com.hayhak.turkcesozluk.util.capitalizeTR
 @Composable
 fun DefinitionCard(definition: WordDefinition, onSpeak: () -> Unit) {
     Card(
+        border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(24.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),

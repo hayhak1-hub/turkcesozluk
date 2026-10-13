@@ -153,6 +153,7 @@ fun WeeklyActivityCard(weeklyStats: List<Int>, previousWeekTotal: Int) {
     )
 
     Card(
+        border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
         modifier = Modifier
             .fillMaxWidth()
             .padding(bottom = 24.dp)
@@ -512,6 +513,7 @@ private fun WeeklyKpiChip(
 @Composable
 fun StatCard(title: String, value: String, icon: ImageVector, color: Color, modifier: Modifier = Modifier) {
     Card(
+        border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
         modifier = modifier,
         shape = RoundedCornerShape(24.dp),
         colors = CardDefaults.cardColors(containerColor = color.copy(alpha = 0.1f))
@@ -528,6 +530,7 @@ fun StatCard(title: String, value: String, icon: ImageVector, color: Color, modi
 @Composable
 fun AchievementItem(title: String, desc: String, isUnlocked: Boolean) {
     Card(
+        border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
         modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(

@@ -139,6 +139,7 @@ fun FavoritesScreen(
                 LazyColumn(contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     items(favorites) { favorite ->
                         Card(
+                            border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
                             modifier = Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(20.dp),
                             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),

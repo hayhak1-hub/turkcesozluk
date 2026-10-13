@@ -207,6 +207,7 @@ fun QuizScreen(viewModel: QuizViewModel = hiltViewModel()) {
         } else if (currentQuestion != null) {
             item(key = "q-${currentQuestion.word}") {
                 Card(
+                    border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp),
                     shape = RoundedCornerShape(24.dp),
                     elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
@@ -397,6 +398,7 @@ fun GameOverScreen(
     onClose: () -> Unit
 ) {
     Card(
+        border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
         modifier = Modifier.fillMaxWidth().padding(8.dp),
         shape = RoundedCornerShape(32.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),

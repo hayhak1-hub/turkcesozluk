@@ -25,7 +25,7 @@ object SettingsManager {
     private val _themeState = MutableStateFlow(AppTheme.SYSTEM)
     val themeState = _themeState.asStateFlow()
 
-    private val _modeState = MutableStateFlow(DictionaryMode.SYNONYMS)
+    private val _modeState = MutableStateFlow(DictionaryMode.ALL)
     val modeState = _modeState.asStateFlow()
 
     private val _languageState = MutableStateFlow(AppLocale.SYSTEM)
@@ -46,8 +46,8 @@ object SettingsManager {
         val themeName = prefs.getString(KEY_THEME, AppTheme.SYSTEM.name)
         _themeState.value = runCatching { AppTheme.valueOf(themeName ?: "") }.getOrDefault(AppTheme.SYSTEM)
 
-        val modeName = prefs.getString(KEY_MODE, DictionaryMode.SYNONYMS.name)
-        _modeState.value = runCatching { DictionaryMode.valueOf(modeName ?: "") }.getOrDefault(DictionaryMode.SYNONYMS)
+        val modeName = prefs.getString(KEY_MODE, DictionaryMode.ALL.name)
+        _modeState.value = runCatching { DictionaryMode.valueOf(modeName ?: "") }.getOrDefault(DictionaryMode.ALL)
 
         val languageTag = prefs.getString(KEY_LANGUAGE, AppLocale.SYSTEM.tag)
         _languageState.value = AppLocale.fromTag(languageTag)

@@ -79,6 +79,7 @@ fun LearningScreen(viewModel: LearningViewModel, onDismiss: () -> Unit) {
         if (currentCard != null) {
             // Flashcard
             Card(
+                border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
                 onClick = { viewModel.flipCard() },
                 modifier = Modifier
                     .fillMaxWidth()

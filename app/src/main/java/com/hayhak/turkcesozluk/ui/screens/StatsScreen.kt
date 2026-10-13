@@ -239,6 +239,7 @@ fun StatsScreen(
             Spacer(modifier = Modifier.height(16.dp))
 
             Card(
+                border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(24.dp),
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f))
@@ -344,6 +345,7 @@ fun StatsScreen(
             }
 
             Card(
+                border = com.hayhak.turkcesozluk.ui.theme.appCardBorder(),
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(24.dp),
                 colors = CardDefaults.cardColors(

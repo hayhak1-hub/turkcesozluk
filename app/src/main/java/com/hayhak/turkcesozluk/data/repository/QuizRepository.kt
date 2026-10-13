@@ -24,6 +24,14 @@ class QuizRepository @Inject constructor() {
         return randomKey to answer
     }
 
+    /**
+     * Çeldirici olarak kullanılamayacak metinler: kelimenin kendisi, doğru cevap ve kelimenin
+     * bütün diğer eş anlamlıları. Aksi halde birden çok eş anlamlısı olan bir kelimede yanlış
+     * şık da aslında doğru olabilir.
+     */
+    fun distractorExclusions(word: String, correct: String): Set<String> =
+        setOf(word, correct) + (SynonymDataStore.synonymMap[word] ?: emptySet())
+
     fun getRandomDistractors(count: Int, excluding: Set<String>): List<String> {
         val pool = SynonymDataStore.cachedMeanings
         if (pool.isEmpty()) return emptyList()
@@ -48,7 +56,7 @@ class QuizRepository @Inject constructor() {
     fun generateQuestion(): QuizQuestion? {
         val (word, correct) = getRandomWord() ?: return null
 
-        val distractors = getRandomDistractors(OPTION_COUNT - 1, excluding = setOf(word, correct))
+        val distractors = getRandomDistractors(OPTION_COUNT - 1, excluding = distractorExclusions(word, correct))
         if (distractors.size < OPTION_COUNT - 1) return null
 
         val correctLabel = correct.capitalizeTR()

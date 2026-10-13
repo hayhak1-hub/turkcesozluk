@@ -42,7 +42,7 @@ class QuizViewModel @Inject constructor(
     var isGameStarted by mutableStateOf(false)
     
     val currentMode = com.hayhak.turkcesozluk.data.db.SettingsManager.modeState
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), com.hayhak.turkcesozluk.data.db.DictionaryMode.SYNONYMS)
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), com.hayhak.turkcesozluk.data.db.DictionaryMode.ALL)
 
     private var timerJob: Job? = null
     private var answerWriteJob: Job? = null

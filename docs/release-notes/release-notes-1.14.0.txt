@@ -1,0 +1,184 @@
+<tr-TR>
+• Sözlük kipi artık varsayılan olarak "Hepsi".
+• Yeni görünüm: gradyan kart çerçeveleri ve canlı sonuç kartı.
+• Quiz veya oyundan sonra, birkaç günde bir değerlendirme hatırlatması.
+• Quiz ve oyunda yanlış şıkkın başka bir doğru eş anlamlı olması düzeltildi.
+• Haftalık etkinlik, her tuş vuruşunu değil aramayı bir kez sayıyor.
+• Gizlilik politikası tüm dillerde güncellendi.
+</tr-TR>
+<ar>
+• وضع القاموس الافتراضي أصبح الآن «الكل».
+• مظهر جديد: حدود متدرجة للبطاقات وبطاقة نتيجة أكثر حيوية.
+• تذكير بتقييم التطبيق بعد الاختبار أو اللعبة، مرة كل بضعة أيام.
+• تم إصلاح ظهور مرادف صحيح آخر كخيار خاطئ في الاختبار واللعبة.
+• يحتسب النشاط الأسبوعي البحث مرة واحدة بدلاً من كل ضغطة مفتاح.
+• تم تحديث سياسة الخصوصية بجميع اللغات.
+</ar>
+<az-AZ>
+• Lüğət rejimi artıq standart olaraq "Hamısı"dır.
+• Yeni görünüş: qradiyent kart çərçivələri və canlı nəticə kartı.
+• Test və ya oyundan sonra bir neçə gündən bir qiymətləndirmə xatırlatması.
+• Test və oyunda yanlış variantın başqa doğru sinonim olması düzəldildi.
+• Həftəlik fəaliyyət hər düymə basılışını yox, axtarışı bir dəfə sayır.
+• Məxfilik siyasəti bütün dillərdə yeniləndi.
+</az-AZ>
+<bn-BD>
+• অভিধান মোড এখন ডিফল্ট হিসেবে "সব"।
+• নতুন চেহারা: গ্রেডিয়েন্ট কার্ড বর্ডার ও উজ্জ্বল ফলাফল কার্ড।
+• কুইজ বা খেলার পর কয়েক দিনে একবার রেটিং অনুস্মারক।
+• কুইজ ও খেলায় ভুল অপশন অন্য একটি সঠিক সমার্থক শব্দ হওয়ার সমস্যা ঠিক করা হয়েছে।
+• সাপ্তাহিক কার্যকলাপ এখন প্রতিটি কী-স্ট্রোকের বদলে অনুসন্ধানকে একবার গণনা করে।
+• সব ভাষায় গোপনীয়তা নীতি হালনাগাদ করা হয়েছে।
+</bn-BD>
+<de-DE>
+• Der Wörterbuchmodus ist jetzt standardmäßig „Alle“.
+• Neues Aussehen: Karten mit Farbverlauf-Rahmen und lebendige Ergebniskarte.
+• Bewertungshinweis nach Quiz oder Spiel, höchstens alle paar Tage.
+• Behoben: Eine falsche Antwort in Quiz und Spiel konnte ein weiteres richtiges Synonym sein.
+• Die Wochenaktivität zählt eine Suche einmal statt pro Tastenanschlag.
+• Datenschutzerklärung in allen Sprachen aktualisiert.
+</de-DE>
+<en-US>
+• "All dictionaries" is now the default mode.
+• A fresh look: gradient card borders and a vivid result card.
+• A rate-us reminder after a quiz or game, at most every few days.
+• Fixed wrong quiz and game options that could be another correct synonym.
+• Weekly activity now counts a search once instead of once per keystroke.
+• Privacy policy updated in all languages.
+</en-US>
+<es-ES>
+• El modo de diccionario predeterminado ahora es «Todos».
+• Nuevo aspecto: bordes de tarjeta con degradado y una tarjeta de resultado más viva.
+• Recordatorio para valorar la app tras un quiz o juego, como máximo cada pocos días.
+• Corregido: una opción incorrecta del quiz y del juego podía ser otro sinónimo correcto.
+• La actividad semanal cuenta una búsqueda una vez, no por cada pulsación.
+• Política de privacidad actualizada en todos los idiomas.
+</es-ES>
+<fr-FR>
+• Le mode de dictionnaire par défaut est désormais « Tous ».
+• Nouveau look : bordures de carte en dégradé et carte de résultat plus vive.
+• Rappel pour noter l’application après un quiz ou un jeu, au plus tous les quelques jours.
+• Correction : une mauvaise option du quiz et du jeu pouvait être un autre synonyme correct.
+• L’activité hebdomadaire compte une recherche une fois, et non à chaque frappe.
+• Politique de confidentialité mise à jour dans toutes les langues.
+</fr-FR>
+<hi-IN>
+• शब्दकोश मोड अब डिफ़ॉल्ट रूप से "सभी" है।
+• नया रूप: ग्रेडिएंट कार्ड बॉर्डर और ज़्यादा जीवंत परिणाम कार्ड।
+• क्विज़ या गेम के बाद कुछ दिनों में एक बार रेटिंग अनुस्मारक।
+• क्विज़ और गेम में गलत विकल्प का किसी दूसरे सही पर्यायवाची शब्द होना ठीक किया गया।
+• साप्ताहिक गतिविधि अब हर कीस्ट्रोक की जगह खोज को एक बार गिनती है।
+• सभी भाषाओं में गोपनीयता नीति अपडेट की गई।
+</hi-IN>
+<id>
+• Mode kamus default sekarang "Semua".
+• Tampilan baru: bingkai kartu gradien dan kartu hasil yang lebih hidup.
+• Pengingat beri nilai setelah kuis atau permainan, paling sering beberapa hari sekali.
+• Memperbaiki pilihan salah di kuis dan permainan yang bisa berupa sinonim benar lainnya.
+• Aktivitas mingguan kini menghitung satu pencarian satu kali, bukan setiap ketukan tombol.
+• Kebijakan privasi diperbarui di semua bahasa.
+</id>
+<ja-JP>
+• 辞書モードの初期設定を「すべて」にしました。
+• 新しいデザイン：グラデーションのカード枠と鮮やかな結果カード。
+• クイズやゲームのあと、数日に一度だけ評価のお願いを表示します。
+• クイズとゲームで、誤りの選択肢が別の正しい類義語になる問題を修正しました。
+• 週間アクティビティは、キー入力ごとではなく検索を1回として数えます。
+• すべての言語でプライバシーポリシーを更新しました。
+</ja-JP>
+<kk>
+• Сөздік режимі енді әдепкі бойынша «Барлығы».
+• Жаңа көрініс: градиентті карта жиектері және жарқын нәтиже картасы.
+• Викторина немесе ойыннан кейін бірнеше күнде бір рет бағалау еске салғышы.
+• Викторина мен ойында қате нұсқаның басқа дұрыс синоним болуы түзетілді.
+• Апталық белсенділік әр перне басуын емес, іздеуді бір рет санайды.
+• Құпиялылық саясаты барлық тілде жаңартылды.
+</kk>
+<ko-KR>
+• 사전 모드의 기본값이 이제 "전체"입니다.
+• 새로운 디자인: 그라데이션 카드 테두리와 선명한 결과 카드.
+• 퀴즈나 게임 후 며칠에 한 번만 평가 알림을 표시합니다.
+• 퀴즈와 게임에서 오답 보기가 또 다른 정답 유의어가 되던 문제를 수정했습니다.
+• 주간 활동은 키 입력마다가 아니라 검색을 한 번으로 셉니다.
+• 모든 언어의 개인정보 처리방침을 업데이트했습니다.
+</ko-KR>
+<ky-KG>
+• Сөздүк режими эми демейки боюнча «Баары».
+• Жаңы көрүнүш: градиент карта алкактары жана жаркын жыйынтык картасы.
+• Викторина же оюндан кийин бир нече күндө бир жолу баалоо эскертмеси.
+• Викторина жана оюндагы туура эмес варианттын башка туура синоним болушу оңдолду.
+• Апталык активдүүлүк ар бир баскычты эмес, издөөнү бир жолу эсептейт.
+• Купуялык саясаты бардык тилде жаңыланды.
+</ky-KG>
+<mr-IN>
+• शब्दकोश मोड आता डीफॉल्ट म्हणून "सर्व" आहे.
+• नवीन रूप: ग्रेडियंट कार्ड बॉर्डर आणि अधिक उठावदार निकाल कार्ड.
+• क्विझ किंवा गेमनंतर काही दिवसांतून एकदा रेटिंग स्मरणपत्र.
+• क्विझ आणि गेममधील चुकीचा पर्याय दुसरा बरोबर समानार्थी शब्द असण्याची समस्या दुरुस्त केली.
+• साप्ताहिक क्रियाकलाप आता प्रत्येक कीस्ट्रोकऐवजी शोध एकदाच मोजतो.
+• सर्व भाषांमध्ये गोपनीयता धोरण अद्ययावत केले.
+</mr-IN>
+<pt-BR>
+• O modo de dicionário padrão agora é "Todos".
+• Visual novo: bordas de cartão em degradê e um cartão de resultado mais vivo.
+• Lembrete para avaliar o app após um quiz ou jogo, no máximo a cada poucos dias.
+• Corrigido: uma opção errada do quiz e do jogo podia ser outro sinônimo correto.
+• A atividade semanal conta uma busca uma vez, e não a cada toque de tecla.
+• Política de privacidade atualizada em todos os idiomas.
+</pt-BR>
+<ru-RU>
+• Режим словаря по умолчанию теперь «Все».
+• Новый вид: карточки с градиентной рамкой и более яркая карточка результата.
+• Напоминание об оценке после викторины или игры — не чаще раза в несколько дней.
+• Исправлено: неверный вариант в викторине и игре мог оказаться другим верным синонимом.
+• Недельная активность считает поиск один раз, а не при каждом нажатии клавиши.
+• Политика конфиденциальности обновлена на всех языках.
+</ru-RU>
+<sw>
+• Hali ya kamusi chaguomsingi sasa ni "Zote".
+• Mwonekano mpya: mipaka ya kadi ya gradient na kadi ya matokeo yenye rangi angavu.
+• Kikumbusho cha kukadiria baada ya jaribio au mchezo, mara moja kila siku chache.
+• Imerekebishwa chaguo lisilo sahihi kwenye jaribio na mchezo kuwa kisawe kingine sahihi.
+• Shughuli za wiki sasa zinahesabu utafutaji mara moja badala ya kila mgongo wa kitufe.
+• Sera ya faragha imesasishwa katika lugha zote.
+</sw>
+<ta-IN>
+• அகராதி பயன்முறை இப்போது இயல்பாக "அனைத்தும்".
+• புதிய தோற்றம்: கிரேடியன்ட் அட்டை எல்லைகள் மற்றும் துடிப்பான முடிவு அட்டை.
+• வினாடி வினா அல்லது விளையாட்டுக்குப் பிறகு சில நாட்களுக்கு ஒருமுறை மதிப்பீட்டு நினைவூட்டல்.
+• வினாடி வினா, விளையாட்டில் தவறான விருப்பம் மற்றொரு சரியான ஒத்த சொல்லாக இருப்பது சரிசெய்யப்பட்டது.
+• வாராந்திர செயல்பாடு ஒவ்வொரு விசை அழுத்தத்திற்கும் பதிலாக தேடலை ஒருமுறை கணக்கிடுகிறது.
+• அனைத்து மொழிகளிலும் தனியுரிமைக் கொள்கை புதுப்பிக்கப்பட்டது.
+</ta-IN>
+<te-IN>
+• నిఘంటువు మోడ్ ఇప్పుడు డిఫాల్ట్‌గా "అన్నీ".
+• కొత్త రూపం: గ్రేడియంట్ కార్డ్ అంచులు మరియు ఉత్సాహభరితమైన ఫలితం కార్డ్.
+• క్విజ్ లేదా ఆట తర్వాత కొన్ని రోజులకు ఒకసారి రేటింగ్ రిమైండర్.
+• క్విజ్, ఆటలో తప్పు ఎంపిక మరో సరైన పర్యాయపదం కావడం సరిచేయబడింది.
+• వారపు కార్యకలాపం ఇప్పుడు ప్రతి కీ నొక్కుకు బదులు శోధనను ఒక్కసారి లెక్కిస్తుంది.
+• అన్ని భాషల్లో గోప్యతా విధానం నవీకరించబడింది.
+</te-IN>
+<ur>
+• لغت کا موڈ اب بطور ڈیفالٹ "سب" ہے۔
+• نیا انداز: گریڈینٹ کارڈ بارڈر اور زیادہ شوخ نتیجہ کارڈ۔
+• کوئز یا گیم کے بعد چند دنوں میں ایک بار ریٹنگ کی یاد دہانی۔
+• کوئز اور گیم میں غلط آپشن کا کسی اور درست مترادف لفظ ہونا درست کر دیا گیا۔
+• ہفتہ وار سرگرمی اب ہر کی اسٹروک کے بجائے تلاش کو ایک بار گنتی ہے۔
+• تمام زبانوں میں رازداری کی پالیسی اپ ڈیٹ کر دی گئی۔
+</ur>
+<vi>
+• Chế độ từ điển mặc định giờ là "Tất cả".
+• Diện mạo mới: viền thẻ chuyển màu và thẻ kết quả sống động hơn.
+• Nhắc đánh giá sau bài đố hoặc trò chơi, tối đa vài ngày một lần.
+• Đã sửa lỗi đáp án sai trong bài đố và trò chơi có thể là một từ đồng nghĩa đúng khác.
+• Hoạt động hằng tuần chỉ tính một lần cho mỗi lượt tìm kiếm, không tính từng lần gõ phím.
+• Đã cập nhật chính sách quyền riêng tư ở mọi ngôn ngữ.
+</vi>
+<zh-CN>
+• 词典模式现在默认为“全部”。
+• 全新外观：渐变卡片边框和更鲜艳的结果卡片。
+• 完成测验或游戏后提示评分，最多每隔几天一次。
+• 修复了测验和游戏中错误选项可能是另一个正确同义词的问题。
+• 每周活动现在将一次搜索只计一次，而不是每次按键都计。
+• 已在所有语言中更新隐私政策。
+</zh-CN>
